@@ -59,23 +59,51 @@
                                         <option value="10">10</option>
                                     </select>
                                 </div>
-                                <button type="button" class="btn btn-primary" onclick="fdCalc();">Submit</button>
+                                <button type="button" onclick="fdCalc();" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#resultModal">Calculate</button>
                             </form>
                         </div>
                     </div>
-                    <hr>
-                    <ul>
-                        <li>
-                            <span>interest earned : ₹</span>
-                            <span id="inte"></span>
-                        </li>
-                        <li>
-                            <span>Maturity Value : ₹</span>
-                            <span id="mval"></span>
-                        </li>
-                    </ul>
                 </div>
                 <div class="col-lg-4 col-12"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Modal -->
+                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="resultModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul>
+                                        <li>
+                                            <span>interest earned : ₹</span>
+                                            <span id="inte"></span>
+                                        </li>
+                                        <li>
+                                            <span>Maturity Value : ₹</span>
+                                            <span id="mval"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
