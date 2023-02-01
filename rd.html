@@ -116,10 +116,12 @@
             let fdtoti = document.getElementById("fd_toti").value;
             let fdroi = document.getElementById("fd_roi").value;
             let fdidur = document.getElementById("fd_idur").value;
-            let toti = (fdtoti *(1+fdroi/100) / 100);
-            let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            document.getElementById("inte").innerHTML = toti;
-            document.getElementById("mval").innerHTML = mamnt;
+            let toti = ((1 + fdroi / 100));
+            let toti1 = (Math.pow(toti, fdidur));
+            let toti2 = (fdtoti*toti1);
+            let mamnt = (parseInt(toti2) - parseInt(fdtoti));
+            document.getElementById("mval").innerHTML = toti2;
+            document.getElementById("inte").innerHTML = mamnt;
             // console.log(toti, mamnt);
         }
     </script>

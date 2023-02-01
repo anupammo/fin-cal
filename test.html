@@ -119,7 +119,7 @@
             let fdtoti = document.getElementById("fd_toti").value;
             let fdroi = document.getElementById("fd_roi").value;
             let fdidur = document.getElementById("fd_idur").value;
-            let toti = ((fdtoti * fdroi * fdidur) / 100);
+            let toti = (Math.pow(fdtoti,fdidur ));
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
             document.getElementById("inte").innerHTML = toti;
             document.getElementById("mval").innerHTML = mamnt;
