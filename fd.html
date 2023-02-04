@@ -9,70 +9,102 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         header {
-            background: linear-gradient(245deg, #000000 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
+            background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+        }
+
+        footer {
+            background-color: #001169;
+        }
+
+        .wave1 {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+
+        .right-dark-strip-bg {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgba(0, 17, 105, 1) 80%, rgba(0, 17, 105, 1) 100%);
         }
 
         a {
             text-decoration: none;
+        }
+
+        h2 {
+            color: rgba(0, 17, 105, 1);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="container py-5">
-            <div class="text-center">
-                <h1 class="text-white text-uppercase fw-bold display-5 my-5">FD Calculator</h1>
+        <div class="wave1">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-lg-6 col-12"></div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow border-0 mt-5">
+                            <div class="card-body">
+                                <h1 class="text-center my-4">FD Calculator</h1>
+                                <form class="px-5">
+                                    <div class="mb-3">
+                                        <label class="form-label">Total Investment</label>
+                                        <input type="number" class="form-control" id="fd_toti">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Rate of interest</label>
+                                        <select class="form-select" id="fd_roi">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Time</label>
+                                        <select class="form-select" id="fd_idur">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                            <option value="6">06</option>
+                                            <option value="7">07</option>
+                                            <option value="8">08</option>
+                                            <option value="9">09</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-center my-4">
+                                        <button type="button" onclick="fdCalc();"
+                                            class="btn btn-primary rounded-pill px-5" data-bs-toggle="modal"
+                                            data-bs-target="#resultModal">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <section>
-        <div class="container my-5">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-12"></div>
                 <div class="col-lg-4 col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label class="form-label">Total Investment</label>
-                                    <input type="number" class="form-control" id="fd_toti">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Rate of interest</label>
-                                    <select class="form-select" id="fd_roi">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                        <option value="5">05</option>
-                                        <option value="6">06</option>
-                                        <option value="7">07</option>
-                                        <option value="8">08</option>
-                                        <option value="9">09</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Time</label>
-                                    <select class="form-select" id="fd_idur">
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option value="4">04</option>
-                                        <option value="5">05</option>
-                                        <option value="6">06</option>
-                                        <option value="7">07</option>
-                                        <option value="8">08</option>
-                                        <option value="9">09</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </div>
-                                <button type="button" onclick="fdCalc();" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#resultModal">Calculate</button>
-                            </form>
-                        </div>
+                    <div class="my-5">
+                        <h2 class="text-center">Corporate and Other Fixed Deposits Offering High ROI</h2>
+                        <p class="text-center">If you choose a good Company FD scheme, you will generally earn more on
+                            your investment than bank FDs as these schemes offer the highest interest rate on FD.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-12"></div>
@@ -117,12 +149,12 @@
             </div>
         </div>
     </section>
-    <footer class="bg-dark">
+    <footer class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <p class="text-center mt-3">
-                        <a class="text-white" href="http://bhritick.github.io/site">Designed & developed by Hritick
+                        <a class="text-white" href="http://bhritick.github.io/site">Designed & Developed by Hritick
                             B</a>
                     </p>
                 </div>
