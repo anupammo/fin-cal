@@ -46,21 +46,23 @@
                     <div class="col-lg-6 col-12">
                         <div class="card shadow border-0 mt-5">
                             <div class="card-body">
-                                <h1 class="text-center my-4">FD Calculator</h1>
+                                <h1 class="text-center my-4">SSY Calculator</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
-                                        <label class="form-label">Total Investment</label>
+                                        <label class="form-label">Amount of Investment / Year</label>
                                         <input type="number" class="form-control" id="fd_toti">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Rate of interest</label>
-                                        <select class="form-select" id="fd_roi">
+                                        <label class="form-label">Rate of interest - <strong>7.6%</strong></label>
+                                        <input type="hidden" class="form-control" id="fd_roi" value="7.6">
+                                        <!-- <select class="form-select" id="fd_roi">
                                             <option value="7.6">7.6</option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Time</label>
-                                        <select class="form-select" id="fd_idur">
+                                        <label class="form-label">Your daughter's birth date</label>
+                                        <input type="date" class="form-control" id="fd_idur">
+                                        <!-- <select class="form-select" id="fd_idur">
                                             <option value="1">01</option>
                                             <option value="2">02</option>
                                             <option value="3">03</option>
@@ -71,7 +73,7 @@
                                             <option value="8">08</option>
                                             <option value="9">09</option>
                                             <option value="10">10</option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                     <div class="text-center my-4">
                                         <button type="button" onclick="fdCalc();" class="btn btn-primary rounded-pill px-5" data-bs-toggle="modal" data-bs-target="#resultModal">Calculate</button>
