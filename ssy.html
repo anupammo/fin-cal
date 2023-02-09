@@ -50,32 +50,28 @@
                                 <h1 class="text-center my-4">SSY Calculator</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
-                                        <label class="form-label">Amount of Investment / Year</label>
-                                        <input type="number" class="form-control shadow-none" id="fd_toti">
+                                        <label class="form-label">Amount of Investment / Year : <strong
+                                            id="inv-disp">250</strong></label>
+                                        <input type="range" class="form-range" min="250" max="150000" step="50"
+                                            value="250" id="totinv" onchange="dispInv()">
+                                        <div class="row">
+                                            <span class="col">250</span>
+                                            <span class="text-end col">150000</span>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Rate of interest - <strong>7.6%</strong></label>
-                                        <input type="hidden" class="form-control" id="fd_roi" value="7.6">
-                                        <!-- <select class="form-select" id="fd_roi">
-                                            <option value="7.6">7.6</option>
-                                        </select> -->
+                                        <label class="form-label">Rate of interest : <strong>7.6%</strong></label>
+                                        <input type="hidden" class="form-control" id="ssyroi" value="7.6">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Daughter's age</label>
-                                        <!-- <label class="form-label">Your daughter's birth date</label>
-                                        <input type="date" class="form-control shadow-none" id="fd_idur"> -->
-                                        <select class="form-select shadow-none" id="fd_idur">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                            <option value="5">05</option>
-                                            <option value="6">06</option>
-                                            <option value="7">07</option>
-                                            <option value="8">08</option>
-                                            <option value="9">09</option>
-                                            <option value="10">10</option>
-                                        </select>
+                                        <label class="form-label">Daughter's age : <strong
+                                                id="age-disp">0</strong></label>
+                                        <input type="range" class="form-range" min="0" max="10" step="1" value="0"
+                                            id="dage" onchange="dispAge()">
+                                            <div class="row">
+                                                <span class="col">0</span>
+                                                <span class="text-end col">10</span>
+                                            </div>
                                     </div>
                                     <div class="text-center my-4">
                                         <button type="button" onclick="fdCalc();"
@@ -120,16 +116,9 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <ul>
-                                        <li>
-                                            <span>interest earned : ₹</span>
-                                            <span id="inte"></span>
-                                        </li>
-                                        <li>
-                                            <span>Maturity Value : ₹</span>
-                                            <span id="mval"></span>
-                                        </li>
-                                    </ul>
+                                    <p>Total Investment : ₹<span id="totalInvestment"></span></p>
+                                    <p>Total Interest : ₹<span id="totalInterest"></span></p>
+                                    <p>Maturity Amount : ₹<span id="maturityValue"></span></p>
                                 </div>
                                 <!-- <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
@@ -159,66 +148,34 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script>
-        // function fdCalc() {
-        //     // let tinv = 0;
-        //     let fdtoti = document.getElementById("fd_toti").value;
-        //     let fdroi = document.getElementById("fd_roi").value;
-        //     let fdidur = document.getElementById("fd_idur").value;
-        //     let toti = ((1 + fdroi / 100));
-        //     let toti1 = (fdtoti * toti);
-        //     let toti2 = (parseInt(toti1) + parseInt(fdtoti));
-        //     let totie2 = (toti2 * toti);
-        //     let toti3 = (parseInt(totie2) + parseInt(fdtoti));
-        //     let totie3 = (toti3 * toti);
-        //     let toti4 = (parseInt(totie3) + parseInt(fdtoti));
-        //     let totie4 = (toti4 * toti);
-        //     let toti5 = (parseInt(totie4) + parseInt(fdtoti));
-        //     let totie5 = (toti5 * toti);
-        //     let toti6 = (parseInt(totie5) + parseInt(fdtoti));
-        //     let totie6 = (toti6 * toti);
-        //     let toti7 = (parseInt(totie6) + parseInt(fdtoti));
-        //     let totie7 = (toti7 * toti);
-        //     let toti8 = (parseInt(totie7) + parseInt(fdtoti));
-        //     let totie8 = (toti8 * toti);
-        //     let toti9 = (parseInt(totie8) + parseInt(fdtoti));
-        //     let totie9 = (toti9 * toti);
-        //     let toti10 = (parseInt(totie9) + parseInt(fdtoti));
-        //     let totie10 = (toti10 * toti);
-        //     let toti11 = (parseInt(totie10) + parseInt(fdtoti));
-        //     let totie11 = (toti11 * toti);
-        //     let toti12 = (parseInt(totie11) + parseInt(fdtoti));
-        //     let totie12 = (toti12 * toti);
-        //     let toti13 = (parseInt(totie12) + parseInt(fdtoti));
-        //     let totie13 = (toti13 * toti);
-        //     let toti14 = (parseInt(totie13) + parseInt(fdtoti));
-        //     let totie14 = (toti14 * toti);
-        //     let toti15 = (parseInt(totie14) + parseInt(fdtoti));
-        //     let totie15 = (toti15 * toti);
-        //     let totie16 = (totie15 * toti);
-        //     let totie17 = (totie16 * toti);
-        //     let totie18 = (totie17 * toti);
-        //     let totie19 = (totie18 * toti);
-        //     let totie20 = (totie19 * toti);
-        //     let totie21 = (totie20 * toti);
-        //     document.getElementById("mval").innerHTML = totie21;
-        //     document.getElementById("inte").innerHTML = mamnt;
-        //     // console.log(toti, mamnt);
-        // }
+        function dispInv() {
+            let invdisp = document.getElementById("totinv").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
+        }
+        function dispAge() {
+            let aged = document.getElementById("dage").value;
+            document.getElementById("age-disp").innerHTML = aged;
+        }
         function fdCalc() {
-            let fdtoti = parseInt(document.getElementById("fd_toti").value);
-            let fdroi = parseFloat(document.getElementById("fd_roi").value);
-            let fdidur = parseInt(document.getElementById("fd_idur").value);
-            let invcount = (15 - fdidur);
-            let onei = 0;
-            let mval = 0;
-            for (let i = fdidur; i <= 15; i++) {
-                onei = (fdtoti * fdroi) / 100;
-                mval = (onei + fdtoti);
-                fdtoti = (mval + fdtoti);
+            let tinv = parseInt(document.getElementById("totinv").value);
+            let ssyi = parseFloat(document.getElementById("ssyroi").value);
+            let dage = parseInt(document.getElementById("dage").value);
+            let ycont = (15 - dage);
+            let rinv = tinv;
+            let totali = 0;
+            for (let i = 0; i < ycont; i++) {
+                totali = (((rinv / 100) * ssyi) + rinv);
+                rinv = totali + tinv;
+                document.getElementById("totalInvestment").innerHTML = (tinv * (ycont - 1));
+                // console.log("Year " + (i + 1) + " - " + parseFloat(totali).toFixed(2));
             }
-            console.log(mval);
-            // console.log(fdtoti, fdroi, fdidur, invcount);
-            // console.log(fdtoti + fdroi);
+            for (let i = 0; i < 6; i++) {
+                totali = (((totali / 100) * ssyi) + totali);
+                // console.log("Year " + ((dage + 2) + i) + " - " + parseFloat(totali).toFixed(2));
+            }
+            document.getElementById("totalInterest").innerHTML = parseFloat(totali - (tinv * (ycont - 1))).toFixed(0);
+            document.getElementById("maturityValue").innerHTML = parseFloat(totali).toFixed(0);
+            // console.log("Maturity value : " + parseFloat(totali).toFixed(0));
 
         }
     </script>
