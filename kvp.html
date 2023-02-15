@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FD Calculator</title>
+    <title>KVP Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
@@ -55,34 +55,34 @@
                     <div class="col-lg-6 col-12">
                         <div class="card shadow border-0 mt-5">
                             <div class="card-body">
-                                <h1 class="px-5 my-4">SSY Calculator</h1>
+                                <h1 class="px-5 my-4">KVP Calculator</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
-                                        <label class="form-label">Amount of Investment / Year : <strong
-                                                id="inv-disp">250</strong></label>
-                                        <input type="range" class="form-range" min="1000" max="150000" step="1000"
+                                        <label class="form-label">Amount of Investment : <strong
+                                                id="inv-disp">1000</strong></label>
+                                        <input type="range" class="form-range" min="1000" max="50000" step="1000"
                                             value="250" id="totinv" onchange="dispInv()">
                                         <div class="row">
-                                            <span class="col">250</span>
-                                            <span class="text-end col">150000</span>
+                                            <span class="col">1000</span>
+                                            <span class="text-end col">50000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Rate of interest : <strong>7.6%</strong></label>
-                                        <input type="hidden" class="form-control" id="ssyroi" value="7.6">
+                                        <label class="form-label">Rate of interest : <strong>7.2%</strong></label>
+                                        <input type="hidden" class="form-control" id="ssyroi" value="7.2">
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Daughter's age : <strong
-                                                id="age-disp">0</strong></label>
-                                        <input type="range" class="form-range" min="0" max="10" step="1" value="0"
+                                        <label class="form-label">Tenure : <strong
+                                                id="age-disp">10</strong></label>
+                                        <input type="range" class="form-range" min="10" max="20" step="5" value="10"
                                             id="dage" onchange="dispAge()">
                                         <div class="row">
-                                            <span class="col">0</span>
-                                            <span class="text-end col">10</span>
+                                            <span class="col">10</span>
+                                            <span class="text-end col">20</span>
                                         </div>
                                     </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="fdCalc();"
+                                        <button type="button" onclick="kvpCalc();"
                                             class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
                                             data-bs-target="#resultModal">Calculate</button>
                                     </div>
@@ -133,31 +133,6 @@
                                                 loop autoplay></lottie-player>
                                         </div>
                                         <div class="w-75">
-                                            <!-- <table class="table table-borderless">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>💵 Total investment</td>
-                                                        <td id="totalInvestment"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>📅 Investment years</td>
-                                                        <td><strong id="invfrom"></strong> - <strong
-                                                                id="invto"></strong></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>📅 Maturity year</td>
-                                                        <td id="myear"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>💵 Total interest</td>
-                                                        <td id="totalInterest"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>💵 Maturity value</td>
-                                                        <td id="maturityValue"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table> -->
                                             <ul>
                                                 <li>💵 Total investment : ₹<strong id="totalInvestment"></strong></li>
                                                 <li>📅 Investment years : <strong id="invfrom"></strong> - <strong
@@ -206,11 +181,10 @@
             let aged = document.getElementById("dage").value;
             document.getElementById("age-disp").innerHTML = aged;
         }
-        function fdCalc() {
+        function kvpCalc() {
             let tinv = parseInt(document.getElementById("totinv").value);
             let ssyi = parseFloat(document.getElementById("ssyroi").value);
             let dage = parseInt(document.getElementById("dage").value);
-            // let ycont = (15 - dage);
             let rinv = tinv;
             let totali = 0;
             for (let i = 0; i < 15; i++) {
