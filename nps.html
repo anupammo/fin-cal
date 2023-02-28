@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NPS Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="fincal.css">
 </head>
 
@@ -16,7 +17,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="p-5">
-                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
+                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
+                                background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
@@ -27,7 +29,8 @@
                                     <div class="mb-3">
                                         <label class="form-label">Amount of Investment / Year : <strong
                                                 id="inv-disp">12000</strong></label>
-                                        <input type="range" class="form-range" min="1000" max="144000" step="1000" value="12000" id="totinv" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="1000" max="144000" step="1000"
+                                            value="12000" id="totinv" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">1000</span>
                                             <span class="text-end col">144000</span>
@@ -42,7 +45,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Starting Age: <strong
                                                         id="age-disp">37</strong></label>
-                                                <input type="range" class="form-range" min="18" max="70" step="1" value="37" id="dage" onchange="dispAge()">
+                                                <input type="range" class="form-range" min="18" max="70" step="1"
+                                                    value="37" id="dage" onchange="dispAge()">
                                                 <div class="row">
                                                     <span class="col">18</span>
                                                     <span class="text-end col">70</span>
@@ -53,7 +57,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Maturity Age: <strong
                                                         id="mage-disp">60</strong></label>
-                                                <input type="range" class="form-range" min="60" max="75" step="1" value="60" id="mage" onchange="matAge()">
+                                                <input type="range" class="form-range" min="60" max="75" step="1"
+                                                    value="60" id="mage" onchange="matAge()">
                                                 <div class="row">
                                                     <span class="col" id="mdisp">60</span>
                                                     <span class="text-end col">75</span>
@@ -66,7 +71,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Annuity of Corpus <strong
                                                         id="anut-disp">40</strong>%</label>
-                                                <input type="range" class="form-range" min="40" max="100" step="1" value="40" id="anut" onchange="dispAnut()">
+                                                <input type="range" class="form-range" min="40" max="100" step="1"
+                                                    value="40" id="anut" onchange="dispAnut()">
                                                 <div class="row">
                                                     <span class="col">40</span>
                                                     <span class="text-end col">100</span>
@@ -77,7 +83,8 @@
                                             <div class="mb-3">
                                                 <label class="form-label">Interest on Annuity <strong
                                                         id="arate-disp">6</strong>%</label>
-                                                <input type="range" class="form-range" min="4" max="10" step="1" value="6" id="arate" onchange="dispArate()">
+                                                <input type="range" class="form-range" min="4" max="10" step="1"
+                                                    value="6" id="arate" onchange="dispArate()">
                                                 <div class="row">
                                                     <span class="col" id="aratedisp">4</span>
                                                     <span class="text-end col">10</span>
@@ -86,7 +93,9 @@
                                         </div>
                                     </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="npsCalc();" class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal" data-bs-target="#resultModal">Calculate</button>
+                                        <button type="button" onclick="npsCalc();"
+                                            class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
+                                            data-bs-target="#resultModal">Calculate</button>
                                     </div>
                                 </form>
                             </div>
@@ -103,9 +112,15 @@
                     <div class="card border-0 mb-3">
                         <div class="card-body">
                             <h2 class="h4">Fixed Deposits Offering High ROI</h2>
-                            <p class="lead fs-6">If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest interest rate on FD. If you choose a good Company FD scheme, you will generally earn more
-                                on your investment than bank FDs as these schemes offer the highest interest rate on FD. If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest
-                                interest rate on FD. If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest interest rate on FD.</p>
+                            <p class="lead fs-6">If you choose a good Company FD scheme, you will generally earn more on
+                                your investment than bank FDs as these schemes offer the highest interest rate on FD. If
+                                you choose a good Company FD scheme, you will generally earn more
+                                on your investment than bank FDs as these schemes offer the highest interest rate on FD.
+                                If you choose a good Company FD scheme, you will generally earn more on your investment
+                                than bank FDs as these schemes offer the highest
+                                interest rate on FD. If you choose a good Company FD scheme, you will generally earn
+                                more on your investment than bank FDs as these schemes offer the highest interest rate
+                                on FD.</p>
                         </div>
                     </div>
                 </div>
@@ -116,42 +131,63 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
                                             Frequently asked question #1
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within
                                             the <code>.accordion-body</code>, though the transition does limit overflow.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
                                             Frequently asked question #2
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within
                                             the <code>.accordion-body</code>, though the transition does limit overflow.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             Frequently asked question #3
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by
+                                            default, until the collapse plugin adds the appropriate classes that we use
+                                            to style each element. These classes control the overall
+                                            appearance, as well as the showing and hiding via CSS transitions. You can
+                                            modify any of this with custom CSS or overriding our default variables. It's
+                                            also worth noting that just about any HTML can go within
                                             the <code>.accordion-body</code>, though the transition does limit overflow.
                                         </div>
                                     </div>
@@ -168,26 +204,32 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Modal -->
-                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content border-0">
                                 <div class="modal-header border-0">
                                     <h1 class="modal-title fs-5" id="resultModalLabel">Investment Details</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="w-25">
                                             <!-- <img src="res/icon/ssy.webp" class="img-fluid d-block mx-auto" alt="..."> -->
-                                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
+                                            <lottie-player
+                                                src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
+                                                background="transparent" speed="1" style="width: 120px; height: 120px;"
+                                                loop autoplay></lottie-player>
                                         </div>
                                         <div class="w-75">
                                             <ul>
                                                 <li>💵 Total investment : ₹<strong id="totalInvestment"></strong></li>
-                                                <li>📅 Investment years : <strong id="invfrom"></strong> - <strong id="invto"></strong></li>
+                                                <li>📅 Investment years : <strong id="invfrom"></strong> - <strong
+                                                        id="invto"></strong></li>
                                                 <li>📅 Maturity year : <strong id="myear"></strong></li>
-                                                <li>💵 Total interest : ₹<strong id="totalInterest"></strong></li>
-                                                <li>💵 Maturity value : ₹<strong id="maturityValue"></strong></li>
+                                                <li>💵 Lumpsum Amount : ₹<strong id="lumsumval"></strong></li>
+                                                <li>💵 Pension Amount : ₹<strong id="pnsnval"></strong> / Month</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -210,7 +252,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
@@ -246,6 +290,8 @@
             let dage = parseInt(document.getElementById("dage").value);
             // let invy = (70 - dage);
             let mage = parseInt(document.getElementById("mage").value);
+            let anut = parseInt(document.getElementById("anut").value);
+            let anutirate = parseInt(document.getElementById("arate").value);
 
 
             let rinv = tinv;
@@ -261,10 +307,15 @@
             document.getElementById("totalInvestment").innerHTML = (tinv * (mage - dage));
             document.getElementById("invto").innerHTML = (date + ((mage - dage) - 1));
             document.getElementById("myear").innerHTML = (date + (mage - dage));
-            document.getElementById("totalInterest").innerHTML = parseFloat(totali - (tinv * (mage - dage))).toFixed(0);
-            document.getElementById("maturityValue").innerHTML = parseFloat(totali).toFixed(0);
+            // document.getElementById("totalInterest").innerHTML = parseFloat(totali - (tinv * (mage - dage))).toFixed(0);
+            // document.getElementById("maturityValue").innerHTML = parseFloat(totali).toFixed(0);
+            let anutval = parseFloat((totali * anut) / 100).toFixed(0);
+            let lumsumval = parseFloat(totali - anutval).toFixed(0);
+            let pnsnval = parseFloat(((anutval * anutirate) / 100) / 12).toFixed(0);
+            document.getElementById("lumsumval").innerHTML = lumsumval;
+            document.getElementById("pnsnval").innerHTML = pnsnval;
             // console.log("Maturity value : " + parseFloat(totali).toFixed(0));
-            console.log(dage);
+            console.log(pnsnval);
 
         }
 
