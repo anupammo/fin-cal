@@ -61,6 +61,30 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <label class="form-label">Annuity of Corpus <strong
+                                                        id="anut-disp">40</strong>%</label>
+                                                <input type="range" class="form-range" min="40" max="100" step="1" value="40" id="anut" onchange="dispAnut()">
+                                                <div class="row">
+                                                    <span class="col">40</span>
+                                                    <span class="text-end col">100</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <label class="form-label">Interest on Annuity <strong
+                                                        id="arate-disp">6</strong>%</label>
+                                                <input type="range" class="form-range" min="4" max="10" step="1" value="6" id="arate" onchange="dispArate()">
+                                                <div class="row">
+                                                    <span class="col" id="aratedisp">4</span>
+                                                    <span class="text-end col">10</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="my-4">
                                         <button type="button" onclick="npsCalc();" class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal" data-bs-target="#resultModal">Calculate</button>
                                     </div>
@@ -226,22 +250,32 @@
 
             let rinv = tinv;
             let totali = 0;
-            for (let i = dage; i <= 70; i++) {
+            for (let i = dage; i < mage; i++) {
                 totali = (((rinv / 100) * ssyi) + rinv);
                 rinv = totali + tinv;
-                console.log("Year " + (i) + " - " + parseFloat(totali).toFixed(2));
+                console.log("Year " + (i + 1) + " - " + parseFloat(totali).toFixed(2));
             }
 
             let date = new Date().getFullYear();
             document.getElementById("invfrom").innerHTML = date;
-            document.getElementById("totalInvestment").innerHTML = (tinv * (70 - dage));
-            document.getElementById("invto").innerHTML = (date + (70 - dage));
-            document.getElementById("myear").innerHTML = (date + (70 - dage));
-            document.getElementById("totalInterest").innerHTML = parseFloat(totali - (tinv * (70 - dage))).toFixed(0);
+            document.getElementById("totalInvestment").innerHTML = (tinv * (mage - dage));
+            document.getElementById("invto").innerHTML = (date + ((mage - dage) - 1));
+            document.getElementById("myear").innerHTML = (date + (mage - dage));
+            document.getElementById("totalInterest").innerHTML = parseFloat(totali - (tinv * (mage - dage))).toFixed(0);
             document.getElementById("maturityValue").innerHTML = parseFloat(totali).toFixed(0);
             // console.log("Maturity value : " + parseFloat(totali).toFixed(0));
-            console.log(invy);
+            console.log(dage);
 
+        }
+
+        function dispAnut() {
+            let anutdisp = document.getElementById("anut").value;
+            document.getElementById("anut-disp").innerHTML = anutdisp;
+        }
+
+        function dispArate() {
+            let aratedisp = document.getElementById("arate").value;
+            document.getElementById("arate-disp").innerHTML = invdisp;
         }
     </script>
 </body>
