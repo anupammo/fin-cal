@@ -37,8 +37,8 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="4000" step="1"
-                                            value="100" id="qgold" onchange="dispQgold()">
+                                        <input type="range" class="form-range" min="1" max="4000" step="1" value="100"
+                                            id="qgold" onchange="dispQgold()">
                                         <div class="row">
                                             <span class="col">1g</span>
                                             <span class="text-end col">4000g</span>
@@ -51,14 +51,14 @@
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
-                                                    ₹<strong id="disp-goldp" class="fs-4">5783</strong>
+                                                    ₹<strong id="disp-goldp" class="fs-4">2634</strong>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5000" max="6500" step="1"
-                                            value="5783" id="goldp" onchange="dispPgold()">
+                                        <input type="range" class="form-range" min="2000" max="6500" step="1"
+                                            value="2634" id="goldp" onchange="dispPgold()">
                                         <div class="row">
-                                            <span class="col">₹5000</span>
+                                            <span class="col">₹2000</span>
                                             <span class="text-end col">₹6500</span>
                                         </div>
                                     </div>
@@ -187,17 +187,21 @@
                     <!-- Modal -->
                     <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content border-0">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="resultModalLabel">Modal title</h1>
+                                    <h1 class="modal-title fs-5" id="resultModalLabel">SGB Investment</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <ul>
                                         <li>
-                                            <span>interest earned : ₹</span>
+                                            <span>invested value : ₹</span>
+                                            <span id="inv"></span>
+                                        </li>
+                                        <li>
+                                            <span>Interest earned : ₹</span>
                                             <span id="inte"></span>
                                         </li>
                                         <li>
@@ -206,11 +210,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -245,16 +244,30 @@
             document.getElementById("disp-goldp").innerHTML = pgold;
         }
         function sgbCalc() {
-            // let tinv = 0;
-            let goldq = document.getElementById("qgold").value;
-            let pgold = document.getElementById("goldp").value;
-            let sgbroi = document.getElementById("sgb-roi").value;
-            let sgbtime = document.getElementById("sgb-period").value;
-            let toti = ((fdtoti * fdroi * fdidur) / 100);
-            let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            document.getElementById("inte").innerHTML = toti;
-            document.getElementById("mval").innerHTML = mamnt;
-            // console.log(toti, mamnt);
+            let vQsgb = parseInt(document.getElementById("qgold").value);
+            let vPsgb = parseInt(document.getElementById("goldp").value);
+
+
+            // compound interest calculation start
+            let principal = (vPsgb * vQsgb);
+            let rate = 5;
+            let time = 2;
+            let year = 5;
+            for (let i = 0; i < 5; i++) {
+                let A = principal * (Math.pow((1 + rate / 100), time));
+                principal = A;
+                // console.log("Compound interest is " + parseFloat(principal).toFixed(0));
+            }
+            let A = parseFloat(principal).toFixed(0);
+            let B = (vPsgb * vQsgb);
+
+            // compound interest calculation end 
+
+            // let date = new Date().getFullYear();
+            // document.getElementById("invfrom").innerHTML = date;
+            document.getElementById("inv").innerHTML = B;
+            document.getElementById("inte").innerHTML = (A - B);
+            document.getElementById("mval").innerHTML = A;
         }
     </script>
 </body>
