@@ -5,43 +5,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KVP Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <style>
         header {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
         }
-
+        
         footer {
             background-color: #001169;
         }
-
+        
         .wave1 {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
             background-position: bottom center;
             background-repeat: no-repeat;
         }
-
+        
         .right-dark-strip-bg {
             background: rgb(255, 255, 255);
             background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgba(0, 17, 105, 1) 80%, rgba(0, 17, 105, 1) 100%);
         }
-
+        
         a {
             text-decoration: none;
         }
-
+        
         h2 {
             color: rgba(0, 17, 105, 1);
         }
-
+        
         ul li {
             list-style: none;
         }
-
+        
         .modal-content {
             background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
         }
@@ -55,9 +54,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="p-5">
-                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
-                                background="transparent" speed="1" class="img-fluid" loop
-                                autoplay></lottie-player>
+                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
@@ -68,8 +65,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Amount of Investment : <strong
                                                 id="inv-disp">10000</strong></label>
-                                        <input type="range" class="form-range" min="1000" max="50000" step="1000"
-                                            value="10000" id="totinv" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="1000" max="50000" step="1000" value="10000" id="totinv" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">1000</span>
                                             <span class="text-end col">50000</span>
@@ -84,9 +80,7 @@
                                         <input type="hidden" class="form-control" id="dage" value="10.25">
                                     </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="kvpCalc();"
-                                            class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
-                                            data-bs-target="#resultModal">Calculate</button>
+                                        <button type="button" onclick="kvpCalc();" class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal" data-bs-target="#resultModal">Calculate</button>
                                     </div>
                                 </form>
                             </div>
@@ -103,14 +97,9 @@
                     <div class="card border-0 mb-3">
                         <div class="card-body">
                             <h2 class="h4">Fixed Deposits Offering High ROI</h2>
-                            <p class="lead fs-6">If you choose a good Company FD scheme, you will generally earn more on
-                                your investment than bank FDs as these schemes offer the highest interest rate on FD. If
-                                you choose a good Company FD scheme, you will generally earn more on your investment
-                                than bank FDs as these schemes offer the highest interest rate on FD. If you choose a
-                                good Company FD scheme, you will generally earn more on your investment than bank FDs as
-                                these schemes offer the highest interest rate on FD. If you choose a good Company FD
-                                scheme, you will generally earn more on your investment than bank FDs as these schemes
-                                offer the highest interest rate on FD.</p>
+                            <p class="lead fs-6">If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest interest rate on FD. If you choose a good Company FD scheme, you will generally earn more
+                                on your investment than bank FDs as these schemes offer the highest interest rate on FD. If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest
+                                interest rate on FD. If you choose a good Company FD scheme, you will generally earn more on your investment than bank FDs as these schemes offer the highest interest rate on FD.</p>
                         </div>
                     </div>
                 </div>
@@ -121,64 +110,41 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            Frequently asked question #1
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            Can I withdraw KVP before maturity?
+
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by
-                                            default, until the collapse plugin adds the appropriate classes that we use
-                                            to style each element. These classes control the overall appearance, as well
-                                            as the showing and hiding via CSS transitions. You can modify any of this
-                                            with custom CSS or overriding our default variables. It's also worth noting
-                                            that just about any HTML can go within the <code>.accordion-body</code>,
-                                            though the transition does limit overflow.
+                                            A Kisan Vikas Patra scheme can be closed before maturity. The principal along with the interest can be withdrawn. The period for premature withdrawal of KVP is after 2 years and 6 months from the date of issuance, which is also the lock-in period.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Frequently asked question #2
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            What are the rules of KVP in post office?
+
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by
-                                            default, until the collapse plugin adds the appropriate classes that we use
-                                            to style each element. These classes control the overall appearance, as well
-                                            as the showing and hiding via CSS transitions. You can modify any of this
-                                            with custom CSS or overriding our default variables. It's also worth noting
-                                            that just about any HTML can go within the <code>.accordion-body</code>,
-                                            though the transition does limit overflow.
+                                            The applicant must be above the age of 18 years. The applicant must be a citizen of India. KVP cannot be purchase by a minor. However, an individual above the age of 18 years can purchase KVP certificates on behalf of a minor.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Frequently asked question #3
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What happens to KVP after death?
+
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>This is the third item's accordion body.</strong> It is hidden by
-                                            default, until the collapse plugin adds the appropriate classes that we use
-                                            to style each element. These classes control the overall appearance, as well
-                                            as the showing and hiding via CSS transitions. You can modify any of this
-                                            with custom CSS or overriding our default variables. It's also worth noting
-                                            that just about any HTML can go within the <code>.accordion-body</code>,
-                                            though the transition does limit overflow.
+                                            Nomination - The purchaser of the certificate, single or joint holder can nominate any person who in the event of the death of the certificate holder shall be entitled to hold the certificate. The payment of the amount will be made to the nominee at the
+                                            maturity of the scheme.
                                         </div>
                                     </div>
                                 </div>
@@ -194,23 +160,18 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Modal -->
-                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content border-0">
                                 <div class="modal-header border-0">
                                     <h1 class="modal-title fs-5" id="resultModalLabel">Investment Details</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="w-25">
                                             <!-- <img src="res/icon/ssy.webp" class="img-fluid d-block mx-auto" alt="..."> -->
-                                            <lottie-player
-                                                src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
-                                                background="transparent" speed="1" style="width: 120px; height: 120px;"
-                                                loop autoplay></lottie-player>
+                                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
                                         </div>
                                         <div class="w-75">
                                             <ul>
@@ -324,9 +285,7 @@
         </div>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
@@ -334,10 +293,12 @@
             let invdisp = document.getElementById("totinv").value;
             document.getElementById("inv-disp").innerHTML = invdisp;
         }
+
         function dispAge() {
             let aged = document.getElementById("dage").value;
             document.getElementById("age-disp").innerHTML = aged;
         }
+
         function kvpCalc() {
 
             let p = parseInt(document.getElementById("totinv").value);
