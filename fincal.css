@@ -35,12 +35,12 @@ ul li {
 }
 
 a small,
-a i {
+a svg {
     display: block;
     margin: 0 auto;
     text-align: center;
 }
 
 a small {
-    font-size: .5rem;
+    font-size: .6rem;
 }
