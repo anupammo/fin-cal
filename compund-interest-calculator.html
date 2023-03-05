@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="lead text-center fw-bold fs-3 py-4">Compund Interest Calculation</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12"></div>
+                <div class="col-lg-4 col-12">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Invested Amount</label>
+                            <input type="text" class="form-control shadow-none" id="p" value="1500">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rate of Interest</label>
+                            <input type="text" class="form-control shadow-none" id="i" value="6">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Investment Duration</label>
+                            <input type="text" class="form-control shadow-none" id="t" value="5">
+                            <!-- <input type="range" class="form-range" id="t" min="1" max="10" step="1" value="5"> -->
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Compund Frequency</label>
+                            <select class="form-select" id="f">
+                                <option value="1">Yearly</option>
+                                <option value="2">Half-yearly</option>
+                                <option selected value="4">Quaterly</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary shadow-none" onclick="vDisp();">Calculate</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-12"></div>
+            </div>
+        </div>
+    </section>
+</head>
+
+<body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function calculateMaturityValue(monthlyDeposit, annualInterestRate, compoundingFrequency, tenureInYears) {
+            const n = compoundingFrequency;
+            const r = annualInterestRate / 100;
+            const t = tenureInYears;
+
+            const numerator = monthlyDeposit * (Math.pow((1 + r / n), (n * t)) - 1);
+            const denominator = 1 - Math.pow((1 + r / n), -(1 / 3));
+
+            return numerator / denominator;
+        }
+        function vDisp() {
+            let varp = parseInt(document.getElementById("p").value);
+            let vari = parseInt(document.getElementById("i").value);
+            let vart = parseInt(document.getElementById("t").value);
+            let varf = parseInt(document.getElementById("f").value);
+
+            const maturityValue = calculateMaturityValue(varp, vari, varf, vart);
+            console.log("Total Investment : " + parseInt(varp * 12 * vart));
+            console.log("Interest Amount : " + (parseInt(maturityValue) - parseInt(varp * 12 * vart)));
+            console.log("Maturity Amount : " + parseInt(maturityValue));
+        }
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
