@@ -50,10 +50,10 @@
                                                 <label class="form-label">Rate of interest</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="age-disp">2</label>
+                                                <label class="form-label fw-bold float-end" id="age-disp">6.5</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="2"
+                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="6.5"
                                             id="fd_roi" onchange="dispROI()">
                                         <div class="row">
                                             <span class="col">1</span>
@@ -159,7 +159,7 @@
                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             Lower Returns Compared to Other Investment Options.
-                                          <br> Finally, recurring deposits offer lower returns than other investment
+                                            <br> Finally, recurring deposits offer lower returns than other investment
                                             options, such as mutual funds or stocks. While RDs offer a fixed interest
                                             rate, the returns on other investment options are not fixed and may be
                                             higher than the returns on an RD
@@ -199,11 +199,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -326,17 +321,24 @@
         }
 
         function fdCalc() {
-            // let tinv = 0;
             let fdtoti = document.getElementById("fd_toti").value;
             let fdroi = document.getElementById("fd_roi").value;
             let fdidur = document.getElementById("fd_idur").value;
-            let toti = ((1 + fdroi / 100));
-            let toti1 = (Math.pow(toti, fdidur));
-            let toti2 = (fdtoti * toti1);
-            let mamnt = (parseInt(toti2) - parseInt(fdtoti));
-            document.getElementById("mval").innerHTML = toti2;
-            document.getElementById("inte").innerHTML = mamnt;
-            // console.log(toti, mamnt);
+            // compound interest calculation start
+            let principal = fdtoti;
+            let rate = fdroi;
+            //Compound frequence quaterly
+            let time = 4;
+            let year = fdidur;
+            for (let i = 0; i < fdidur; i++) {
+                let A = principal * (Math.pow((1 + rate / 100), time));
+                principal = A;
+                console.log("Compound interest is " + parseFloat(principal).toFixed(0));
+            }
+            let A = parseFloat(principal).toFixed(0);
+            // compound interest calculation end 
+            document.getElementById("mval").innerHTML = A;
+            document.getElementById("inte").innerHTML = (A - fdtoti);
         }
     </script>
 </body>
