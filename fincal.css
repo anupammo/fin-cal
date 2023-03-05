@@ -33,3 +33,14 @@ ul li {
 .modal-content {
     background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
 }
+
+a small,
+a i {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a small {
+    font-size: .5rem;
+}
