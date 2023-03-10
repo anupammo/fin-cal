@@ -171,6 +171,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
+                        <div class="card shadow border-0 mt-5">
+                            <div class="card-body">
+                                <div id="myChart" style="width:100%; max-width:600px; height:560px;"></div>
+                            </div>
+                        </div>
                         <!-- <div class="p-5">
                             <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
                                 background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
@@ -180,136 +185,71 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="card border-0 mb-3">
-                        <div class="card-body">
-                            <h2 class="h4">Fixed Deposit Investment Calculator</h2>
-                            <p class="lead fs-6">A fixed deposit (FD) is a type of investment product offered by banks
-                                and other financial institutions. It allows individuals to invest a lump sum of money
-                                for a fixed period of time, earning a predetermined interest rate on
-                                their investment. A fixed deposit investment calculator is a powerful tool that can help
-                                individuals plan their investments and estimate the amount of money they can earn over
-                                time.</p>
-                            <h2 class="h4 my-2">How Does a Fixed Deposit Investment Calculator Work?</h2>
-                            <p class="lead fs-6">A fixed deposit investment calculator works by taking into account
-                                several inputs, including the investment amount, the interest rate offered by the
-                                financial institution, and the tenure of the investment. Based on these inputs,
-                                the calculator estimates the maturity amount, which is the total amount of money an
-                                individual can earn on their investment. To calculate the maturity amount, the fixed
-                                deposit investment calculator uses a formula that
-                                takes into account the principal amount, the interest rate, and the compounding
-                                frequency. Compounding is the process by which interest is earned on both the principal
-                                amount and the interest earned in previous periods.
-                            </p>
-                            <h2 class="h4 my-2">The maturity amount of a fixed deposit investment is calculated using
-                                the following formula:
-                            </h2>
-                            <p class="lead fs-6">A = P x (1 + r/n)^(n*t) <br> Where: <br> A = maturity amount <br> P =
-                                principal amount (investment amount) <br> r = interest rate (in decimal) <br> n =
-                                compounding frequency (annually, semi-annually, quarterly, or monthly)
-                                <br> t = tenure of the investment (in years)
-                            </p>
-                            <h2 class="h4 my-2">Why Use a Fixed Deposit Investment Calculator?</h2>
-                            <p class="lead fs-6">There are many benefits to using a fixed deposit investment calculator,
-                                including: Planning for Future Expenses: By using a fixed deposit investment calculator,
-                                individuals can estimate the amount of money they can save over
-                                time and plan for future expenses, such as a down payment on a house or a child's
-                                education. Comparing Different Investment Options: By using a fixed deposit investment
-                                calculator, individuals can compare different investment
-                                options and choose the one that best fits their financial goals. Determining the Impact
-                                of Interest Rates: Interest rates can have a significant impact on the amount of money
-                                earned on an investment. A fixed deposit investment
-                                calculator can help individuals determine the impact of different interest rates on
-                                their investments. Creating a Savings Plan: A fixed deposit investment calculator can
-                                help individuals create a savings plan and determine
-                                the amount of money they need to save each month to achieve their financial goals.
-                                Ensuring a Safe Investment: Fixed deposits are considered a safe investment option as
-                                they are backed by the government and provide guaranteed
-                                returns. A fixed deposit investment calculator can help individuals ensure that their
-                                investment is safe and secure.
-
-
-                            </p>
-                            <h2 class="h4 my-2">Conclusion:
-                            </h2>
-                            <p class="lead fs-6">A fixed deposit investment calculator is a valuable tool for anyone
-                                looking to plan for their financial future. By using a fixed deposit investment
-                                calculator, individuals can estimate the amount of money they can save over
-                                time and make informed decisions about their investments. Whether you're planning for
-                                future expenses, comparing different investment options, determining the impact of
-                                interest rates, creating a savings plan, or ensuring
-                                a safe investment, a fixed deposit investment calculator can help you achieve your
-                                financial goals. So if you're ready to take control of your finances and plan for your
-                                future, start using a fixed deposit investment calculator
-                                today!
-
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <h2 class="h4 mb-3">Fixed Deposit Investment Calculator</h2>
+                    <p class="lead fs-6">A fixed deposit (FD) is a type of investment product offered by banks
+                        and other financial institutions. It allows individuals to invest a lump sum of money
+                        for a fixed period of time, earning a predetermined interest rate on
+                        their investment. A fixed deposit investment calculator is a powerful tool that can help
+                        individuals plan their investments and estimate the amount of money they can earn over
+                        time.</p>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card border-0 mb-3">
-                        <div class="card-body">
-                            <h2 class="h4">FAQ - Frequently asked questions</h2>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            What are the rules for FD?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            If the interest on your FD is less than the interest being received on the
-                                            savings account, then you will keep getting the interest with FD.
-                                            <br> If the interest earned on FD is more than the interest earned on the
-                                            savings account, then you will get the interest on the savings account after
-                                            maturity.
-                                        </div>
-                                    </div>
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h2 class="h4 mb-3">FAQ - Frequently asked questions</h2>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What are the rules for FD?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    If the interest on your FD is less than the interest being received on the
+                                    savings account, then you will keep getting the interest with FD.
+                                    <br> If the interest earned on FD is more than the interest earned on the
+                                    savings account, then you will get the interest on the savings account after
+                                    maturity.
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            What happens if we break FD before time?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            For example, the interest rate for a 4-year FD maybe 7.60%, whereas a 1-year
-                                            FD would offer you 7.15% If you wish to prematurely withdraw your FD, you
-                                            will be charged interest as per the rate on the day of opening your account
-                                            for the actual period your
-                                            account was open.
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What happens if we break FD before time?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    For example, the interest rate for a 4-year FD maybe 7.60%, whereas a 1-year
+                                    FD would offer you 7.15% If you wish to prematurely withdraw your FD, you
+                                    will be charged interest as per the rate on the day of opening your account
+                                    for the actual period your
+                                    account was open.
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            What is the disadvantage of FD?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse"
-                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            The cons of investing in an FD are discussed below. The returns in an FD are
-                                            guaranteed but the FD rates are low as compared to other market-linked
-                                            investments. If you withdraw the FD before its maturity date, you will have
-                                            to pay a penalty charge.
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What is the disadvantage of FD?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    The cons of investing in an FD are discussed below. The returns in an FD are
+                                    guaranteed but the FD rates are low as compared to other market-linked
+                                    investments. If you withdraw the FD before its maturity date, you will have
+                                    to pay a penalty charge.
                                 </div>
                             </div>
                         </div>
@@ -318,7 +258,95 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-6 col-12">
+                    <h2 class="h4 mb-3">How Does a Fixed Deposit Investment Calculator Work?</h2>
+                    <p class="lead fs-6">A fixed deposit investment calculator works by taking into account
+                        several inputs, including the investment amount, the interest rate offered by the
+                        financial institution, and the tenure of the investment. Based on these inputs,
+                        the calculator estimates the maturity amount, which is the total amount of money an
+                        individual can earn on their investment. To calculate the maturity amount, the fixed
+                        deposit investment calculator uses a formula that
+                        takes into account the principal amount, the interest rate, and the compounding
+                        frequency. Compounding is the process by which interest is earned on both the principal
+                        amount and the interest earned in previous periods.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h2 class="h4 my-3">The maturity amount of a fixed deposit investment is calculated using
+                        the following formula:
+                    </h2>
+                    <p class="lead fs-6">A = P x (1 + r/n)^(n*t) <br> Where: <br> A = maturity amount <br> P =
+                        principal amount (investment amount) <br> r = interest rate (in decimal) <br> n =
+                        compounding frequency (annually, semi-annually, quarterly, or monthly)
+                        <br> t = tenure of the investment (in years)
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="px-4">
+                        <img class="img-fluid shadow rounded"
+                            src="https://images.pexels.com/photos/6927345/pexels-photo-6927345.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-6 col-12">
+                    <h2 class="h4 mb-3">Why Use a Fixed Deposit Investment Calculator?</h2>
+                    <p class="lead fs-6">There are many benefits to using a fixed deposit investment calculator,
+                        including: Planning for Future Expenses: By using a fixed deposit investment calculator,
+                        individuals can estimate the amount of money they can save over
+                        time and plan for future expenses, such as a down payment on a house or a child's
+                        education. Comparing Different Investment Options: By using a fixed deposit investment
+                        calculator, individuals can compare different investment
+                        options and choose the one that best fits their financial goals. Determining the Impact
+                        of Interest Rates: Interest rates can have a significant impact on the amount of money
+                        earned on an investment. A fixed deposit investment
+                        calculator can help individuals determine the impact of different interest rates on
+                        their investments. Creating a Savings Plan: A fixed deposit investment calculator can
+                        help individuals create a savings plan and determine
+                        the amount of money they need to save each month to achieve their financial goals.
+                        Ensuring a Safe Investment: Fixed deposits are considered a safe investment option as
+                        they are backed by the government and provide guaranteed
+                        returns. A fixed deposit investment calculator can help individuals ensure that their
+                        investment is safe and secure.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12"></div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3">Conclusion: </h2>
+                    <p class="lead fs-6">A fixed deposit investment calculator is a valuable tool for anyone
+                        looking to plan for their financial future. By using a fixed deposit investment
+                        calculator, individuals can estimate the amount of money they can save over
+                        time and make informed decisions about their investments. Whether you're planning for
+                        future expenses, comparing different investment options, determining the impact of
+                        interest rates, creating a savings plan, or ensuring
+                        a safe investment, a fixed deposit investment calculator can help you achieve your
+                        financial goals. So if you're ready to take control of your finances and plan for your
+                        future, start using a fixed deposit investment calculator
+                        today!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -334,6 +362,10 @@
                                 </div>
                                 <div class="modal-body">
                                     <ul>
+                                        <li>
+                                            <span>Invested amount : ₹</span>
+                                            <span id="invst"></span>
+                                        </li>
                                         <li>
                                             <span>interest earned : ₹</span>
                                             <span id="inte"></span>
@@ -432,7 +464,8 @@
                 <div class="col-12">
                     <ul class="nav justify-content-center my-3">
                         <li class="nav-item">
-                            <a class="nav-link fs-3 p-2 text-white" target="_blank" href="https://www.facebook.com/Nivesguru-118950734466440/">
+                            <a class="nav-link fs-3 p-2 text-white" target="_blank"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/">
                                 <!-- <i class="bi bi-facebook"></i> -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                     class="bi bi-facebook" viewBox="0 0 16 16">
@@ -443,7 +476,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-3 px-2 text-white" href="#">
+                            <a class="nav-link fs-3 px-2 text-white" target="_blank"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=">
                                 <!-- <i class="bi bi-instagram"></i> -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                                     class="bi bi-instagram" viewBox="0 0 16 16">
@@ -494,8 +528,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Google Chart JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Lottie player JS -->
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script>
         function dispInv() {
             let invdisp = document.getElementById("fd_toti").value;
@@ -519,9 +555,32 @@
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
+            document.getElementById("invst").innerHTML = (mamnt - toti);
             document.getElementById("inte").innerHTML = toti;
             document.getElementById("mval").innerHTML = mamnt;
             // console.log(toti, mamnt);
+
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                const varint = ((toti * 100) / (mamnt - toti));
+                const varinv = (100 - varint);
+                console.log(varint, varinv);
+                var data = google.visualization.arrayToDataTable([
+                    ['Contry', 'Mhl'],
+                    ['Investment', varinv],
+                    ['Return', varint]
+                ]);
+
+                var options = {
+                    title: 'World Wide Wine Production',
+                    is3D: true
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                chart.draw(data, options);
+            }
         }
     </script>
 </body>
