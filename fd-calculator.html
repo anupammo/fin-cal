@@ -50,7 +50,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        header {
+        header, .mix-bg {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
         }
@@ -70,7 +70,7 @@
             text-decoration: none;
         }
 
-        h2 {
+        h2, ul li a {
             color: rgba(0, 17, 105, 1);
         }
 
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow border-0 mt-5">
+                        <div class="card shadow mix-bg border-0 mt-5">
                             <div class="card-body">
                                 <div id="myChart" style="width:100%; max-width:600px; height:560px;"></div>
                             </div>
@@ -261,8 +261,42 @@
     <section class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-6 col-12">
-                    <h2 class="h4 mb-3">How Does a Fixed Deposit Investment Calculator Work?</h2>
+                <div class="col-lg-3 col-md-4 col-12">
+                    <ul class="list-group list-group-flush lead my-3">
+                        <li class="list-group-item">
+                            <a href="#">An item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A second item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A third item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A fourth item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A sixth item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">And seventh item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A eighth item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A nineth item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">A tenth item</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">And eleventh</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <h2 class="h4 my-3">How Does a Fixed Deposit Investment Calculator Work?</h2>
                     <p class="lead fs-6">A fixed deposit investment calculator works by taking into account
                         several inputs, including the investment amount, the interest rate offered by the
                         financial institution, and the tenure of the investment. Based on these inputs,
@@ -273,38 +307,7 @@
                         frequency. Compounding is the process by which interest is earned on both the principal
                         amount and the interest earned in previous periods.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h2 class="h4 my-3">The maturity amount of a fixed deposit investment is calculated using
-                        the following formula:
-                    </h2>
-                    <p class="lead fs-6">A = P x (1 + r/n)^(n*t) <br> Where: <br> A = maturity amount <br> P =
-                        principal amount (investment amount) <br> r = interest rate (in decimal) <br> n =
-                        compounding frequency (annually, semi-annually, quarterly, or monthly)
-                        <br> t = tenure of the investment (in years)
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="px-4">
-                        <img class="img-fluid shadow rounded"
-                            src="https://images.pexels.com/photos/6927345/pexels-photo-6927345.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-6 col-12">
-                    <h2 class="h4 mb-3">Why Use a Fixed Deposit Investment Calculator?</h2>
+                    <h2 class="h4 my-3">Why Use a Fixed Deposit Investment Calculator?</h2>
                     <p class="lead fs-6">There are many benefits to using a fixed deposit investment calculator,
                         including: Planning for Future Expenses: By using a fixed deposit investment calculator,
                         individuals can estimate the amount of money they can save over
@@ -323,7 +326,30 @@
                         returns. A fixed deposit investment calculator can help individuals ensure that their
                         investment is safe and secure.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12"></div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-6 col-12">
+                    <h2 class="h4 my-3">The maturity amount of a fixed deposit investment is calculated using
+                        the following formula:
+                    </h2>
+                    <p class="lead fs-6">A = P x (1 + r/n)^(n*t) <br> Where: <br> A = maturity amount <br> P =
+                        principal amount (investment amount) <br> r = interest rate (in decimal) <br> n =
+                        compounding frequency (annually, semi-annually, quarterly, or monthly)
+                        <br> t = tenure of the investment (in years)
+                    </p>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 col-12"></div> -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="py-4">
+                        <img class="img-fluid shadow rounded float-end"
+                            src="https://images.pexels.com/photos/6927345/pexels-photo-6927345.jpeg?auto=compress&cs=tinysrgb&w=160&lazy=load"
+                            alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
