@@ -164,18 +164,25 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <button type="button" onclick="fdCalc();"
+                                        <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
+                                            onclick="fdCalc();">Calculate</button>
+                                        <!-- <button type="button" onclick="fdCalc();"
                                             class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
-                                            data-bs-target="#resultModal">Calculate</button>
+                                            data-bs-target="#resultModal">Calculate</button> -->
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow mix-bg border-0 mt-5">
+                        <div class="card shadow border-0 mt-5">
                             <div class="card-body">
-                                <div id="myChart" style="width:100%; max-width:600px; height:560px;"></div>
+                                <ul class="mt-5">
+                                    <li class="lead text-center" id="invst"></li>
+                                    <li class="lead text-center text-danger" id="inte"></li>
+                                    <li class="lead text-center text-primary" id="mval"></li>
+                                </ul>
+                                <div id="myChart" style="width:100%; max-width:600px; height:410px;"></div>
                             </div>
                         </div>
                         <!-- <div class="p-5">
@@ -269,37 +276,48 @@
                             <a href="http://localhost/fin-cal/fd-calculator"><span class="fs-5">🪙</span> FD Calculator</a>
                         </li> -->
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/sb-calculator"><span class="fs-5">🪙</span> SB Calculator</a>
+                            <a href="http://localhost/fin-cal/sb-calculator"><span class="fs-5">🪙</span> SB
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/rd-calculator"><span class="fs-5">🪙</span> RD Calculator</a>
+                            <a href="http://localhost/fin-cal/rd-calculator"><span class="fs-5">🪙</span> RD
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/ssy-calculator"><span class="fs-5">🪙</span> SSY Calculator</a>
+                            <a href="http://localhost/fin-cal/ssy-calculator"><span class="fs-5">🪙</span> SSY
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/ppf-calculator"><span class="fs-5">🪙</span> PPF Calculator</a>
+                            <a href="http://localhost/fin-cal/ppf-calculator"><span class="fs-5">🪙</span> PPF
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/nps-calculator"><span class="fs-5">🪙</span> NPS Calculator</a>
+                            <a href="http://localhost/fin-cal/nps-calculator"><span class="fs-5">🪙</span> NPS
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/apy-calculator"><span class="fs-5">🪙</span> APY Calculator</a>
+                            <a href="http://localhost/fin-cal/apy-calculator"><span class="fs-5">🪙</span> APY
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/pmjjby-calculator"><span class="fs-5">🪙</span> PMJJBY Calculator</a>
+                            <a href="http://localhost/fin-cal/pmjjby-calculator"><span class="fs-5">🪙</span> PMJJBY
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/pmsby-calculator"><span class="fs-5">🪙</span> PMSBY Calculator</a>
+                            <a href="http://localhost/fin-cal/pmsby-calculator"><span class="fs-5">🪙</span> PMSBY
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/kvp-calculator"><span class="fs-5">🪙</span> KVP Calculator</a>
+                            <a href="http://localhost/fin-cal/kvp-calculator"><span class="fs-5">🪙</span> KVP
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/nsc-calculator"><span class="fs-5">🪙</span> NSC Calculator</a>
+                            <a href="http://localhost/fin-cal/nsc-calculator"><span class="fs-5">🪙</span> NSC
+                                Calculator</a>
                         </li>
                         <li class="list-group-item border-0">
-                            <a href="http://localhost/fin-cal/sgb-calculator"><span class="fs-5">🪙</span> SGB Calculator</a>
+                            <a href="http://localhost/fin-cal/sgb-calculator"><span class="fs-5">🪙</span> SGB
+                                Calculator</a>
                         </li>
                     </ul>
                 </div>
@@ -395,7 +413,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <ul>
+                                    <!-- <ul>
                                         <li>
                                             <span>Invested amount : ₹</span>
                                             <span id="invst"></span>
@@ -408,7 +426,7 @@
                                             <span>Maturity Value : ₹</span>
                                             <span id="mval"></span>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <!-- <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
@@ -559,9 +577,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <!-- Google Chart JS -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- Lottie player JS -->
@@ -589,9 +607,9 @@
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            document.getElementById("invst").innerHTML = (mamnt - toti);
-            document.getElementById("inte").innerHTML = toti;
-            document.getElementById("mval").innerHTML = mamnt;
+            document.getElementById("invst").innerHTML = "Invested amount : ₹" + (mamnt - toti);
+            document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
+            document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
             // console.log(toti, mamnt);
 
             google.charts.load('current', { 'packages': ['corechart'] });
