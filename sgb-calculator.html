@@ -46,7 +46,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        header {
+        header,
+        .mix-bg {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
         }
@@ -66,7 +67,8 @@
             text-decoration: none;
         }
         
-        h2 {
+        h2,
+        ul li a {
             color: rgba(0, 17, 105, 1);
         }
         
@@ -171,97 +173,54 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="card border-0 mb-3">
-                        <div class="card-body">
-                            <h2 class="h4">Sovereign Gold Bond</h2>
-                            <p class="lead fs-6">The Sovereign Gold Bond (SGB) is a government-backed scheme that offers investors the opportunity to invest in gold without having to worry about the storage and security issues associated with physical gold. An investment
-                                calculator for SGB can help investors estimate the returns on their investment and plan their finances accordingly.
-
-                            </p>
-                            <h2 class="h4 my-2">How Does a Sovereign Gold Bond Investment Calculator Work?
-                            </h2>
-                            <p class="lead fs-6">An SGB investment calculator takes into account the prevailing market price of gold and the amount invested by the investor to estimate the returns on their investment. The calculator uses a formula that takes into account
-                                the prevailing gold price, the rate of interest, and the duration of the investment.
-
-                            </p>
-                            <h2 class="h4 my-2">The maturity amount of a Sovereign Gold Bond investment is calculated using the following formula:
-                            </h2>
-                            <p class="lead fs-6">Maturity Value = (Investment Amount x Prevailing Price of Gold x (1 + Rate of Interest/100))/100
-                                <br> Where:
-                                <br> Maturity value = the total value of the investment at maturity
-                                <br> Investment amount = the amount invested initially
-                                <br> Prevailing price of gold = the price of gold at the time of investment
-                                <br> Rate of interest = the interest rate offered by the scheme
-                                <br> Duration of investment = the number of years the investment is held
-
-                            </p>
-                            <h2 class="h4 my-2">Why Use a Sovereign Gold Bond nvestment Calculator?</h2>
-                            <p class="lead fs-6">Estimating the Returns: By using an SGB investment calculator, investors can estimate the returns on their investment and plan their finances accordingly.
-                                <br> Understanding the Impact of Gold Prices: The prevailing market price of gold can have a significant impact on the returns offered by SGB. By using an SGB investment calculator, investors can determine the impact of
-                                different gold prices on their investment returns.
-                                <br> Planning for the Future: By using an SGB investment calculator, investors can plan for their future and ensure that they have sufficient savings to meet their financial goals.
-                                <br> Comparing Different Investment Options: Investors can use an SGB investment calculator to compare the returns offered by different investment options and choose the one that best fits their financial goals.
-                                <br> Taking Advantage of Tax Benefits: SGB offers tax benefits under Section 80C of the Income Tax Act, which allows investors to claim deductions on their investments. By using an SGB investment calculator, investors can
-                                ensure that they take full advantage of these tax benefits
-
-                            </p>
-                            <h2 class="h4 my-2">Conclusion:
-                            </h2>
-                            <p class="lead fs-6">An SGB investment calculator is a useful tool for investors looking to invest in gold without the associated storage and security issues. By using an SGB investment calculator, investors can estimate the returns on their investment,
-                                compare different investment options, and plan their finances accordingly. Whether you're a gold enthusiast or someone looking for a safe and secure investment option, an SGB investment calculator can help you achieve your
-                                financial goals. So, if you're ready to start investing in gold and take advantage of the benefits offered by SGB, start using an SGB investment calculator today!
-
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <h2 class="h4 mb-3">Sovereign Gold Bond</h2>
+                    <p class="lead fs-6">The Sovereign Gold Bond (SGB) is a government-backed scheme that offers investors the opportunity to invest in gold without having to worry about the storage and security issues associated with physical gold. An investment calculator
+                        for SGB can help investors estimate the returns on their investment and plan their finances accordingly.
+                    </p>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card border-0 mb-3">
-                        <div class="card-body">
-                            <h2 class="h4">FAQ - Frequently asked questions</h2>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                            Is it mandatory to redeem SGB after 8 years?
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h2 class="h4">FAQ - Frequently asked questions</h2>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Is it mandatory to redeem SGB after 8 years?
 
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Though the tenor of the bond is 8 years, early encashment/redemption of the bond is allowed after fifth year from the date of issue on coupon payment dates. The bond will be tradable on Exchanges, if held in demat form.
-                                        </div>
-                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Though the tenor of the bond is 8 years, early encashment/redemption of the bond is allowed after fifth year from the date of issue on coupon payment dates. The bond will be tradable on Exchanges, if held in demat form.
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Can I exit SGB before 5 years?
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Can I exit SGB before 5 years?
 
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Although the Sovereign Gold Bond (SGB) has a tenor of 8 years, it can be redeemed prematurely on coupon payment dates after the 5th year from the date of issue. A charge of ₹150 + 18% GST will be imposed for rematerialisation or redemption.
-                                        </div>
-                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Although the Sovereign Gold Bond (SGB) has a tenor of 8 years, it can be redeemed prematurely on coupon payment dates after the 5th year from the date of issue. A charge of ₹150 + 18% GST will be imposed for rematerialisation or redemption.
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Can I buy SGB multiple times in a year?
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Can I buy SGB multiple times in a year?
 
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            An investor/trust can buy 4 Kg/20 Kg worth of gold every year as the ceiling has been fixed on a fiscal year (April-March) basis.
-                                        </div>
-                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    An investor/trust can buy 4 Kg/20 Kg worth of gold every year as the ceiling has been fixed on a fiscal year (April-March) basis.
                                 </div>
                             </div>
                         </div>
@@ -270,7 +229,116 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <ul class="list-group list-group-flush lead fw-bold fs-6 my-3">
+                        <!-- <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/fd-calculator"><span class="fs-5">🪙</span> FD Calculator</a>
+                        </li> -->
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/sb-calculator"><span class="fs-5">🪙</span> SB
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/rd-calculator"><span class="fs-5">🪙</span> RD
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/ssy-calculator"><span class="fs-5">🪙</span> SSY
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/ppf-calculator"><span class="fs-5">🪙</span> PPF
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/nps-calculator"><span class="fs-5">🪙</span> NPS
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/apy-calculator"><span class="fs-5">🪙</span> APY
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/pmjjby-calculator"><span class="fs-5">🪙</span> PMJJBY
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/pmsby-calculator"><span class="fs-5">🪙</span> PMSBY
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/kvp-calculator"><span class="fs-5">🪙</span> KVP
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/nsc-calculator"><span class="fs-5">🪙</span> NSC
+                                Calculator</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="http://localhost/fin-cal/sgb-calculator"><span class="fs-5">🪙</span> SGB
+                                Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <h2 class="h4 my-3">How Does a Sovereign Gold Bond Investment Calculator Work?</h2>
+                    <p class="lead fs-6">An SGB investment calculator takes into account the prevailing market price of gold and the amount invested by the investor to estimate the returns on their investment. The calculator uses a formula that takes into account the prevailing
+                        gold price, the rate of interest, and the duration of the investment.
+                    </p>
+                    <h2 class="h4 my-3">Why Use a Sovereign Gold Bond nvestment Calculator?</h2>
+                    <p class="lead fs-6">Estimating the Returns: By using an SGB investment calculator, investors can estimate the returns on their investment and plan their finances accordingly.
+                        <br> Understanding the Impact of Gold Prices: The prevailing market price of gold can have a significant impact on the returns offered by SGB. By using an SGB investment calculator, investors can determine the impact of different
+                        gold prices on their investment returns.
+                        <br> Planning for the Future: By using an SGB investment calculator, investors can plan for their future and ensure that they have sufficient savings to meet their financial goals.
+                        <br> Comparing Different Investment Options: Investors can use an SGB investment calculator to compare the returns offered by different investment options and choose the one that best fits their financial goals.
+                        <br> Taking Advantage of Tax Benefits: SGB offers tax benefits under Section 80C of the Income Tax Act, which allows investors to claim deductions on their investments. By using an SGB investment calculator, investors can ensure
+                        that they take full advantage of these tax benefits
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-6 col-12">
+                    <h2 class="h4 my-3">The maturity amount of a Sovereign Gold Bond investment is calculated using the following formula:
+                    </h2>
+                    <p class="lead fs-6">Maturity Value = (Investment Amount x Prevailing Price of Gold x (1 + Rate of Interest/100))/100
+                        <br> Where:
+                        <br> Maturity value = the total value of the investment at maturity
+                        <br> Investment amount = the amount invested initially
+                        <br> Prevailing price of gold = the price of gold at the time of investment
+                        <br> Rate of interest = the interest rate offered by the scheme
+                        <br> Duration of investment = the number of years the investment is held
+                    </p>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 col-12"></div> -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="py-4">
+                        <img class="img-fluid shadow rounded float-end" src="https://images.pexels.com/photos/6927345/pexels-photo-6927345.jpeg?auto=compress&cs=tinysrgb&w=160&lazy=load" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3">Conclusion: </h2>
+                    <p class="lead fs-6">An SGB investment calculator is a useful tool for investors looking to invest in gold without the associated storage and security issues. By using an SGB investment calculator, investors can estimate the returns on their investment,
+                        compare different investment options, and plan their finances accordingly. Whether you're a gold enthusiast or someone looking for a safe and secure investment option, an SGB investment calculator can help you achieve your financial
+                        goals. So, if you're ready to start investing in gold and take advantage of the benefits offered by SGB, start using an SGB investment calculator today!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
