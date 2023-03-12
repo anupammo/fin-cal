@@ -100,9 +100,10 @@
         }
 
         #myChart {
+            display: block;
+            margin: auto;
             width: 100%;
-            max-width: 600px;
-            height: 410px;
+            max-width: 340px
         }
     </style>
     <!-- <link rel="stylesheet" href="fincal.css">
@@ -120,7 +121,6 @@
                             <div class="card-body">
                                 <h1 class="px-5 my-5 lead fw-bold fs-3">Pradhan Mantri Jeevan Jyoti Bima Yojana
                                     Calculator: Insurance, Coverage</h1>
-
                                 <form class="px-5">
                                     <div class="row">
                                         <div class="col">
@@ -161,23 +161,22 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="my-2">
-                                                <label class="form-label">Sum Assured : <strong class="fs-4">2
-                                                    </strong>Lac</label>
+                                                <label class="form-label">Renew up to : <strong class="fs-4"
+                                                        class="fs-4">55 </strong>Year</label>
                                                 <input type="hidden" class="form-control" id="ssyroi" value="8">
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="my-2">
-                                                <label class="form-label float-end">Renew up to : <strong class="fs-4"
-                                                        class="fs-4">55 </strong>Year</label>
+                                                <label class="form-label float-end">Sum Assured : <strong class="fs-4">2
+                                                    </strong>Lac</label>
                                                 <input type="hidden" class="form-control" id="ssyroi" value="8">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="npsCalc();"
-                                            class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
-                                            data-bs-target="#resultModal">Calculate</button>
+                                        <button type="button" onclick="pmjjbyCalc();"
+                                            class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
                             </div>
@@ -186,12 +185,14 @@
                     <div class="col-lg-6 col-12">
                         <div class="card shadow h-100 border-0">
                             <div class="card-body">
-                                <ul class="mt-5">
-                                    <li class="lead text-center" id="invst"></li>
-                                    <li class="lead text-center text-danger" id="inte"></li>
-                                    <li class="lead text-center text-primary" id="mval"></li>
-                                </ul>
-                                <div id="myChart"></div>
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
                             </div>
                         </div>
                         <!-- <div class="p-5">
@@ -222,8 +223,9 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <button class="accordion-button shadow-none collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
                                     How many days after death we can claim PMJJBY?
 
                                 </button>
@@ -241,8 +243,9 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button shadow-none collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
                                     Who is not eligible for PMJJBY?
                                 </button>
                             </h2>
@@ -256,8 +259,9 @@
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="accordion-button shadow-none collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
                                     Can I get my money back from PMJJBY?
 
                                 </button>
@@ -594,11 +598,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <!-- Google Chart JS -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script>
         function dispRate() {
             let mnthRate = document.getElementById("mnths").value;
@@ -614,6 +616,39 @@
         function dispAge() {
             let aged = document.getElementById("dage").value;
             document.getElementById("age-disp").innerHTML = aged;
+        }
+
+        function pmjjbyCalc() {
+            let permonth = document.getElementById("prmumrate").value;
+            let coverage = 200000;
+
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Premium / Year</td><th class='text-end'>" + permonth + "</td></tr><tr><td>Sum Assured</td><th class='text-end'>" + coverage + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
+
+            // Pie Chart 
+            var xValues = ["Premium / Year", "Sum Assured"];
+            var yValues = [permonth, coverage];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: true },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
         }
     </script>
 </body>
