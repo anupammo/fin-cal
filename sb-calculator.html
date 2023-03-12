@@ -100,9 +100,10 @@
         }
 
         #myChart {
+            display: block;
+            margin: auto;
             width: 100%;
-            max-width: 600px;
-            height: 410px;
+            max-width: 340px
         }
     </style>
     <!-- <link rel="stylesheet" href="fincal.css">
@@ -113,10 +114,10 @@
 <body>
     <header>
         <div class="wave1">
-            <div class="container py-3">
+            <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow border-0 mt-5">
+                        <div class="card shadow h-100 border-0">
                             <div class="card-body">
                                 <h1 class="px-5 my-5 lead fw-bold fs-3">Savings Deposit Investment Calculator: Estimate
                                     Your Interest </h1>
@@ -178,14 +179,16 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow border-0 mt-5">
-                            <div class="card-body">
-                                <ul class="mt-5">
-                                    <li class="lead text-center" id="invst"></li>
-                                    <li class="lead text-center text-danger" id="inte"></li>
-                                    <li class="lead text-center text-primary" id="mval"></li>
-                                </ul>
-                                <div id="myChart"></div>
+                        <div class="card shadow h-100 border-0">
+                            <div class="card-body py-0">
+                                <div class="p-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
                             </div>
                         </div>
                         <!-- <div class="p-5">
@@ -574,8 +577,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <!-- Google Chart JS -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script>
@@ -601,39 +603,40 @@
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            document.getElementById("inte").innerHTML = toti;
-            document.getElementById("mval").innerHTML = mamnt;
-            document.getElementById("invst").innerHTML = "Invested amount : ₹" + (mamnt - toti);
-            document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
-            document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
+            // document.getElementById("inte").innerHTML = toti;
+            // document.getElementById("mval").innerHTML = mamnt;
+            let xtinv = (mamnt - toti);
+            // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
+            // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
             // console.log(toti, mamnt);
 
-            // Google Charts
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
 
-            google.charts.load('current', {
-                'packages': ['corechart']
+            // Pie Chart 
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [xtinv, toti];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: { display: true },
+                    title: {
+                        display: true
+                    }
+                }
             });
-            google.charts.setOnLoadCallback(drawChart);
-
-            function drawChart() {
-                const varint = ((toti * 100) / (mamnt - toti));
-                const varinv = (100 - varint);
-                // console.log(varint, varinv);
-                var data = google.visualization.arrayToDataTable([
-                    ['Contry', 'Mhl'],
-                    ['Investment', varinv],
-                    ['Return', varint]
-                ]);
-
-                var options = {
-                    legend: 'right',
-                    title: 'Savings Investment Breakup',
-                    is3D: true
-                };
-
-                var chart = new google.visualization.PieChart(document.getElementById('myChart'));
-                chart.draw(data, options);
-            }
+            // Pie Chart 
         }
     </script>
 </body>
