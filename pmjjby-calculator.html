@@ -125,7 +125,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label mt-2">Premium for Months</label>
+                                                <label for="mnths" class="form-label mt-2">Premium for Months</label>
                                                 <select class="form-select shadow-none mt-2" id="mnths"
                                                     onchange="dispRate();">
                                                     <option value="436">Jun - Aug</option>
@@ -137,8 +137,8 @@
                                         </div>
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label float-end">Premium / Year : ₹ <strong
-                                                        class="fs-4" id="prmumrate-disp">436</strong></label>
+                                                <label for="prmumrate" class="form-label float-end">Premium / Year : ₹
+                                                    <strong class="fs-4" id="prmumrate-disp">436</strong></label>
                                                 <input type="range" class="form-range" min="114" max="436" step="1"
                                                     value="436" id="prmumrate" disabled>
                                                 <div class="row">
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Starting Age: <strong
+                                        <label for="dage" class="form-label">Starting Age: <strong
                                                 id="age-disp">37</strong></label>
                                         <input type="range" class="form-range" min="18" max="50" step="1" value="37"
                                             id="dage" onchange="dispAge()">
@@ -161,16 +161,17 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="my-2">
-                                                <label class="form-label">Renew up to : <strong class="fs-4"
-                                                        class="fs-4">55 </strong>Year</label>
-                                                <input type="hidden" class="form-control" id="ssyroi" value="8">
+                                                <label for="ssyroi" class="form-label">Renew up to : <strong
+                                                        class="fs-4" class="fs-4">55 </strong>Year</label>
+                                                <!-- <input type="hidden" class="form-control" id="ssyroi" value="8"> -->
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="my-2">
-                                                <label class="form-label float-end">Sum Assured : <strong class="fs-4">2
+                                                <label for="pmjjby" class="form-label float-end">Sum Assured : <strong
+                                                        class="fs-4">2
                                                     </strong>Lac</label>
-                                                <input type="hidden" class="form-control" id="ssyroi" value="8">
+                                                <!-- <input type="hidden" class="form-control" id="pmjjby" value="8"> -->
                                             </div>
                                         </div>
                                     </div>

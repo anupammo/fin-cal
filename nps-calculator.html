@@ -119,10 +119,9 @@
                             <div class="card-body">
                                 <h1 class="px-5 my-5 lead fw-bold fs-3">National Pension Scheme Calculator: plan Your
                                     Retirement and Savings </h1>
-
                                 <form class="px-5">
                                     <div class="mb-3">
-                                        <label class="form-label">Amount of Investment / Year : <strong
+                                        <label for="totinv" class="form-label">Amount of Investment / Year : <strong
                                                 id="inv-disp">12000</strong></label>
                                         <input type="range" class="form-range" min="1000" max="144000" step="1000"
                                             value="12000" id="totinv" onchange="dispInv()">
@@ -132,13 +131,13 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label">Rate of interest : <strong>9%</strong></label>
+                                        <label for="ssyroi" class="form-label">Rate of interest : <strong>9%</strong></label>
                                         <input type="hidden" class="form-control" id="ssyroi" value="9">
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label">Starting Age: <strong
+                                                <label for="dage" class="form-label">Starting Age: <strong
                                                         id="age-disp">37</strong></label>
                                                 <input type="range" class="form-range" min="18" max="70" step="1"
                                                     value="37" id="dage" onchange="dispAge()">
@@ -150,7 +149,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label">Maturity Age: <strong
+                                                <label for="mage" class="form-label">Maturity Age: <strong
                                                         id="mage-disp">60</strong></label>
                                                 <input type="range" class="form-range" min="60" max="75" step="1"
                                                     value="60" id="mage" onchange="matAge()">
@@ -164,7 +163,7 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label">Annuity of Corpus <strong
+                                                <label for="anut" class="form-label">Annuity of Corpus <strong
                                                         id="anut-disp">40</strong>%</label>
                                                 <input type="range" class="form-range" min="40" max="100" step="1"
                                                     value="40" id="anut" onchange="dispAnut()">
@@ -176,7 +175,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="mb-3">
-                                                <label class="form-label">Interest on Annuity <strong
+                                                <label for="arate" class="form-label">Interest on Annuity <strong
                                                         id="arate-disp">6</strong>%</label>
                                                 <input type="range" class="form-range" min="4" max="10" step="1"
                                                     value="6" id="arate" onchange="dispArate()">
