@@ -70,6 +70,11 @@
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
         } */
         
+        .bg-3 {
+            background: linear-gradient(238.72deg, #FFB864 0%, #006C4C 100%), radial-gradient(100% 224.43% at 0% 0%, #6CFF72 0%, #002C6D 100%), linear-gradient(121.28deg, #FFEAB6 0%, #00563C 100%), radial-gradient(56.26% 101.79% at 50% 0%, #8F00FF 0%, #000000 100%), linear-gradient(65.05deg, #6F0072 0%, #DBFFE5 100%);
+            background-blend-mode: overlay, screen, color-burn, screen, normal;
+        }
+        
         .wave1 {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
             background-position: bottom center;
@@ -78,7 +83,7 @@
         
         .right-dark-strip-bg {
             background: rgb(255, 255, 255);
-            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgba(0, 17, 105, 1) 80%, rgba(0, 17, 105, 1) 100%);
+            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgb(8 85 102) 80%, rgb(19 67 100) 100%);
         }
         
         a {
@@ -151,11 +156,11 @@
 
 <body>
     <header>
-        <div class="wave1">
+        <div>
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <h1 class=" display-3">About Us
+                    <div class="col-lg-9 col-12">
+                        <h1 class="lead fw-bold fs-3 text-center mb-3">About Us
                         </h1>
                         <p class="lead fs-6">Welcome to NivesGuru, a website dedicated to providing expert financial advice and resources for individuals and businesses alike. Our team of experienced financial professionals is committed to helping you achieve your financial
                             goals through a personalized and holistic approach. At NivesGuru, we understand that each person's financial situation is unique. That's why we offer a range of services, including financial planning, investment management,
@@ -164,7 +169,7 @@
                             and strategies. At NivesGuru, we are dedicated to staying up-to-date on the latest financial trends and strategies. We regularly publish articles and resources on our website to help educate our clients and keep them informed
                             about the ever-changing financial landscape. Thank you for considering NivesGuru for your financial needs. We look forward to helping you achieve your financial goals.</p>
                     </div>
-                    <div class="col-lg-6 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="h-100">
                             <div class="py-4">
                                 <img class="img-fluid shadow rounded" src="Business support-rafiki.svg" alt="NivesGuru about us" width="350" height="350">
