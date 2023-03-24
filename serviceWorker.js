@@ -1,6 +1,7 @@
 const assets = [
   "./",
   "./index.html",
+  "./bootstrap.min.css",
   "./app.js",
   "./res/icon/bank-deposit.webp",
   "./res/icon/deposits.webp",
