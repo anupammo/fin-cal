@@ -2,7 +2,7 @@ if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
         .register("/serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
+        .then(res => console.log("NivesGuru PWA installable to any device."))
+        .catch(err => console.log("NivesGuru PWA not working", err))
     })
   }

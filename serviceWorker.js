@@ -2,6 +2,7 @@
 
 const assets = [
     "./",
+    "./404.html",
     "./index.html",
     "./offline.html",
     "./about-us.html",
