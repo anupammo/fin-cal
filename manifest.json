@@ -2,11 +2,11 @@
     "short_name": "NivesGuru",
     "name": "Investment Calculator - Plan Financial Future | NivesGuru",
     "categories": ["finance", "education", "news", "utilities", "productivity"],
-    "id": "/",
+    "id": "/https://nivesguru.in/",
     "dir": "ltr",
     "lang": "en",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "/https://nivesguru.in/",
+    "start_url": "/https://nivesguru.in/",
     "display": "standalone",
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
@@ -47,7 +47,7 @@
             "short_name": "NivesGuru",
             "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
             "url": "/",
-            "icons": [{ "src": "/maskable_icon_x96.png", "sizes": "96x96" }]
+            "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
         }
     ],
     "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
