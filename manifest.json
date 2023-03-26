@@ -1,9 +1,11 @@
 {
     "short_name": "NivesGuru",
     "name": "Investment Calculator - Plan Financial Future | NivesGuru",
+    "categories": ["finance", "education", "news", "utilities", "productivity"],
     "id": "/",
     "start_url": "/",
     "background_color": "#FFFFFF",
+    "display_override": ["window-control-overlay", "minimal-ui"],
     "display": "standalone",
     "scope": "/",
     "theme_color": "#FFFFFF",
