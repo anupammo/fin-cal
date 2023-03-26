@@ -16,7 +16,6 @@
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "orientation": "portrait-primary",
-  "display_override": [],
   "prefer_related_applications": true,
   "categories": [
     "finance",
@@ -48,12 +47,6 @@
       "sizes": "72x72",
       "type": "image/png",
       "density": "1.5"
-    },
-    {
-      "src": "./android-icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "density": "2.0"
     },
     {
       "src": "./android-icon-144x144.png",
@@ -99,8 +92,8 @@
       "url": "/",
       "icons": [
         {
-          "src": "/favicon-96x96.png",
-          "sizes": "96x96"
+          "src": "/maskable_icon_x512.png",
+          "sizes": "512x512"
         }
       ]
     },
@@ -111,7 +104,7 @@
       "url": "/",
       "icons": [
         {
-          "src": "/maskable_icon_x96.png",
+          "src": "/favicon-96x96.png",
           "sizes": "96x96"
         }
       ]
