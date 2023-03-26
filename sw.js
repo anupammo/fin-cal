@@ -11,7 +11,7 @@ const PRECACHE_ASSETS = [
     "./terms-and-conditions.html",
     "./bootstrap.min.css",
     "./bootstrap.min.css.map",
-    "./app.js",,
+    "./app.js",
     "./sw.js",
     "./res/icon/bank-deposit.webp",
     "./res/icon/deposits.webp",
