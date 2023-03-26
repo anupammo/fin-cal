@@ -1,18 +1,32 @@
 {
-    "short_name": "NivesGuru",
+    "protocol_handlers": [
+        {
+            "protocol": "mailto",
+            "url": "/newEmail?to=%s"
+        }
+    ],
     "name": "Investment Calculator - Plan Financial Future | NivesGuru",
-    "categories": ["finance", "education", "news", "utilities", "productivity"],
-    "id": "/https://nivesguru.in/",
+    "short_name": "NivesGuru",
+    "start_url": "/",
+    "id": "/",
     "dir": "ltr",
     "lang": "en",
-    "scope": "/https://nivesguru.in/",
-    "start_url": "/https://nivesguru.in/",
+    "scope": "/",
     "display": "standalone",
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
     "orientation": "portrait-primary",
-    "display_override": ["window-control-overlay", "minimal-ui"],
-    "icons": [{
+    "display_override": "[]",
+    "prefer_related_applications": true,
+    "categories": [
+        "finance",
+        "education",
+        "news",
+        "utilities",
+        "productivity"
+    ],
+    "icons": [
+        {
             "src": "/icons-vector.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
@@ -35,23 +49,35 @@
             "sizes": "512x512"
         }
     ],
-    "shortcuts": [{
+    "shortcuts": [
+        {
             "name": "Investment Calculator - Plan Financial Future | NivesGuru",
             "short_name": "NivesGuru",
             "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
             "url": "/",
-            "icons": [{ "src": "/maskable_icon_x192.png", "sizes": "192x192" }]
+            "icons": [
+                {
+                    "src": "/maskable_icon_x192.png",
+                    "sizes": "192x192"
+                }
+            ]
         },
         {
             "name": "Investment Calculator - Plan Financial Future | NivesGuru",
             "short_name": "NivesGuru",
             "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
             "url": "/",
-            "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+            "icons": [
+                {
+                    "src": "/favicon-96x96.png",
+                    "sizes": "96x96"
+                }
+            ]
         }
     ],
     "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
-    "screenshots": [{
+    "screenshots": [
+        {
             "src": "/screenshot1.png",
             "type": "image/png",
             "sizes": "540x720",
