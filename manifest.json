@@ -1,7 +1,7 @@
 {
   "protocol_handlers": [
     {
-      "protocol": "mailto",
+      "protocol": "https",
       "url": "/newEmail?to=%s"
     }
   ],
