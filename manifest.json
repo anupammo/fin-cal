@@ -1,6 +1,13 @@
 {
     "short_name": "NivesGuru",
     "name": "Investment Calculator - Plan Financial Future | NivesGuru",
+    "id": "/",
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#FFFFFF",
+    "orientation": "portrait-primary",
     "icons": [{
             "src": "/icons-vector.svg",
             "type": "image/svg+xml",
@@ -24,12 +31,6 @@
             "sizes": "512x512"
         }
     ],
-    "id": "/",
-    "start_url": "/",
-    "background_color": "#FFFFFF",
-    "display": "standalone",
-    "scope": "/",
-    "theme_color": "#FFFFFF",
     "shortcuts": [{
             "name": "Investment Calculator - Plan Financial Future | NivesGuru",
             "short_name": "NivesGuru",
