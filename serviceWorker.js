@@ -1,3 +1,5 @@
+// var cacheName = 'epwa';
+
 const assets = [
     "./",
     "./index.html",
@@ -31,11 +33,11 @@ self.addEventListener("fetch", fetchEvent => {
         )
     })
     // hritick26032023
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-            console.log('sw: writing files into cache');
-            return cache.addAll(filesToCache);
-        })
-    )
-});
+    // self.addEventListener('install', function(event) {
+    //     event.waitUntil(
+    //         caches.open(cacheName).then(function(cache) {
+    //             console.log('sw: writing files into cache');
+    //             return cache.addAll(filesToCache);
+    //         })
+    //     )
+    // });
