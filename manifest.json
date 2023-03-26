@@ -16,7 +16,7 @@
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "orientation": "portrait-primary",
-  "display_override": "standalone",
+  "display_override": [],
   "prefer_related_applications": true,
   "categories": [
     "finance",
