@@ -52,11 +52,11 @@ self.addEventListener('fetch', event => {
     });
 });
 
-self.addEventListener('push', (event) => {
-    event.waitUntil(
-        self.registration.showNotification('Notification Title', {
-            body: 'Notification Body Text',
-            icon: './favicon-32x32.png',
-        })
-    );
-  });
+// self.addEventListener('push', (event) => {
+//     event.waitUntil(
+//         self.registration.showNotification('Notification Title', {
+//             body: 'Notification Body Text',
+//             icon: './favicon-32x32.png',
+//         })
+//     );
+// });
