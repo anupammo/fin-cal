@@ -320,6 +320,42 @@
             </div>
         </div>
     </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Modal -->
+                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5" id="resultModalLabel">Investment Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="w-25">
+                                            <!-- <img src="res/icon/ssy.webp" class="img-fluid d-block mx-auto" alt="..."> -->
+                                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
+                                        </div>
+                                        <div class="w-75">
+                                            <ul>
+                                                <li>💵 Total investment : ₹<strong id="totalInvestment"></strong></li>
+                                                <li>📅 Invested on : <strong id="invfrom"></strong></li>
+                                                <li>📅 Maturity year : <strong id="myear"></strong></li>
+                                                <li>💵 Total interest : ₹<strong id="totalInterest"></strong></li>
+                                                <li>💵 Maturity value : ₹<strong id="maturityValue"></strong></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="bg-dark mt-5">
         <div class="container">
             <div class="row">

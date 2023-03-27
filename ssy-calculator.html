@@ -129,7 +129,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="card shadow h-100 border-0">
                             <div class="card-body">
-                                <h1 class="px-5 my-5 lead fw-bold fs-3">Free Sukanya Samriddhi Yojana / SSY Calculator for India by NivesGuru</h1>
+                                <h1 class="px-5 my-5 lead fw-bold fs-3">Sukanya Samriddhi Yojana Calculator: plan Daughter's Future Savings</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
                                         <label for="totinv" class="form-label">Amount of Investment / Year : <strong
@@ -141,8 +141,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="ssyroi" class="form-label">Rate of interest :
-                                            <strong>7.6%</strong></label>
+                                        <label for="ssyroi" class="form-label">Rate of interest : <strong>7.6%</strong></label>
                                         <input type="hidden" class="form-control" id="ssyroi" value="7.6">
                                     </div>
                                     <div class="mb-3">
@@ -309,6 +308,72 @@
                     <p> Can we deposit lump sum in Sukanya samriddhi?</p>
                     <p class="lead fs-6">The maximum amount you can deposit in the SSY account is Rs 1.5 lakh per financial year. The SSY account is opened in the name of a girl child to give her a bright future. The money can be used for higher education or the marriage
                         expenses of a girl child.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Modal -->
+                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content border-0">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5" id="resultModalLabel">Investment Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="w-25">
+                                            <!-- <img src="res/icon/ssy.webp" class="img-fluid d-block mx-auto" alt="..."> -->
+                                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
+                                        </div>
+                                        <div class="w-75">
+                                            <!-- <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>💵 Total investment</td>
+                                                        <td id="totalInvestment"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>📅 Investment years</td>
+                                                        <td><strong id="invfrom"></strong> - <strong
+                                                                id="invto"></strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>📅 Maturity year</td>
+                                                        <td id="myear"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>💵 Total interest</td>
+                                                        <td id="totalInterest"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>💵 Maturity value</td>
+                                                        <td id="maturityValue"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> -->
+                                            <ul>
+                                                <li>💵 Total investment : ₹<strong id="totalInvestment"></strong></li>
+                                                <li>📅 Investment years : <strong id="invfrom"></strong> - <strong id="invto"></strong></li>
+                                                <li>📅 Maturity year : <strong id="myear"></strong></li>
+                                                <li>💵 Total interest : ₹<strong id="totalInterest"></strong></li>
+                                                <li>💵 Maturity value : ₹<strong id="maturityValue"></strong></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
