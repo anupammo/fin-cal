@@ -20,7 +20,7 @@
   ],
   "icons": [
     {
-      "src": "/icons-vector.svg",
+      "src": "./icons-vector.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     },
@@ -54,19 +54,19 @@
       "density": "3.0"
     },
     {
-      "src": "/maskable_icon_x192.png",
+      "src": "./maskable_icon_x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "/maskable_icon_x96.png",
+      "src": "./maskable_icon_x96.png",
       "type": "image/png",
       "sizes": "96x96",
       "purpose": "any"
     },
     {
-      "src": "/maskable_icon_x512.png",
+      "src": "./maskable_icon_x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -79,7 +79,7 @@
           "url": "/",
           "icons": [
               {
-                  "src": "/maskable_icon_x192.png",
+                  "src": "./maskable_icon_x192.png",
                   "sizes": "192x192"
               }
           ]
@@ -91,7 +91,7 @@
           "url": "/",
           "icons": [
               {
-                  "src": "/maskable_icon_x96.png",
+                  "src": "./maskable_icon_x96.png",
                   "sizes": "96x96"
               }
           ]
@@ -100,13 +100,13 @@
   "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
   "screenshots": [
     {
-      "src": "/screenshot1.png",
+      "src": "./screenshot1.png",
       "type": "image/png",
       "sizes": "540x720",
       "form_factor": "narrow"
     },
     {
-      "src": "/screenshot2.jpg",
+      "src": "./screenshot2.jpg",
       "type": "image/jpg",
       "sizes": "720x540",
       "form_factor": "wide"
