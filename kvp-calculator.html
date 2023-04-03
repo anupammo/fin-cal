@@ -140,12 +140,12 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="ssyroi" class="form-label">Rate of interest : <strong>7.2%</strong></label>
+                                        <p class="form-label">Rate of interest : <strong>7.2%</strong></p>
                                         <input type="hidden" class="form-control" id="ssyroi" value="7.2">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="dage" class="form-label">Tenure : <strong id="age-disp">10
-                                                years</strong></label>
+                                        <p class="form-label">Tenure : <strong id="age-disp">10
+                                                years</strong></p>
                                         <input type="hidden" class="form-control" id="dage" value="10.25">
                                     </div>
                                     <div class="my-4">
@@ -352,41 +352,6 @@
             </div>
         </div>
     </section>
-    <section class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="modal fade" id="resultModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content border-0">
-                                <div class="modal-header border-0">
-                                    <h1 class="modal-title fs-5" id="resultModalLabel">Investment Details</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="w-25">
-                                            <!-- <img src="res/icon/ssy.webp" class="img-fluid d-block mx-auto" alt="..."> -->
-                                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
-                                        </div>
-                                        <div class="w-75">
-                                            <ul>
-                                                <li>💵 Total investment : ₹<strong id="totalInvestment"></strong></li>
-                                                <li>📅 Invested on : <strong id="invfrom"></strong></li>
-                                                <li>📅 Maturity year : <strong id="myear"></strong></li>
-                                                <li>💵 Total interest : ₹<strong id="totalInterest"></strong></li>
-                                                <li>💵 Maturity value : ₹<strong id="maturityValue"></strong></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer class="bg-dark mt-5">
         <div class="container">
             <div class="row">
@@ -553,12 +518,12 @@
 
             let date = new Date().getFullYear();
             let mdate = (parseInt(date) + parseInt(y))
-            document.getElementById("invfrom").innerHTML = date;
+            // document.getElementById("invfrom").innerHTML = date;
             // document.getElementById("invto").innerHTML = (date);
-            document.getElementById("myear").innerHTML = (mdate);
-            document.getElementById("totalInvestment").innerHTML = p;
-            document.getElementById("totalInterest").innerHTML = p;
-            document.getElementById("maturityValue").innerHTML = parseFloat(p * 2).toFixed(0);
+            // document.getElementById("myear").innerHTML = (mdate);
+            // document.getElementById("totalInvestment").innerHTML = p;
+            // document.getElementById("totalInterest").innerHTML = p;
+            // document.getElementById("maturityValue").innerHTML = parseFloat(p * 2).toFixed(0);
 
             // console.log("Maturity value : " + parseFloat(totali).toFixed(0));
             // console.log(date);
