@@ -141,7 +141,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="ssyroi" class="form-label">Rate of interest : <strong>7.6%</strong></label>
+                                        <p class="form-label">Rate of interest : <strong>7.6%</strong></p>
                                         <input type="hidden" class="form-control" id="ssyroi" value="7.6">
                                     </div>
                                     <div class="mb-3">
@@ -580,9 +580,9 @@
                 // console.log("Year " + (i + 1) + " - " + parseFloat(totali).toFixed(2));
             }
             let date = new Date().getFullYear();
-            document.getElementById("invfrom").innerHTML = date;
-            document.getElementById("invto").innerHTML = (date + 15);
-            document.getElementById("myear").innerHTML = (date + 21);
+            // document.getElementById("invfrom").innerHTML = date;
+            // document.getElementById("invto").innerHTML = (date + 15);
+            // document.getElementById("myear").innerHTML = (date + 21);
             let xtinv = (tinv * 15);
             let xtint = parseFloat(totali - (tinv * 15)).toFixed(0);
             let xmval = parseFloat(totali).toFixed(0);
