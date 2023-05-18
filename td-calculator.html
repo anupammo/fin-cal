@@ -176,31 +176,31 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_roi" class="form-label">Rate of interest</label>
-                                            </div>
-                                            <div class="col">
-                                                <label class="form-label fw-bold float-end" id="age-disp">2</label>
-                                            </div>
-                                        </div>
-                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="2" id="fd_roi" onchange="dispROI()">
-                                        <div class="row">
-                                            <span class="col">1</span>
-                                            <span class="text-end col">15</span>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col">
                                                 <label for="fd_idur" class="form-label">Time</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                                <label class="form-label fw-bold float-end" id="dur-disp">3</label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="1" max="5" step="1" value="3" id="fd_idur" onchange="dispTime()">
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_roi" class="form-label">Rate of interest</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="age-disp">7.0</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" disabled class="form-range" min="6" max="8" step=".1" value="7.0" id="fd_roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">6</span>
+                                            <span class="text-end col">8</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -538,81 +538,88 @@
         function dispTime() {
             let invdisp = document.getElementById("fd_idur").value;
             document.getElementById("dur-disp").innerHTML = invdisp;
+
+
+            document.getElementById("age-disp").innerHTML = aged;
         }
 
         function fdCalc() {
-            // let tinv = 0;
-
+            let fdtoti = 0;
+            let totint = 0;
+            let mamnt = 0;
 
             let fdidur = document.getElementById("fd_idur").value;
 
             if (fdidur <= 1) {
-                let fdtoti = document.getElementById("fd_toti").value;
+                fdtoti = document.getElementById("fd_toti").value;
                 let fdroi = document.getElementById("fd_roi").value;
                 let fdidur = document.getElementById("fd_idur").value;
                 let toti = (Math.pow(1 + (6.8 / 400), (4 * 1)));
                 let toti1 = (fdtoti * toti);
-                let mamnt = (parseInt(toti1));
-                console.log(mamnt);
+                mamnt = (parseInt(toti1));
+                totint = parseInt(toti1 - fdtoti);
+                console.log(mamnt, toti, toti1);
             } else if (fdidur <= 2) {
-                let fdtoti = document.getElementById("fd_toti").value;
+                fdtoti = document.getElementById("fd_toti").value;
                 let fdroi = document.getElementById("fd_roi").value;
                 let fdidur = document.getElementById("fd_idur").value;
                 let toti = (Math.pow(1 + (6.9 / 400), (4 * 2)));
                 let toti1 = (fdtoti * toti);
-                let mamnt = (parseInt(toti1));
-                console.log(mamnt);
+                mamnt = (parseInt(toti1));
+                totint = parseInt(toti1 - fdtoti);
+                console.log(mamnt, toti, toti1);
             } else if (fdidur <= 3) {
-                let fdtoti = document.getElementById("fd_toti").value;
+                fdtoti = document.getElementById("fd_toti").value;
                 let fdroi = document.getElementById("fd_roi").value;
                 let fdidur = document.getElementById("fd_idur").value;
                 let toti = (Math.pow(1 + (7 / 400), (4 * 3)));
                 let toti1 = (fdtoti * toti);
-                let mamnt = (parseInt(toti1));
-                console.log(mamnt);
+                mamnt = (parseInt(toti1));
+                totint = parseInt(toti1 - fdtoti);
+                console.log(mamnt, toti, toti1);
             } else {
-                let fdtoti = document.getElementById("fd_toti").value;
+                fdtoti = document.getElementById("fd_toti").value;
                 let fdroi = document.getElementById("fd_roi").value;
                 let fdidur = document.getElementById("fd_idur").value;
                 let toti = (Math.pow(1 + (6.6 / 400), (20)));
                 let toti1 = (fdtoti * toti);
-                let mamnt = (parseInt(toti1));
-                console.log(mamnt);
+                mamnt = (parseInt(toti1));
+                totint = parseInt(toti1 - fdtoti);
+                console.log(mamnt, toti, toti1);
             }
 
             // function dispAnut() {
             //     let anutdisp = document.getElementById("xtinv").value;
-
             // }
-            // // Table of Investments 
-            // let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
-            // document.getElementById("myTbl").innerHTML = tblVal;
-            // // Table of Investments 
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + totint + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
 
-            // // Pie Chart 
-            // var xValues = ["Total Investment", "Total Interest"];
-            // var yValues = [xtinv, toti];
-            // var barColors = ["#03a9f4", "#f50057"];
+            // Pie Chart 
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [fdtoti, totint];
+            var barColors = ["#03a9f4", "#f50057"];
 
-            // new Chart("myChart", {
-            //     type: "pie",
-            //     data: {
-            //         labels: xValues,
-            //         datasets: [{
-            //             backgroundColor: barColors,
-            //             data: yValues
-            //         }]
-            //     },
-            //     options: {
-            //         legend: {
-            //             display: true
-            //         },
-            //         title: {
-            //             display: true
-            //         }
-            //     }
-            // });
-            // // Pie Chart 
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
         }
     </script>
     <script src="app.js"></script>
