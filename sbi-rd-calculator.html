@@ -21,8 +21,8 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "SBI Fixed deposit / FD Investment Calculator for India by NivesGuru",
-            "url": "https://nivesguru.in/sbi-fd-calculator",
+            "name": "SBI Recurring deposit | RD Investment Calculator for India by NivesGuru",
+            "url": "https://nivesguru.in/sbi-rd-calculator",
             "logo": "https://nivesguru.in/maskable_icon_x192.png",
             "contactPoint": [{
                 "@type": "ContactPoint",
@@ -31,7 +31,7 @@
                 "areaServed": "IN"
             }],
             "image": [
-                "nivesguru-investment-calculator.svg"
+                "nivesguru-investment-calculator-svg.webp"
             ],
             "sameAs": [
                 "https://nivesguru.in",
@@ -61,28 +61,28 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
-    <link rel="canonical" href="https://nivesguru.in/fd-calculator">
+    <link rel="canonical" href="https://nivesguru.in/sbi-rd-calculator">
     <!-- Favicon -->
     <!-- Primary Meta Tags -->
-    <title>SBI Fixed deposit / FD Investment Calculator for India by NivesGuru</title>
-    <meta name="title" content="SBI Fixed deposit / FD Investment Calculator for India by NivesGuru">
+    <title>SBI Recurring deposit | RD Investment Calculator for India by NivesGuru</title>
+    <meta name="title" content="SBI Recurring deposit | RD Investment Calculator for India by NivesGuru">
     <meta name="description"
-        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of fixed deposit schemes to investors. SBI fixed deposit schemes are popular among investors due to their high safety,">
+        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of Recurring deposit schemes to investors. SBI Recurring deposit schemes are popular among investors due to their high safety,">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nivesguru.in/sbi-fd-calculator">
-    <meta property="og:title" content="SBI Fixed deposit / FD Investment Calculator for India by NivesGuru">
+    <meta property="og:url" content="https://nivesguru.in/sbi-rd-calculator">
+    <meta property="og:title" content="SBI Recurring deposit | RD Investment Calculator for India by NivesGuru">
     <meta property="og:description"
-        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of fixed deposit schemes to investors. SBI fixed deposit schemes are popular among investors due to their high safety,">
+        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of Recurring deposit schemes to investors. SBI Recurring deposit schemes are popular among investors due to their high safety,">
     <meta property="og:image" content="https://nivesguru.in/nivesguru.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nivesguru.in/sbi-fd-calculator">
-    <meta property="twitter:title" content="SBI Fixed deposit / FD Investment Calculator for India by NivesGuru">
+    <meta property="twitter:url" content="https://nivesguru.in/sbi-rd-calculator">
+    <meta property="twitter:title" content="SBI Recurring deposit | RD Investment Calculator for India by NivesGuru">
     <meta property="twitter:description"
-        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of fixed deposit schemes to investors. SBI fixed deposit schemes are popular among investors due to their high safety,">
+        content="SBI, also known as State Bank of India, is one of the largest public sector banks in India, offering a range of Recurring deposit schemes to investors. SBI Recurring deposit schemes are popular among investors due to their high safety,">
     <meta property="twitter:image" content="https://nivesguru.in/nivesguru.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -169,20 +169,20 @@
                                         </ol>
                                     </nav>
                                 </div>
-                                <h1 class="lead fw-bold fs-3 mb-5 px-5">SBI Fixed deposit / FD Investment Calculator for
+                                <h1 class="lead fw-bold fs-3 mb-5 px-5">SBI Recurring deposit | RD Investment Calculator for
                                     India by NivesGuru</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Total Investment</label>
+                                                <label for="RD_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="1000" max="100000" step="500"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                            value="10000" id="RD_toti" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">1000</span>
                                             <span class="text-end col">100000</span>
@@ -191,14 +191,14 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_roi" class="form-label">Rate of interest</label>
+                                                <label for="RD_roi" class="form-label">Rate of interest</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end" id="age-disp">2</label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="1" max="15" step=".1" value="2"
-                                            id="fd_roi" onchange="dispROI()">
+                                            id="RD_roi" onchange="dispROI()">
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">15</span>
@@ -207,14 +207,14 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_idur" class="form-label">Time</label>
+                                                <label for="RD_idur" class="form-label">Time</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end" id="dur-disp">5</label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="1" max="25" step="1" value="5"
-                                            id="fd_idur" onchange="dispTime()">
+                                            id="RD_idur" onchange="dispTime()">
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">25</span>
@@ -222,8 +222,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
-                                            onclick="fdCalc();">Calculate</button>
-                                        <!-- <button type="button" onclick="fdCalc();"
+                                            onclick="RDCalc();">Calculate</button>
+                                        <!-- <button type="button" onclick="RDCalc();"
                                             class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
                                             data-bs-target="#resultModal">Calculate</button> -->
                                     </div>
@@ -257,12 +257,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
-                    <h2 class="h4 mb-3"> SBI FD Calculator</h2>
+                    <h2 class="h4 mb-3"> SBI RD Calculator</h2>
                     <p class="lead fs-6">SBI, also known as State Bank of India, is one of the largest public sector
-                        banks in India, offering a range of fixed deposit schemes to investors. SBI fixed deposit
+                        banks in India, offering a range of Recurring deposit schemes to investors. SBI Recurring deposit
                         schemes are popular among investors due to their high safety, guaranteed
-                        returns, and flexible tenure options. Investors can use the SBI fixed deposit investment
-                        calculator to calculate the returns on their fixed deposit investments with SBI.
+                        returns, and flexible tenure options. Investors can use the SBI Recurring deposit investment
+                        calculator to calculate the returns on their Recurring deposit investments with SBI.
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
@@ -345,7 +345,7 @@
                 <div class="col-lg-3 col-md-4 col-12">
                     <ul class="list-group list-group-flush lead fw-bold fs-6 my-3">
                         <!-- <li class="list-group-item border-0">
-                            <a href="fd-calculator"><span class="fs-5">🪙</span> FD Calculator</a>
+                            <a href="sbi-rd-calculator"><span class="fs-5">🪙</span> RD Calculator</a>
                         </li> -->
                         <li class="list-group-item border-0">
                             <a href="sb-calculator"><span class="fs-5">🪙</span> SB
@@ -394,21 +394,21 @@
                     </ul>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
-                    <h2 class="h4 my-3">SBI Fixed Deposit Schemes</h2>
-                    <p class="lead fs-6">SBI offers several fixed deposit schemes to cater to the diverse needs of
-                        investors. Some of the most popular SBI fixed deposit schemes are: SBI Regular Fixed Deposit:
+                    <h2 class="h4 my-3">SBI Recurring deposit Schemes</h2>
+                    <p class="lead fs-6">SBI offers several Recurring deposit schemes to cater to the diverse needs of
+                        investors. Some of the most popular SBI Recurring deposit schemes are: SBI Regular Recurring deposit:
                         This scheme is suitable for investors who want to invest a lump
                         sum amount for a fixed period of time. The minimum investment amount for SBI Regular Fixed
                         Deposit is Rs. 1,000, and the tenure options range from 7 days to 10 years. SBI Tax Saving Fixed
                         Deposit: This scheme is ideal for investors
                         who want to save tax while earning a guaranteed return on their investment. The minimum
-                        investment amount for SBI Tax Saving Fixed Deposit is Rs. 1,000, and the tenure is fixed at 5
+                        investment amount for SBI Tax Saving Recurring deposit is Rs. 1,000, and the tenure is fixed at 5
                         years. SBI Flexi Deposit Scheme: This scheme
                         is suitable for investors who want the flexibility of withdrawing their money from the fixed
                         deposit account without having to break the entire deposit. The minimum investment amount for
                         SBI Flexi Deposit Scheme is Rs. 5,000, and
                         the tenure options range from 1 year to 5 years. SBI Annuity Deposit Scheme: This scheme is
-                        suitable for investors who want a regular income stream from their fixed deposit investment.
+                        suitable for investors who want a regular income stream from their Recurring deposit investment.
                         Under this scheme, the investor makes a lump
                         sum deposit, and the bank pays the interest earned as a monthly installment to the investor. The
                         minimum investment amount for SBI Annuity Deposit Scheme is Rs. 25,000, and the tenure options
@@ -422,10 +422,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-12">
-                    <h2 class="h4 my-3">SBI Fixed Deposit Investment Calculator - How to Use</h2>
-                    <p class="lead fs-6">To use the SBI fixed deposit investment calculator, investors need to visit the
-                        SBI website and follow the below steps: Click on the 'Fixed Deposit' tab on the SBI
-                        homepage.<br> Select the type of fixed deposit scheme you want to invest
+                    <h2 class="h4 my-3">SBI Recurring deposit Investment Calculator - How to Use</h2>
+                    <p class="lead fs-6">To use the SBI Recurring deposit investment calculator, investors need to visit the
+                        SBI website and follow the below steps: Click on the 'Recurring deposit' tab on the SBI
+                        homepage.<br> Select the type of Recurring deposit scheme you want to invest
                         in. <br> Input the deposit amount, tenure, and interest rate. <br> Click on the 'Calculate'
                         button to view the maturity value and interest earned.
 
@@ -435,7 +435,7 @@
                 <div class="col-lg-3 col-md-3 col-12">
                     <div class="">
                         <img src="nivesguru-investment-calculator-svg.webp" width="300" height="300"
-                            alt="nivesguru investment calculator fd">
+                            alt="nivesguru investment calculator RD">
                     </div>
                 </div>
             </div>
@@ -445,9 +445,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="h4 mb-3">Free SBI FD Calculator Conclusion:</h2>
-                    <p class="lead fs-6">SBI fixed deposit schemes are a safe and reliable investment option for
-                        investors who want to earn a guaranteed return on their investment. The SBI fixed deposit
+                    <h2 class="h4 mb-3">Free SBI RD Calculator Conclusion:</h2>
+                    <p class="lead fs-6">SBI Recurring deposit schemes are a safe and reliable investment option for
+                        investors who want to earn a guaranteed return on their investment. The SBI Recurring deposit
                         investment calculator is a useful tool for investors to calculate the
                         returns on their investment and make informed investment decisions.</p>
                 </div>
@@ -458,29 +458,29 @@
                 <div class="col-12">
                     <div class="socializer a sr-32px sr-opacity sr-icon-white sr-pad">
                         <div class="sr-google"><a
-                                href="https://www.google.com/bookmarks/mark?op=edit&amp;bkmk=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;title=FD%20calculator&amp;annotation="
+                                href="https://www.google.com/bookmarks/mark?op=edit&amp;bkmk=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator&amp;title=RD%20calculator&amp;annotation="
                                 target="_blank" title="Google"><i class="fab fa-google"></i></a></div>
                         <div class="sr-linkedin"><a
-                                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;title=FD%20calculator&amp;summary="
+                                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator&amp;title=RD%20calculator&amp;summary="
                                 target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div>
                         <div class="sr-facebook"><a
-                                href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;t=FD%20calculator"
+                                href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator&amp;t=RD%20calculator"
                                 target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="sr-whatsapp"><a
-                                href="https://api.whatsapp.com/send?text=FD%20calculator%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                href="https://api.whatsapp.com/send?text=RD%20calculator%20https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator"
                                 target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
                         <div class="sr-fbmessenger"><a
-                                href="fb-messenger://share?link=https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                href="fb-messenger://share?link=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator"
                                 target="_blank" title="Facebook messenger"><i class="fa fa-comment"></i></a></div>
                         <div class="sr-snapchat"><a href="https://snapchat.com" target="_blank" title="Snapchat"><i
                                     class="fab fa-snapchat"></i></a></div>
                         <div class="sr-twitter"><a
-                                href="https://twitter.com/intent/tweet?text=FD%20calculator%20-%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator%20"
+                                href="https://twitter.com/intent/tweet?text=RD%20calculator%20-%20https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator%20"
                                 target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></div>
                         <div class="sr-instagram"><a href="https://instagram.com" target="_blank" title="Instagram"><i
                                     class="fab fa-instagram"></i></a></div>
                         <div class="sr-pinterest"><a
-                                href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;media=&amp;description="
+                                href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator&amp;media=&amp;description="
                                 target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a></div>
                         <div class="sr-stackoverflow"><a href="https://stackoverflow.com/" target="_blank"
                                 title="StackOverflow"><i class="fab fa-stack-overflow"></i></a></div>
@@ -489,13 +489,13 @@
                                     class="fab fa-quora"></i></a></div><div class="sr-rss"><a href="" target="_blank"
                                 title="RSS"><i class="fa fa-rss"></i></a></div> -->
                         <div class="sr-telegram"><a
-                                href="https://telegram.me/share/url?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;text=FD%20calculator"
+                                href="https://telegram.me/share/url?url=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator&amp;text=RD%20calculator"
                                 target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a></div>
                         <div class="sr-skype"><a
-                                href="https://web.skype.com/share?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                href="https://web.skype.com/share?url=https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator"
                                 target="_blank" title="Skype"><i class="fab fa-skype"></i></a></div>
                         <div class="sr-email"><a
-                                href="mailto:?subject=FD%20calculator&amp;body=%20-%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                href="mailto:?subject=RD%20calculator&amp;body=%20-%20https%3A%2F%2Fnivesguru.in%2Fsbi-rd-calculator"
                                 target="_blank" title="Email"><i class="fa fa-envelope"></i></a></div>
                         <!-- <div class="sr-more"><a href="#" target="_blank" title="More"><i class="fa fa-share-alt"></i></a>
                             <ul class="socializer"></ul>
@@ -547,7 +547,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <ul class="nav flex-column text-center mt-4">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="fd-calculator">FD Calculator</a>
+                            <a class="nav-link text-white" href="sbi-rd-calculator">RD Calculator</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="sb-calculator">SB Calculator</a>
@@ -670,7 +670,7 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KRDBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- share button -->
@@ -682,27 +682,27 @@
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <script>
         function dispInv() {
-            let invdisp = document.getElementById("fd_toti").value;
+            let invdisp = document.getElementById("RD_toti").value;
             document.getElementById("inv-disp").innerHTML = invdisp;
         }
 
         function dispROI() {
-            let aged = document.getElementById("fd_roi").value;
+            let aged = document.getElementById("RD_roi").value;
             document.getElementById("age-disp").innerHTML = aged;
         }
 
         function dispTime() {
-            let invdisp = document.getElementById("fd_idur").value;
+            let invdisp = document.getElementById("RD_idur").value;
             document.getElementById("dur-disp").innerHTML = invdisp;
         }
 
-        function fdCalc() {
+        function RDCalc() {
             // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
-            let fdroi = document.getElementById("fd_roi").value;
-            let fdidur = document.getElementById("fd_idur").value;
-            let toti = ((fdtoti * fdroi * fdidur) / 100);
-            let mamnt = (parseInt(toti) + parseInt(fdtoti));
+            let RDtoti = document.getElementById("RD_toti").value;
+            let RDroi = document.getElementById("RD_roi").value;
+            let RDidur = document.getElementById("RD_idur").value;
+            let toti = ((RDtoti * RDroi * RDidur) / 100);
+            let mamnt = (parseInt(toti) + parseInt(RDtoti));
             let xtinv = (mamnt - toti);
             // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
             // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
