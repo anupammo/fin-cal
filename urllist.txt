@@ -17,12 +17,12 @@ https://nivesguru.in/boi-rd-calculator
 https://nivesguru.in/pnb-rd-calculator
 https://nivesguru.in/sbi-rd-calculator
 https://nivesguru.in/ubi-rd-calculator
-https://nivesguru.in/ssy-calculator
-https://nivesguru.in/ppf-calculator
-https://nivesguru.in/nps-calculator
 https://nivesguru.in/apy-calculator
+https://nivesguru.in/nps-calculator
+https://nivesguru.in/ppf-calculator
 https://nivesguru.in/pmjjby-calculator
 https://nivesguru.in/pmsby-calculator
+https://nivesguru.in/ssy-calculator
 https://nivesguru.in/kvp-calculator
 https://nivesguru.in/nsc-calculator
 https://nivesguru.in/sgb-calculator
@@ -31,3 +31,4 @@ https://nivesguru.in/contact-us
 https://nivesguru.in/faq-page
 https://nivesguru.in/privacy-policy
 https://nivesguru.in/terms-and-conditions
+https://nivesguru.in/sitemap.html
