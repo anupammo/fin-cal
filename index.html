@@ -99,6 +99,10 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
+        nav.navbar {
+            background-color: #00000077;
+        }
+
         header {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
@@ -245,7 +249,7 @@
 <body>
     <header>
         <div class="wave1">
-            <nav class="navbar navbar-expand-lg bg-transparent">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
                         <img src="favicon-32x32.png" width="24" height="24"
@@ -259,15 +263,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link text-white active" aria-current="page" href="./">Home</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="about-us">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="contact-us">Contact</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -295,13 +290,19 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-white" href="about-us">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="contact-us">Contact</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-white" href="faq-page">FAQ</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="container py-3">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="card shadow border-0 mt-5">
