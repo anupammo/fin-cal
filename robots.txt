@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /ads.txt
 Disallow: 
 Disallow: /cgi-bin/
 Sitemap: https://nivesguru.in/sitemap.xml
