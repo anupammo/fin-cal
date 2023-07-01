@@ -125,6 +125,7 @@
             text-decoration: none;
         }
 
+        h1,
         h2,
         ul li a {
             color: rgba(0, 17, 105, 1);
@@ -228,9 +229,9 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow h-100 border-0">
+                        <div class="card shadow border-0">
                             <div class="card-body">
-                                <div class="px-5 pt-5">
+                                <div class="p-5">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="./">Home</a></li>
@@ -238,41 +239,40 @@
                                                 Calculator</li>
                                         </ol>
                                     </nav>
-                                </div>
-                                <h1 class="lead fw-bold px-5 mb-5 fs-3">Pradhan Mantri Suraksha Bima Yojana Investment
-                                    Calculator: Plan Your Pension Savings and Calculate Your Benefits</h1>
-                                <form class="px-5">
-                                    <div class="mb-3">
-                                        <label for="dage" class="form-label">Starting Age: <strong class="fs-3"
-                                                id="age-disp">37</strong></label>
-                                        <input type="range" class="form-range" min="18" max="70" step="1" value="37"
-                                            id="dage" onchange="dispAge()">
+                                    <h1 class="h2">Free Pradhan Mantri Suraksha Bima Yojana / PMSBY Calculator</h1>
+                                    <form class="pt-5">
+                                        <div class="mb-3">
+                                            <label for="dage" class="form-label">Starting Age: <strong class="fs-3"
+                                                    id="age-disp">37</strong></label>
+                                            <input type="range" class="form-range" min="18" max="70" step="1" value="37"
+                                                id="dage" onchange="dispAge()">
+                                            <div class="row">
+                                                <span class="col">18 Year</span>
+                                                <span class="text-end col">70 Year</span>
+                                            </div>
+                                        </div>
                                         <div class="row">
-                                            <span class="col">18 Year</span>
-                                            <span class="text-end col">70 Year</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="my-2">
-                                                <p class="form-label">Premium / Year : ₹ <strong class="fs-4">20
-                                                    </strong></p>
-                                                <!-- <input type="hidden" class="form-control" id="ssyroi" value="8"> -->
+                                            <div class="col">
+                                                <div class="my-2">
+                                                    <p class="form-label">Premium / Year : ₹ <strong class="fs-4">20
+                                                        </strong></p>
+                                                    <!-- <input type="hidden" class="form-control" id="ssyroi" value="8"> -->
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="my-2">
+                                                    <p class="form-label float-end">Sum Assured : <strong class="fs-3">2
+                                                        </strong>Lac</p>
+                                                    <!-- <input type="hidden" class="form-control" id="pmsby" value="8"> -->
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="my-2">
-                                                <p class="form-label float-end">Sum Assured : <strong class="fs-3">2
-                                                    </strong>Lac</p>
-                                                <!-- <input type="hidden" class="form-control" id="pmsby" value="8"> -->
-                                            </div>
+                                        <div class="my-4">
+                                            <button type="button" onclick="pmsbyCalc();"
+                                                class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                         </div>
-                                    </div>
-                                    <div class="my-4">
-                                        <button type="button" onclick="pmsbyCalc();"
-                                            class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -691,7 +691,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
         function dispAge() {
