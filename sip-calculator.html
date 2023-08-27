@@ -303,12 +303,37 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <p class="form-label">Rate of interest : <strong>7.4%</strong></p>
-                                        <input type="hidden" class="form-control" id="fd_roi" value="7.4">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Rate of interest</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end"><strong
+                                                        id="age-disp">7.4%</strong></label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="7.4"
+                                            id="fd_roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">12</span>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
-                                        <p class="form-label">Time : <strong>5</strong></p>
-                                        <input type="hidden" class="form-control" id="fd_idur" value="5">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Duration</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="20" step="1" value="5"
+                                            id="fd_idur" onchange="dispTime()">
+                                        <div class="row">
+                                            <span class="col">0</span>
+                                            <span class="text-end col">20</span>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"

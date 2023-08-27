@@ -292,13 +292,13 @@
                                                 <label for="fd_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
+                                                <label class="form-label fw-bold float-end" id="inv-disp">100000</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="3000000" step="1000"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="0" max="3000000" step="25000"
+                                            value="100000" id="fd_toti" onchange="dispInv()">
                                         <div class="row">
-                                            <span class="col">1000</span>
+                                            <span class="col">0</span>
                                             <span class="text-end col">3000000</span>
                                         </div>
                                     </div>
@@ -306,9 +306,25 @@
                                         <p class="form-label">Rate of interest : <strong>8.2%</strong></p>
                                         <input type="hidden" class="form-control" id="fd_roi" value="8.2">
                                     </div>
+                                    <!-- <div class="mb-3">
+                                        <p class="form-label">Time : <strong>5</strong></p>
+                                        <input type="hidden" class="form-control" id="fd_idur" value="5">
+                                    </div> -->
                                     <div class="mb-3">
-                                        <p class="form-label">Time : <strong>8</strong></p>
-                                        <input type="hidden" class="form-control" id="fd_idur" value="8">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Duration</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="inv-disp">5</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="8" step="3"
+                                            value="5" id="fd_idur" onchange="dispInv()">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">8</span>
+                                        </div>
                                     </div>
                                     <!-- <div class="mb-3">
                                         <div class="row">
