@@ -290,30 +290,30 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Total Investment</label>
+                                                <label for="fd_toti" class="form-label">Investment / Month</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
+                                                <label class="form-label fw-bold float-end" id="inv-disp">5000</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="900000" step="1000"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="1000" max="100000" step="1000"
+                                            value="5000" id="fd_toti" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">1000</span>
-                                            <span class="text-end col">900000</span>
+                                            <span class="text-end col">100000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Rate of interest</label>
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end"><strong
-                                                        id="age-disp">7.4%</strong></label>
+                                                        id="age-disp">7.5%</strong></label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="7.4"
+                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="7.5"
                                             id="fd_roi" onchange="dispROI()">
                                         <div class="row">
                                             <span class="col">5</span>
@@ -323,7 +323,7 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Duration</label>
+                                                <label class="form-label">Duration (Year)</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end" id="dur-disp">5</label>
@@ -350,7 +350,7 @@
                                 <div class="px-5">
                                     <div class="card border-0">
                                         <div class="card-body pb-0">
-                                            <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0"></table>
                                         </div>
                                     </div>
                                     <canvas id="myChart"></canvas>
@@ -987,26 +987,44 @@
         }
 
         function fdCalc() {
-            // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
-            let fdroi = document.getElementById("fd_roi").value;
-            let fdidur = document.getElementById("fd_idur").value;
-            let toti = ((fdtoti * fdroi * fdidur) / 100);
-            let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            let xtinv = (mamnt - toti);
-            // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
-            // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
+            let invst = parseInt(document.getElementById("fd_toti").value);
+            let roi = parseInt(document.getElementById("fd_roi").value);
+            let invdur = parseInt(document.getElementById("fd_idur").value) * 12;
+            let mamnt = 0;
+
+            function calculateSIP(initialInvestment, investmentPM, iRate, durationPerMonth) {
+                const iRateMonthly = (iRate / 12) / 100;
+
+                let fval = 0;
+                for (let i = 1; i <= durationPerMonth; i++) {
+                    fval += investmentPM;
+                    fval += fval * iRateMonthly;
+                }
+
+                fval += initialInvestment;
+                return fval.toFixed(0);
+            }
+
+            const totalCorpus = calculateSIP(mamnt, invst, roi, invdur);
+
+            let totalInvestment = parseInt(invst * invdur);
+            let totalInterest = parseInt(totalCorpus - totalInvestment);
 
             // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end' id='total-investment'></td></tr><tr><td>Total Interest</td><th class='text-end' id='interest-earned'></td</tr><tr><td>Maturity Value</td><th class='text-end' id='maturity-value'></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
+
+            document.getElementById("total-investment").innerHTML = totalInvestment;
+            document.getElementById("interest-earned").innerHTML = totalInterest;
+            document.getElementById("maturity-value").innerHTML = totalCorpus;
             // Table of Investments 
 
             // Pie Chart 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [xtinv, toti];
+            var yValues = [totalInvestment, totalInterest];
             var barColors = ["#03a9f4", "#f50057"];
 
+            // Pie Chart 
             new Chart("myChart", {
                 type: "pie",
                 data: {
