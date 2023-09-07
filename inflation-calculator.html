@@ -294,29 +294,29 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Total Investment</label>
+                                                <label for="fd_toti" class="form-label">Current Amount</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
+                                                <label class="form-label fw-bold float-end" id="inv-disp">100000</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="100000" step="500"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="0" max="5000000" step="50000"
+                                            value="100000" id="fd_toti" onchange="dispInv()">
                                         <div class="row">
-                                            <span class="col">1000</span>
-                                            <span class="text-end col">100000</span>
+                                            <span class="col">0</span>
+                                            <span class="text-end col">5000000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_roi" class="form-label">Rate of interest</label>
+                                                <label for="fd_roi" class="form-label">Inflation Rate (Year)</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="age-disp">2</label>
+                                                <label class="form-label fw-bold float-end" id="age-disp">6</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="2"
+                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="6"
                                             id="fd_roi" onchange="dispROI()">
                                         <div class="row">
                                             <span class="col">1</span>
@@ -326,7 +326,7 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_idur" class="form-label">Time</label>
+                                                <label for="fd_idur" class="form-label">Time (Duration)</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end" id="dur-disp">5</label>
@@ -342,9 +342,6 @@
                                     <div class="mb-3">
                                         <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
                                             onclick="fdCalc();">Calculate</button>
-                                        <!-- <button type="button" onclick="fdCalc();"
-                                            class="btn btn-primary rounded-pill shadow-none px-5" data-bs-toggle="modal"
-                                            data-bs-target="#resultModal">Calculate</button> -->
                                     </div>
                                 </form>
                             </div>
@@ -356,17 +353,13 @@
                                 <div class="px-5">
                                     <div class="card border-0">
                                         <div class="card-body pb-0">
-                                            <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0"></table>
                                         </div>
                                     </div>
                                     <canvas id="myChart"></canvas>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="p-5">
-                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
-                                background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -720,23 +713,23 @@
                         expensive, which in turn can lead to reduced consumer spending and slower economic growth.</p>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12">
                     <h3 class="h4 my-4">Mermaid Diagram: Inflation and Investment Returns</h3>
                     <code>mermaid
                     graph TD
-                    A[Time] -- Increasing Inflation --> B{Purchasing Power Erosion}
-                    A -- Decreasing Inflation --> C{Maintained Purchasing Power}
-                    A -- Volatile Inflation --> D{Varied Purchasing Power}
-                    B -- Impact on Fixed-Income Investments --> E{Decreased Returns}
-                    B -- Impact on Stocks & Real Estate --> F{Potential for Higher Returns}
-                    C -- Investment Strategies --> F
-                    D -- Complex Investment Strategies --> F
-                    F -- Long-Term Focus --> G{Potential for Wealth Accumulation}
-                    G -- Compound Interest --> H{Growing Investment Portfolio}
+                    A[Time] -- Increasing Inflation - -> B{Purchasing Power Erosion}
+                    A -- Decreasing Inflation - -> C{Maintained Purchasing Power}
+                    A -- Volatile Inflation - -> D{Varied Purchasing Power}
+                    B -- Impact on Fixed-Income Investments - -> E{Decreased Returns}
+                    B -- Impact on Stocks & Real Estate - -> F{Potential for Higher Returns}
+                    C -- Investment Strategies - -> F
+                    D -- Complex Investment Strategies - -> F
+                    F -- Long-Term Focus - -> G{Potential for Wealth Accumulation}
+                    G -- Compound Interest - -> H{Growing Investment Portfolio}
                     </code>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="faqs">
@@ -1042,25 +1035,34 @@
             document.getElementById("dur-disp").innerHTML = invdisp;
         }
 
+
         function fdCalc() {
-            // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
-            let fdroi = document.getElementById("fd_roi").value;
-            let fdidur = document.getElementById("fd_idur").value;
-            let toti = ((fdtoti * fdroi * fdidur) / 100);
-            let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            let xtinv = (mamnt - toti);
-            // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
-            // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
+
+            let fdtoti = parseInt(document.getElementById("fd_toti").value);
+            let fdroi = parseFloat(document.getElementById("fd_roi").value) / 100;
+            let fdidur = parseInt(document.getElementById("fd_idur").value);
+
+            const futureValue = inflationVal(fdtoti, fdidur, fdroi);
+
+            console.log(fdtoti, fdroi, fdidur, futureValue.toFixed(2));
+
+            function inflationVal(fdtoti, fdidur, fdroi) {
+                const adjustedValue = fdtoti * Math.pow(1 - fdroi, fdidur);
+                return adjustedValue;
+            }
+
+            let xtinv = futureValue.toFixed(0);
+            let mamnt = (fdtoti - futureValue.toFixed(0));
+
 
             // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Current Amount</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Impacted Value</td><th class='text-end'>" + mamnt + "</td</tr><tr><td>Future Value</td><th class='text-end'>" + futureValue.toFixed(0) + "</td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
             // Table of Investments 
 
             // Pie Chart 
-            var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [xtinv, toti];
+            var xValues = ["Future Value", "Inflation Impact"];
+            var yValues = [xtinv, mamnt];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {

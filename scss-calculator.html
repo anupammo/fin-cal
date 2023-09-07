@@ -293,11 +293,11 @@
                                                 <label for="fd_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">100000</label>
+                                                <label class="form-label fw-bold float-end" id="inv-disp">1000</label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="0" max="3000000" step="25000"
-                                            value="100000" id="fd_toti" onchange="dispInv()">
+                                            value="1000" id="fd_toti" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">0</span>
                                             <span class="text-end col">3000000</span>
@@ -329,8 +329,8 @@
                                                 <label class="form-label fw-bold float-end" id="dur-disp">5</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="8" step="3"
-                                            value="5" id="fd_idur" onchange="dispTime()">
+                                        <input type="range" class="form-range" min="5" max="8" step="3" value="5"
+                                            id="fd_idur" onchange="dispTime()">
                                         <div class="row">
                                             <span class="col">5</span>
                                             <span class="text-end col">8</span>
@@ -350,7 +350,8 @@
                                 <div class="px-5">
                                     <div class="card border-0">
                                         <div class="card-body pb-0">
-                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0"></table>
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
                                         </div>
                                     </div>
                                     <canvas id="myChart"></canvas>
@@ -490,7 +491,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="fs-3 mb-4">Senior Citizens Savings Scheme: A Comprehensive Guide to Maximizing Your Savings</h2>
+                    <h2 class="fs-3 mb-4">Senior Citizens Savings Scheme: A Comprehensive Guide to Maximizing Your
+                        Savings</h2>
                 </div>
             </div>
             <div class="row">
@@ -856,10 +858,10 @@
             // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
             // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
 
-            console.log(toti/20);
+            console.log(toti / 20);
 
             // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr> <tr><td>Quarterly Interest</td><th class='text-end'>₹" + (toti / 20) + "</td></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
             // Table of Investments 
 
