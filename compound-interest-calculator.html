@@ -121,7 +121,7 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
             background-position: bottom center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
         }
 
         .right-dark-strip-bg {
@@ -171,6 +171,15 @@
         .blink {
             animation: blink-animation 1s steps(5, start) infinite;
             -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        }
+
+        .parallax {
+            background-image: url("https://images.pexels.com/photos/4466492/pexels-photo-4466492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            /* min-height: 500px; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         @keyframes blink-animation {
@@ -402,21 +411,7 @@
             </div>
         </div>
     </header>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="h3 mb-4">Compound Interest Calculation: Unveiling the Power of Growth</h2>
-                    <p class="lead fs-6">Have you ever wondered how your money can grow exponentially over time? That's
-                        where compound interest comes into play. In this article, we'll dive into the world of compound
-                        interest, exploring its calculation, the significance of keywords like "compound interest
-                        calculator" and "compound interest formula," and how you can harness its potential to build your
-                        wealth.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="toc">
+    <section class="py-5" id="toc">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -480,34 +475,64 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 my-4">Introduction to Compound Interest</h2>
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">Introduction to Compound Interest</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">Compound Interest Calculation</h2>
                     <p class="lead fs-6">Imagine a scenario where your money not only earns interest on the initial
                         amount but also on the accumulated interest over time. That's the magic of compound interest.
                         It's a financial concept that holds the potential to turn a modest sum into substantial wealth.
                     </p>
+                    <p class="lead fs-6">Compound interest is the financial phenomenon that allows your money to earn
+                        interest not only on the initial amount invested but also on the accumulated interest over time.
+                        In simple terms, it's like interest earning interest. This compounding effect has the potential
+                        to significantly boost your savings and investments over the long term.</p>
                 </div>
-                <div class="col-md-4 col-12">
+                <div class="col-md-6 col-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h3 mb-4"><span class="h4 d-block mt-3">Unveiling the Power of Growth</span></h2>
+                    <p class="lead fs-6">Have you ever wondered how your money can grow exponentially over time? That's
+                        where compound interest comes into play. In this article, we'll dive into the world of compound
+                        interest, exploring its calculation, the significance of keywords like "compound interest
+                        calculator" and "compound interest formula," and how you can harness its potential to build your
+                        wealth.</p>
+                </div>
+                <div class="col-md 4 col-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
                     <h2 class="h4 my-4">The Basics of Compound Interest Calculation</h2>
                     <p class="lead fs-6">At its core, compound interest is about reinvesting earned interest. Unlike
                         simple interest, where only the principal amount earns interest, compound interest allows both
                         the principal and previously earned interest to generate more earnings.</p>
                 </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 my-4">Understanding the Compound Interest Formula</h2>
-                    <p class="lead fs-6">Breaking down the formula, you can see that the principal amount \(P\) is
-                        multiplied by \(1\) plus the interest rate divided by the compounding frequency \(n\), all
-                        raised to the power of the product of \(n\) and \(t\). This demonstrates how the interest
-                        compounds over time.</p>
-                </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-8 col-12">
                     <h2 class="h4 my-4">Compound Interest Calculation: A Closer Look</h2>
-                    <h3>Compound Interest Formula and Its Components</h3>
+                    <h3 class="h5">Compound Interest Formula and Its Components</h3>
                     <p class="lead fs-6">The fundamental formula for compound interest is:</p>
                     <p class="lead fs-6">To calculate compound interest, you can use the formula:</p>
                     <code>
@@ -521,49 +546,70 @@
                         <li>- n = Number of times interest is compounded per year</li>
                         <li>- t = Number of years</li>
                     </ul>
-                    <p class="lead fs-6">The key to successful compound interest calculation lies in understanding these
-                        components and their interactions. Let's break it down further:</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 mt-4">
+                        <img class="img-fluid mb-2"
+                            src="https://images.pexels.com/photos/1602726/pexels-photo-1602726.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                        <div class="card-body px-0">
+                            <p class="lead fs-6">The key to successful compound interest calculation lies in
+                                understanding these components and their interactions. Let's break it down further:</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h5 my-4">Compound Interest Calculation <span class="d-block mt-2 h3">A
+                                Closer Look</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="closer-look">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">The Role of Frequency and Time in Compound Interest</h2>
                     <p class="lead fs-6">The frequency of compounding significantly impacts the growth of your
                         investment. The more frequently interest is compounded, the faster your money grows. Time also
                         plays a crucial role. The longer your money remains invested, the greater the impact of
                         compounding.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <h2 class="h4 my-4">Leveraging Online Tools: The Keyword "Compound Interest Calculator"</h2>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">Online Tool: Compound Interest Calculator</h2>
                     <p class="lead fs-6">In the digital age, calculating compound interest is easier than ever. A simple
                         online search for "compound interest calculator" reveals a plethora of user-friendly tools that
                         do the math for you. These calculators allow you to experiment with different variables and
                         investment scenarios to see the potential outcomes.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">How Compound Interest Differs from Simple Interest</h2>
                     <p class="lead fs-6">Unlike compound interest, where interest generates interest, simple interest is
                         calculated solely on the principal amount. This fundamental difference can lead to significant
                         variations in earnings over time.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">Exploring Real-world Examples of Compound Interest</h2>
                     <p class="lead fs-6">Let's consider a real-world example: Sarah invests $10,000 in a savings account
                         with a 5% annual interest rate, compounded annually. After 10 years, her investment would grow
                         to approximately $16,386.92. The same scenario with simple interest would yield only $15,000.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">The Compounding Effect on Investments</h2>
                     <p class="lead fs-6">Compound interest isn't limited to savings accounts; it applies to investments
                         as well. The reinvestment of dividends and interest in stocks, bonds, and mutual funds can lead
                         to substantial long-term gains.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">Strategies to Maximize Compound Growth</h2>
                     <p class="lead fs-6">To make the most of compound interest, consider these strategies:</p>
                     <ul class="lead fs-6">
@@ -573,36 +619,48 @@
                         <li>Reinvest dividends and interest</li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <h2 class="h4 my-4">Overcoming Common Misconceptions about Compound Interest</h2>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">Common Misconceptions for Compound Interest</h2>
                     <p class="lead fs-6">Misconceptions about compound interest abound. One common belief is that it's
                         only relevant for the wealthy. In reality, anyone can benefit from compound interest by starting
                         early and making consistent contributions.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">Compound Interest vs. Inflation: A Balancing Act</h2>
                     <p class="lead fs-6">While compound interest helps your money grow, inflation erodes its purchasing
                         power. To combat the effects of inflation, aim for investments that outpace the inflation rate.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <h2 class="h4 my-4">Teaching Financial Literacy: Introducing Compound Interest to Students</h2>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">Financial Literacy for Compound Interest Calculation</h2>
                     <p class="lead fs-6">Educating the younger generation about compound interest is essential for
                         fostering financial literacy. Introducing them to concepts like the "magic" of compounding can
                         set
                         them on the path to smart financial decisions.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-md-6 col-12">
                     <h2 class="h4 my-4">Planning for Long-Term Goals with Compound Interest</h2>
                     <p class="lead fs-6">Compound interest is a powerful tool for achieving long-term financial goals,
                         such as retirement planning, buying a home, or funding education. The earlier you start, the
                         more time your investments have to grow.</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <h2 class="h4 my-4">Diving Deeper: Compound Interest in Different Financial Instruments</h2>
+                <div class="col-12">
+                    <h2 class="h4 my-4">Compound Interest in Different Financial Instruments</h2>
                     <p class="lead fs-6">Compound interest operates across various financial instruments, including
                         bonds, certificates of deposit, and even loans. Understanding its implications in each context
                         can help you make informed financial decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">Compound Interest <span class="d-block mt-2 h4">The Magic of
+                                Growing Wealth</span></h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -619,47 +677,46 @@
             </div>
         </div>
     </section> -->
-    <section>
+    <section class="pt-5" id="growing">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <h2 class="h4 my-3">Compound Interest: Unraveling the Magic of Growing Wealth</h2>
+                <div class="col-12">
+                    <!-- <h2 class="h4 my-3">Compound Interest: Unraveling the Magic of Growing Wealth</h2> -->
                     <p class="lead fs-6">Imagine your money growing on autopilot, multiplying faster than you thought
                         possible. This financial magic is achieved through the power of compound interest. In this
                         comprehensive guide, we will delve into the world of compound interest calculation, explore the
                         intricacies of the compound interest formula, and provide you with expert insights on how to
                         make the most of compound interest in your financial journey.</p>
                 </div>
-                <div class="col-md-6 col-12">
-                    <h2 class="h4 my-4">Introduction to Compound Interest</h2>
-                    <p class="lead fs-6">Compound interest is the financial phenomenon that allows your money to earn
-                        interest not only on the initial amount invested but also on the accumulated interest over time.
-                        In simple terms, it's like interest earning interest. This compounding effect has the potential
-                        to significantly boost your savings and investments over the long term.</p>
-                </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Principal Amount (P)</h3>
+                    <h3 class="h5 my-2">Principal Amount (P)</h3>
                     <p class="lead fs-6">The initial amount you invest or deposit is known as the principal. It
                         serves as the foundation for your interest earnings.</p>
                 </div>
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Annual Interest Rate (r)</h3>
+                    <h3 class="h5 my-2">Annual Interest Rate (r)</h3>
                     <p class="lead fs-6">The rate at which your investment grows annually is the annual interest
                         rate. It's crucial to use the rate in decimal form for accurate calculations.</p>
                 </div>
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Compounding Frequency (n)</h3>
+                    <h3 class="h5 my-2">Compounding Frequency (n)</h3>
                     <p class="lead fs-6">How often the interest is compounded can have a significant impact on your
                         final amount. Common compounding frequencies include annually, semi-annually, quarterly, and
                         monthly.</p>
                 </div>
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Time (t)</h3>
+                    <h3 class="h5 my-2">Time (t)</h3>
                     <p class="lead fs-6">The number of years you allow your investment to grow directly affects the
                         outcome. The longer the time, the more pronounced the compounding effect.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="exploring">
+        <div class="container">
+            <div class="row">
                 <div class="col-12">
                     <h2 class="h4 my-4">Exploring Compound Interest Calculator Tools</h2>
                     <p class="lead fs-6">To simplify complex calculations, compound interest calculators come to the
@@ -669,73 +726,49 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <h3 class="h4 my-4">Advantages of Using a Compound Interest Calculator</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <p class="lead fs-6"><strong>Time-Saving : </strong>Manual calculations can be time-consuming and
-                        error-prone. Calculators offer quick results.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <p class="lead fs-6"><strong>Accuracy : </strong>Eliminate the risk of human errors in complex
-                        calculations, ensuring precise outcomes.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <p class="lead fs-6"><strong>Scenario Analysis : </strong>Experiment with various inputs to
-                        visualize the impact of different investment scenarios.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <p class="lead fs-6"><strong>Informed Decisions : </strong>Make well-informed financial decisions
-                        based on accurate projections.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="text-center h4 my-4">Leveraging Compound Interest for Wealth Accumulation</h2>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">The Power of Starting Early</h3>
-                    <p class="lead fs-6">One of the most valuable strategies for maximizing compound interest is to
-                        start early. Even small contributions can lead to significant gains over time due to the
-                        extended period of compounding.</p>
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h3 class="h4 my-4">Advantages of Using a Compound Interest Calculator</h3>
+                            <p class="lead fs-6"><strong>Time-Saving : </strong>Manual calculations can be
+                                time-consuming and error-prone. Calculators offer quick results.</p>
+                            <p class="lead fs-6"><strong>Accuracy : </strong>Eliminate the risk of human errors in
+                                complex calculations, ensuring precise outcomes.</p>
+                            <p class="lead fs-6"><strong>Scenario Analysis : </strong>Experiment with various inputs to
+                                visualize the impact of different investment scenarios.</p>
+                            <p class="lead fs-6"><strong>Informed Decisions : </strong>Make well-informed financial
+                                decisions based on accurate projections.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Consistent Contributions</h3>
-                    <p class="lead fs-6">Regularly contributing to your investments adds a consistent flow of funds that
-                        can capitalize on the compounding effect. This approach is particularly effective in long-term
-                        investments.</p>
-                </div>
-                <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Reinvesting Interest</h3>
-                    <p class="lead fs-6">Instead of withdrawing interest earnings, consider reinvesting them into the
-                        investment. This accelerates the compounding process, as the reinvested interest earns its own
-                        interest.</p>
-                </div>
-                <div class="col-md-6 col-12">
-                    <h3 class="h5 my-4">Diversification</h3>
-                    <p class="lead fs-6">Diversifying your investments helps spread risk and enhance potential returns.
-                        It's advisable to explore various investment vehicles like stocks, bonds, mutual funds, and real
-                        estate.</p>
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img class="img-fluid"
+                                src="https://images.pexels.com/photos/4968631/pexels-photo-4968631.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center h4 my-4">Frequently Asked Questions (FAQs)</h2>
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">
+                            Frequently Asked Questions
+                            <span class="d-block h2">(FAQs)</span>
+                        </h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="py-5" id="faqs">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <p>1. What is compound interest?</p>
@@ -788,11 +821,55 @@
             </div>
         </div>
     </section>
-    <section id="conclusion">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="h4 my-4">Conclusion</h2>
+                    <div class="py-5">
+                        <h2 class="text-center h4 my-4">
+                            Leveraging Compound Interest for
+                            <span class="d-block h2">Wealth Accumulation</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5" id="leveraging">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">The Power of Starting Early</h3>
+                    <p class="lead fs-6">One of the most valuable strategies for maximizing compound interest is to
+                        start early. Even small contributions can lead to significant gains over time due to the
+                        extended period of compounding.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">Consistent Contributions</h3>
+                    <p class="lead fs-6">Regularly contributing to your investments adds a consistent flow of funds that
+                        can capitalize on the compounding effect. This approach is particularly effective in long-term
+                        investments.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">Reinvesting Interest</h3>
+                    <p class="lead fs-6">Instead of withdrawing interest earnings, consider reinvesting them into the
+                        investment. This accelerates the compounding process, as the reinvested interest earns its own
+                        interest.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">Diversification</h3>
+                    <p class="lead fs-6">Diversifying your investments helps spread risk and enhance potential returns.
+                        It's advisable to explore various investment vehicles like stocks, bonds, mutual funds, and real
+                        estate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-5" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center my-4">Conclusion</h2>
                 </div>
             </div>
             <div class="row">
