@@ -172,14 +172,25 @@
             -webkit-animation: blink-animation 1s steps(5, start) infinite;
         }
 
+        .parallax {
+            background-image: url("https://images.pexels.com/photos/4466492/pexels-photo-4466492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            /* min-height: 500px; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         @keyframes blink-animation {
             to {
+                /* visibility: hidden; */
                 background-color: #ffc107;
             }
         }
 
         @-webkit-keyframes blink-animation {
             to {
+                /* visibility: hidden; */
                 background-color: #ffc107;
             }
         }
@@ -369,11 +380,17 @@
             </div>
         </div>
     </header>
-    <section class="py-5">
+    <section class="py-5" id="intro">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <h2 class="h3 mb-4">Exploring the Benefits of the Senior Citizens Savings Scheme</h2>
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h2 class="mb-4">Introduction</h2>
+                    <p class="lead fs-6">Retirement is a phase of life that deserves financial stability and peace of
+                        mind. The Senior Citizens Savings Scheme (SCSS) and post office SCSS scheme are designed to
+                        offer senior citizens a secure avenue for their savings. In this article, we'll delve into the
+                        details of these schemes, including interest rates, calculators, and the benefits they offer.
+                    </p>
+                    <h3 class="h4 my-4">Exploring the Benefits of the Senior Citizens Savings Scheme</h3>
                     <p class="lead fs-6">Are you a senior citizen looking for a secure and lucrative savings option?
                         Look no further -- the Senior Citizens Savings Scheme (SCSS) is tailored just for you. In this
                         article, we will delve into the intricacies of the SCSS, from its interest rates to its
@@ -381,21 +398,25 @@
                         your savings.
                     </p>
                 </div>
-                <div class="col-md-6 col-12">
-                    <h2 class="h3 mb-4">Understanding the Senior Citizens Savings Scheme (SCSS)</h2>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <!-- <img src="https://images.pexels.com/photos/6974989/pexels-photo-6974989.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class="img-fluid rounded my-5" alt=""> -->
+                    <img src="senior-citizens-savings-scheme-scss-calculator.svg" class="img-fluid rounded my-2"
+                        alt="Senior Citizens Savings Scheme - SCSS Calculator">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="h4 my-4">Understanding the Senior Citizens Savings Scheme (SCSS)</h3>
                     <p class="lead fs-6">The Senior Citizens Savings Scheme, often abbreviated as SCSS, is a
                         government-backed savings initiative designed exclusively for senior citizens. It offers them a
                         safe and attractive investment avenue with substantial interest rates. This scheme provides
                         financial security while also encouraging senior citizens to contribute to the economy.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Key Features of SCSS</h3>
+                    <h2 class="my-4">Key Features of SCSS</h2>
                 </div>
             </div>
             <div class="row">
@@ -407,8 +428,8 @@
                 </div>
                 <div class="col-md-4 col-12">
                     <p class="lead fs-6 my-3"><strong>2. Investment Limit : </strong>A single senior citizen can invest
-                        a
-                        maximum of ₹15 lakh in the SCSS, either individually or jointly with another senior citizen.</p>
+                        a maximum of ₹15 lakh in the SCSS, either individually or jointly with another senior citizen.
+                    </p>
                 </div>
                 <div class="col-md-4 col-12">
                     <p class="lead fs-6 my-3"><strong>3. Interest Rates : </strong>The interest rates for the SCSS are
@@ -417,16 +438,33 @@
                 </div>
                 <div class="col-md-4 col-12">
                     <p class="lead fs-6 my-3"><strong>4. Investment Duration : </strong>The tenure of the SCSS is five
-                        years,
-                        which can be extended for an additional three years after maturity.</p>
+                        years, which can be extended for an additional three years after maturity.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">Using the SCSS Calculator for Informed Decisions</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead fs-6">To facilitate a clear understanding of the returns on your investment, the SCSS
+                        calculator comes in handy. This tool allows you to input your investment amount, the prevailing
+                        interest rate, and the tenure of your investment. The calculator then provides an estimate of
+                        the maturity amount and interest earned.</p>
+                </div>
+                <div class="col-lg-8 col-md-6 col-12">
                     <h2 class="h4 mb-4">Exploring the Interest Rate of the Senior Citizens Savings Scheme</h2>
                     <p class="lead fs-6">The interest rate of the SCSS is a crucial factor that makes it an attractive
                         option for senior citizens looking to grow their savings. The scheme's interest rates are
@@ -437,18 +475,11 @@
                         is important to note that tax is deducted at source if the interest exceeds ₹50,000 in a
                         financial year.</p>
                 </div>
-                <div class="col-md-6 col-12">
-                    <h2 class="h4 mb-4">Using the SCSS Calculator for Informed Decisions</h2>
-                    <p class="lead fs-6">To facilitate a clear understanding of the returns on your investment, the SCSS
-                        calculator comes in handy. This tool allows you to input your investment amount, the prevailing
-                        interest rate, and the tenure of your investment. The calculator then provides an estimate of
-                        the maturity amount and interest earned.</p>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/3831187/pexels-photo-3831187.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-2" alt="Senior Citizens Savings Scheme Interest Rate">
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h2 class="h4 mb-4">Navigating the Senior Citizens Savings Scheme through Post Offices</h2>
@@ -460,137 +491,163 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <h3>Understanding Post Office SCSS Calculator</h3>
+                    <h3 class="h4 mb-4">Understanding Post Office SCSS Calculator</h3>
                     <p class="lead fs-6">The post office SCSS calculator is a valuable tool that assists individuals in
                         predicting the maturity amount of their investment. By entering the principal amount, interest
                         rate, and tenure, investors can get an accurate estimate of the returns they can expect.</p>
                 </div>
                 <div class="col-md-6 col-12">
-                    <h3>Interest Rate Trends in 2022</h3>
+                    <h3 class="h4 mb-4">Interest Rate Trends in 2022</h3>
                     <p class="lead fs-6">The interest rates for the SCSS are subject to change based on economic
                         conditions. In 2022, the interest rate remains stable at 7.4% per annum, making it an attractive
                         choice for senior citizens seeking higher returns than traditional savings accounts.</p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>SEO Meta Description</h2>
-                    <p class="lead fs-6">Explore the Senior Citizens Savings Scheme (SCSS) and post office SCSS scheme
-                        to make the most of your retirement years. Learn about interest rates, calculators, and more in
-                        this informative article.</p>
-
-                    <h2>Introduction</h2>
-                    <p class="lead fs-6">Retirement is a phase of life that deserves financial stability and peace of
-                        mind. The Senior Citizens Savings Scheme (SCSS) and post office SCSS scheme are designed to
-                        offer senior citizens a secure avenue for their savings. In this article, we'll delve into the
-                        details of these schemes, including interest rates, calculators, and the benefits they offer.
-                    </p>
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">
+                            Senior Citizens Savings Scheme:
+                            <span class="d-block h5 mt-2">A Comprehensive Guide to Maximizing Your Savings</span>
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="my-5" id="guide">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="fs-3 mb-4">Senior Citizens Savings Scheme: A Comprehensive Guide to Maximizing Your
-                        Savings</h2>
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Senior Citizens Savings Scheme (SCSS): Explained</h2>
+                        <p class="lead fs-6">The <strong>Senior Citizens Savings Scheme</strong> is a government-backed
+                            savings option tailored for individuals aged 60 and above. It offers an attractive way for
+                            senior citizens to invest their savings and secure their financial future. With its higher
+                            interest rates compared to other savings avenues, SCSS is an excellent choice.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Understanding Interest Rates in SCSS</h2>
+                        <p class="lead fs-6">The <strong>interest rates</strong> in the Senior Citizens Savings Scheme
+                            are periodically revised by the government. As of [latest year], the interest rate is [X%]
+                            per annum, providing a steady income stream for retirees. This is significantly higher than
+                            traditional savings accounts, making SCSS an appealing choice for seniors.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Benefits of SCSS</h2>
+                        <p class="lead fs-6">The benefits of SCSS extend beyond favorable interest rates. This scheme
+                            offers regular payouts, making it an ideal way to supplement retirement income.
+                            Additionally, the investment in SCSS is exempted from income tax under Section 80C of the
+                            Income Tax Act.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">How to Calculate Returns with SCSS Calculator</h2>
+                        <p class="lead fs-6">Utilize the <strong>SCSS calculator </strong>to accurately estimate your
+                            returns. By inputting the principal amount and the desired tenure, you can foresee the
+                            interest earned and the final maturity amount. This tool helps you make informed decisions
+                            about your investments.</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Navigating the Post Office Senior Citizens Savings Scheme</h2>
+                        <p class="lead fs-6">The<strong></strong>post office SCSS scheme offers similar benefits to
+                            the regular SCSS, making it a reliable choice for senior citizens seeking security and
+                            growth
+                            for their savings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Interest Rate Trends: Post Office SCSS Interest Rate 2022</h2>
+                        <p class="lead fs-6">As of 2022, the<strong></strong>post office SCSS interest rate stands at
+                            [X%] per annum. This consistency provides retirees with stable returns, ensuring a peaceful
+                            retirement without financial worries.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Eligibility and Account Opening Process</h2>
+                        <p class="lead fs-6">To open an SCSS account, individuals must be 60 years or older. Retirees
+                            aged 55-60 and retired defense personnel can also apply. The process is straightforward, and
+                            with minimal documentation, you can secure your financial future.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Deposits and Limits</h2>
+                        <p class="lead fs-6">The minimum deposit for SCSS is [X amount], while the maximum is capped at
+                            [X amount]. This ensures flexibility for retirees with varying financial capacities.</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Tenure and Extension</h2>
+                        <p class="lead fs-6">The initial tenure for SCSS is five years, with an option to extend for an
+                            additional three years. This extension comes with its own set of benefits, allowing senior
+                            citizens to continue enjoying attractive interest rates.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Benefits of Early Withdrawal</h2>
+                        <p class="lead fs-6">In case of emergency, SCSS permits early withdrawal after one year, subject
+                            to certain conditions. However, a penalty is applicable, making it important to consider
+                            this option carefully.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Nomination and Transferring Benefits</h2>
+                        <p class="lead fs-6">Nomination is a crucial aspect of SCSS, ensuring your loved ones receive
+                            the benefits in case of unforeseen events. Additionally, you can transfer your SCSS account
+                            from one post office to another for convenience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Documents Required for Account Opening</h2>
+                        <p class="lead fs-6">To open an SCSS account, you'll need proof of age, identity, and residence.
+                            These documents include Aadhaar card, PAN card, passport-sized photographs, and address
+                            proof.</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card border-0 py-3 mb-3">
+                        <h2 class="h5 mb-4">Managing SCSS Online</h2>
+                        <p class="lead fs-6">The convenience of online account management has reached SCSS. You can
+                            easily check your account balance, interest earned, and make necessary updates through the
+                            post office's online portal.</p>
+                    </div>
                 </div>
             </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">1. Senior Citizens Savings Scheme (SCSS): Explained</h2>
-                    <p class="lead fs-6">The<strong></strong>Senior Citizens Savings Scheme is a government-backed
-                        savings option tailored for individuals aged 60 and above. It offers an attractive way for
-                        senior citizens to invest their savings and secure their financial future. With its higher
-                        interest rates compared to other savings avenues, SCSS is an excellent choice.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">2. Understanding Interest Rates in SCSS</h2>
-                    <p class="lead fs-6">The<strong>interest rates </strong>in the Senior Citizens Savings Scheme
-                        are periodically revised by the government. As of [latest year], the interest rate is [X%] per
-                        annum, providing a steady income stream for retirees. This is significantly higher than
-                        traditional savings accounts, making SCSS an appealing choice for seniors.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">3. Benefits of SCSS</h2>
-                    <p class="lead fs-6">The benefits of SCSS extend beyond favorable interest rates. This scheme
-                        offers regular payouts, making it an ideal way to supplement retirement income. Additionally,
-                        the investment in SCSS is exempted from income tax under Section 80C of the Income Tax Act.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">4. How to Calculate Returns with SCSS Calculator</h2>
-                    <p class="lead fs-6">Utilize the <strong>SCSS calculator </strong>to accurately estimate your
-                        returns. By inputting the principal amount and the desired tenure, you can foresee the interest
-                        earned and the final maturity amount. This tool helps you make informed decisions about your
-                        investments.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">5. Navigating the Post Office Senior Citizens Savings Scheme</h2>
-                    <p class="lead fs-6">The<strong></strong>post office SCSS scheme offers similar benefits to
-                        the regular SCSS, making it a reliable choice for senior citizens seeking security and growth
-                        for their savings.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">6. Interest Rate Trends: Post Office SCSS Interest Rate 2022</h2>
-                    <p class="lead fs-6">As of 2022, the<strong></strong>post office SCSS interest rate stands at
-                        [X%] per annum. This consistency provides retirees with stable returns, ensuring a peaceful
-                        retirement without financial worries.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">7. Eligibility and Account Opening Process</h2>
-                    <p class="lead fs-6">To open an SCSS account, individuals must be 60 years or older. Retirees
-                        aged 55-60 and retired defense personnel can also apply. The process is straightforward, and
-                        with minimal documentation, you can secure your financial future.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">8. Deposits and Limits</h2>
-                    <p class="lead fs-6">The minimum deposit for SCSS is [X amount], while the maximum is capped at
-                        [X amount]. This ensures flexibility for retirees with varying financial capacities.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">9. Tenure and Extension</h2>
-                    <p class="lead fs-6">The initial tenure for SCSS is five years, with an option to extend for an
-                        additional three years. This extension comes with its own set of benefits, allowing senior
-                        citizens to continue enjoying attractive interest rates.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">10. Benefits of Early Withdrawal</h2>
-                    <p class="lead fs-6">In case of emergency, SCSS permits early withdrawal after one year, subject
-                        to certain conditions. However, a penalty is applicable, making it important to consider this
-                        option carefully.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">11. Nomination and Transferring Benefits</h2>
-                    <p class="lead fs-6">Nomination is a crucial aspect of SCSS, ensuring your loved ones receive
-                        the benefits in case of unforeseen events. Additionally, you can transfer your SCSS account from
-                        one post office to another for convenience.</p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">12. Documents Required for Account Opening</h2>
-                    <p class="lead fs-6">To open an SCSS account, you'll need proof of age, identity, and residence.
-                        These documents include Aadhaar card, PAN card, passport-sized photographs, and address proof.
-                    </p>
-                </div>
-                <div class="col-md-4 col-12">
-                    <h2 class="h4 mb-4">13. Managing SCSS Online</h2>
-                    <p class="lead fs-6">The convenience of online account management has reached SCSS. You can
-                        easily check your account balance, interest earned, and make necessary updates through the post
-                        office's online portal.</p>
-                </div>
-                <div class="col-md-4 col-12">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">
+                            Frequently Asked Questions (FAQs)
+                            <span class="d-block h4 mt-1">About the Senior Citizens Savings Scheme</span>
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="faqs">
+    <section class="my-5" id="faqs">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="h3 my-5">14. Frequently Asked Questions (FAQs) About <br>the Senior Citizens Savings
-                        Scheme</h2>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-6 col-12">
                     <p><strong>Q : </strong>What is the age requirement for opening an SCSS account?</p>
@@ -634,22 +691,34 @@
             </div>
         </div>
     </section>
-    <section id="conclusion">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="h3 mb-4">Conclusion</h2>
+                    <div class="py-5">
+                        <h2 class="text-center text-uppercase my-4">Conclusion</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-12">
                     <p class="lead fs-6">The Senior Citizens Savings Scheme and the post office SCSS scheme provide
                         retirees with a secure and beneficial avenue for their savings. With attractive interest rates,
-                        tax
-                        exemptions, and convenient online management, these schemes offer financial stability during
+                        tax exemptions, and convenient online management, these schemes offer financial stability during
                         retirement. By making informed decisions and utilizing SCSS calculators, senior citizens can
-                        enjoy
-                        their golden years without financial worries.</p>
+                        enjoy their golden years without financial worries.</p>
                     <p class="lead fs-6">In conclusion, the Senior Citizens Savings Scheme (SCSS) is a fantastic
                         investment avenue for senior citizens looking to grow their savings securely. With competitive
                         interest rates, easy accessibility through post offices, and the convenience of calculators,
                         this scheme offers a well-rounded package for financial growth during retirement.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/302083/pexels-photo-302083.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded" alt="Senior Citizens Savings Scheme Calculator">
                 </div>
             </div>
         </div>

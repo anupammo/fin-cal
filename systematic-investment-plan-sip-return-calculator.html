@@ -171,6 +171,15 @@
             -webkit-animation: blink-animation 1s steps(5, start) infinite;
         }
 
+        .parallax {
+            background-image: url("https://images.pexels.com/photos/4466492/pexels-photo-4466492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            /* min-height: 500px; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         @keyframes blink-animation {
             to {
                 /* visibility: hidden; */
@@ -188,7 +197,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="calculator">
         <div class="wave1">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
@@ -353,7 +362,8 @@
                                 <div class="px-5">
                                     <div class="card border-0">
                                         <div class="card-body pb-0">
-                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0"></table>
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
                                         </div>
                                     </div>
                                     <canvas id="myChart"></canvas>
@@ -365,11 +375,11 @@
             </div>
         </div>
     </header>
-    <section class="mt-5" id="introduction">
+    <section class="my-5" id="intro">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h2 class="h2 mb-3">Introduction : SIP Calculator</h2>
+                <div class="col-12">
+                    <h2 class="mb-3">Introduction : SIP Calculator</h2>
                     <p class="lead fs-6">In the ever-evolving landscape of personal finance, investment strategies play
                         a pivotal role in shaping a secure future. Among the myriad options available, Systematic
                         Investment Plans (SIPs) have emerged as a popular choice for investors seeking long-term wealth
@@ -377,21 +387,9 @@
                         calculators, their significance in India's financial market, and how they aid in making informed
                         investment decisions.</p>
                 </div>
-                <div class="col-lg-3 col-md-3 col-12">
-                </div>
-                <div class="col-lg-3 col-md-3 col-12">
-                    <div class="">
-                        <img src="nivesguru-investment-calculator-svg.webp" width="300" height="300"
-                            alt="nivesguru investment calculator fd">
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-    <section class="mt-5" id="">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-12">
+                <!-- <div class="col-lg-3 col-md-4 col-12">
                     <ul class="list-group list-group-flush lead fw-bold fs-6 my-3">
                         <li class="list-group-item border-0">
                             <a href="fixed-deposit-fd-calculator"><span class="fs-5">🪙</span> FD Calculator</a>
@@ -443,9 +441,9 @@
                                 Calculator</a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-lg-9 col-md-8 col-12">
-                    <h2 class="h2 my-3">How Does a SIP Calculator Work?</h2>
+                </div> -->
+                <div class="col-lg-8 col-md-6 col-12">
+                    <h2 class="h3 my-3">How Does a SIP Calculator Work?</h2>
                     <p class="lead fs-6">The Post Office SIP Calculator is designed to be user-friendly, even for those
                         who have little or no experience in financial calculations. It requires only a few basic inputs,
                         such as your investment amount, the interest rate, and
@@ -461,8 +459,17 @@
                         to use, accurate, and can help you make informed investment decisions. Try it out today and
                         experience the benefits for yourself!
                     </p>
-
-                    <h2 class="h2 mb-3">Free SIP Calculator Conclusion:</h2>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card border-0">
+                        <img src="systematic-investment-plan-sip-return-calculator.svg" class="card-body img-fluid py-4"
+                            alt="Systematic Investment Plans - SIP Return Calculator">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h3 mb-3">Free SIP Calculator Conclusion:</h2>
                     <p class="lead fs-6">Are you looking to optimize the performance of your post office? Look no
                         further than our SIP Calculator, available now on nivesguru.in! With its advanced algorithms and
                         user-friendly interface, our calculator can help you calculate
@@ -480,23 +487,27 @@
             </div>
         </div>
     </section>
-    <section id="essence">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center h2 my-5">The Essence of SIP Investment</h2>
+                    <div class="py-5">
+                        <h2 class="text-center my-4">The Essence of SIP Investment</h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="my-5" id="essence">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-7 col-md-6 col-12">
                     <h3 class="h4 my-4">Understanding SIP Investment</h3>
                     <p class="lead fs-6"><strong>Systematic Investment Plan</strong>, commonly known as SIP, is a
                         disciplined approach to investing in mutual funds. It allows investors to allocate a fixed sum
                         of money at regular intervals, typically monthly or quarterly, into a selected mutual fund
                         scheme. The allure of SIP lies in its simplicity, enabling individuals to start investing with
                         minimal capital and benefit from rupee-cost averaging.</p>
-                </div>
-                <div class="col-md-6 col-12">
                     <h3 class="h4 my-4">Unveiling the SIP Return Calculator</h3>
                     <p class="lead fs-6">A crucial tool in the arsenal of a prudent investor is the SIP Return
                         Calculator. This tool takes the complexity out of estimating potential returns on SIP
@@ -504,16 +515,26 @@
                         rate of return, investors can gain valuable insights into the growth of their investments over
                         time.</p>
                 </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/14907339/pexels-photo-14907339.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class="img-fluid rounded shadow my-5" alt="SIP Investment by Nivesguru">
+                </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-center h2 my-5">Leveraging SIP Calculators in India</h3>
+                    <div class="py-5">
+                        <h2 class="text-center my-4">Leveraging SIP Calculators in India</h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="my-5" id="leveraging">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <h4 class="h4 my-4">Leveraging SIP Calculators in India</h4>
@@ -559,11 +580,21 @@
             </div>
         </div>
     </section>
-    <section class="thoughts">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center my-5">Demystifying Systematic Investment Plan (SIP)</h2>
+                    <div class="py-5">
+                        <h2 class="text-center my-4">Demystifying Systematic Investment Plan (SIP)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="thoughts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
                     <p class="text-center lead fs-6">Systematic Investment Plan, often abbreviated as SIP, is a
                         methodical approach to investment that minimizes the impact of market volatility. It involves
                         allocating a fixed amount of money at regular intervals to purchase units of a mutual fund. By
@@ -591,16 +622,22 @@
             </div>
         </div>
     </section>
-    <section id="strategies">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center my-5">Exploring SIP Investment Strategies</h2>
+                    <div class="py-5">
+                        <h2 class="text-center my-4">Exploring SIP Investment Strategies</h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="my-5" id="strategies">
+        <div class="container">
             <div class="row">
                 <div class="col-md-4 col-12">
-                    <h3 class="mb-4">The Art of Diversification in SIP</h3>
+                    <h3 class="h5 mb-4">The Art of Diversification in SIP</h3>
                     <p class="lead fs-6">Diversification is a fundamental strategy in investment, and SIPs offer a
                         convenient way to implement it. By investing in multiple mutual fund schemes through SIPs,
                         investors can spread their risk across different asset classes, industries, and market segments.
@@ -608,14 +645,14 @@
                         potential for consistent returns.</p>
                 </div>
                 <div class="col-md-4 col-12">
-                    <h3 class="mb-4">Goal-Oriented Investing with SIP</h3>
+                    <h3 class="h5 mb-4">Goal-Oriented Investing with SIP</h3>
                     <p class="lead fs-6">SIPs can be tailored to meet specific financial goals. Whether it's building a
                         retirement corpus, funding a child's education, or purchasing a home, SIPs offer a disciplined
                         approach to achieving these objectives. By aligning investment amounts and tenures with target
                         goals, investors can track their progress and make adjustments as needed.</p>
                 </div>
                 <div class="col-md-4 col-12">
-                    <h3 class="mb-4">Leveraging Tax Benefits through ELSS SIPs</h3>
+                    <h3 class="h5 mb-4">Tax Benefits through ELSS SIPs</h3>
                     <p class="lead fs-6">Equity Linked Savings Schemes (ELSS) offer tax benefits under Section 80C of
                         the Income Tax Act. ELSS SIPs provide investors with the dual advantage of potential capital
                         appreciation and tax savings. SIP calculators can help investors understand the impact of tax
@@ -625,32 +662,31 @@
             </div>
         </div>
     </section>
-    <section id="concerns">
+    <section class="my-5" id="concerns">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center my-5">Addressing Investor Concerns</h2>
+                    <h2 class="text-center mb-5">Addressing Investor Concerns</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <h3>Tackling Market Volatility with SIPs</h3>
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h3 class="h4 mb-4">Tackling Market Volatility with SIPs</h3>
                     <p class="lead fs-6">Market volatility often triggers uncertainty among investors. However, SIPs act
-                        as a
-                        cushion against
-                        extreme market fluctuations. By consistently investing a fixed amount, investors buy more units
-                        when
-                        prices are low and fewer units when prices are high. This strategy effectively averages out the
-                        cost
-                        of units, reducing the impact of short-term market turbulence.</p>
-                </div>
-                <div class="col-md-6 col-12">
-                    <h3>SIP vs. Lump Sum: A Comparative Analysis</h3>
+                        as a cushion against extreme market fluctuations. By consistently investing a fixed amount,
+                        investors buy more units when prices are low and fewer units when prices are high. This strategy
+                        effectively averages out the cost of units, reducing the impact of short-term market turbulence.
+                    </p>
+                    <h3 class="h4 mb-4">SIP vs. Lump Sum: Comparative Analysis</h3>
                     <p class="lead fs-6">Investors often contemplate whether to invest through SIP or opt for a lump sum
-                        investment. SIP
-                        calculators can facilitate this decision by providing a side-by-side comparison of potential
-                        returns. While lump sum investments may capitalize on market lows, SIPs offer the advantage of
-                        rupee-cost averaging and mitigate the risk of investing a large sum at an inopportune time.</p>
+                        investment. SIP calculators can facilitate this decision by providing a side-by-side comparison
+                        of potential returns. While lump sum investments may capitalize on market lows, SIPs offer the
+                        advantage of rupee-cost averaging and mitigate the risk of investing a large sum at an
+                        inopportune time.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/68912/pexels-photo-68912.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-2" alt="Systematic Investment Plan Calculator">
                 </div>
             </div>
         </div>
@@ -659,7 +695,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center h2 my-5">Navigating SIP Calculators: A Step-by-Step Guide</h2>
+                    <h2 class="text-center mb-5">Navigating SIP Calculators: A Step-by-Step Guide</h2>
                 </div>
             </div>
             <div class="row">
@@ -685,11 +721,11 @@
             </div>
         </div>
     </section>
-    <section id="conclusion">
+    <section class="mb-5" id="conclusion">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center my-5">Conclusion</h2>
+                    <h2 class="text-center mb-5">Conclusion</h2>
                 </div>
             </div>
             <div class="row">
@@ -715,14 +751,19 @@
             </div>
         </div>
     </section>
-    <section class="faqs">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- <h2 class="h3 mb-3">References</h2> -->
-                    <h2 class="text-center h3 my-5">FAQs about SIP Investment</h2>
+                    <div class="py-5">
+                        <h2 class="text-center my-4"><span class="d-block h1">FAQ's</span> about SIP Investment</h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="my-5" id="faqs">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <p>Q1: What is the minimum investment amount for SIPs?</p>
@@ -765,31 +806,39 @@
             </div>
         </div>
     </section>
-    <section class="thoughts">
+    <section class="parallax">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center my-5">Concluding Thoughts</h2>
+                    <div class="py-5">
+                        <h2 class="text-center my-4">Concluding Thoughts</h2>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="mt-5" id="concluding">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
-                    <h3 class="mb-4">Your SIP Journey Unfolds</h3>
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h3 class="h4 mb-4">Your SIP Journey Unfolds</h3>
                     <p class="lead fs-6">In the world of investment, SIPs stand as a beacon of financial prudence and
                         foresight. Through systematic investments and the wisdom of SIP calculators, you have the
                         opportunity to build a solid financial foundation. As you navigate the intricacies of SIP
                         investment, remember that each contribution, no matter how small, brings you closer to your
                         financial aspirations. So, embark on this journey with confidence, armed with knowledge and the
                         conviction that your financial future is within reach.</p>
-                </div>
-                <div class="col-md-6 col-12">
-                    <h3 class="mb-4">Disclaimer</h3>
+                    <h3 class="h4 mb-4">Disclaimer</h3>
                     <p class="lead fs-6">The information provided in this article is for educational purposes only and
                         should not be considered financial advice. Investment decisions should be made based on careful
                         consideration of individual financial circumstances and consultation with a qualified financial
                         advisor. The accuracy and applicability of the content may vary over time and among different
                         regions. Always refer to the latest official sources and guidelines for the most up-to-date
                         information.</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/14907454/pexels-photo-14907454.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-5" alt="SIP Return Calculator by Nivesguru">
                 </div>
             </div>
         </div>
