@@ -47,6 +47,33 @@
             ]
         }
     </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "FinancialProduct",
+            "name": "Sovereign Gold Bond",
+            "description": "Gold Bond issued by the Reserve Bank of India (RBI) and the Government of India, allowing investors to invest in gold in a non-physical form",
+            "url": "https://rbi.org.in/scripts/BS_SwarnaBharat.aspx",
+            "offers": { 
+                "@type": "AggregateOffer", 
+                "lowPrice" : "5876 ", 
+                "highPrice" : "5923 ",
+                "priceCurrency" : "INR ", 
+                "offerCount": "10" 
+            },
+            "issuer": {
+                "@type": "GovernmentOrganization",
+                "name": "Government of India",
+                "url": "https://www.india.gov.in/"
+            },
+            "manufacturer": {
+                "@type": "GovernmentOrganization",
+                "name": "Reserve Bank of India (RBI)",
+                "url": "https://www.rbi.org.in/"
+            }
+        }
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>Free online Sovereign Gold Bond / SGB Calculator | Nivesguru</title>
     <meta name="title" content="Free online Sovereign Gold Bond / SGB Calculator | Nivesguru">
@@ -355,6 +382,10 @@
                                                         class="fs-4">5</strong> Year</label>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input shadow-none" id="sgb-disc">
+                                        <label class="form-check-label lead fs-6" for="sgb-disc">Discounted Price for online payment</label>
                                     </div>
                                     <div class="mb-3">
                                         <button type="button" onclick="sgbCalc();"
@@ -1043,6 +1074,17 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
+        var checkbox = document.getElementById("sgb-disc");
+        checkbox.addEventListener("change", function () {
+            if (checkbox.checked) {
+                document.getElementById("goldp").value = 5873;
+                document.getElementById("disp-goldp").innerHTML = 5873;
+            } else {
+                document.getElementById("goldp").value = 5923;
+                document.getElementById("disp-goldp").innerHTML = 5923;
+            }
+        });
+
         function dispQgold() {
             let goldq = document.getElementById("qgold").value;
             document.getElementById("disp-qgold").innerHTML = goldq;
