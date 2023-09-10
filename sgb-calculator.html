@@ -311,6 +311,24 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
+                                                <label for="goldp" class="form-label">Gold Price / gram</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    ₹<strong id="disp-goldp" class="fs-4">5923</strong>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5000" max="6500" step="1"
+                                            value="5923" id="goldp" onchange="dispPgold()" disabled>
+                                        <div class="row">
+                                            <span class="col">₹5000</span>
+                                            <span class="text-end col">₹6500</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
                                                 <label for="qgold" class="form-label">Quantity of Gold</label>
                                             </div>
                                             <div class="col">
@@ -319,29 +337,11 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="10" max="4000" step="1" value="10"
+                                        <input type="range" class="form-range" min="0" max="4000" step="10" value="10"
                                             id="qgold" onchange="dispQgold()">
                                         <div class="row">
-                                            <span class="col">10g</span>
+                                            <span class="col">0g</span>
                                             <span class="text-end col">4000g</span>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label for="goldp" class="form-label">Gold Price / gram</label>
-                                            </div>
-                                            <div class="col">
-                                                <label class="form-label float-end">
-                                                    ₹<strong id="disp-goldp" class="fs-4">5926</strong>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <input type="range" class="form-range" min="5000" max="6500" step="1"
-                                            value="5926" id="goldp" onchange="dispPgold()">
-                                        <div class="row">
-                                            <span class="col">₹5000</span>
-                                            <span class="text-end col">₹6500</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
