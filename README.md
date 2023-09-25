@@ -1,5 +1,5 @@
-# fin-cal
-# Project Name
+# Nivesguru [fin-cal] 
+![GitHub](https://img.shields.io/github/license/:anupammo/:fincal)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/yourproject.svg?style=social)](https://github.com/yourusername/yourproject/stargazers)
