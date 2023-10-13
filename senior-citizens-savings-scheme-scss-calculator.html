@@ -352,11 +352,11 @@
                                                 <label for="fd_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">1000</label>
+                                                <label class="form-label fw-bold float-end" id="inv-disp">100000</label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="3000000" step="25000"
-                                            value="1000" id="fd_toti" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="0" max="3000000" step="50000"
+                                            value="100000" id="fd_toti" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">0</span>
                                             <span class="text-end col">3000000</span>
@@ -991,7 +991,8 @@
             // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
             // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
 
-            console.log(toti / 20);
+            // console.log(toti / 20);
+            console.log(fdtoti);
 
             // Table of Investments 
             let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr> <tr><td>Quarterly Interest</td><th class='text-end'>₹" + (toti / 20) + "</td></tbody>";
