@@ -1,9 +1,6 @@
 # Nivesguru [fin-cal] 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bhritick/fin-cal/blob/main/LICENCE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/yourproject.svg?style=social)](https://github.com/bhritick/fin-cal)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/yourproject.svg?style=social)](https://github.com/bhritick/fin-cal/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/yourproject.svg)](https://github.com/bhritick/fin-cal/issues)
 
 > Brief description or tagline for your project.
 
