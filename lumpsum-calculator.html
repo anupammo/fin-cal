@@ -311,28 +311,47 @@
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">Amount of Investment </label>
+                                            <div class="col"> <label class="form-label">Loan Amount </label>
                                             </div>
                                             <div class="col"> <label for="totinv" class="form-label float-end"> ₹<strong
-                                                        class="fs-4" id="inv-disp">10000</strong> </label> </div>
-                                        </div> <input type="range" class="form-range" min="1000" max="50000" step="1000"
-                                            value="10000" id="totinv" onchange="dispInv()">
-                                        <div class="row"> <span class="col">₹1000</span> <span
-                                                class="text-end col">₹50000</span> </div>
+                                                        class="fs-4" id="inv-disp">500000</strong> </label> </div>
+                                        </div> <input type="range" class="form-range" min="0" max="5000000" step="100000"
+                                            value="500000" id="totinv" onchange="dispInv()">
+                                        <div class="row"> <span class="col">₹0</span> <span
+                                                class="text-end col">₹5000000</span> </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">Interest Rate </label> </div>
-                                            <div class="col"> <label class="form-label float-end"><strong
-                                                        class="fs-4">7.5</strong>%</label> </div>
-                                        </div> <input type="hidden" class="form-control" id="ssyroi" value="7.5">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end"><strong
+                                                        id="age-disp">8.2%</strong></label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="8.2"
+                                            id="fd_roi" disabled="">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">12</span>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">Tenure </label> </div>
-                                            <div class="col"> <label class="form-label float-end"> <strong class="fs-4"
-                                                        id="age-disp">115</strong> months </label> </div>
-                                        </div> <input type="hidden" class="form-control" id="dage" value="10.25">
+                                            <div class="col">
+                                                <label class="form-label">Duration</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="8" step="3" value="5"
+                                            id="fd_idur" onchange="dispTime()" data-gtm-form-interact-field-id="0">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">8</span>
+                                        </div>
                                     </div>
                                     <div class="my-4"> <button type="button" onclick="kvpCalc();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
