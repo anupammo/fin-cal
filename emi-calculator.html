@@ -313,36 +313,62 @@
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">Loan Amount </label> </div>
-                                            <div class="col"> <label for="totinv" class="form-label float-end"> ₹<strong
-                                                        class="fs-4" id="inv-disp">500000</strong> </label> </div>
-                                        </div> <input type="range" class="form-range" min="0" max="5000000"
-                                            step="100000" value="500000" id="totinv" onchange="dispInv()">
-                                        <div class="row"> <span class="col">₹0</span> <span
-                                                class="text-end col">₹5000000</span> </div>
-                                    </div>
-                                    <div class="mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Principal Amount </label>
+                                            </div>
+                                            <div class="col">
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="inv-disp">1000000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="5000000"
+                                            step="100000" value="1000000" id="totinv" onchange="dispInv()">
                                         <div class="row">
-                                            <div class="col"> <label for="fd_toti" class="form-label">Interest
-                                                    Rate</label> </div>
-                                            <div class="col"> <label class="form-label fw-bold float-end"><strong
-                                                        id="age-disp">8.2%</strong></label> </div>
-                                        </div> <input type="range" class="form-range" min="5" max="12" step=".1"
-                                            value="8.2" id="fd_roi" disabled="">
-                                        <div class="row"> <span class="col">5</span> <span
-                                                class="text-end col">12</span> </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col"> <label class="form-label">Duration</label> </div>
-                                            <div class="col"> <label class="form-label fw-bold float-end"
-                                                    id="dur-disp">5</label> </div>
-                                        </div> <input type="range" class="form-range" min="5" max="8" step="3" value="5"
-                                            id="fd_idur" onchange="dispTime()" data-gtm-form-interact-field-id="0">
-                                        <div class="row"> <span class="col">5</span> <span class="text-end col">8</span>
+                                            <span class="col">0</span>
+                                            <span class="text-end col">5000000</span>
                                         </div>
                                     </div>
-                                    <div class="my-4"> <button type="button" onclick="kvpCalc();"
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    <span id="roi-disp" class="fs-4">10</span>
+                                                    <span>%</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="15" 
+                                        step=".1" value="10" id="emi-roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">EMI Duration</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    <span class="fs-4" id="dur-disp">5</span>
+                                                    <span>Yr</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="1" max="20" step="1" value="5"
+                                            id="dage" onchange="dispTime()">
+                                        <div class="row">
+                                            <span class="col">1</span>
+                                            <span class="text-end col">20</span>
+                                        </div>
+                                    </div>
+                                    <div class="my-4">
+                                        <button type="button" onclick="resultEMI();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
@@ -920,31 +946,38 @@
             document.getElementById("inv-disp").innerHTML = invdisp;
         }
 
-        function dispAge() {
-            let aged = document.getElementById("dage").value;
-            document.getElementById("age-disp").innerHTML = aged;
+        function dispROI() {
+            let aged = document.getElementById("emi-roi").value;
+            document.getElementById("roi-disp").innerHTML = aged;
         }
 
-        function kvpCalc() {
+        function dispTime() {
+            let invdisp = document.getElementById("dage").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
+        
+        function resultEMI() {
+            let principalAmount = document.getElementById("totinv").value;
+            let interestRatePercent = document.getElementById("emi-roi").value;
+            let loanTenureYears = document.getElementById("dage").value;
+            
+            function calculateEMI(principal, interestRate, tenure) {
+                const monthlyInterestRate = (interestRate / 12) / 100;
+                const numberOfPayments = tenure * 12;
+                const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+                return emi.toFixed(0);
+            }
 
-            let p = parseInt(document.getElementById("totinv").value);
-            let r = parseFloat(document.getElementById("ssyroi").value).toFixed(2);
-            let y = parseFloat(document.getElementById("dage").value).toFixed(2);
+            let emi = calculateEMI(principalAmount, interestRatePercent, loanTenureYears);
 
-            let a = parseInt(p * (Math.pow((1 + r / 100), y)));
-            let ci = parseInt(a - p);
+            let totali = (emi * (loanTenureYears * 12));
+            let totalp = (parseInt(principalAmount) + parseInt(totali));            
 
-            let date = new Date().getFullYear();
-            let mdate = (parseInt(date) + parseInt(y));
-
-            // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + p + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + ci + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + a + "</td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + emi + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + totali + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + totalp + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
-            // Table of Investments 
 
-            // Pie Chart 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [p, ci];
+            var yValues = [emi, totali];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
@@ -964,8 +997,6 @@
                     }
                 }
             });
-            // Pie Chart 
-
         }
     </script>
     <script src="app.js"></script>

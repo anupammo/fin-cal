@@ -343,41 +343,42 @@
                                 </div>
                                 <h1 class="px-5 mb-5 lead fw-bold fs-3">Simple Interest Calculator in Rupees: for
                                     Financial Clarity</h1>
-                                <form class="px-5">
+                                <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="p" class="form-label">Total Investment</label>
+                                                <label class="form-label">Principal Amount </label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end bg-warning rounded-pill fs-5 px-2">₹
-                                                    <span id="inv-disp">100000</span>
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="inv-disp">400000</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="500000" step="10000"
-                                            value="100000" id="p" onchange="dispP()">
+                                        <input type="range" class="form-range" min="0" max="1000000" step="50000"
+                                            value="400000" id="totinv" onchange="dispInv()">
                                         <div class="row">
-                                            <small class="col">0</small>
-                                            <small class="text-end col">500000</small>
+                                            <span class="col">0</span>
+                                            <span class="text-end col">1000000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="i" class="form-label">Interest Rate</label>
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end bg-warning rounded-pill fs-5 px-2">
-                                                    <span id="age-disp">5</span>%
+                                                <label class="form-label float-end">
+                                                    <span id="roi-disp" class="fs-4">9</span>
+                                                    <span>%</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="15" step="1" value="5"
-                                            id="i" onchange="dispI()">
+                                        <input type="range" class="form-range" min="5" max="15" step=".1" value="9"
+                                            id="emi-roi" onchange="dispROI()">
                                         <div class="row">
-                                            <small class="col">0</small>
-                                            <small class="text-end col">15</small>
+                                            <span class="col">5</span>
+                                            <span class="text-end col">15</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -386,19 +387,23 @@
                                                 <label class="form-label">Duration</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                                <label class="form-label float-end">
+                                                    <span class="fs-4" id="dur-disp">10</span>
+                                                    <span>Yr</span>
+                                                </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="8" step="3" value="5"
-                                            id="fd_idur" onchange="dispTime()" data-gtm-form-interact-field-id="0">
+                                        <input type="range" class="form-range" min="1" max="25" step="1" value="10"
+                                            id="dage" onchange="dispTime()">
                                         <div class="row">
-                                            <span class="col">5</span>
-                                            <span class="text-end col">8</span>
+                                            <div class="col">
+                                                <span class="col">1</span><span class="text-end col">25</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
-                                            onclick="vDisp();">Calculate</button>
+                                    <div class="my-4">
+                                        <button type="button" onclick="resultSimpleInterest();"
+                                            class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
                             </div>
@@ -999,41 +1004,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
     <script>
-        function dispP() {
-            let pValue = parseInt(document.getElementById("p").value);
-            document.getElementById("inv-disp").innerHTML = pValue;
+        function dispInv() {
+            let invdisp = document.getElementById("totinv").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
         }
-        function dispI() {
-            let iValue = parseInt(document.getElementById("i").value);
-            document.getElementById("age-disp").innerHTML = iValue;
-        }
-        function dispT() {
-            let tValue = parseInt(document.getElementById("t").value);
-            document.getElementById("dur-disp").innerHTML = tValue;
-        }
-        function dispF() {
-            let fValue = parseInt(document.getElementById("f").value);
-            document.getElementById("freq-disp").innerHTML = fValue;
-        }
-        function vDisp() {
-            const varp = parseInt(document.getElementById("p").value);
-            const vari = parseFloat(document.getElementById("i").value) / 100;
-            const vart = parseInt(document.getElementById("t").value);
-            const n = parseInt(document.getElementById("f").value);
 
-            // const n = varf === "annually" ? 1 : varf === "semiannually" ? 2 : varf === "quarterly" ? 4 : varf === "monthly" ? 12 : 1;
+        function dispROI() {
+            let aged = document.getElementById("emi-roi").value;
+            document.getElementById("roi-disp").innerHTML = aged;
+        }
 
-            const amount = (varp * Math.pow(1 + (vari / n), n * vart)).toFixed(0);
-            const interest = (amount - varp).toFixed(0);
+        function dispTime() {
+            let invdisp = document.getElementById("dage").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
 
-            // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + varp + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + interest + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + amount + "</td></tr></tbody>";
+        function resultSimpleInterest() {
+            let principalAmount = document.getElementById("totinv").value;
+            let interestRatePercent = document.getElementById("emi-roi").value;
+            let timeInYears = document.getElementById("dage").value;
+
+            function calculateSimpleInterest(principal, interestRate, timePeriod) {
+                if (isNaN(principal) || isNaN(interestRate) || isNaN(timePeriod)) {
+                    return "Please enter valid numerical values.";
+                }
+                const decimalInterestRate = interestRate / 100;
+                const finalAmount = principal * Math.pow(1 + decimalInterestRate, timePeriod);
+                const roundedFinalAmount = Math.round(finalAmount * 100) / 100;
+                return roundedFinalAmount.toFixed(0);
+            }
+
+            let result = calculateSimpleInterest(principalAmount, interestRatePercent, timeInYears);
+            let totali = (result - principalAmount);
+
+            let tblVal = "<tbody><tr><td>Total Investment</td><td class='text-end'>₹ <span class='fs-5'>" + principalAmount + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + totali + "</span></td</tr><tr><td>Matured Amount</td><td class='text-end'>₹ <span class='fs-5'>" + result + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
-            // Table of Investments 
 
-            // Pie Chart 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [varp, interest];
+            var yValues = [principalAmount, totali];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
@@ -1041,8 +1049,7 @@
                 data: {
                     labels: xValues,
                     datasets: [{
-                        backgroundColor: barColors,
-                        data: yValues
+                        backgroundColor: barColors, data: yValues
                     }]
                 },
                 options: {
@@ -1054,7 +1061,6 @@
                     }
                 }
             });
-            // Pie Chart 
         }
     </script>
     <script src="app.js"></script>

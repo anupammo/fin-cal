@@ -308,24 +308,25 @@
                                         </ol>
                                     </nav>
                                 </div>
-                                <h1 class="lead fs-3 mb-5 px-5">SWP Calculator Online: understand Systematic Withdrawal
+                                <h1 class="lead fs-4 my-4 px-5">SWP Calculator Online: understand Systematic Withdrawal
                                     Plan</h1>
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Total Investment </label>
+                                                <label class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label for="totinv" class="form-label float-end"> ₹<strong class="fs-4"
-                                                        id="inv-disp">500000</strong> </label>
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="inv-disp">1500000</span>
+                                                </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="5000000" step="100000"
-                                            value="500000" id="totinv" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="100000" max="5000000" step="100000"
+                                            value="1500000" id="totinv" onchange="dispInv()">
                                         <div class="row">
-                                            <span class="col">₹0</span>
-                                            <span class="text-end col">₹5000000</span>
+                                            <span class="col">0</span>
+                                            <span class="text-end col">1000000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -334,16 +335,17 @@
                                                 <label for="fd_toti" class="form-label">Interest Rate</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end">
-                                                    <strong id="age-disp">8.2%</strong>
+                                                <label class="form-label float-end">
+                                                    <span id="roi-disp" class="fs-4">9</span>
+                                                    <span>%</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="8.2"
-                                            id="fd_roi" disabled="">
+                                        <input type="range" class="form-range" min="5" max="15" step=".1" value="9"
+                                            id="emi-roi" onchange="dispROI()">
                                         <div class="row">
                                             <span class="col">5</span>
-                                            <span class="text-end col">12</span>
+                                            <span class="text-end col">15</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -352,17 +354,20 @@
                                                 <label class="form-label">Duration</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                                <label class="form-label float-end">
+                                                    <span class="fs-4" id="dur-disp">10</span>
+                                                    <span>Yr</span>
+                                                </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="8" step="3" value="5"
-                                            id="fd_idur" onchange="dispTime()" data-gtm-form-interact-field-id="0">
+                                        <input type="range" class="form-range" min="1" max="25" step="1" value="10"
+                                            id="dage" onchange="dispTime()">
                                         <div class="row">
-                                            <span class="col">5</span>
-                                            <span class="text-end col">8</span>
+                                            <span class="col">1</span>
+                                            <span class="text-end col">25</span>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
                                                 <label class="form-label">Withdrawal / month </label>
@@ -374,9 +379,9 @@
                                             </div>
                                         </div>
                                         <input type="hidden" class="form-control" id="dage" value="10.25">
-                                    </div>
-                                    <div class="my-4">
-                                        <button type="button" onclick="kvpCalc();"
+                                    </div> -->
+                                    <div class="my-5">
+                                        <button type="button" onclick="resultSWP();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
@@ -386,7 +391,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="card shadow h-100 border-0">
                             <div class="card-body">
-                                <div class="px-5">
+                                <div class="p-5">
                                     <div class="card border-0">
                                         <div class="card-body pb-0">
                                             <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
@@ -656,13 +661,9 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="h4 my-4">IX. SWP vs. Other Investment Strategies</h2>
-                </div>
-                <div class="col-md-6 col-12">
                     <h3 class="h5 my-3">Comparative Analysis</h3>
                     <p class="lead fs-6">Comparing SWP with other investment strategies provides readers with a
                     comprehensive understanding of its strengths and weaknesses in different financial scenarios.</p>
-                </div>
-                <div class="col-md-6 col-12">
                     <h3 class="h5 my-3">Advantages and Disadvantages</h3>
                     <p class="lead fs-6">An unbiased analysis of the advantages and disadvantages of SWP versus other
                         strategies helps readers make informed decisions based on their financial objectives.</p>
@@ -693,19 +694,13 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="h4 my-4">XI. Conclusion</h2>
-                </div>
-                <div class="col-lg-4 col-12">
                     <h3 class="h5 my-3">Recap of Key Points</h3>
                     <p class="lead fs-6">Summarizing the key takeaways from the article reinforces the importance of SWP
                         calculators in achieving financial goals.</p>
-                </div>
-                <div class="col-lg-4 col-12">
                     <h3 class="h5 my-3">Encouragement for Readers</h3>
                     <p class="lead fs-6">Readers are encouraged to explore SWP calculators as valuable additions to
                         their financial toolkit, empowering them to make informed decisions for a secure financial
                         future.</p>
-                </div>
-                <div class="col-lg-4 col-12">
                     <h3 class="h5 my-3">C. Transition to FAQs</h3>
                     <p class="lead fs-6">The following FAQs address common queries readers may have, providing
                         additional insights into SWP calculations and their practical applications.</p>
@@ -896,31 +891,44 @@
             document.getElementById("inv-disp").innerHTML = invdisp;
         }
 
-        function dispAge() {
-            let aged = document.getElementById("dage").value;
-            document.getElementById("age-disp").innerHTML = aged;
+        function dispROI() {
+            let aged = document.getElementById("emi-roi").value;
+            document.getElementById("roi-disp").innerHTML = aged;
         }
 
-        function kvpCalc() {
+        function dispTime() {
+            let invdisp = document.getElementById("dage").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
 
-            let p = parseInt(document.getElementById("totinv").value);
-            let r = parseFloat(document.getElementById("ssyroi").value).toFixed(2);
-            let y = parseFloat(document.getElementById("dage").value).toFixed(2);
+        function resultSWP() {
+            
+            let investmentAmount = document.getElementById("totinv").value;
+            let roi = document.getElementById("emi-roi").value;
+            let annualReturn = (roi / 100);
+            let withdrawalFrequency = 12;
+            let years = document.getElementById("dage").value;
 
-            let a = parseInt(p * (Math.pow((1 + r / 100), y)));
-            let ci = parseInt(a - p);
+            function calculateSWP(investmentAmount, annualReturn, withdrawalFrequency, years) {
+                const monthlyReturn = (1 + annualReturn) ** (1 / 12) - 1;
+                const totalWithdrawals = withdrawalFrequency * years;
+                const monthlyWithdrawal = investmentAmount * monthlyReturn / (1 - (1 + monthlyReturn) ** -totalWithdrawals);
+                const totalWithdrawn = monthlyWithdrawal * totalWithdrawals;                
+                return {
+                    monthlyWithdrawal: monthlyWithdrawal.toFixed(0),
+                    totalWithdrawn: totalWithdrawn.toFixed(0),
+                };
+            }
 
-            let date = new Date().getFullYear();
-            let mdate = (parseInt(date) + parseInt(y));
+            const result = calculateSWP(investmentAmount, annualReturn, withdrawalFrequency, years);
+            // console.log(`Monthly Withdrawal: ₹${result.monthlyWithdrawal}`);
+            // console.log(`Total Withdrawn: ₹${result.totalWithdrawn}`);
 
-            // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + p + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + ci + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + a + "</td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Total Investment</td><td class='text-end'>₹ <span class='fs-5'>" + investmentAmount + "</span></td></tr><tr><td>Monthly Withdrawl</td><td class='text-end'>₹ <span class='fs-5'>" + result.monthlyWithdrawal + "</span></td</tr><tr><td>Total Withdrawl</td><td class='text-end'>₹ <span class='fs-5'>" + result.totalWithdrawn + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
-            // Table of Investments 
 
-            // Pie Chart 
-            var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [p, ci];
+            var xValues = ["Total Withdrawl", "Monthly Withdrawl"];
+            var yValues = [investmentAmount, result.monthlyWithdrawal];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
@@ -940,8 +948,6 @@
                     }
                 }
             });
-            // Pie Chart 
-
         }
     </script>
     <script src="app.js"></script>
