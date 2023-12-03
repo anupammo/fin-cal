@@ -4,10 +4,11 @@
 
 # Investment Calculator - Plan Financial Future | Nivesguru
 
-🌏 *Live Site* - [https://nivesguru.in](https://nivesguru.in/)
+## 🌏 *Live Site* - [https://nivesguru.in](https://nivesguru.in/)
 
 Nivesguru is a online calculation tool for investments absolutely free of cost. A initiative for Indian to motivate on investments for their finance related queries with real time output along with a tool set of calculators. You can calculate your investment and its maturity amount through our calculators like Savings / Fixed / Recurring Deposits. 
 
+## Calculators 
 ### Government bonds for investments
 
 - [Kisan Vikas Patra / KVP Calculator](https://nivesguru.in/kvp-calculator)
@@ -54,18 +55,20 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 ## SEO / Optimizations / Page load performance
 
 Tool used for optimizations
-- Google Lighthouse
-- PageSpeed Insights
-- Google Search Console
-- Google Search Central
-- PWA
+- Google Analytics 
+- Google Lighthouse 
+- PageSpeed Insights 
+- Google Search Console 
+- Google Search Central 
+- Google Structured Data Markup Helper 
+- Progressive Web Apps / PWA 
 
 
 ## Screenshots
 
 ![App Screenshot](https://nivesguru.in/nivesguru-1.png)
 
-![App Screenshot](https://nivesguru.in/res/meta/national-savings-certificate Calculator.png)
+![App Screenshot](https://nivesguru.in/res/meta/national-savings-certificate-calculator.png)
 
-![App Screenshot](https://nivesguru.in/res/meta/apy Calculator-nivesguru.png)
+![App Screenshot](https://nivesguru.in/res/meta/apy-calculator-nivesguru.png)
 
