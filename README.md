@@ -6,7 +6,32 @@
 
 🌏 *Live Site* - [https://nivesguru.in](https://nivesguru.in/)
 
-Nivesguru is a online calculation tool for investments absolutely free of cost. A initiative for Indian to motivate on investments for their finance related queries with real time output along with a tool set of calculators. You can calculate your investment and its maturity amount through our calculators like Savings / Fixed / Recurring Deposits. Government bonds like Kisan Vikas Patra [KVP Calculator](https://nivesguru.in/kvp-calculator), National Security Certificates[NSC](https://nivesguru.in/national-savings-certificate-nsc-calculator). Pension and family plan like [PPF Calculator](https://nivesguru.in/ppf Calculator), [NPS Calculator](https://nivesguru.in/national-pension-system-nps Calculator), [APY Calculator](https://nivesguru.in/apy Calculator), [PMJJBY Calculator](https://nivesguru.in/pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby Calculator), [PMSBY Calculator](https://nivesguru.in/pradhan-mantri-suraksha-bima-yojana-pmsby Calculator), [SSY Calculator](https://nivesguru.in/sukanya-samriddhi-yojana-ssy Calculator) for investments. Financial Calculators like [EMI Calculator](https://nivesguru.in/emi-calculator-online), [SIP Calculator](https://nivesguru.in/systematic-investment-plan-sip-return-calculator), [SWP Calculator](https://nivesguru.in/swp-calculator-online), [Inflation Calculator](https://nivesguru.in/inflation-calculator-india), [Lumpsum Calculator](https://nivesguru.in/lumpsum-calculator-online), [Simple Interest Calculator](https://nivesguru.in/simple-interest-calculator), [Compound Interest Calculator](https://nivesguru.in/compound-interest-calculator).
+Nivesguru is a online calculation tool for investments absolutely free of cost. A initiative for Indian to motivate on investments for their finance related queries with real time output along with a tool set of calculators. You can calculate your investment and its maturity amount through our calculators like Savings / Fixed / Recurring Deposits. 
+
+### Government bonds for investments
+
+- [Kisan Vikas Patra / KVP Calculator](https://nivesguru.in/kvp-calculator)
+- [National Security Certificates / NSC](https://nivesguru.in/national-savings-certificate-nsc-calculator)
+- [Sovereign Gold Bond / SGB Calculator](https://nivesguru.in/sgb-calculator)
+  
+### Government bonds 
+
+- [Pension and family plan / PPF Calculator](https://nivesguru.in/ppf-calculator)
+- [NPS Calculator](https://nivesguru.in/national-pension-system-nps-calculator)
+- [APY Calculator](https://nivesguru.in/apy-calculator)
+- [PMJJBY Calculator](https://nivesguru.in/pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby)
+- [PMSBY Calculator](https://nivesguru.in/pradhan-mantri-suraksha-bima-yojana-pmsby-calculator)
+- [SSY Calculator](https://nivesguru.in/sukanya-samriddhi-yojana-ssy)
+  
+### Financial Calculators  
+
+- [EMI Calculator](https://nivesguru.in/emi-calculator-online)
+- [SIP Calculator](https://nivesguru.in/systematic-investment-plan-sip-return-calculator)
+- [SWP Calculator](https://nivesguru.in/swp-calculator-online)
+- [Inflation Calculator](https://nivesguru.in/inflation-calculator-india)
+- [Lumpsum Calculator](https://nivesguru.in/lumpsum-calculator-online)
+- [Simple Interest Calculator](https://nivesguru.in/simple-interest-calculator)
+- [Compound Interest Calculator](https://nivesguru.in/compound-interest-calculator).
 
 
 ## Tech Stack
@@ -26,9 +51,14 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
 
-## Optimizations
+## SEO / Optimizations / Page load performance
 
-Page load performance, Optimizations done through Google Lighthouse, PageSpeed Insights
+Tool used for optimizations
+- Google Lighthouse
+- PageSpeed Insights
+- Google Search Console
+- Google Search Central
+- PWA
 
 
 ## Screenshots
