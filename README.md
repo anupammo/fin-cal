@@ -48,7 +48,7 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 
 ## SEO / Optimizations / Page load performance
 
-> [!INFO]
+> [!NOTE]
 > Tools used for optimiation
 - Google Analytics 
 - Google Lighthouse 
