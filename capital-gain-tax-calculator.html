@@ -387,16 +387,16 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Principal Amount </label>
+                                                <label class="form-label">Purchase Price : </label>
                                             </div>
                                             <div class="col">
                                                 <label for="totinv" class="form-label float-end">₹
-                                                    <span class="fs-4" id="inv-disp">1000000</span>
+                                                    <span class="fs-4" id="inv-disp">800000</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="0" max="5000000" step="100000"
-                                            value="1000000" id="totinv" onchange="dispInv()">
+                                            value="800000" id="purchasePrice" onchange="dispInv()">
                                         <div class="row">
                                             <span class="col">0</span>
                                             <span class="text-end col">5000000</span>
@@ -405,43 +405,45 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                                <label for="fd_toti" class="form-label">Sell Price : </label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end">
-                                                    <span id="roi-disp" class="fs-4">10</span>
-                                                    <span>%</span>
+                                                <label class="form-label float-end">₹
+                                                    <span id="roi-disp" class="fs-4">1000000</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5" max="15" step=".1" value="10"
-                                            id="emi-roi" onchange="dispROI()">
+                                        <input type="range" class="form-range" min="0" max="5000000" step="100000"
+                                            value="1000000" id="sellPrice" onchange="dispROI()">
                                         <div class="row">
-                                            <span class="col">5</span>
-                                            <span class="text-end col">15</span>
+                                            <span class="col">0</span>
+                                            <span class="text-end col">5000000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label class="form-label">EMI Duration</label>
-                                            </div>
-                                            <div class="col">
-                                                <label class="form-label float-end">
-                                                    <span class="fs-4" id="dur-disp">5</span>
-                                                    <span>Yr</span>
-                                                </label>
-                                            </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cgt" id="stcg"
+                                                onchange="divToggle()" checked>
+                                            <label class="form-check-label" for="stcg">
+                                                STCG (Short Term Capital Gain)
+                                            </label>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="20" step="1" value="5"
-                                            id="dage" onchange="dispTime()">
-                                        <div class="row">
-                                            <span class="col">1</span>
-                                            <span class="text-end col">20</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="cgt" id="ltcg"
+                                                onchange="divToggle()">
+                                            <label class="form-check-label" for="ltcg">
+                                                LTCG (Long Term Capital Gain)
+                                            </label>
                                         </div>
                                     </div>
+                                    <div class="mb-3 form-check" id="ltcg-toggle" style="display: none;">
+                                        <input type="checkbox" class="form-check-input shadow-none" id="ltcg-type"
+                                            checked>
+                                        <label class="text-danger form-check-label lead fs-6" for="ltcg-type">For stocks
+                                            & equity mutual funds</label>
+                                    </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="resultEMI();"
+                                        <button type="button" onclick="calculateCapitalGainsTax();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
@@ -698,7 +700,8 @@
                                     <a class="nav-link" href="emi-calculator-online">EMI Calculator Online</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP Return Calculator</a>
+                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP
+                                        Return Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="swp-calculator-online">SWP Calculator Online</a>
@@ -713,7 +716,8 @@
                                     <a class="nav-link" href="simple-interest-calculator">Simple Interest Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest Calculator</a>
+                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest
+                                        Calculator</a>
                                 </li>
                             </ul>
                         </div>
@@ -726,13 +730,16 @@
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="post-office-time-deposit-td-calculator">TD Calculator</a>
@@ -942,42 +949,78 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
         function dispInv() {
-            let invdisp = document.getElementById("totinv").value;
+            let invdisp = document.getElementById("purchasePrice").value;
             document.getElementById("inv-disp").innerHTML = invdisp;
         }
 
         function dispROI() {
-            let aged = document.getElementById("emi-roi").value;
+            let aged = document.getElementById("sellPrice").value;
             document.getElementById("roi-disp").innerHTML = aged;
         }
 
-        function dispTime() {
-            let invdisp = document.getElementById("dage").value;
-            document.getElementById("dur-disp").innerHTML = invdisp;
+        function divToggle() {
+            // Get the radio buttons and the target div
+            const showRadio = document.getElementById('ltcg');
+            const hideRadio = document.getElementById('stcg');
+            const targetDiv = document.getElementById('ltcg-toggle');
+
+            // Check the state of the radio buttons and toggle div visibility accordingly
+            if (showRadio.checked) {
+                targetDiv.style.display = 'block';
+            } else if (hideRadio.checked) {
+                targetDiv.style.display = 'none';
+            }
         }
 
-        function resultEMI() {
-            let principalAmount = document.getElementById("totinv").value;
-            let interestRatePercent = document.getElementById("emi-roi").value;
-            let loanTenureYears = document.getElementById("dage").value;
+        function calculateCapitalGainsTax() {
+            // Get input values
+            var purchasePrice = parseFloat(document.getElementById('purchasePrice').value);
+            var sellPrice = parseFloat(document.getElementById('sellPrice').value);
 
-            function calculateEMI(principal, interestRate, tenure) {
-                const monthlyInterestRate = (interestRate / 12) / 100;
-                const numberOfPayments = tenure * 12;
-                const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-                return emi.toFixed(0);
+            // Validate input
+            if (isNaN(purchasePrice) || isNaN(sellPrice)) {
+                alert('Please enter valid numbers for purchase and sell prices.');
+                return;
             }
 
-            let emi = calculateEMI(principalAmount, interestRatePercent, loanTenureYears);
+            // Calculate capital gains
+            var capitalGains = sellPrice - purchasePrice;
+            var capitalGainsTax = 0;
 
-            let totali = (emi * (loanTenureYears * 12));
-            let totalp = (parseInt(principalAmount) + parseInt(totali));
+            if (document.getElementById('stcg').checked) {
+                if (sellPrice > purchasePrice) {
+                    // Assuming a fixed tax rate of 15%
+                    var taxRate = 0.15;
+                    capitalGainsTax = capitalGains * taxRate;
+                } else {
+                    capitalGainsTax = 0;
+                }
+            } else {
+                if (sellPrice > purchasePrice) {
+                    if (capitalGains > 100000) {
+                        var chkbox = document.getElementById("ltcg-type").checked;
+                        if (chkbox === true) {
+                            // Assuming a fixed tax rate of 10%
+                            var taxRate = 0.1;
+                            capitalGainsTax = (capitalGains - 100000) * taxRate;
+                        } else {
+                            // Assuming a fixed tax rate of 20%
+                            var taxRate = 0.2;
+                            capitalGainsTax = (capitalGains - 100000) * taxRate;
+                        }
+                    } else {
+                        capitalGainsTax = 0;
+                    }
+                } else {
+                    capitalGainsTax = 0;
+                }
+            }
 
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + emi + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + totali + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + totalp + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Purchase Price</td><td class='text-end'>₹ <span class='fs-5'>" + purchasePrice + "</span></td></tr><tr><td>Sell Price</td><td class='text-end'>₹ <span class='fs-5'>" + sellPrice + "</span></td</tr><tr><td>Capital Gain Tax</td><td class='text-end'>₹ <span class='fs-5'>" + capitalGainsTax + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
-            var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [emi, totali];
+            var xValues = ["Capital Gains", "Capital Gain Tax"];
+            var yValues = [capitalGains, capitalGainsTax];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
