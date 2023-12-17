@@ -365,36 +365,74 @@
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">Principal Amount </label> </div>
-                                            <div class="col"> <label for="totinv" class="form-label float-end">₹ <span
-                                                        class="fs-4" id="inv-disp">1000000</span> </label> </div>
-                                        </div> <input type="range" class="form-range" min="0" max="5000000"
-                                            step="100000" value="1000000" id="totinv" onchange="dispInv()">
-                                        <div class="row"> <span class="col">0</span> <span
-                                                class="text-end col">5000000</span> </div>
-                                    </div>
-                                    <div class="mb-3">
+                                            <div class="col">
+                                                <label class="form-label">Price (including GST) </label>
+                                            </div>
+                                            <div class="col">
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="priceDisp">100000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="100000" step="500"
+                                            value="30000" id="gstPrice" onchange="dipsPrice()">
                                         <div class="row">
-                                            <div class="col"> <label for="fd_toti" class="form-label">Interest
-                                                    Rate</label> </div>
-                                            <div class="col"> <label class="form-label float-end"> <span id="roi-disp"
-                                                        class="fs-4">10</span> <span>%</span> </label> </div>
-                                        </div> <input type="range" class="form-range" min="5" max="15" step=".1"
-                                            value="10" id="emi-roi" onchange="dispROI()">
-                                        <div class="row"> <span class="col">5</span> <span
-                                                class="text-end col">15</span> </div>
+                                            <span class="col">0 </span>
+                                            <span class="text-end col">100000</span>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="my-5">
+                                        <label class="form-label">Select GST Rate </label><br />
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst3"
+                                                value="3">
+                                            <label class="form-check-label" for="gst3">
+                                                <span class="fs-3">3</span>%
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst5"
+                                                value="5">
+                                            <label class="form-check-label" for="gst5">
+                                                <span class="fs-3">5</span>%
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst12"
+                                                value="12">
+                                            <label class="form-check-label" for="gst12">
+                                                <span class="fs-3">12</span>%
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst18"
+                                                value="18" checked>
+                                            <label class="form-check-label" for="gst18">
+                                                <span class="fs-3">18</span>%
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst28"
+                                                value="28">
+                                            <label class="form-check-label" for="gst28">
+                                                <span class="fs-3">28</span>%
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="my-3">
                                         <div class="row">
-                                            <div class="col"> <label class="form-label">EMI Duration</label> </div>
-                                            <div class="col"> <label class="form-label float-end"> <span class="fs-4"
-                                                        id="dur-disp">5</span> <span>Yr</span> </label> </div>
-                                        </div> <input type="range" class="form-range" min="1" max="20" step="1"
-                                            value="5" id="dage" onchange="dispTime()">
-                                        <div class="row"> <span class="col">1</span> <span
-                                                class="text-end col">20</span> </div>
+                                            <div class="col">
+                                                <label class="form-label mt-2">Your tax amount is: </label>
+                                            </div>
+                                            <div class="col">
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="result">5400</span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="my-4"> <button type="button" onclick="resultEMI();"
+                                    <div class="my-4">
+                                        <button type="button" onclick="calculateTax();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
@@ -709,7 +747,8 @@
                                     <a class="nav-link" href="emi-calculator-online">EMI Calculator Online</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP Return Calculator</a>
+                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP
+                                        Return Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="swp-calculator-online">SWP Calculator Online</a>
@@ -724,7 +763,8 @@
                                     <a class="nav-link" href="simple-interest-calculator">Simple Interest Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest Calculator</a>
+                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest
+                                        Calculator</a>
                                 </li>
                             </ul>
                         </div>
@@ -737,13 +777,16 @@
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="post-office-time-deposit-td-calculator">TD Calculator</a>
@@ -900,43 +943,31 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        function dispInv() {
-            let invdisp = document.getElementById("totinv").value;
-            document.getElementById("inv-disp").innerHTML = invdisp;
+        function dipsPrice() {
+            let invdisp = document.getElementById("gstPrice").value;
+            document.getElementById("priceDisp").innerHTML = invdisp;
         }
 
-        function dispROI() {
-            let aged = document.getElementById("emi-roi").value;
-            document.getElementById("roi-disp").innerHTML = aged;
-        }
-
-        function dispTime() {
-            let invdisp = document.getElementById("dage").value;
-            document.getElementById("dur-disp").innerHTML = invdisp;
-        }
-
-        function resultEMI() {
-            let principalAmount = document.getElementById("totinv").value;
-            let interestRatePercent = document.getElementById("emi-roi").value;
-            let loanTenureYears = document.getElementById("dage").value;
-
-            function calculateEMI(principal, interestRate, tenure) {
-                const monthlyInterestRate = (interestRate / 12) / 100;
-                const numberOfPayments = tenure * 12;
-                const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-                return emi.toFixed(0);
+        function calculateTax() {            
+            var income = parseFloat(document.getElementById("gstPrice").value);            
+            var checkedRadio = document.querySelector('input[name="gstRates"]:checked');
+            
+            if (checkedRadio) {
+                var taxRate = checkedRadio.value;
+            } else {
+                alert("Please select an option");
             }
+            
+            var taxAmount = (income * taxRate) / 100;
+            
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = taxAmount.toFixed(0);
 
-            let emi = calculateEMI(principalAmount, interestRatePercent, loanTenureYears);
-
-            let totali = (emi * (loanTenureYears * 12));
-            let totalp = (parseInt(principalAmount) + parseInt(totali));
-
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + emi + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + totali + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + totalp + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [emi, totali];
+            var yValues = [income, taxAmount];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
