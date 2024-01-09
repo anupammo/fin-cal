@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +27,7 @@
             "@type": "Article",
             "headline": "Unveiling Mysteries of TDS Calculators: Your Ultimate Guide",
             "author": {
-                "@type": "Person",
+                "@type": "trate",
                 "name": "Anupam Mondal",
                 "url": "https://anupammondal.in"
             },
@@ -225,6 +226,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="calculator">
         <div class="wave1">
@@ -385,68 +387,69 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Price (including GST) </label>
+                                                <label class="form-label">Amount of Payment</label>
                                             </div>
                                             <div class="col">
-                                                <label for="totinv" class="form-label float-end">₹
+                                                <label class="form-label float-end">₹
                                                     <span class="fs-4" id="priceDisp">100000</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="0" max="100000" step="500"
-                                            value="30000" id="gstPrice" onchange="dipsPrice()">
+                                            value="30000" id="pAmount" onchange="dipsPrice()">
                                         <div class="row">
                                             <span class="col">0 </span>
                                             <span class="text-end col">100000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <select class="form-select shadow-none lead fs-6">
+                                        <label class="form-label">Section | Payment type </label>
+                                        <select class="form-select shadow-none lead fs-6" id="usType">
                                             <optgroup label="30%">
-                                                <option>194B</option>
-                                                <option>194BB</option>
+                                                <option value="194B">194B</option>
+                                                <option value="194BB">194BB</option>
                                             </optgroup>
                                             <optgroup label="20%">
-                                                <option>194F</option>
-                                                <option>206AA</option>
+                                                <option value="194F">194F</option>
+                                                <option value="206AA">206AA</option>
                                             </optgroup>
                                             <optgroup label="10%">
-                                                <option>192A</option>
-                                                <option>193</option>
-                                                <option>194</option>
-                                                <option>194A</option>
-                                                <option>194D</option>
-                                                <option>194EE</option>
-                                                <option>194I</option>
-                                                <option>194IC</option>
-                                                <option>194J</option>
-                                                <option>194K</option>
-                                                <option>194LA</option>
-                                                <option>194LBA(1)</option>
+                                                <option value="">192A</option>
+                                                <option value="">193</option>
+                                                <option value="">194</option>
+                                                <option value="">194A</option>
+                                                <option value="">194D</option>
+                                                <option value="">194EE</option>
+                                                <option value="">194I</option>
+                                                <option value="">194IC</option>
+                                                <option value="">194J</option>
+                                                <option value="">194K</option>
+                                                <option value="">194LA</option>
+                                                <option value="">194LBA(1)</option>
                                             </optgroup>
                                             <optgroup label="5%">
-                                                <option>194D</option>
-                                                <option>194DA</option>
-                                                <option>194G</option>
-                                                <option>194H</option>
-                                                <option>194IB</option>
-                                                <option>194LB</option>
-                                                <option>194LD</option>
-                                                <option>194DA</option>
-                                                <option>194M</option>
-                                                <option>206AB</option>
+                                                <option value="">194D</option>
+                                                <option value="">194DA</option>
+                                                <option value="">194G</option>
+                                                <option value="">194H</option>
+                                                <option value="">194IB</option>
+                                                <option value="">194LB</option>
+                                                <option value="">194LD</option>
+                                                <option value="">194DA</option>
+                                                <option value="">194M</option>
+                                                <option value="">206AB</option>
                                             </optgroup>
                                             <optgroup label="2%">
-                                                <option>194C</option>
-                                                <option>194I</option>
-                                                <option>194J</option>
-                                                <option>194N</option>
+                                                <option value="">194C</option>
+                                                <option value="">194I</option>
+                                                <option value="">194J</option>
+                                                <option value="">194N</option>
                                             </optgroup>
                                             <optgroup label="1%">
-                                                <option>194C</option>
-                                                <option>194IA</option>
-                                                <option>194O</option>
-                                                <option>194S</option>
+                                                <option value="">194C</option>
+                                                <option value="">194IA</option>
+                                                <option value="">194O</option>
+                                                <option value="">194S</option>
                                             </optgroup>
                                         </select>
                                     </div>
@@ -454,39 +457,28 @@
                                         <label class="form-label">Taxpayer type </label><br />
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="taxpayee" id="taxpayee1"
-                                                value="1" checked>
+                                                value="Individual" checked>
                                             <label class="form-check-label" for="taxpayee1">Individual / HUF</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="taxpayee" id="taxpayee0"
-                                                value="0">
+                                                value="Others">
                                             <label class="form-check-label" for="taxpayee0">Others</span></label>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">PAN available </label><br />
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="pan" id="pan1" value="1"
-                                                checked>
+                                            <input class="form-check-input" type="radio" name="pan" id="pan1"
+                                                value="Yes" checked>
                                             <label class="form-check-label" for="pan1">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="pan" id="pan0" value="0">
+                                            <input class="form-check-input" type="radio" name="pan" id="pan0"
+                                                value="No">
                                             <label class="form-check-label" for="pan0">No</span></label>
                                         </div>
                                     </div>
-                                    <!-- <div class="my-3">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label class="form-label mt-2">Your tax amount is: </label>
-                                            </div>
-                                            <div class="col">
-                                                <label for="totinv" class="form-label float-end">₹
-                                                    <span class="fs-4" id="result">5400</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                     <div class="my-4">
                                         <button type="button" onclick="calculateTax();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
@@ -994,51 +986,389 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
         function dipsPrice() {
-            let invdisp = document.getElementById("gstPrice").value;
+            let invdisp = document.getElementById("pAmount").value;
             document.getElementById("priceDisp").innerHTML = invdisp;
         }
 
-        function calculateTax() {
-            var income = parseFloat(document.getElementById("gstPrice").value);
-            var checkedRadio = document.querySelector('input[name="gstRates"]:checked');
+        // function calculateTax() {
+        //     var income = parseFloat(document.getElementById("gstPrice").value);
+        //     var checkedRadio = document.querySelector('input[name="gstRates"]:checked');
 
-            if (checkedRadio) {
-                var taxRate = checkedRadio.value;
-            } else {
-                alert("Please select an option");
+        //     if (checkedRadio) {
+        //         var taxRate = checkedRadio.value;
+        //     } else {
+        //         alert("Please select an option");
+        //     }
+
+        //     var taxAmount = (income * taxRate) / 100;
+
+        //     var resultElement = document.getElementById("result");
+        //     resultElement.textContent = taxAmount.toFixed(0);
+
+        //     let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
+        //     document.getElementById("myTbl").innerHTML = tblVal;
+
+        //     var xValues = ["Total Investment", "Total Interest"];
+        //     var yValues = [income, taxAmount];
+        //     var barColors = ["#03a9f4", "#f50057"];
+
+        //     new Chart("myChart", {
+        //         type: "pie",
+        //         data: {
+        //             labels: xValues,
+        //             datasets: [{
+        //                 backgroundColor: barColors, data: yValues
+        //             }]
+        //         },
+        //         options: {
+        //             legend: {
+        //                 display: true
+        //             },
+        //             title: {
+        //                 display: true
+        //             }
+        //         }
+        //     });
+        // }
+
+
+        const jsonData = {
+            "tdsrates": [
+                {
+                    "id": 1,
+                    "section": "192",
+                    "paymenttype": "Salaries",
+                    "threshold": 250000,
+                    "individual": "0",
+                    "others": "0"
+                },
+                {
+                    "id": 2,
+                    "section": "192A",
+                    "paymenttype": "Premature EPF withdrawal",
+                    "threshold": 50000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 3,
+                    "section": "193",
+                    "paymenttype": "TDS on interest on securities",
+                    "threshold": 10000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 4,
+                    "section": "194",
+                    "paymenttype": "Payment of dividend",
+                    "threshold": 5000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 5,
+                    "section": "194A",
+                    "paymenttype": "Interest issued by banks or post offices on deposits",
+                    "threshold": 40000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 6,
+                    "section": "194A",
+                    "paymenttype": "Interest by others apart from on securities",
+                    "threshold": 5000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 7,
+                    "section": "194B",
+                    "paymenttype": "Amounts that someone has won through lotteries, puzzles, or games",
+                    "threshold": 10000,
+                    "individual": 30,
+                    "others": 30
+                },
+                {
+                    "id": 8,
+                    "section": "194BB",
+                    "paymenttype": "Amounts that someone has won from horse races",
+                    "threshold": 10000,
+                    "individual": 30,
+                    "others": 30
+                },
+                {
+                    "id": 9,
+                    "section": "194C",
+                    "paymenttype": "Payments to contractor or sub-contractor – Single Payments",
+                    "threshold": 30000,
+                    "individual": 1,
+                    "others": 2
+                },
+                {
+                    "id": 10,
+                    "section": "194C",
+                    "paymenttype": "Payments to contractor/sub-contractor – Aggregate Payments",
+                    "threshold": 100000,
+                    "individual": 1,
+                    "others": 2
+                },
+                {
+                    "id": 11,
+                    "section": "194D",
+                    "paymenttype": "Payment of insurance commission to domestic companies",
+                    "threshold": 15000,
+                    "individual": 0,
+                    "others": 10
+                },
+                {
+                    "id": 12,
+                    "section": "194D",
+                    "paymenttype": "Payment of insurance commission to companies other than domestic ones",
+                    "threshold": 15000,
+                    "individual": 5,
+                    "others": 0
+                },
+                {
+                    "id": 13,
+                    "section": "194DA",
+                    "paymenttype": "Maturity of Life Insurance Policy",
+                    "threshold": 100000,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 14,
+                    "section": "194EE",
+                    "paymenttype": "Payment of an amount standing to the credit of an individual under NSS (National Savings Scheme)",
+                    "threshold": 2500,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 15,
+                    "section": "194F",
+                    "paymenttype": "Payment of repurchase of unit by UTI (Unit Trust of India) or any mutual fund",
+                    "threshold": "No Limit",
+                    "individual": 20,
+                    "others": 20
+                },
+                {
+                    "id": 16,
+                    "section": "194G",
+                    "paymenttype": "Payments or commission on sale of lottery tickets",
+                    "threshold": 15000,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 17,
+                    "section": "194H",
+                    "paymenttype": "Commission or brokerage",
+                    "threshold": 15000,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 18,
+                    "section": "194I",
+                    "paymenttype": "Rent of land, building, or furniture",
+                    "threshold": 240000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 19,
+                    "section": "194I",
+                    "paymenttype": "Rent of plant and machinery",
+                    "threshold": 240000,
+                    "individual": 2,
+                    "others": 2
+                },
+                {
+                    "id": 20,
+                    "section": "194IA",
+                    "paymenttype": "Payment for transfer of immovable property other than agricultural land",
+                    "threshold": 5000000,
+                    "individual": 1,
+                    "others": 1
+                },
+                {
+                    "id": 21,
+                    "section": "194IB",
+                    "paymenttype": "Rent payment that is made by an individual or HUF not covered under payment 194I",
+                    "threshold": "50000 (per month)",
+                    "individual": 5,
+                    "others": 0
+                },
+                {
+                    "id": 22,
+                    "section": "194IC",
+                    "paymenttype": "Payment that are made under Joint Development Agreement (JDA) to Individual/HUF",
+                    "threshold": "No Limit",
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 23,
+                    "section": "194J",
+                    "paymenttype": "Fees paid for professional services",
+                    "threshold": 30000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 24,
+                    "section": "194J",
+                    "paymenttype": "Amount paid for technical services",
+                    "threshold": 30000,
+                    "individual": 2,
+                    "others": 2
+                },
+                {
+                    "id": 25,
+                    "section": "194J",
+                    "paymenttype": "Amounts paid as royalty for sale/distribution/exhibition of cinematographic films",
+                    "threshold": 30000,
+                    "individual": 2,
+                    "others": 2
+                },
+                {
+                    "id": 26,
+                    "section": "194K",
+                    "paymenttype": "Payment of income for units of a mutual fund, for example- dividends",
+                    "threshold": 5000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 27,
+                    "section": "194LA",
+                    "paymenttype": "Payment made for compensation for acquiring certain immovable property",
+                    "threshold": 250000,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 28,
+                    "section": "194LB",
+                    "paymenttype": "Payment of interest on infrastructure bonds to Non-Resident Indians",
+                    "threshold": 0,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 29,
+                    "section": "194LBA(1)",
+                    "paymenttype": "Certain income distributed by a business trust among its unit holder",
+                    "threshold": 0,
+                    "individual": 10,
+                    "others": 10
+                },
+                {
+                    "id": 30,
+                    "section": "194LD",
+                    "paymenttype": "Payment of interest on rupee-denominated bonds, municipal debt security, and government securities",
+                    "threshold": 0,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 31,
+                    "section": "194M",
+                    "paymenttype": "Amounts paid for contract, brokerage, commission or professional fee (other than 194C, 194H, 194J)",
+                    "threshold": 5000000,
+                    "individual": 5,
+                    "others": 5
+                },
+                {
+                    "id": 32,
+                    "section": "194N",
+                    "paymenttype": "In case cash withdrawal over a certain amount takes place from the bank, and ITR is filed",
+                    "threshold": 10000000,
+                    "individual": 2,
+                    "others": 2
+                },
+                {
+                    "id": 33,
+                    "section": "194N",
+                    "paymenttype": "In case cash withdrawal takes place from a bank and one does not file ITR",
+                    "threshold": 2000000,
+                    "individual": 2,
+                    "others": 2
+                },
+                {
+                    "id": 34,
+                    "section": "194O",
+                    "paymenttype": "Amount paid for the sale of products/services by e-commerce service providers via their digital platform",
+                    "threshold": 500000,
+                    "individual": 1,
+                    "others": 1
+                },
+                {
+                    "id": 35,
+                    "section": "194Q",
+                    "paymenttype": "Payments made for the purchase of goods",
+                    "threshold": 5000000,
+                    "individual": 0.1,
+                    "others": 0.1
+                },
+                {
+                    "id": 36,
+                    "section": "194S",
+                    "paymenttype": "TDS on the payment of any crypto or other virtual asset",
+                    "threshold": 0,
+                    "individual": 1,
+                    "others": 1
+                },
+                {
+                    "id": 37,
+                    "section": "206AA",
+                    "paymenttype": "TDS for non-availability of PAN",
+                    "threshold": 0,
+                    "individual": 20,
+                    "others": 20
+                },
+                {
+                    "id": 38,
+                    "section": "206AB",
+                    "paymenttype": "TDS on non-filers of Income tax return",
+                    "threshold": 0,
+                    "individual": 5,
+                    "others": 0
+                }
+            ]
+        };
+
+        function calculateTax() {
+            let amont = parseFloat(document.getElementById("pAmount").value);
+            let selectBox = document.getElementById("usType");
+            let selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            let payee = document.querySelector('input[name="taxpayee"]:checked');
+            let pan = document.querySelector('input[name="pan"]:checked');
+            let taxPayee, panStatus;
+
+            if (payee) {
+                taxPayee = payee.value;
             }
 
-            var taxAmount = (income * taxRate) / 100;
+            if (pan) {
+                panStatus = pan.value;
+            }
 
-            var resultElement = document.getElementById("result");
-            resultElement.textContent = taxAmount.toFixed(0);
+            // Display inputs in Console
+            console.log(amont, taxPayee, panStatus, selectedValue);
 
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
-            document.getElementById("myTbl").innerHTML = tblVal;
+            // Display tdsrates based on a condition 
+            const filteredtdsrates = jsonData.tdsrates.filter(trate => trate.section === selectedValue);
 
-            var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [income, taxAmount];
-            var barColors = ["#03a9f4", "#f50057"];
-
-            new Chart("myChart", {
-                type: "pie",
-                data: {
-                    labels: xValues,
-                    datasets: [{
-                        backgroundColor: barColors, data: yValues
-                    }]
-                },
-                options: {
-                    legend: {
-                        display: true
-                    },
-                    title: {
-                        display: true
-                    }
-                }
+            filteredtdsrates.forEach(trate => {
+                console.log(trate.section, trate.individual, trate.others);
             });
         }
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>
