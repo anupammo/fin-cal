@@ -382,11 +382,13 @@
                                                 <label for="fd_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="inv-disp">10000</label> -->
+                                                <input type="number" class="fw-bold float-end" id="amt_ti" value="2000" min="1000" max="100000" oninput="scroll_ti.value=amt_ti.value">
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="100000" step="500"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <!-- <input type="range" class="form-range" min="1000" max="100000" step="100"
+                                            value="10000" id="fd_toti" onchange="dispInv()"> -->
+                                            <input type="range" class="form-range" min="1000" max="100000" step="500" value="2000" id="scroll_ti" oninput="amt_ti.value=scroll_ti.value">
                                         <div class="row">
                                             <span class="col">1000</span>
                                             <span class="text-end col">100000</span>
@@ -398,11 +400,14 @@
                                                 <label for="fd_roi" class="form-label">Rate of interest</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="age-disp">2</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="age-disp">2</label> -->
+                                                <input type="number" class="fw-bold float-end" id="amt_ri" value="2" min="1" max="15" oninput="scroll_ri.value=amt_ri.value">
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="15" step=".1" value="2"
-                                            id="fd_roi" onchange="dispROI()">
+                                        <!-- <input type="range" class="form-range" min="1" max="15" step=".1" value="2"
+                                            id="fd_roi" onchange="dispROI()"> -->
+                                            <input type="range" class="form-range" min="1" max="15" step=".1" value="2" id="scroll_ri" oninput="amt_ri.value=scroll_ri.value">
+
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">15</span>
@@ -414,11 +419,13 @@
                                                 <label for="fd_idur" class="form-label">Time</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="dur-disp">5</label> -->
+                                                <input type="number" class="fw-bold float-end" id="amt_tm" value="1" min="1" max="25" oninput="scroll_tm.value=amt_tm.value">
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="25" step="1" value="5"
-                                            id="fd_idur" onchange="dispTime()">
+                                        <!-- <input type="range" class="form-range" min="1" max="25" step="1" value="5"
+                                            id="fd_idur" onchange="dispTime()"> -->
+                                            <input type="range" class="form-range" min="1" max="25" step="1" value="1" id="scroll_tm" oninput="amt_tm.value=scroll_tm.value">
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">25</span>
@@ -1017,9 +1024,14 @@
 
         function sbCalc() {
             // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
-            let fdroi = document.getElementById("fd_roi").value;
-            let fdidur = document.getElementById("fd_idur").value;
+            // let fdtoti = document.getElementById("fd_toti").value;
+            // let fdroi = document.getElementById("fd_roi").value;
+            // let fdidur = document.getElementById("fd_idur").value;
+
+            let fdtoti = document.getElementById("scroll_ti").value;
+            let fdroi = document.getElementById("scroll_ri").value;
+            let fdidur = document.getElementById("scroll_tm").value;
+
             let toti = ((fdtoti * fdroi * fdidur) / 100);
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
             // document.getElementById("inte").innerHTML = toti;
