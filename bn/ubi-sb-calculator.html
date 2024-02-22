@@ -914,12 +914,7 @@
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);
             let mamnt = (parseInt(toti) + parseInt(fdtoti));
-            // document.getElementById("inte").innerHTML = toti;
-            // document.getElementById("mval").innerHTML = mamnt;
             let xtinv = (mamnt - toti);
-            // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
-            // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
-            // console.log(toti, mamnt);
 
             // Table of Investments 
             let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
