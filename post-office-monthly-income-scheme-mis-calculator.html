@@ -379,12 +379,15 @@
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-bold float-end">₹
-                                                    <span id="inv-disp">100000</span>
+                                                    <!-- <span id="inv-disp">100000</span> -->
+                                                    <input type="number" class="fw-bold float-end" id="msamt_pr" value="100000" min="1000" max="900000" oninput="msscroll_pr.value=msamt_pr.value">
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="900000" step="10000"
-                                            value="100000" id="fd_toti" onchange="dispInv()">
+                                        <!-- <input type="range" class="form-range" min="0" max="900000" step="10000"
+                                            value="100000" id="fd_toti" onchange="dispInv()"> -->
+
+                                            <input type="range" class="form-range" min="1000" max="900000" step="10000" value="100000" id="msscroll_pr" oninput="msamt_pr.value=msscroll_pr.value">
                                         <div class="row">
                                             <span class="col">₹1000</span>
                                             <span class="text-end col">₹900000</span>
@@ -1119,7 +1122,9 @@
 
         function fdCalc() {
             // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
+            // let fdtoti = document.getElementById("fd_toti").value;
+
+            let fdtoti = document.getElementById("msamt_pr").value;
             let fdroi = document.getElementById("fd_roi").value;
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);

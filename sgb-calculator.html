@@ -479,12 +479,15 @@
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
-                                                    ₹<strong id="disp-goldp" class="fs-4">6199</strong>
+                                                    ₹
+                                                    <!-- <strong id="disp-goldp" class="fs-4">6199</strong> -->
+                                                    <input type="number" class="fw-bold float-end" id="amt_gp" value="6199" min="5000" max="6500" oninput="scroll_gp.value=amt_gp.value">
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5000" max="6500" step="1"
-                                            value="6199" id="goldp" onchange="dispPgold()" disabled>
+                                        <!-- <input type="range" class="form-range" min="5000" max="6500" step="1"
+                                            value="6199" id="goldp" onchange="dispPgold()" disabled> -->
+                                            <input type="range" class="form-range" min="5000" max="6500" step="1" value="6199" id="scroll_gp" oninput="amt_gp.value=scroll_gp.value">
                                         <div class="row">
                                             <span class="col">₹5000</span>
                                             <span class="text-end col">₹6500</span>
@@ -498,16 +501,19 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="qgold" class="form-label">Quantity of Gold</label>
+                                                <label for="qgold" class="form-label">Quantity of Gold (In gram)</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
-                                                    <strong id="disp-qgold" class="fs-4">1</strong>g
+                                                    <!-- <strong id="disp-qgold" class="fs-4">1</strong> -->
+                                                    <input type="number" class="fw-bold float-end" id="amt_gq" value="1" min="1" max="4000" oninput="scroll_gq.value=amt_gq.value"> 
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="4000" step="1" value="1"
-                                            id="qgold" onchange="dispQgold()">
+                                        <!-- <input type="range" class="form-range" min="1" max="4000" step="1" value="1"
+                                            id="qgold" onchange="dispQgold()"> -->
+                                            <input type="range" class="form-range" min="1" max="4000" step="1" value="1" id="scroll_gq" oninput="amt_gq.value=scroll_gq.value">
+
                                         <div class="row">
                                             <span class="col">1g</span>
                                             <span class="text-end col">4000g</span>
@@ -1267,8 +1273,11 @@
         }
 
         function sgbCalc() {
-            let vQsgb = parseInt(document.getElementById("qgold").value);
-            let vPsgb = parseInt(document.getElementById("goldp").value);
+            // let vQsgb = parseInt(document.getElementById("qgold").value);
+            // let vPsgb = parseInt(document.getElementById("goldp").value);
+
+            let vQsgb = parseInt(document.getElementById("scroll_gq").value);
+            let vPsgb = parseInt(document.getElementById("scroll_gp").value);
 
             // compound interest calculation start
             let principal = (vPsgb * vQsgb);

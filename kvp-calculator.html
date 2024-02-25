@@ -383,12 +383,16 @@
                                             </div>
                                             <div class="col">
                                                 <label for="totinv" class="form-label float-end">
-                                                    ₹<strong class="fs-4" id="inv-disp">10000</strong>
+                                                    ₹
+                                                    <!-- <strong class="fs-4" id="inv-disp">10000</strong> -->
+                                                    <input type="number" class="fw-bold float-end" id="kvp_amt_pr" value="10000" min="1000" max="50000" oninput="kvp_scroll_pr.value=kvp_amt_pr.value">
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="50000" step="1000"
-                                            value="10000" id="totinv" onchange="dispInv()">
+                                        <!-- <input type="range" class="form-range" min="1000" max="50000" step="1000"
+                                            value="10000" id="totinv" onchange="dispInv()"> -->
+                                            <input type="range" class="form-range" min="1000" max="50000" step="1000" value="10000" id="kvp_scroll_pr" oninput="kvp_amt_pr.value=kvp_scroll_pr.value">
+
                                         <div class="row">
                                             <span class="col">₹1000</span>
                                             <span class="text-end col">₹50000</span>
@@ -1264,7 +1268,10 @@
 
         function kvpCalc() {
 
-            let p = parseInt(document.getElementById("totinv").value);
+            // let p = parseInt(document.getElementById("totinv").value);
+
+            //kvp_scroll_pr
+            let p = parseInt(document.getElementById("kvp_scroll_pr").value);
             let r = parseFloat(document.getElementById("ssyroi").value).toFixed(2);
             let y = parseFloat(document.getElementById("dage").value).toFixed(2);
 

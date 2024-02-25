@@ -387,15 +387,18 @@
                                         </div>
                                         <div class="col">
                                             <label for="totinv" class="form-label float-end">₹
-                                                <strong class="fs-4" id="inv-disp">1000</strong>
+                                                <!-- <strong class="fs-4" id="inv-disp">1000</strong> -->
+                                                <input type="number" class="fw-bold float-end" id="apy_amt_pr" value="1000" min="1000" max="5000" oninput="apy_scroll_pr.value=apy_amt_pr.value">
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <input type="range" class="form-range" min="1000" max="5000" step="1000"
-                                                    value="1000" id="totinv" onchange="dispInv()">
+                                                <!-- <input type="range" class="form-range" min="1000" max="5000" step="1000"
+                                                    value="1000" id="totinv" onchange="dispInv()"> -->
+                                                    <input type="range" class="form-range" min="1000" max="5000" step="1000" value="1000" id="apy_scroll_pr" oninput="apy_amt_pr.value=apy_scroll_pr.value">
+
                                                 <div class="row">
                                                     <span class="col">₹1000</span>
                                                     <span class="text-end col">₹5000</span>
@@ -409,15 +412,17 @@
                                         </div>
                                         <div class="col">
                                             <label for="dage" class="form-label float-end">
-                                                <strong class="fs-4" id="age-disp">37</strong>
+                                                <!-- <strong class="fs-4" id="age-disp">37</strong> -->
+                                                <input type="number" class="fw-bold float-end" id="apy_amt_yr" value="37" min="18" max="40" oninput="apy_scroll_yr.value=apy_amt_yr.value">
                                             </label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <input type="range" class="form-range" min="18" max="40" step="1"
-                                                    value="37" id="dage" onchange="dispAge()">
+                                                <!-- <input type="range" class="form-range" min="18" max="40" step="1"
+                                                    value="37" id="dage" onchange="dispAge()"> -->
+                                                    <input type="range" class="form-range" min="18" max="40" step="1" value="37" id="apy_scroll_yr" oninput="apy_amt_yr.value=apy_scroll_yr.value">
                                                 <div class="row">
                                                     <span class="col">18</span>
                                                     <span class="text-end col">40</span>
@@ -1679,8 +1684,13 @@
         }
 
         function npsCalc() {
-            let invdisp = document.getElementById("totinv").value;
-            let age = document.getElementById("dage").value;
+            // let invdisp = document.getElementById("totinv").value;
+            // let age = document.getElementById("dage").value;
+
+            let invdisp = document.getElementById("apy_scroll_pr").value;
+            let age = document.getElementById("apy_scroll_yr").value;
+
+
             let invpm = 0;
             if (invdisp == 1000) {
                 if (age == 18) {

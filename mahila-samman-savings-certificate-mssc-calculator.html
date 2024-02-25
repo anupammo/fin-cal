@@ -402,12 +402,16 @@
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">₹
-                                                    <span class="fw-bold fs-5" id="inv-disp">10000</span>
+                                                    <!-- <span class="fw-bold fs-5" id="inv-disp">10000</span> -->
+
+                                                    <input type="number" class="fw-bold float-end" id="msscamt_pr" value="10000" min="0" max="200000" oninput="msscscroll_pr.value=msscamt_pr.value">
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="200000" step="5000"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <!-- <input type="range" class="form-range" min="0" max="200000" step="5000"
+                                            value="10000" id="fd_toti" onchange="dispInv()"> -->
+
+                                            <input type="range" class="form-range" min="0" max="200000" step="5000" value="10000" id="msscscroll_pr" oninput="msscamt_pr.value=msscscroll_pr.value">
                                         <div class="row">
                                             <span class="col">₹1000</span>
                                             <span class="text-end col">₹200000</span>
@@ -992,7 +996,9 @@
 
         function fdCalc() {
             // let tinv = 0;
-            let fdtoti = document.getElementById("fd_toti").value;
+            //let fdtoti = document.getElementById("fd_toti").value;
+
+            let fdtoti = document.getElementById("msscamt_pr").value;
             let fdroi = document.getElementById("fd_roi").value;
             let fdidur = document.getElementById("fd_idur").value;
             let toti = ((fdtoti * fdroi * fdidur) / 100);

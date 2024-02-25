@@ -382,10 +382,14 @@
                                     by Nivesguru</h1>
                                 <form class="px-5">
                                     <div class="mb-3">
-                                        <label for="totinv" class="form-label">Amount of Investment / Year : <strong
-                                                id="inv-disp">250</strong></label>
-                                        <input type="range" class="form-range" min="1000" max="150000" step="1000"
-                                            value="250" id="totinv" onchange="dispInv()">
+                                        <label for="totinv" class="form-label">Amount of Investment / Year : 
+                                            <!-- <strong id="inv-disp">250</strong> -->
+                                            <input type="number" class="fw-bold float-end" id="ssy_amt_pr" value="250" min="1000" max="150000" oninput="ssy_scroll_pr.value=ssy_amt_pr.value">
+                                        </label>
+                                        <!-- <input type="range" class="form-range" min="1000" max="150000" step="1000"
+                                            value="250" id="totinv" onchange="dispInv()"> -->
+                                            <input type="range" class="form-range" min="1000" max="150000" step="1000" value="250" id="ssy_scroll_pr" oninput="ssy_amt_pr.value=ssy_scroll_pr.value">
+
                                         <div class="row">
                                             <span class="col">250</span>
                                             <span class="text-end col">150000</span>
@@ -397,10 +401,14 @@
                                         <input type="hidden" class="form-control" id="ssyroi" value="8">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="dage" class="form-label">Daughter's age : <strong
-                                                id="age-disp">0</strong></label>
-                                        <input type="range" class="form-range" min="0" max="10" step="1" value="0"
-                                            id="dage" onchange="dispAge()">
+                                        <label for="dage" class="form-label">Daughter's age : 
+                                            <!-- <strong id="age-disp">0</strong> -->
+                                            <input type="number" class="fw-bold float-end" id="ssy_amt_yr" value="0" min="0" max="10" oninput="ssy_scroll_yr.value=ssy_amt_yr.value">
+                                        </label>
+                                        <!-- <input type="range" class="form-range" min="0" max="10" step="1" value="0"
+                                            id="dage" onchange="dispAge()"> -->
+
+                                            <input type="range" class="form-range" min="0" max="10" step="1" value="0" id="ssy_scroll_yr" oninput="ssy_amt_yr.value=ssy_scroll_yr.value">
                                         <div class="row">
                                             <span class="col">0</span>
                                             <span class="text-end col">10</span>
@@ -1057,9 +1065,11 @@
         }
 
         function fdCalc() {
-            let tinv = parseInt(document.getElementById("totinv").value);
+            //let tinv = parseInt(document.getElementById("totinv").value);
+            let tinv = parseInt(document.getElementById("ssy_scroll_pr").value);
             let ssyi = parseFloat(document.getElementById("ssyroi").value);
-            let dage = parseInt(document.getElementById("dage").value);
+            //let dage = parseInt(document.getElementById("dage").value);
+            let dage = parseInt(document.getElementById("ssy_scroll_yr").value);
             // let ycont = (15 - dage);
             let rinv = tinv;
             let totali = 0;

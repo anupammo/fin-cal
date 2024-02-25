@@ -378,11 +378,13 @@
                                                 <label for="fd_toti" class="form-label">Total Investment</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="inv-disp">10000</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="inv-disp">10000</label> -->
+                                                <input type="number" class="fw-bold float-end" id="td_amt_pr" value="10000" min="1000" max="100000" oninput="td_scroll_pr.value=td_amt_pr.value">
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1000" max="100000" step="500"
-                                            value="10000" id="fd_toti" onchange="dispInv()">
+                                        <!-- <input type="range" class="form-range" min="1000" max="100000" step="500"
+                                            value="10000" id="fd_toti" onchange="dispInv()"> -->
+                                            <input type="range" class="form-range" min="1000" max="100000" step="500" value="10000" id="td_scroll_pr" oninput="td_amt_pr.value=td_scroll_pr.value">
                                         <div class="row">
                                             <span class="col">1000</span>
                                             <span class="text-end col">100000</span>
@@ -394,11 +396,13 @@
                                                 <label for="fd_idur" class="form-label">Time</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="dur-disp">3</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="dur-disp">3</label> -->
+                                                <input type="number" class="fw-bold float-end" id="td_amt_yr" value="3" min="1" max="5" oninput="td_scroll_yr.value=td_amt_yr.value">
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="5" step="1" value="3"
-                                            id="fd_idur" onchange="dispTime()">
+                                        <!-- <input type="range" class="form-range" min="1" max="5" step="1" value="3"
+                                            id="fd_idur" onchange="dispTime()"> -->
+                                            <input type="range" class="form-range" min="1" max="5" step="1" value="3" id="td_scroll_yr" oninput="td_amt_yr.value=td_scroll_yr.value">
                                         <div class="row">
                                             <span class="col">1</span>
                                             <span class="text-end col">5</span>
@@ -410,11 +414,14 @@
                                                 <label for="fd_roi" class="form-label">Rate of interest</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label fw-bold float-end" id="age-disp">7.0</label>
+                                                <!-- <label class="form-label fw-bold float-end" id="age-disp">7.0</label> -->
+                                                <input type="number" disabled class="fw-bold float-end" id="td_amt_rt" value="7.0" min="6" max="8" oninput="td_scroll_rt.value=td_amt_rt.value">
                                             </div>
                                         </div>
-                                        <input type="range" disabled class="form-range" min="6" max="8" step=".1"
-                                            value="7.0" id="fd_roi" onchange="dispROI()">
+                                        <!-- <input type="range" disabled class="form-range" min="6" max="8" step=".1"
+                                            value="7.0" id="fd_roi" onchange="dispROI()"> -->
+                                            <input type="range" disabled class="form-range" min="6" max="8" step=".1" value="7.0" id="td_scroll_rt" oninput="td_amt_rt.value=td_scroll_rt.value">
+
                                         <div class="row">
                                             <span class="col">6</span>
                                             <span class="text-end col">8</span>
@@ -1172,39 +1179,55 @@
             let totint = 0;
             let mamnt = 0;
 
-            let fdidur = document.getElementById("fd_idur").value;
+            // let fdidur = document.getElementById("fd_idur").value;
+            let fdidur = document.getElementById("td_scroll_yr").value;
 
             if (fdidur <= 1) {
-                fdtoti = document.getElementById("fd_toti").value;
-                let fdroi = document.getElementById("fd_roi").value;
-                let fdidur = document.getElementById("fd_idur").value;
+                // fdtoti = document.getElementById("fd_toti").value;
+                // let fdroi = document.getElementById("fd_roi").value;
+                // let fdidur = document.getElementById("fd_idur").value;
+
+                fdtoti = document.getElementById("td_scroll_pr").value;
+                let fdroi = document.getElementById("td_scroll_rt").value;
+                let fdidur = document.getElementById("td_scroll_yr").value;
                 let toti = (Math.pow(1 + (6.8 / 400), (4 * 1)));
                 let toti1 = (fdtoti * toti);
                 mamnt = (parseInt(toti1));
                 totint = parseInt(toti1 - fdtoti);
                 console.log(mamnt, toti, toti1);
             } else if (fdidur <= 2) {
-                fdtoti = document.getElementById("fd_toti").value;
-                let fdroi = document.getElementById("fd_roi").value;
-                let fdidur = document.getElementById("fd_idur").value;
+                // fdtoti = document.getElementById("fd_toti").value;
+                // let fdroi = document.getElementById("fd_roi").value;
+                // let fdidur = document.getElementById("fd_idur").value;
+
+                fdtoti = document.getElementById("td_scroll_pr").value;
+                let fdroi = document.getElementById("td_scroll_rt").value;
+                let fdidur = document.getElementById("td_scroll_yr").value;
                 let toti = (Math.pow(1 + (6.9 / 400), (4 * 2)));
                 let toti1 = (fdtoti * toti);
                 mamnt = (parseInt(toti1));
                 totint = parseInt(toti1 - fdtoti);
                 console.log(mamnt, toti, toti1);
             } else if (fdidur <= 3) {
-                fdtoti = document.getElementById("fd_toti").value;
-                let fdroi = document.getElementById("fd_roi").value;
-                let fdidur = document.getElementById("fd_idur").value;
+                // fdtoti = document.getElementById("fd_toti").value;
+                // let fdroi = document.getElementById("fd_roi").value;
+                // let fdidur = document.getElementById("fd_idur").value;
+
+                fdtoti = document.getElementById("td_scroll_pr").value;
+                let fdroi = document.getElementById("td_scroll_rt").value;
+                let fdidur = document.getElementById("td_scroll_yr").value;
                 let toti = (Math.pow(1 + (7 / 400), (4 * 3)));
                 let toti1 = (fdtoti * toti);
                 mamnt = (parseInt(toti1));
                 totint = parseInt(toti1 - fdtoti);
                 console.log(mamnt, toti, toti1);
             } else {
-                fdtoti = document.getElementById("fd_toti").value;
-                let fdroi = document.getElementById("fd_roi").value;
-                let fdidur = document.getElementById("fd_idur").value;
+                // fdtoti = document.getElementById("fd_toti").value;
+                // let fdroi = document.getElementById("fd_roi").value;
+                // let fdidur = document.getElementById("fd_idur").value;
+                fdtoti = document.getElementById("td_scroll_pr").value;
+                let fdroi = document.getElementById("td_scroll_rt").value;
+                let fdidur = document.getElementById("td_scroll_yr").value;
                 let toti = (Math.pow(1 + (6.6 / 400), (20)));
                 let toti1 = (fdtoti * toti);
                 mamnt = (parseInt(toti1));
