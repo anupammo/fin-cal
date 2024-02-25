@@ -103,15 +103,14 @@ https://nivesguru.in/hi/sb-calculator
 https://nivesguru.in/bn/sb-calculator
 https://nivesguru.in/hi/bob-sb-calculator
 https://nivesguru.in/bn/bob-sb-calculator
-https://nivesguru.in/hi/pnb-sb-calculator.html
-https://nivesguru.in/bn/pnb-sb-calculator.html
+https://nivesguru.in/hi/pnb-sb-calculator
+https://nivesguru.in/bn/pnb-sb-calculator
 https://nivesguru.in/hi/sbi-sb-calculator
 https://nivesguru.in/bn/sbi-sb-calculator
 https://nivesguru.in/hi/ubi-sb-calculator
 https://nivesguru.in/bn/ubi-sb-calculator
 https://nivesguru.in/hi/about-us
 https://nivesguru.in/bn/about-us
-https://nivesguru.in/sitemap.html
 https://nivesguru.in/hi/contact-us
 https://nivesguru.in/bn/contact-us
 https://nivesguru.in/hi/faq-page
@@ -130,6 +129,6 @@ https://nivesguru.in/bn/boi-fd-calculator
 https://nivesguru.in/bn/boi-rd-calculator
 https://nivesguru.in/bn/boi-sb-calculator
 https://nivesguru.in/bn/pnb-sb-calculator
-https://nivesguru.in/bn/index.html
-https://nivesguru.in/bn/about-us.html
-https://nivesguru.in/hi/index.html
+https://nivesguru.in/bn/
+https://nivesguru.in/bn/about-us
+https://nivesguru.in/hi/
