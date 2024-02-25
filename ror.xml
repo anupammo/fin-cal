@@ -309,6 +309,14 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://nivesguru.in/faq-page</link>
+     <title>Frequently Asked Questions / FAQ page Nivesguru Calculator</title>
+     <description>Welcome to the Nivesguru FAQ page! Here, you'll find answers to some of the most frequently asked questions about our website, including what we do, what type</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://nivesguru.in/hi/</link>
      <title>निवेश कैलकुलेटर - वित्तीय भविष्य की योजना बनाएं | निवेसगुरु</title>
      <description>निवेसगुरु निवेश के लिए एक ऑनलाइन गणना उपकरण बिल्कुल मुफ्त है। भारतीयों को अपने वित्त संबंधी निवेश के लिए प्रेरित करने की एक पहल</description>
@@ -349,14 +357,6 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://nivesguru.in/faq-page</link>
-     <title>Frequently Asked Questions / FAQ page Nivesguru Calculator</title>
-     <description>Welcome to the Nivesguru FAQ page! Here, you'll find answers to some of the most frequently asked questions about our website, including what we do, what type</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>1</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
      <link>https://nivesguru.in/privacy-policy</link>
      <title>Privacy Policy for Nivesguru | Free Investment Calculator</title>
      <description>At nivesguru.in, accessible from https://nivesguru.in, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of</description>
@@ -390,7 +390,7 @@
 </item>
 <item>
      <link>https://nivesguru.in/bn/senior-citizens-savings-scheme-scss-calculator</link>
-     <title>SCSS ক্যালকুলেটর সিনিয়র সিটিজেনস সেভিংস স্কিমের সুদের হার</title>
+     <title>NivesGuru দ্বারা ভারতের জন্য সিনিয়র সিটিজেন সেভিংস স্কিম / SCSS ক্যালকুলেটর</title>
      <description>আপনার অবসরের বছরগুলিকে সবচেয়ে বেশি কাজে লাগাতে সিনিয়র সিটিজেনস সেভিংস স্কিম (SCSS) এবং পোস্ট অফিস SCSS স্কিম অন্বেষণ করুন। সুদের হার, ক্যালকুলেটর সম্পর্কে জানুন</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
@@ -542,8 +542,8 @@
 </item>
 <item>
      <link>https://nivesguru.in/hi/pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator</link>
-     <title>प्रधानमंत्री जीवन ज्योति बीमा योजना | पीएमजेजेबीवाई कैलकुलेटर</title>
-     <description>प्रधानमंत्री जीवन ज्योति बीमा योजना (पीएमजेजेबीवाई) एक सरकार समर्थित जीवन बीमा योजना है जो किफायती प्रीमियम के साथ जीवन बीमा कवरेज प्रदान करती है</description>
+     <title>प्रधानमंत्री जीवन ज्योति बीमा योजना | PMJJBY कैलकुलेटर</title>
+     <description>प्रधानमंत्री जीवन ज्योति बीमा योजना पीएमजेजेबीवाई (PMJJBY) एक सरकार समर्थित जीवन बीमा योजना है जो किफायती प्रीमियम के साथ जीवन बीमा कवरेज प्रदान करती है</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -933,6 +933,22 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://nivesguru.in/hi/faq-page</link>
+     <title>अक्सर पूछे जाने वाले प्रश्न/एफएक्यू पेज निवेसगुरु कैलकुलेटर</title>
+     <description>निवेसगुरु FAQ पृष्ठ में आपका स्वागत है! यहां, आपको हमारी वेबसाइट के बारे में अक्सर पूछे जाने वाले कुछ प्रश्नों के उत्तर मिलेंगे, जिनमें हम क्या करते हैं, किस प्रकार के हैं, आदि शामिल हैं</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nivesguru.in/bn/faq-page</link>
+     <title>প্রায়শই জিজ্ঞাসিত প্রশ্ন / প্রায়শই জিজ্ঞাসিত প্রশ্ন পাতা Nivesguru ক্যালকুলেটর</title>
+     <description>নিভেসগুরু FAQ পাতায় স্বাগতম! এখানে, আপনি আমাদের ওয়েবসাইট সম্পর্কে প্রায়শই জিজ্ঞাসিত কিছু প্রশ্নের উত্তর পাবেন, যার মধ্যে আমরা কী করি, কী ধরনের</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://nivesguru.in/hi/post-office-monthly-income-scheme-mis-calculator</link>
      <title>डाकघर मासिक आय योजना / एमआईएस कैलकुलेटर निवेसगुरु</title>
      <description>जब आपकी मेहनत की कमाई को निवेश करने की बात आती है, तो एक सुरक्षित और विश्वसनीय विकल्प ढूंढना महत्वपूर्ण है। डाकघर मासिक आय योजना (एमआईएस) निवेश</description>
@@ -965,25 +981,17 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://nivesguru.in/hi/pnb-sb-calculator</link>
-     <title>पंजाब नेशनल बैंक आवर्ती जमा | पीएनबी आरडी कैलकुलेटर</title>
-     <description>बचत खाता व्यक्तियों के लिए उपलब्ध सबसे लोकप्रिय और सुरक्षित निवेश विकल्पों में से एक है। यह एक प्रकार का जमा खाता है जो व्यक्तियों को इसकी अनुमति देता है</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://nivesguru.in/hi/faq-page</link>
-     <title>अक्सर पूछे जाने वाले प्रश्न/एफएक्यू पेज निवेसगुरु कैलकुलेटर</title>
-     <description>निवेसगुरु FAQ पृष्ठ में आपका स्वागत है! यहां, आपको हमारी वेबसाइट के बारे में अक्सर पूछे जाने वाले कुछ प्रश्नों के उत्तर मिलेंगे, जिनमें हम क्या करते हैं, किस प्रकार के हैं, आदि शामिल हैं</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
      <link>https://nivesguru.in/hi/boi-fd-calculator</link>
      <title>बैंक ऑफ इंडिया फिक्स्ड डिपॉजिट | भारत के लिए बीओआई एफडी कैलकुलेटर</title>
      <description>बीओआई, जिसे बैंक ऑफ इंडिया के नाम से भी जाना जाता है, भारत के सबसे बड़े सार्वजनिक क्षेत्र के बैंकों में से एक है, जो निवेशकों को कई प्रकार की सावधि जमा योजनाओं की पेशकश करता है। बीओआई सावधि जमा</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nivesguru.in/hi/boi-rd-calculator</link>
+     <title>बैंक ऑफ इंडिया आवर्ती जमा | भारत का बीओआई आरडी कैलकुलेटर</title>
+     <description>आवर्ती जमा (आरडी) बैंकों और अन्य वित्तीय संस्थानों द्वारा पेश किया जाने वाला एक प्रकार का निवेश उत्पाद है। यह व्यक्ति को एक निश्चित राशि बचाने की अनुमति देता है</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -997,9 +1005,9 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://nivesguru.in/hi/boi-rd-calculator</link>
-     <title>बैंक ऑफ इंडिया आवर्ती जमा | भारत का बीओआई आरडी कैलकुलेटर</title>
-     <description>आवर्ती जमा (आरडी) बैंकों और अन्य वित्तीय संस्थानों द्वारा पेश किया जाने वाला एक प्रकार का निवेश उत्पाद है। यह व्यक्ति को एक निश्चित राशि बचाने की अनुमति देता है</description>
+     <link>https://nivesguru.in/hi/pnb-sb-calculator</link>
+     <title>पंजाब नेशनल बैंक आवर्ती जमा | पीएनबी आरडी कैलकुलेटर</title>
+     <description>बचत खाता व्यक्तियों के लिए उपलब्ध सबसे लोकप्रिय और सुरक्षित निवेश विकल्पों में से एक है। यह एक प्रकार का जमा खाता है जो व्यक्तियों को इसकी अनुमति देता है</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -1021,41 +1029,9 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://nivesguru.in/bn/pnb-sb-calculator</link>
-     <title>পাঞ্জাব ন্যাশনাল ব্যাঙ্ক সঞ্চয় আমানত | পিএনবি এসবি ক্যালকুলেটর</title>
-     <description>একটি সঞ্চয় অ্যাকাউন্ট ব্যক্তিদের জন্য উপলব্ধ সবচেয়ে জনপ্রিয় এবং নিরাপদ বিনিয়োগ বিকল্পগুলির মধ্যে একটি। এটি এক ধরনের আমানত অ্যাকাউন্ট যা ব্যক্তিদের অনুমতি দেয়</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://nivesguru.in/hi/index.html</link>
-     <title>निवेश कैलकुलेटर - वित्तीय भविष्य की योजना बनाएं | निवेसगुरु</title>
-     <description>निवेसगुरु निवेश के लिए एक ऑनलाइन गणना उपकरण बिल्कुल मुफ्त है। भारतीयों को अपने वित्त संबंधी निवेश के लिए प्रेरित करने की एक पहल</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://nivesguru.in/bn/index.html</link>
-     <title>নিভেসগুরু: বিনামূল্যে ক্যালকুলেটর বিনিয়োগ ভারতের জন্য সহজ করে তোলে</title>
-     <description>নিভেসগুরু হল সম্পূর্ণ বিনামূল্যে বিনিয়োগের জন্য একটি অনলাইন গণনার টুল। ভারতীয়দের জন্য একটি উদ্যোগ তাদের অর্থ সম্পর্কিত বিনিয়োগের জন্য অনুপ্রাণিত করার জন্য</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
      <link>https://nivesguru.in/bn/boi-fd-calculator</link>
      <title>ব্যাঙ্ক অফ ইন্ডিয়া ফিক্সড ডিপোজিট | ভারতের জন্য BOI FD ক্যালকুলেটর</title>
      <description>BOI, ব্যাংক অফ ইন্ডিয়া নামেও পরিচিত, ভারতের সর্ববৃহৎ পাবলিক সেক্টরের ব্যাঙ্কগুলির মধ্যে একটি, যা বিনিয়োগকারীদের জন্য ফিক্সড ডিপোজিট স্কিমগুলির একটি পরিসীমা অফার করে৷ BOI ফিক্সড ডিপোজিট</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>2</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://nivesguru.in/bn/boi-sb-calculator</link>
-     <title>ব্যাঙ্ক অফ ইন্ডিয়া সেভিংস অ্যাকাউন্ট | ভারতের জন্য BOI এসবি ক্যালকুলেটর</title>
-     <description>একটি সঞ্চয় অ্যাকাউন্ট ব্যক্তিদের জন্য উপলব্ধ সবচেয়ে জনপ্রিয় এবং নিরাপদ বিনিয়োগ বিকল্পগুলির মধ্যে একটি। এটি এক ধরনের আমানত অ্যাকাউন্ট যা ব্যক্তিদের অনুমতি দেয়</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -1069,9 +1045,25 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://nivesguru.in/bn/faq-page</link>
-     <title>প্রায়শই জিজ্ঞাসিত প্রশ্ন / প্রায়শই জিজ্ঞাসিত প্রশ্ন পাতা Nivesguru ক্যালকুলেটর</title>
-     <description>নিভেসগুরু FAQ পাতায় স্বাগতম! এখানে, আপনি আমাদের ওয়েবসাইট সম্পর্কে প্রায়শই জিজ্ঞাসিত কিছু প্রশ্নের উত্তর পাবেন, যার মধ্যে আমরা কী করি, কী ধরনের</description>
+     <link>https://nivesguru.in/bn/boi-sb-calculator</link>
+     <title>ব্যাঙ্ক অফ ইন্ডিয়া সেভিংস অ্যাকাউন্ট | ভারতের জন্য BOI এসবি ক্যালকুলেটর</title>
+     <description>একটি সঞ্চয় অ্যাকাউন্ট ব্যক্তিদের জন্য উপলব্ধ সবচেয়ে জনপ্রিয় এবং নিরাপদ বিনিয়োগ বিকল্পগুলির মধ্যে একটি। এটি এক ধরনের আমানত অ্যাকাউন্ট যা ব্যক্তিদের অনুমতি দেয়</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nivesguru.in/bn/pnb-sb-calculator</link>
+     <title>পাঞ্জাব ন্যাশনাল ব্যাঙ্ক সঞ্চয় আমানত | পিএনবি এসবি ক্যালকুলেটর</title>
+     <description>একটি সঞ্চয় অ্যাকাউন্ট ব্যক্তিদের জন্য উপলব্ধ সবচেয়ে জনপ্রিয় এবং নিরাপদ বিনিয়োগ বিকল্পগুলির মধ্যে একটি। এটি এক ধরনের আমানত অ্যাকাউন্ট যা ব্যক্তিদের অনুমতি দেয়</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nivesguru.in/bn/index.html</link>
+     <title>নিভেসগুরু: বিনামূল্যে ক্যালকুলেটর বিনিয়োগ ভারতের জন্য সহজ করে তোলে</title>
+     <description>নিভেসগুরু হল সম্পূর্ণ বিনামূল্যে বিনিয়োগের জন্য একটি অনলাইন গণনার টুল। ভারতীয়দের জন্য একটি উদ্যোগ তাদের অর্থ সম্পর্কিত বিনিয়োগের জন্য অনুপ্রাণিত করার জন্য</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -1081,7 +1073,15 @@
      <title>আমাদের সম্পর্কে | নিভেসগুরু | ভারতের জন্য বিনামূল্যে বিনিয়োগ ক্যালকুলেটর</title>
      <description>Indian Government started Digital India initiative and on the 75th Anniversary of Indian Independence, Team Nivesguru celebrating Azadi Ka Amrit Mahotsav</description>
      <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>3</ror:sortOrder>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://nivesguru.in/hi/index.html</link>
+     <title>निवेश कैलकुलेटर - वित्तीय भविष्य की योजना बनाएं | निवेसगुरु</title>
+     <description>निवेसगुरु निवेश के लिए एक ऑनलाइन गणना उपकरण बिल्कुल मुफ्त है। भारतीयों को अपने वित्त संबंधी निवेश के लिए प्रेरित करने की एक पहल</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 </channel>
