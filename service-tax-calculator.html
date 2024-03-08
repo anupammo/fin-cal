@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -225,6 +226,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="calculator">
         <div class="wave1">
@@ -379,61 +381,45 @@
                                         </ol>
                                     </nav>
                                 </div>
-                                <h1 class="lead fs-3 mb-5 px-5">Unlocking the Power of Service Tax Calculators: Your Guide</h1>
+                                <h1 class="lead fs-3 mb-5 px-5">Unlocking the Power of Service Tax Calculators: Your
+                                    Guide</h1>
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Price (including GST) </label>
+                                                <!-- <label class="form-label">Price (including GST)</label> -->
+                                                <label class="form-label">Price </label>
                                             </div>
                                             <div class="col">
                                                 <label for="totinv" class="form-label float-end">₹
-                                                    <span class="fs-4" id="priceDisp">100000</span>
+                                                    <span class="fs-4" id="priceDisp">1500000</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="100000" step="500"
-                                            value="30000" id="gstPrice" onchange="dipsPrice()">
+                                        <input type="range" class="form-range" min="0" max="2000000" step="100000"
+                                            value="1500000" id="gstPrice" onchange="dipsPrice()">
                                         <div class="row">
                                             <span class="col">0 </span>
-                                            <span class="text-end col">100000</span>
+                                            <span class="text-end col">2000000</span>
                                         </div>
                                     </div>
-                                    <div class="my-5">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst3"
-                                                value="3">
-                                            <label class="form-check-label" for="gst3">
-                                                <span class="fs-3">3</span>%
-                                            </label>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Service Tax Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    <span id="roi-disp" class="fs-4">15</span>
+                                                    <span>%</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst5"
-                                                value="5">
-                                            <label class="form-check-label" for="gst5">
-                                                <span class="fs-3">5</span>%
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst12"
-                                                value="12">
-                                            <label class="form-check-label" for="gst12">
-                                                <span class="fs-3">12</span>%
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst18"
-                                                value="18" checked>
-                                            <label class="form-check-label" for="gst18">
-                                                <span class="fs-3">18</span>%
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input mt-3" type="radio" name="gstRates" id="gst28"
-                                                value="28">
-                                            <label class="form-check-label" for="gst28">
-                                                <span class="fs-3">28</span>%
-                                            </label>
+                                        <input type="range" class="form-range" min="0" max="20" step="1" value="15"
+                                            id="emi-roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">0</span>
+                                            <span class="text-end col">20</span>
                                         </div>
                                     </div>
                                     <div class="my-3">
@@ -477,7 +463,8 @@
                                 <div class="px-5">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
-                                            <time pubdate="pubdate" datetime="2023-12-12">Published December 12, 2023</time>
+                                            <time pubdate="pubdate" datetime="2023-12-12">Published December 12,
+                                                2023</time>
                                         </li>
                                         <li class="list-group-item lead fs-6 pt-0 px-0">
                                             Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
@@ -594,8 +581,8 @@
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="p-5">
-                        <img class="img-fluid" src="res/online-service-tax-calculator.svg" alt="Online Service Tax Calculator"
-                            title="Online Service Tax Calculator">
+                        <img class="img-fluid" src="res/online-service-tax-calculator.svg"
+                            alt="Online Service Tax Calculator" title="Online Service Tax Calculator">
                     </div>
                 </div>
             </div>
@@ -692,7 +679,8 @@
                                     <a class="nav-link" href="emi-calculator-online">EMI Calculator Online</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP Return Calculator</a>
+                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP
+                                        Return Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="swp-calculator-online">SWP Calculator Online</a>
@@ -707,7 +695,8 @@
                                     <a class="nav-link" href="simple-interest-calculator">Simple Interest Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest Calculator</a>
+                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest
+                                        Calculator</a>
                                 </li>
                             </ul>
                         </div>
@@ -720,13 +709,16 @@
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="post-office-time-deposit-td-calculator">TD Calculator</a>
@@ -940,22 +932,26 @@
             document.getElementById("priceDisp").innerHTML = invdisp;
         }
 
-        function calculateTax() {            
-            var income = parseFloat(document.getElementById("gstPrice").value);            
-            var checkedRadio = document.querySelector('input[name="gstRates"]:checked');
-            
-            if (checkedRadio) {
-                var taxRate = checkedRadio.value;
+        function dispROI() {
+            let aged = document.getElementById("emi-roi").value;
+            document.getElementById("roi-disp").innerHTML = aged;
+        }
+
+        function calculateTax() {
+            var income = parseFloat(document.getElementById("gstPrice").value);
+            var taxRate = parseFloat(document.getElementById("emi-roi").value);
+            var taxAmount = 0;
+
+            if (income > 1000000) {
+                taxAmount = (income * taxRate) / 100;
             } else {
-                alert("Please select an option");
+                taxAmount = (income * 0) / 100;
             }
-            
-            var taxAmount = (income * taxRate) / 100;
-            
+
             var resultElement = document.getElementById("result");
             resultElement.textContent = taxAmount.toFixed(0);
 
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Amount</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Service Tax</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount.toFixed(0) + "</span></td</tr><tr><td>Payment</td><td class='text-end'>₹ <span class='fs-5'>" + (income + taxAmount).toFixed(0) + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
             var xValues = ["Total Investment", "Total Interest"];
@@ -983,4 +979,5 @@
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -948,7 +948,9 @@
     <script>
         function dispInv() {
             let invdisp = document.getElementById("purchasePrice").value;
+            // document.getElementById("sellPrice").value = invdisp;
             document.getElementById("inv-disp").innerHTML = invdisp;
+            // document.getElementById("roi-disp").innerHTML = invdisp;
         }
 
         function dispROI() {
@@ -986,7 +988,7 @@
             var capitalGainsTax = 0;
 
             if (document.getElementById('stcg').checked) {
-                if (sellPrice > purchasePrice) {
+                if ((sellPrice > 300000) && (sellPrice > purchasePrice))  {
                     // Assuming a fixed tax rate of 15%
                     var taxRate = 0.15;
                     capitalGainsTax = capitalGains * taxRate;

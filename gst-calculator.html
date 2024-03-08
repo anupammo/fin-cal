@@ -366,7 +366,8 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Price (including GST) </label>
+                                                <!-- <label class="form-label">Price (including GST)</label> -->
+                                                <label class="form-label">Price </label>
                                             </div>
                                             <div class="col">
                                                 <label for="totinv" class="form-label float-end">₹
@@ -963,7 +964,7 @@
             var resultElement = document.getElementById("result");
             resultElement.textContent = taxAmount.toFixed(0);
 
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Amount</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total GST</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td</tr><tr><td>Payment</td><td class='text-end'>₹ <span class='fs-5'>" + (income + taxAmount) + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
             var xValues = ["Total Investment", "Total Interest"];

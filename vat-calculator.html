@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -225,6 +226,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="calculator">
         <div class="wave1">
@@ -379,30 +381,32 @@
                                         </ol>
                                     </nav>
                                 </div>
-                                <h1 class="lead fs-3 mb-5 px-5">Online VAT Calculator in India: Your Ultimate Guide for Tax</h1>
+                                <h1 class="lead fs-3 mb-5 px-5">Online VAT Calculator in India: Your Ultimate Guide for
+                                    Tax</h1>
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Principal Amount </label>
+                                                <!-- <label class="form-label">Price (including GST)</label> -->
+                                                <label class="form-label">Price </label>
                                             </div>
                                             <div class="col">
                                                 <label for="totinv" class="form-label float-end">₹
-                                                    <span class="fs-4" id="inv-disp">1000000</span>
+                                                    <span class="fs-4" id="priceDisp">100000</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="5000000" step="100000"
-                                            value="1000000" id="totinv" onchange="dispInv()">
+                                        <input type="range" class="form-range" min="0" max="100000" step="500"
+                                            value="30000" id="gstPrice" onchange="dipsPrice()">
                                         <div class="row">
-                                            <span class="col">0</span>
-                                            <span class="text-end col">5000000</span>
+                                            <span class="col">0 </span>
+                                            <span class="text-end col">100000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                                <label for="fd_toti" class="form-label">VAT Rate</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
@@ -418,27 +422,20 @@
                                             <span class="text-end col">15</span>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="my-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">EMI Duration</label>
+                                                <label class="form-label mt-2">Your tax amount is: </label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end">
-                                                    <span class="fs-4" id="dur-disp">5</span>
-                                                    <span>Yr</span>
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="result">5400</span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="1" max="20" step="1" value="5"
-                                            id="dage" onchange="dispTime()">
-                                        <div class="row">
-                                            <span class="col">1</span>
-                                            <span class="text-end col">20</span>
-                                        </div>
                                     </div>
                                     <div class="my-4">
-                                        <button type="button" onclick="resultEMI();"
+                                        <button type="button" onclick="calculateTax();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
                                     </div>
                                 </form>
@@ -466,7 +463,8 @@
                                 <div class="px-5">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
-                                            <time pubdate="pubdate" datetime="2023-12-12">Published December 12, 2023</time>
+                                            <time pubdate="pubdate" datetime="2023-12-12">Published December 12,
+                                                2023</time>
                                         </li>
                                         <li class="list-group-item lead fs-6 pt-0 px-0">
                                             Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
@@ -662,7 +660,8 @@
                                     <a class="nav-link" href="emi-calculator-online">EMI Calculator Online</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP Return Calculator</a>
+                                    <a class="nav-link" href="systematic-investment-plan-sip-return-calculator">SIP
+                                        Return Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="swp-calculator-online">SWP Calculator Online</a>
@@ -677,7 +676,8 @@
                                     <a class="nav-link" href="simple-interest-calculator">Simple Interest Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest Calculator</a>
+                                    <a class="nav-link" href="compound-interest-calculator">Compound Interest
+                                        Calculator</a>
                                 </li>
                             </ul>
                         </div>
@@ -690,13 +690,16 @@
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    <a class="nav-link" href="senior-citizens-savings-scheme-scss-calculator">SCSS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    <a class="nav-link" href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    <a class="nav-link" href="post-office-monthly-income-scheme-mis-calculator">MIS
+                                        Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="post-office-time-deposit-td-calculator">TD Calculator</a>
@@ -905,9 +908,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        function dispInv() {
-            let invdisp = document.getElementById("totinv").value;
-            document.getElementById("inv-disp").innerHTML = invdisp;
+        function dipsPrice() {
+            let invdisp = document.getElementById("gstPrice").value;
+            document.getElementById("priceDisp").innerHTML = invdisp;
         }
 
         function dispROI() {
@@ -915,33 +918,20 @@
             document.getElementById("roi-disp").innerHTML = aged;
         }
 
-        function dispTime() {
-            let invdisp = document.getElementById("dage").value;
-            document.getElementById("dur-disp").innerHTML = invdisp;
-        }
+        function calculateTax() {
+            var income = parseFloat(document.getElementById("gstPrice").value);
+            var taxRate = parseFloat(document.getElementById("emi-roi").value);
 
-        function resultEMI() {
-            let principalAmount = document.getElementById("totinv").value;
-            let interestRatePercent = document.getElementById("emi-roi").value;
-            let loanTenureYears = document.getElementById("dage").value;
+            var taxAmount = (income * taxRate) / 100;
 
-            function calculateEMI(principal, interestRate, tenure) {
-                const monthlyInterestRate = (interestRate / 12) / 100;
-                const numberOfPayments = tenure * 12;
-                const emi = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-                return emi.toFixed(0);
-            }
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = taxAmount.toFixed(0);
 
-            let emi = calculateEMI(principalAmount, interestRatePercent, loanTenureYears);
-
-            let totali = (emi * (loanTenureYears * 12));
-            let totalp = (parseInt(principalAmount) + parseInt(totali));
-
-            let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + emi + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + totali + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + totalp + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Amount</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total GST</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount.toFixed(0) + "</span></td</tr><tr><td>Payment</td><td class='text-end'>₹ <span class='fs-5'>" + (income + taxAmount).toFixed(0) + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [emi, totali];
+            var yValues = [income, taxAmount];
             var barColors = ["#03a9f4", "#f50057"];
 
             new Chart("myChart", {
@@ -965,4 +955,5 @@
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>
