@@ -176,9 +176,41 @@
         {
           "@context": "https://schema.org",
           "@type": ["SoftwareApplication", "WebApplication"],
-          "name": "Sovereign Gold Bond / SGB Calculator",
-          "operatingSystem": "ANDROID",
-          "applicationCategory": "FinanceApplication",
+          "name": "Sovereign Gold Bond / SGB Calculator : Investment & Returns",
+          "description": "Calculate returns on Sovereign Gold Bonds with our SGB Calculator. Accurately estimate gold returns using our Sovereign Gold Bond Return Calculator.",
+          "url": "https://nivesguru.in/sgb-calculator",
+          "applicationCategory": "Calculator",
+          "operatingSystem": "Web",
+          "inLanguage": "en",
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://nivesguru.in/sgb-calculator",
+              "actionPlatform": [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/MobileWebPlatform"
+              ],
+              "httpMethod": "GET",
+              "encodingType": "application/json",
+              "contentType": "application/json",
+              "description": "Sovereign Gold Bond / SGB Calculator : Investment & Returns",
+              "input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": [
+                  "Gold Price / gram",
+                  "Quantity of Gold"
+                ],
+                "valueName": "Calculation",
+                "valueMinLength": 1
+              },
+              "result": {
+                "@type": "PropertyValueSpecification",
+                "valueName": "Result",
+                "valueRequired": true
+              }
+            }
+          },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
