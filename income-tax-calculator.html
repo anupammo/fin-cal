@@ -414,7 +414,7 @@
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="0" max="30" step="5" value="5"
-                                            id="emi-roi" disabled>
+                                            id="emi-roi">
                                         <div class="row">
                                             <span class="col">0</span>
                                             <span class="text-end col">20</span>
@@ -966,7 +966,7 @@
             var resultElement = document.getElementById("result");
             resultElement.textContent = taxAmount.toFixed(0);
 
-            let tblVal = "<tbody><tr><td>Amount</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Service Tax</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount.toFixed(0) + "</span></td</tr><tr><td>Payment</td><td class='text-end'>₹ <span class='fs-5'>" + (income + taxAmount).toFixed(0) + "</span></td></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Income</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Income Tax Rate</td><td class='text-end'><span class='fs-5'>" + taxRate + "</span> %</td</tr><tr><td>Tax Amount</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
 
             var xValues = ["Total Investment", "Total Interest"];
