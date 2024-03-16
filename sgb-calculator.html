@@ -387,7 +387,7 @@
     </style>
 </head>
 
-<body>
+<body onload="sgbCalc()">
     <header id="calculator">
         <div class="wave1">
             <nav class="navbar navbar-expand-lg">
@@ -560,7 +560,7 @@
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6 col-12">
-                        <div class="card shadow h-100 border-0">
+                        <div class="card bg-light shadow h-100 border-0">
                             <div class="card-body">
                                 <div class="px-5 pt-5">
                                     <nav aria-label="breadcrumb">
@@ -571,7 +571,7 @@
                                         </ol>
                                     </nav>
                                 </div>
-                                <h1 class="px-5 mb-5 lead fw-bold fs-3">Sovereign Gold Bond / SGB Calculator :
+                                <h1 class="lead px-5 mb-4 fs-3">Sovereign Gold Bond / SGB Calculator :
                                     Investment & Returns</h1>
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
@@ -580,22 +580,20 @@
                                                 <label for="goldp" class="form-label">Gold Price / gram</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end">
-                                                    ₹<strong id="disp-goldp" class="fs-4">6263</strong>
-                                                </label>
+                                                <div class="d-block float-end">
+                                                    <input class="rounded d-inline-block fs-4 border-0" type="text"
+                                                        value="6263" style="width: 60px;" id="disp-goldp"
+                                                        onchange="goldpChange()">
+                                                    <span class="text-end d-inline-block">₹</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="5000" max="6500" step="1"
+                                        <input type="range" class="form-range" min="2000" max="7000" step="1"
                                             value="6263" id="goldp" onchange="dispPgold()">
                                         <div class="row">
-                                            <span class="col">₹5000</span>
-                                            <span class="text-end col">₹6500</span>
+                                            <span class="col">₹2000</span>
+                                            <span class="text-end col">₹7000</span>
                                         </div>
-                                    </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input shadow-none" id="sgb-disc">
-                                        <label class="text-danger form-check-label lead fs-6" for="sgb-disc">Discounted
-                                            Price for online payment</label>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
@@ -603,9 +601,12 @@
                                                 <label for="qgold" class="form-label">Quantity of Gold</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end">
-                                                    <strong id="disp-qgold" class="fs-4">1</strong>g
-                                                </label>
+                                                <div class="d-block float-end">
+                                                    <input class="rounded text-end d-inline-block fs-4 border-0"
+                                                        type="text" value="1" style="width: 60px;" id="disp-qgold"
+                                                        onchange="goldqChange()">
+                                                    <span class="text-end d-inline-block">g</span>
+                                                </div>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="1" max="4000" step="1" value="1"
@@ -618,30 +619,39 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label">Rate of interest <strong id="sgb-roi"
-                                                        class="fs-4">2.5</strong> %</label>
+                                                <label class="form-label">SGB Tenure</label>
                                             </div>
                                             <div class="col">
-                                                <label class="form-label float-end">Duration <strong id="sgb-period"
-                                                        class="fs-4">5</strong> Year</label>
+                                                <label class="form-label float-end">
+                                                    <span class="fs-4" id="dur-disp">8</span>
+                                                    <span>Yr</span>
+                                                </label>
                                             </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="8" step="1" value="8"
+                                            id="sgb-period" onchange="dispTime()">
+                                        <div class="row">
+                                            <span class="col">5 <small>[Premature]</small></span>
+                                            <span class="text-end col">8</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <button type="button" onclick="sgbCalc();"
-                                            class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
-                                        <!-- <a onclick="sgbCalc();" class="btn btn-primary rounded-pill shadow-none px-5"
-                                            href="#calculator">Calculate</a> -->
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label text-danger">Rate of interest <strong id="sgb-roi"
+                                                        class="fs-4">2.5</strong> %</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                                 <a href="https://wheelguru.in"
                                     title="Top Bike, Scooter Mileage, Price, Specification | Wheelguru">
-                                    <p class="text-center rounded-pill mx-auto mb-0 px-4 py-2"
-                                        style="background-color: #ffffff; width: fit-content;">
+                                    <p class="d-block bg-white text-center rounded mx-5 mb-0 py-2">
                                         <span>
                                             <img src="https://wheelguru.in/favicon-32x32.png" width="32" height="32"
                                                 alt="Top Bike, Scooter Mileage, Price, Specification | Wheelguru">
-                                        </span>Wheelguru | plz checkout our new product for Bike lovers
+                                        </span>
+                                        <span>Discover the Ride of Your Life <strong>Wheelguru</strong></span>
                                     </p>
                                 </a>
                             </div>
@@ -756,10 +766,13 @@
                         to worry about the storage and security issues associated with physical gold. An investment
                         calculator for SGB can help investors estimate the returns on their investment and plan their
                         finances accordingly.</p>
-                    <div class="in-feed-adsense">
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="fluid"
-                            data-ad-layout-key="-el+d+d-5a+7x" data-ad-client="ca-pub-1195438021979002"
-                            data-ad-slot="1694493453"></ins>
+                    <div class="in-article-adsense">
+                        <script async
+                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1195438021979002"
+                            crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                            data-ad-format="fluid" data-ad-client="ca-pub-1195438021979002"
+                            data-ad-slot="2628301171"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -1470,8 +1483,7 @@
                     </div>
                     <p class="text-danger my-3">*Reference - <a target="_blank" nofollow
                             href="https://rbidocs.rbi.org.in/rdocs/PressRelease/PDFs/PR19459B65C8F154184C87B80D1C33888D2051.PDF">RBI
-                            (Reserve
-                            Bank of India)</a></p>
+                            (Reserve Bank of India)</a></p>
                 </div>
             </div>
         </div>
@@ -2096,53 +2108,58 @@
     </head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        var checkbox = document.getElementById("sgb-disc");
-        checkbox.addEventListener("change", function () {
-            if (checkbox.checked) {
-                document.getElementById("goldp").value = 6213;
-                document.getElementById("disp-goldp").innerHTML = 6213;
-            } else {
-                document.getElementById("goldp").value = 6263;
-                document.getElementById("disp-goldp").innerHTML = 6263;
-            }
-        });
+        let sgbprice = parseInt(document.getElementById("goldp").value);
+        let sgbgunits = parseInt(document.getElementById("qgold").value);
+        let sgbtenure = document.getElementById("sgb-period").value;
 
-        function dispQgold() {
-            let goldq = document.getElementById("qgold").value;
-            document.getElementById("disp-qgold").innerHTML = goldq;
+        function goldpChange() {
+            sgbprice = document.getElementById("disp-goldp").value;
+            document.getElementById("goldp").value = sgbprice;
+            sgbCalc();
         }
 
         function dispPgold() {
             let pgold = document.getElementById("goldp").value;
-            document.getElementById("disp-goldp").innerHTML = pgold;
+            document.getElementById("disp-goldp").value = pgold;
+            sgbCalc();
+        }
+
+        function goldqChange() {
+            sgbgunits = document.getElementById("disp-qgold").value;
+            document.getElementById("qgold").value = sgbgunits;
+            sgbCalc();
+        }
+
+        function dispQgold() {
+            sgbgunits = document.getElementById("qgold").value;
+            document.getElementById("disp-qgold").value = sgbgunits;
+            sgbCalc();
+        }
+
+        function dispTime() {
+            sgbtenure = document.getElementById("sgb-period").value;
+            document.getElementById("dur-disp").innerHTML = sgbtenure;
+            sgbCalc();
+        }
+
+        function intCalc(principal, rate, time) {
+            const simpleInterest = (principal * rate * time) / 100;
+            return simpleInterest;
         }
 
         function sgbCalc() {
-            let vQsgb = parseInt(document.getElementById("qgold").value);
-            let vPsgb = parseInt(document.getElementById("goldp").value);
+            let principal = (sgbprice * sgbgunits);
+            let rate = 2.5;
+            let time = sgbtenure;
 
-            // compound interest calculation start
-            let principal = (vPsgb * vQsgb);
-            let rate = 5;
-            let time = 2;
-            let year = 5;
-            for (let i = 0; i < 5; i++) {
-                let A = principal * (Math.pow((1 + rate / 100), time));
-                principal = A;
-            }
-            let A = parseFloat(principal).toFixed(0);
-            let B = (vPsgb * vQsgb);
-            // compound interest calculation end 
+            const interest = intCalc(principal, rate, time);
 
-            // Table of Investments 
-            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + B + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + (A - B) + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + A + "</td></tr></tr></tbody>";
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>₹" + principal + "</td></tr><tr><td>Total Interest</td><th class='text-end'>₹" + interest + "</td</tr><tr><td>Year (Duration)</td><th class='text-end'>" + time + " year</td></tr></tr></tbody>";
             document.getElementById("myTbl").innerHTML = tblVal;
-            // Table of Investments 
 
-            // Pie Chart 
             var xValues = ["Total Investment", "Total Interest"];
-            var yValues = [B, (A - B)];
-            var barColors = ["#03a9f4", "#f50057"];
+            var yValues = [principal, interest];
+            var barColors = ["#ffca2c", "#dc3545"];
 
             new Chart("myChart", {
                 type: "pie",
@@ -2162,7 +2179,6 @@
                     }
                 }
             });
-            // Pie Chart 
         }
     </script>
     <script src="app.js"></script>
