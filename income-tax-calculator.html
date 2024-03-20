@@ -226,7 +226,7 @@
     </style>
 </head>
 
-<body>
+<body onload="calculateTax();">
     <header id="calculator">
         <div class="wave1">
             <nav class="navbar navbar-expand-lg">
@@ -397,7 +397,7 @@
                                         <input type="range" class="form-range" min="0" max="2000000" step="25000"
                                             value="400000" id="gstPrice" onchange="dipsPrice()">
                                         <div class="row">
-                                            <span class="col">0 </span>
+                                            <span class="col">0</span>
                                             <span class="text-end col">2000000</span>
                                         </div>
                                     </div>
@@ -408,29 +408,49 @@
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
-                                                    <span id="roi-disp" class="fs-4">5</span>
+                                                    <span id="roi-disp" class="text-danger fs-4">5</span>
                                                     <span>%</span>
                                                 </label>
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="0" max="30" step="5" value="5"
-                                            id="emi-roi">
+                                            id="emi-roi" disabled>
                                         <div class="row">
                                             <span class="col">0</span>
-                                            <span class="text-end col">20</span>
+                                            <span class="text-end col">30</span>
                                         </div>
                                     </div>
-                                    <div class="my-3">
+                                    <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label class="form-label mt-2">Your tax amount is: </label>
+                                                <label for="fd_idur" class="form-label">Age [Year]</label>
                                             </div>
                                             <div class="col">
-                                                <label for="totinv" class="form-label float-end">₹
-                                                    <span class="fs-4" id="result">5400</span>
+                                                <label class="form-label float-end">
+                                                    <span id="dur-disp" class="fs-4">25</span>
+                                                    <span>Yr</span>
                                                 </label>
                                             </div>
                                         </div>
+                                        <input type="range" class="form-range" min="18" max="90" step="1" value="25"
+                                            id="fd_idur" onchange="dispTime()">
+                                        <div class="row">
+                                            <span class="col">18</span>
+                                            <span class="text-end col">90</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="tax-regime" onchange="regimetype()">
+                                            <label class="form-check-label">New Regime Tax Slab</label>
+                                        </div>
+                                    </div>
+                                    <div class="my-3">
+                                        <label class="form-label mt-2">
+                                            <span>Your tax amount is : ₹</span>
+                                            <span class="fs-4" id="result">0</span>
+                                        </label>
                                     </div>
                                     <div class="my-4">
                                         <button type="button" onclick="calculateTax();"
@@ -477,30 +497,10 @@
             </div>
         </div>
     </header>
-    <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-in-article-adsense"> <ins class="adsbygoogle"
-                            style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
-                            data-ad-client="ca-pub-1195438021979002" data-ad-slot="8059393466"></ins>
-                        <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- <h5>SEO Meta-Description:</h5>
-                    <p class="lead fs-6">Unlock the secrets of income tax calculations in India with our comprehensive
-                        guide. Explore the new regime, compare old vs. new, and use our online salary income tax
-                        calculator. Navigate the intricacies of income tax effortlessly.</p>
-
-                    <h1>Income Tax Calculator: Demystifying Financial Obligations</h1> -->
-
                     <h2 class="h4 mb-3">Introduction</h2>
                     <p class="lead fs-6">Welcome to the ultimate guide on income tax calculations in India. Whether
                         you're a seasoned taxpayer or a novice, understanding the nuances of income tax is crucial. In
@@ -725,19 +725,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-multiplex-adsense"> <ins class="adsbygoogle" style="display:block"
-                            data-ad-format="autorelaxed" data-ad-client="ca-pub-1195438021979002"
-                            data-ad-slot="2998638475"></ins>
-                        <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <footer class="bg-dark">
         <div class="container-fluid bg-duo">
             <div class="row">
@@ -916,60 +903,51 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
+        let income = 400000, taxrate = 5, ages = 25, taxAmount = 0, regmtyp;
+        // let domemiroi = domroidisp = taxrate;
+
+
         function dipsPrice() {
-            let invdisp = document.getElementById("gstPrice").value;
-            document.getElementById("priceDisp").innerHTML = invdisp;
-            let aged = 0;
-            if (invdisp <= 300000) {
-                aged = 0;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
-            } else if ((invdisp > 300000) && (invdisp <= 600000)) {
-                aged = 5;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
-            } else if ((invdisp > 600000) && (invdisp <= 900000)) {
-                aged = 10;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
-            } else if ((invdisp > 900000) && (invdisp <= 1200000)) {
-                aged = 15;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
-            } else if ((invdisp > 1200000) && (invdisp <= 1500000)) {
-                aged = 20;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
+            income = document.getElementById("gstPrice").value;
+            document.getElementById("priceDisp").innerHTML = income;
+            let domemiroi = document.getElementById("emi-roi");
+            let domroidisp = document.getElementById("roi-disp");
+            if (income <= 300000) {
+                taxrate = domemiroi.value = domroidisp.innerHTML = 0;
+            } else if ((income > 300000) && (income <= 600000)) {
+                taxrate = domemiroi.value = domroidisp.innerHTML = 5;
+            } else if ((income > 600000) && (income <= 900000)) {
+                taxrate = domemiroi.value = domroidisp.innerHTML = 10;
+            } else if ((income > 900000) && (income <= 1200000)) {
+                taxrate = domemiroi.value = domroidisp.innerHTML = 15;
+            } else if ((income > 1200000) && (income <= 1500000)) {
+                taxrate = domemiroi.value = domroidisp.innerHTML = 20;
             } else {
-                aged = 30;
-                document.getElementById("emi-roi").value = aged;
-                document.getElementById("roi-disp").innerHTML = aged;
+                taxrate = domemiroi.value = domroidisp.innerHTML = 30;
             }
+            calculateTax();
         }
 
-        // function dispROI() {
-        //     let aged = document.getElementById("emi-roi").value;
-        //     document.getElementById("roi-disp").innerHTML = aged;
-        // }
+        function dispTime() {
+            ages = document.getElementById("fd_idur").value;
+            document.getElementById("dur-disp").innerHTML = ages;
+            console.log(ages);
+        }
+
+        function regimetype() {
+            regmtyp = document.getElementById("tax-regime").checked;
+            console.log(regmtyp);
+        }
 
         function calculateTax() {
-            var income = parseFloat(document.getElementById("gstPrice").value);
-            var taxRate = parseFloat(document.getElementById("emi-roi").value);
-            var taxAmount = 0;
+            taxAmount = (income * taxrate) / 100;
 
-            if (income > 1000000) {
-                taxAmount = (income * taxRate) / 100;
-            } else {
-                taxAmount = (income * 0) / 100;
-            }
+            document.getElementById("result").innerHTML = taxAmount;
 
-            var resultElement = document.getElementById("result");
-            resultElement.textContent = taxAmount.toFixed(0);
-
-            let tblVal = "<tbody><tr><td>Income</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Income Tax Rate</td><td class='text-end'><span class='fs-5'>" + taxRate + "</span> %</td</tr><tr><td>Tax Amount</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
+            let tblVal = `<tbody><tr><td>Income</td><td class='text-end'>₹ <span class='fs-5'>${income}</span></td></tr><tr><td>Income Tax Rate</td><td class='text-end'><span class='fs-5'>${taxrate}</span> %</td</tr><tr><td>Tax Amount</td><td class='text-end'>₹ <span class='fs-5'>${taxAmount}</span></td></tr></tbody>`;
             document.getElementById("myTbl").innerHTML = tblVal;
 
-            var xValues = ["Total Investment", "Total Interest"];
+            var xValues = ["Total Income", "Total Tax"];
             var yValues = [income, taxAmount];
             var barColors = ["#03a9f4", "#f50057"];
 
