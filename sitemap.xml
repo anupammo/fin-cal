@@ -4,8 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://nivesguru.in/</loc>
@@ -34,7 +32,7 @@
 </url>
 <url>
   <loc>https://nivesguru.in/sgb-calculator</loc>
-  <lastmod>2024-02-25T01:50:53+00:00</lastmod>
+  <lastmod>2024-03-24T01:50:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
