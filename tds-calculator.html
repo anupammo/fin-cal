@@ -226,6 +226,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="calculator">
         <div class="wave1">
@@ -393,88 +394,128 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="100000" step="500"
+                                        <input type="range" class="form-range" min="0" max="500000" step="1000"
                                             value="30000" id="pAmount" onchange="dipsPrice()">
                                         <div class="row">
                                             <span class="col">0 </span>
-                                            <span class="text-end col">100000</span>
+                                            <span class="text-end col">500000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Section | Payment type </label>
                                         <select class="form-select shadow-none lead fs-6" id="usType">
-                                            <optgroup label="30%">
-                                                <option value="194B">194B</option>
-                                                <option value="194BB">194BB</option>
-                                            </optgroup>
-                                            <optgroup label="20%">
-                                                <option value="194F">194F</option>
-                                                <option value="206AA">206AA</option>
-                                            </optgroup>
-                                            <optgroup label="10%">
-                                                <option value="">192A</option>
-                                                <option value="">193</option>
-                                                <option value="">194</option>
-                                                <option value="">194A</option>
-                                                <option value="">194D</option>
-                                                <option value="">194EE</option>
-                                                <option value="">194I</option>
-                                                <option value="">194IC</option>
-                                                <option value="">194J</option>
-                                                <option value="">194K</option>
-                                                <option value="">194LA</option>
-                                                <option value="">194LBA(1)</option>
-                                            </optgroup>
-                                            <optgroup label="5%">
-                                                <option value="">194D</option>
-                                                <option value="">194DA</option>
-                                                <option value="">194G</option>
-                                                <option value="">194H</option>
-                                                <option value="">194IB</option>
-                                                <option value="">194LB</option>
-                                                <option value="">194LD</option>
-                                                <option value="">194DA</option>
-                                                <option value="">194M</option>
-                                                <option value="">206AB</option>
-                                            </optgroup>
-                                            <optgroup label="2%">
-                                                <option value="">194C</option>
-                                                <option value="">194I</option>
-                                                <option value="">194J</option>
-                                                <option value="">194N</option>
-                                            </optgroup>
-                                            <optgroup label="1%">
-                                                <option value="">194C</option>
-                                                <option value="">194IA</option>
-                                                <option value="">194O</option>
-                                                <option value="">194S</option>
-                                            </optgroup>
+                                            <option class="lead fs-6" value="192">192 | Salaries</option>
+                                            <option class="lead fs-6" value="192A">192A | Premature EPF withdrawal
+                                            </option>
+                                            <option class="lead fs-6" value="193">193 | TDS on interest on securities
+                                            </option>
+                                            <option class="lead fs-6" value="194">194 | Payment of dividend</option>
+                                            <option class="lead fs-6" value="194A">194A | Interest on deposits by
+                                                Banks/Post Offices</option>
+                                            <option class="lead fs-6" value="194A">194A | Interest by others apart from
+                                                on securities</option>
+                                            <option class="lead fs-6" value="194B">194B | Amounts from lotteries,
+                                                puzzles or games</option>
+                                            <option class="lead fs-6" value="194BB">194BB | Amounts from horse races
+                                            </option>
+                                            <option class="lead fs-6" value="194C">194C | Payments to
+                                                Ccontractor/Sub-contractor(Single Payments)</option>
+                                            <option class="lead fs-6" value="194C">194C | Payments to
+                                                Contractor/Sub-contractor(Aggregate Payments)</option>
+                                            <option class="lead fs-6" value="194D">194D | Payment of insurance
+                                                commission to domestic companies</option>
+                                            <option class="lead fs-6" value="194D">194D | Payment of insurance
+                                                commission to companies other than domestic ones</option>
+                                            <option class="lead fs-6" value="194DA">194DA | Maturity of Life Insurance
+                                                Policy</option>
+                                            <option class="lead fs-6" value="194EE">194EE | Payment of an amount
+                                                standing to the credit of an individual under NSS(National Savings
+                                                Scheme)</option>
+                                            <option class="lead fs-6" value="194F">194F | Payment of repurchase of unit
+                                                by UTI (Unit Trust of India) or any mutual fund</option>
+                                            <option class="lead fs-6" value="194G">194G | Payments or commission on sale
+                                                of lottery tickets</option>
+                                            <option class="lead fs-6" value="194H">194H | Commission or brokerage
+                                            </option>
+                                            <option class="lead fs-6" value="194I">194I | Rent of land, building, or
+                                                furniture</option>
+                                            <option class="lead fs-6" value="194I">194I | Rent of plant and machinery
+                                            </option>
+                                            <option class="lead fs-6" value="194IA">194IA | Payment for transfer of
+                                                immovable property other than agricultural land</option>
+                                            <option class="lead fs-6" value="194IB">194IB | Rent payment that is made by
+                                                an individual or HUF not covered under payment 194I</option>
+                                            <option class="lead fs-6" value="194IC">194IC | Payment that are made under
+                                                Joint Development Agreement (JDA) to Individual/HUF</option>
+                                            <option class="lead fs-6" value="194J">194J | Fees paid for professional
+                                                services</option>
+                                            <option class="lead fs-6" value="194J">194J | Amount paid for technical
+                                                services</option>
+                                            <option class="lead fs-6" value="194J">194J | Amounts paid as royalty for
+                                                sale/distribution/exhibition of cinematographic films</option>
+                                            <option class="lead fs-6" value="194K">194K | Payment of income for units of
+                                                a mutual fund, for example- dividends</option>
+                                            <option class="lead fs-6" value="194LA">194LA | Payment made for
+                                                compensation for acquiring certain immovable property</option>
+                                            <option class="lead fs-6" value="194LB">194LB | Payment of interest on
+                                                infrastructure bonds to Non-Resident Indians</option>
+                                            <option class="lead fs-6" value="194LBA(1)">194LBA(1) | Certain income
+                                                distributed by a business trust among its unit holder</option>
+                                            <option class="lead fs-6" value="194LD">194LD | Payment of interest on
+                                                rupee-denominated bonds, municipal debt security, and government
+                                                securities</option>
+                                            <option class="lead fs-6" value="194M">194M | Amounts paid for contract,
+                                                brokerage, commission or professional fee (other than 194C, 194H, 194J)
+                                            </option>
+                                            <option class="lead fs-6" value="194N">194N | In case cash withdrawal over a
+                                                certain amount takes place from the bank, and ITR is filed</option>
+                                            <option class="lead fs-6" value="194N">194N | In case cash withdrawal takes
+                                                place from a bank and one does not file ITR</option>
+                                            <option class="lead fs-6" value="194O">194O | Amount paid for the sale of
+                                                products/services by e-commerce service providers via their digital
+                                                platform</option>
+                                            <option class="lead fs-6" value="194Q">194Q | Payments made for the purchase
+                                                of goods</option>
+                                            <option class="lead fs-6" value="194S">194S | TDS on the payment of any
+                                                crypto or other virtual asset</option>
+                                            <option class="lead fs-6" value="206AA">206AA | TDS for non-availability of
+                                                PAN</option>
+                                            <option class="lead fs-6" value="206AB">206AB | TDS on non-filers of Income
+                                                tax return</option>
                                         </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">PAN available </label><br />
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="pan" id="pan1"
+                                                        value="Yes" checked>
+                                                    <label class="form-check-label" for="pan1">Yes</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="pan" id="pan0"
+                                                        value="No">
+                                                    <label class="form-check-label" for="pan0">No</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label my-2">TDS Rate <strong id="sgb-roi"
+                                                        class="fs-4">10</strong> %</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Taxpayer type </label><br />
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="taxpayee" id="taxpayee1"
+                                            <input class="form-check-input" type="radio" name="taxpayee" id="individual"
                                                 value="Individual" checked>
-                                            <label class="form-check-label" for="taxpayee1">Individual / HUF</label>
+                                            <label class="form-check-label">Individual / HUF</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="taxpayee" id="taxpayee0"
+                                            <input class="form-check-input" type="radio" name="taxpayee" id="others"
                                                 value="Others">
-                                            <label class="form-check-label" for="taxpayee0">Others</span></label>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">PAN available </label><br />
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="pan" id="pan1"
-                                                value="Yes" checked>
-                                            <label class="form-check-label" for="pan1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="pan" id="pan0"
-                                                value="No">
-                                            <label class="form-check-label" for="pan0">No</span></label>
+                                            <label class="form-check-label">Others</span></label>
                                         </div>
                                     </div>
                                     <div class="my-4">
@@ -506,11 +547,11 @@
                                 <div class="px-5">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
-                                            <time pubdate="pubdate" datetime="2023-12-12">Published December 12,
-                                                2023</time>
+                                            <time pubdate="pubdate" datetime="2024-03-27">Published March 27,
+                                                2024</time>
                                         </li>
                                         <li class="list-group-item lead fs-6 pt-0 px-0">
-                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                            Author | <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
                                                 rel="author">Anupam Mondal</a>
                                         </li>
                                     </ul>
@@ -687,10 +728,10 @@
                                         Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="income-tax-calculator">Income Tax Calculator</a>
+                                    <a class="nav-link" href="gst-calculator">GST Calculator</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="gst-calculator">GST Calculator</a>
+                                    <a class="nav-link" href="income-tax-calculator">Income Tax Calculator</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="service-tax-calculator">Service Tax Calculator</a>
@@ -950,52 +991,12 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
+        let amont, selectBox, selectedValue, payee, pan, taxPayee, panStatus, exemptLimit, taxRate, totalTax;
+
         function dipsPrice() {
             let invdisp = document.getElementById("pAmount").value;
             document.getElementById("priceDisp").innerHTML = invdisp;
         }
-
-        // function calculateTax() {
-        //     var income = parseFloat(document.getElementById("gstPrice").value);
-        //     var checkedRadio = document.querySelector('input[name="gstRates"]:checked');
-
-        //     if (checkedRadio) {
-        //         var taxRate = checkedRadio.value;
-        //     } else {
-        //         alert("Please select an option");
-        //     }
-
-        //     var taxAmount = (income * taxRate) / 100;
-
-        //     var resultElement = document.getElementById("result");
-        //     resultElement.textContent = taxAmount.toFixed(0);
-
-        //     let tblVal = "<tbody><tr><td>EMI</td><td class='text-end'>₹ <span class='fs-5'>" + income + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + taxRate + "</span></td</tr><tr><td>Total Payment</td><td class='text-end'>₹ <span class='fs-5'>" + taxAmount + "</span></td></tr></tbody>";
-        //     document.getElementById("myTbl").innerHTML = tblVal;
-
-        //     var xValues = ["Total Investment", "Total Interest"];
-        //     var yValues = [income, taxAmount];
-        //     var barColors = ["#03a9f4", "#f50057"];
-
-        //     new Chart("myChart", {
-        //         type: "pie",
-        //         data: {
-        //             labels: xValues,
-        //             datasets: [{
-        //                 backgroundColor: barColors, data: yValues
-        //             }]
-        //         },
-        //         options: {
-        //             legend: {
-        //                 display: true
-        //             },
-        //             title: {
-        //                 display: true
-        //             }
-        //         }
-        //     });
-        // }
-
 
         const jsonData = {
             "tdsrates": [
@@ -1004,7 +1005,7 @@
                     "section": "192",
                     "paymenttype": "Salaries",
                     "threshold": 250000,
-                    "individual": 0,
+                    "individual": 5,
                     "others": 0
                 },
                 {
@@ -1066,7 +1067,7 @@
                 {
                     "id": 9,
                     "section": "194C",
-                    "paymenttype": "Payments to contractor or sub-contractor – Single Payments",
+                    "paymenttype": "Payments to contractor or sub-contractor - Single Payments",
                     "threshold": 30000,
                     "individual": 1,
                     "others": 2
@@ -1074,7 +1075,7 @@
                 {
                     "id": 10,
                     "section": "194C",
-                    "paymenttype": "Payments to contractor/sub-contractor – Aggregate Payments",
+                    "paymenttype": "Payments to contractor/sub-contractor - Aggregate Payments",
                     "threshold": 100000,
                     "individual": 1,
                     "others": 2
@@ -1171,7 +1172,7 @@
                     "id": 22,
                     "section": "194IC",
                     "paymenttype": "Payment that are made under Joint Development Agreement (JDA) to Individual/HUF",
-                    "threshold": "No Limit",
+                    "threshold": 0,
                     "individual": 10,
                     "others": 10
                 },
@@ -1307,12 +1308,12 @@
         };
 
         function calculateTax() {
-            let amont = parseFloat(document.getElementById("pAmount").value);
-            let selectBox = document.getElementById("usType");
-            let selectedValue = selectBox.options[selectBox.selectedIndex].value;
-            let payee = document.querySelector('input[name="taxpayee"]:checked');
-            let pan = document.querySelector('input[name="pan"]:checked');
-            let taxPayee, panStatus;
+
+            amont = parseFloat(document.getElementById("pAmount").value);
+            selectBox = document.getElementById("usType");
+            selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            payee = document.querySelector('input[name="taxpayee"]:checked');
+            pan = document.querySelector('input[name="pan"]:checked');
 
             if (payee) {
                 taxPayee = payee.value;
@@ -1322,17 +1323,107 @@
                 panStatus = pan.value;
             }
 
-            // Display inputs in Console
-            console.log(amont, taxPayee, panStatus, selectedValue);
-
-            // Display tdsrates based on a condition 
             const filteredtdsrates = jsonData.tdsrates.filter(trate => trate.section === selectedValue);
 
             filteredtdsrates.forEach(trate => {
-                console.log(trate.section, trate.individual, trate.others);
+                if (taxPayee === "Individual") {
+                    if (panStatus === 'Yes') {
+                        taxRate = trate.individual;
+                        exemptLimit = trate.threshold;
+                        if (amont > exemptLimit) {
+                            totalTax = ((amont * taxRate) / 100);
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        } else {
+                            totalTax = 0;
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        }
+                    } else {
+                        taxRate = 20;
+                        exemptLimit = trate.threshold;
+                        if (amont > exemptLimit) {
+                            totalTax = ((amont * taxRate) / 100);
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        } else {
+                            totalTax = 0;
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        }
+                    }
+                } else {
+                    if (panStatus === 'Yes') {
+                        taxRate = trate.others;
+                        exemptLimit = trate.threshold;
+                        if (amont > exemptLimit) {
+                            totalTax = ((amont * taxRate) / 100);
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        } else {
+                            totalTax = 0;
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        }
+                    } else {
+                        taxRate = 20;
+                        exemptLimit = trate.threshold;
+                        if (amont > exemptLimit) {
+                            totalTax = ((amont * taxRate) / 100);
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        } else {
+                            totalTax = 0;
+                            // console.log("Tax : " + totalTax);
+                            // console.log("Tax Rate : " + taxRate);
+                            // document.getElementById("sgb-roi").innerHTML = taxRate;
+                        }
+                    }
+                }
+                document.getElementById("sgb-roi").innerHTML = taxRate;
+
+                // Table of Investments 
+                let tblVal = `<tbody><tr><td>Assessment Amount</td><th class='text-end'>${amont}</td></tr><tr><td>TDS Rate</td><th class='text-end'>${taxRate}</td</tr><tr><td>TDS Amount</td><th class='text-end'>${totalTax}</td></tr></tr></tbody>`;
+                document.getElementById("myTbl").innerHTML = tblVal;
+                // Table of Investments 
+
+                // Pie Chart 
+                var xValues = ["Total Investment", "Total Interest"];
+                var yValues = [amont, totalTax];
+                var barColors = ["#03a9f4", "#f50057"];
+
+                new Chart("myChart", {
+                    type: "pie",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: true
+                        },
+                        title: {
+                            display: true
+                        }
+                    }
+                });
+                // Pie Chart 
+                // console.log(amont, trate.section, panStatus, taxPayee, trate.threshold, taxRate);
+                // console.log(amont, trate.section, panStatus, taxPayee, trate.threshold, trate.individual, trate.others);
             });
         }
     </script>
     <!-- <script src="app.js"></script> -->
 </body>
+
 </html>
