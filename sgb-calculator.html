@@ -506,7 +506,7 @@
                                             </div>
                                         </div>
                                         <input type="range" class="form-range" min="5000" max="6500" step="1"
-                                            value="6199" id="goldp" onchange="dispPgold()" disabled>
+                                            value="6199" id="goldp" onchange="dispPgold()">
                                         <div class="row">
                                             <span class="col">₹5000</span>
                                             <span class="text-end col">₹6500</span>
@@ -520,7 +520,7 @@
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="qgold" class="form-label">Quantity of Gold</label>
+                                                <label for="qgold" class="form-label">Quantity of Gold Bond</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
@@ -550,8 +550,6 @@
                                     <div class="mb-3">
                                         <button type="button" onclick="sgbCalc();"
                                             class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
-                                        <!-- <a onclick="sgbCalc();" class="btn btn-primary rounded-pill shadow-none px-5"
-                                            href="#calculator">Calculate</a> -->
                                     </div>
                                 </form>
                             </div>
@@ -1245,7 +1243,7 @@
             let B = (vPsgb * vQsgb);
 
             // Table of Investments 
-            let tblVal = `<tbody><tr><td>Total Investment</td><th class='text-end'>₹${principal}</td></tr><tr><td>Total Interest</td><th class='text-end'>₹${interest}</td</tr><tr><td>Interest(year)</td><th class='text-end'>₹${interest/time}</td></tr></tr></tbody>`;
+            let tblVal = `<tbody><tr><td>Total Investment</td><th class='text-end'>₹${principal}</td></tr><tr><td>Total Interest</td><th class='text-end'>₹${interest}</td</tr><tr><td>Interest / year</td><th class='text-end'>₹${interest/time}</td></tr></tr></tbody>`;
             document.getElementById("myTbl").innerHTML = tblVal;
             // Table of Investments 
 
