@@ -40,7 +40,6 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 - [Capital Gain Tax Calculator](https://nivesguru.in/capital-gain-tax-calculator)
 - [TDS Calculator](https://nivesguru.in/tds-calculator)
 - [VAT Calculator](https://nivesguru.in/vat-calculator)
-- [Lumpsum Calculator](https://nivesguru.in/lumpsum-calculator-online)
 - [SIP Calculator](https://nivesguru.in/systematic-investment-plan-sip-return-calculator)
 - [Inflation Calculator](https://nivesguru.in/inflation-calculator-india)
 - [EMI Calculator](https://nivesguru.in/emi-calculator-online)
