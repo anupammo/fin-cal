@@ -79,9 +79,7 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 
 ## Screenshots
 
-![App Screenshot](https://nivesguru.in/nivesguru-1.png)
-
-![App Screenshot](https://nivesguru.in/res/meta/national-savings-certificate-calculator.png)
-
-![App Screenshot](https://nivesguru.in/res/meta/apy-calculator-nivesguru.png)
+<img src="https://nivesguru.in/nivesguru-1.png" alt="Nivesguru Screenshot 1" width="320">
+<img src="https://nivesguru.in/res/meta/national-savings-certificate-calculator.png" alt="Nivesguru Screenshot 2" width="300">
+<img src="https://nivesguru.in/res/meta/apy-calculator-nivesguru.png" alt="Nivesguru Screenshot 3" width="320">
 
