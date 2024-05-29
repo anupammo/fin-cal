@@ -64,6 +64,7 @@ Nivesguru is a online calculation tool for investments absolutely free of cost. 
 > Contributions from 
 - [@anupammo](https://www.github.com/anupammo)
 - [@bhritick](https://www.github.com/bhritick)
+- [@dmrinalwd](https://www.github.com/dmrinalwd)
 
 
 ## License
