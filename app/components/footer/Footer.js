@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import FooterLogo from './img/maskable_icon_x192.png'
+
 export default function Footer({ children }) {
     return (
       <div>
@@ -77,9 +80,13 @@ export default function Footer({ children }) {
                       </ul>
                   </div>
                   <div className="col-lg-3 col-md-6 col-12 mt-3">
-                      <img src="maskable_icon_x192.png" width="130" height="130" className="rounded-circle mx-auto mt-3 d-block" loading="lazy" alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru" />
-                      <p className="h5 text-white text-center mt-3">Investment make<br />easy with Nivesguru</p>
-                      <p className="text-center text-white"><a className="text-white" href="sitemap">HTML Sitemap</a> | <a className="text-white" href="sitemap.xml">XML Sitemap</a></p>
+                    const Component = () ={'>'} (
+                        <Image src={FooterLogo} width={130} height={130} className="rounded-circle mx-auto mt-3 d-block" loading="lazy" alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru" />
+                    );
+                    {/* <Image src="" width={130} height={130} className="rounded-circle mx-auto mt-3 d-block" loading="lazy" alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru" /> */}
+                    {/* <img src="../../../maskable_icon_x192.png" width="130" height="130" className="rounded-circle mx-auto mt-3 d-block" loading="lazy" alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru" /> */}
+                    <p className="h5 text-white text-center mt-3">Investment make<br />easy with Nivesguru</p>
+                    <p className="text-center text-white"><a className="text-white" href="sitemap">HTML Sitemap</a> | <a className="text-white" href="sitemap.xml">XML Sitemap</a></p>
                   </div>
               </div>
           </div>

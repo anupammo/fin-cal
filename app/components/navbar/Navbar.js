@@ -1,12 +1,15 @@
+import Image from 'next/image'
+import NavbarLogo from './img/favicon-32x32.png' 
+
 export default function Navbar({ children }) {
     return (
       <div>
         {children}
         <nav className="navbar navbar-expand-lg bg-dark">
           <div className="container">
-              <a className="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
-                  <img src="favicon-32x32.png" width="32" height="32" className="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo" title="Nivesguru Logo" />
-                  <p className="d-inline-block h4">Nivesguru</p>
+              <a className="navbar-brand text-white" href="./" title="Nivesguru">
+                <Image src={NavbarLogo} width={32} height={32} className="d-inline-block align-text-center rounded-circle me-2" alt="Nivesguru Logo" title="Nivesguru Logo" />
+                <p className="d-inline-block fw-bold mb-0">Nivesguru</p>
               </a>
               <button className="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="text-white">
