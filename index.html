@@ -117,10 +117,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
-        canvas {
-            position: absolute;
-        }
-
         nav.navbar {
             background-color: #00000077;
         }
@@ -137,44 +133,9 @@
         }
 
         .wave1 {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
-            background-position: bottom center;
-            background-repeat: no-repeat;
-        }
-
-        .bg-1 {
-            background: linear-gradient(58.72deg, #FF20DB 0%, #FFFFFF 100%), linear-gradient(180deg, #FFFFFF 0%, #060046 100%), linear-gradient(64.82deg, #AD00FF 0%, #FF0000 100%), linear-gradient(307.27deg, #FF9900 0.37%, #150052 100%), radial-gradient(67.08% 100% at 50% 0%, #76005C 0%, #0500FF 100%), radial-gradient(100% 140% at 100% 0%, #5ED500 0%, #2200AA 100%);
-            background-blend-mode: soft-light, overlay, difference, difference, color-burn, normal;
-        }
-
-        .bg-2 {
-            background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
-            background-blend-mode: overlay, overlay, normal;
-        }
-
-        .bg-3 {
-            background: linear-gradient(238.72deg, #FFB864 0%, #006C4C 100%), radial-gradient(100% 224.43% at 0% 0%, #6CFF72 0%, #002C6D 100%), linear-gradient(121.28deg, #FFEAB6 0%, #00563C 100%), radial-gradient(56.26% 101.79% at 50% 0%, #8F00FF 0%, #000000 100%), linear-gradient(65.05deg, #6F0072 0%, #DBFFE5 100%);
-            background-blend-mode: overlay, screen, color-burn, screen, normal;
-        }
-
-        .bg-duo {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 50%);
-        }
-
-        .wave1 {
-            /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
-            background-position: bottom center;
-            background-repeat: no-repeat;
-        }
-
-        .right-dark-strip-bg {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgb(8 85 102) 80%, rgb(19 67 100) 100%);
-        }
-
-        a {
-            text-decoration: none;
+            background: #ffffff;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%);
+            /* text-decoration: none; */
         }
 
         h1,
@@ -282,7 +243,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
-                        <img src="favicon-32x32.png" width="32" height="32"
+                        <img src="nivesguru-logo-32x32.webp" width="32" height="32"
                             class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
                             title="Nivesguru Logo">
                         <p class="d-inline-block h4">Nivesguru</p>
@@ -480,38 +441,49 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <div class="card fireworks-container border-0 mt-5">
+                        <div class="card shadow border-0 mt-5">
                             <div class="card-body">
-                                <a href="sgb-calculator">
-                                    <div class="blink rounded text-dark p-3">
-                                        <h2 class="h5">SGB Series IV Subscription : 12th - 16th Feb, 2024</h2>
-                                        <p class="lead fs-6 mb-0"><strong>SGB (Sovereign Gold Bond)</strong> 2023-24
-                                            scheme <strong>Series IV subscription</strong> will start from <strong>12th
-                                                - 16th February, 2024</strong>. Date of Issuance - 21st February, 2024.
-                                            Invest in Digital Gold. Will get discounts of <strong>₹50 per gram</strong>
-                                            if you purchase it through online or digital mode. <strong>Interest</strong>
-                                            will be <strong>2.5%</strong> and paid <strong>half-yealy</strong> basis.
-                                            SGB investment comes under <strong>Long Term Capital Gain (LTCG)</strong>
-                                        </p>
+                                <div class="p-5">
+                                    <h2 class="text-center mb-4">Explore more sites</h2>
+                                    <hr>
+                                    <div class="card mx-auto mb-4 border-0" style="max-width: 320px;">
+                                        <div class="card-body py-2">
+                                            <a href="https://wheelguru.in" rel="sponsored" class="stretched-link">
+                                                <div class="d-inline-block">
+                                                    <img src="https://wheelguru.in/wheelguru-logo-130x130.webp" width="60" height="60" loading="lazy" class="d-inline-block mx-auto" alt="Wheelguru">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <h3 class="h4 my-4 px-3">Wheelguru</h3>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </a>
-                                <a href="https://wheelguru.in"
-                                    title="Top Bike, Scooter Mileage, Price, Specification | Wheelguru">
-                                    <p class="text-center rounded-pill mx-auto mb-0 px-4 py-2"
-                                        style="background-color: #ffffff; width: fit-content;">
-                                        <span>
-                                            <img src="https://wheelguru.in/favicon-32x32.png" width="32" height="32"
-                                                alt="Top Bike, Scooter Mileage, Price, Specification | Wheelguru">
-                                        </span>Wheelguru | plz checkout our new product for Bike lovers
-                                    </p>
-                                </a>
-                                <div class="p-0">
-                                    <img width="120" height="68" src="digital-india.webp" alt="Digital India"
-                                        title="Digital India">
-                                    <img width="195" height="345" class="float-end"
-                                        src="nivesguru-anouncement-indian-incom-tax-return-last-date.webp"
-                                        alt="Nivesguru Anouncement Indian Incom Tax Return Last Date"
-                                        title="Nivesguru Anouncement Indian Incom Tax Return Last Date">
+                                    <hr>
+                                    <div class="card mx-auto mb-4 border-0" style="max-width: 320px;">
+                                        <div class="card-body py-2">
+                                            <a href="https://sundarban-tour.com" rel="sponsored" class="stretched-link">
+                                                <div class="d-inline-block">
+                                                    <img src="https://sundarban-tour.com/ms-icon-150x150.png" width="60" height="60" loading="lazy" class="d-inline-block mx-auto" alt="Sundarban Tour">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <h3 class="h4 my-4 px-3">Sundarban Tour</h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="card mx-auto mb-4 border-0" style="max-width: 320px;">
+                                        <div class="card-body py-2">
+                                            <a href="https://anupammo.github.io/zodiac/" rel="sponsored" class="stretched-link">
+                                                <div class="d-inline-block">
+                                                    <img src="https://anupammo.github.io/zodiac/apple-icon-152x152.png" width="60" height="60" loading="lazy" class="d-inline-block mx-auto" alt="Zodiac">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <h3 class="h4 my-4 px-5">Zodiac</h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -624,21 +596,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-multiplex-adsense">
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
-                            data-ad-client="ca-pub-1195438021979002" data-ad-slot="2998638475"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section id="pension-bima">
         <div class="container">
             <div class="row">
@@ -778,21 +735,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-multiplex-adsense">
-                        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
-                            data-ad-client="ca-pub-1195438021979002" data-ad-slot="2998638475"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section id="bonds">
         <div class="container">
             <div class="row">
@@ -1347,7 +1289,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="card lead fs-6 my-4">
                         <div class="card-body">
-                            <h4 class="fs-6 ps-3 mt-3">Few more Tax Calculators</h4>
+                            <h3 class="fs-6 ps-3 mt-3">Few more Tax Calculators</h3>
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -1374,9 +1316,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card bg-light lead fs-6 my-2">
+                    <div class="card lead shadow border-0 fs-6 my-2">
                         <div class="card-body">
-                            <h4 class="fs-6 ps-3 mt-3">Our Finance Calculators</h4>
+                            <h3 class="fs-6 ps-3 mt-3">Our Finance Calculators</h3>
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -1409,7 +1351,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="card lead fs-6 my-4">
                         <div class="card-body">
-                            <h4 class="fs-6 ps-3 mt-3">Some Savings Calculators</h4>
+                            <h3 class="fs-6 ps-3 mt-3">Some Savings Calculators</h3>
                             <hr class="mx-3 w-50" />
                             <ul class="nav flex-column">
                                 <li class="nav-item">
@@ -1512,22 +1454,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-in-article-adsense">
-                        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
-                            data-ad-format="fluid" data-ad-client="ca-pub-1195438021979002"
-                            data-ad-slot="8059393466"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <footer class="bg-dark">
         <div class="container-fluid bg-duo">
             <div class="row">
@@ -1686,10 +1612,10 @@
             <div class="row">
                 <div class="col-12 text-light text-center">
                     <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
-                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <a class="text-white" href="https://wheelguru.in" target="_blank">Wheelguru</a>
                         <br>
                         Designed & Developed by : Team
-                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                        <a class="text-white" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
                     </p>
                 </div>
             </div>
