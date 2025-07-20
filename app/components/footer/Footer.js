@@ -4,14 +4,14 @@ import FooterLogo from './img/maskable_icon_x192.png';
 
 export default function Footer({ children }) {
     return (
-      <footer className="bg-brand">
+      <footer className="bg-dark">
         {children}
         <div className={`${styles.bgduo} container-fluid`}>
             <div className="row">
                 <div className="col-12">
                     <ul className="nav justify-content-center my-3">
                         <li className="nav-item">
-                            <a className="nav-link bg-primary text-white rounded shadow border-0 mx-1 p-2" href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                            <a className="nav-link bg-dark text-white rounded shadow-lg border mx-1 p-2" href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
                                 <span className='d-block text-center fs-3'>
                                     <i className="bi bi-facebook"></i>
                                 </span>
@@ -19,35 +19,35 @@ export default function Footer({ children }) {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link bg-danger text-white rounded shadow border-0 mx-1 px-2" href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                            <a className="nav-link bg-dark text-white rounded shadow-lg border mx-1 p-2" href="https://www.youtube.com/@nivesguru-india" target="_blank">
                                 <span className='d-block text-center fs-3'>
                                     <i className="bi bi-youtube"></i>
                                 </span>
-                                <small>YouTube</small>
+                                <small className='mt-1'>YouTube</small>
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link bg-dark text-white rounded shadow border-0 mx-1 px-2" href="https://twitter.com/Nivesguru" target="_blank">
+                            <a className="nav-link bg-dark text-white rounded shadow-lg border mx-1 p-2" href="https://twitter.com/Nivesguru" target="_blank">
                                 <span className='d-block text-center fs-3'>
                                     <i className="bi bi-twitter-x"></i>
                                 </span>
-                                <small>Twitter-X</small>
+                                <small className='mt-1'>Twitter-X</small>
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link bg-danger text-white rounded shadow border-0 mx-1 px-2" href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                            <a className="nav-link bg-dark text-white rounded shadow-lg border mx-1 p-2" href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
                                 <span className='d-block text-center fs-3'><
                                     i className="bi bi-instagram"></i>
                                 </span>
-                                <small>Instagram</small>
+                                <small className='mt-1'>Instagram</small>
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link bg-primary text-white rounded shadow border-0 mx-1 px-2" href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                            <a className="nav-link bg-dark text-white rounded shadow-lg border mx-1 p-2" href="https://www.linkedin.com/company/nivesguru/" target="_blank">
                                 <span className='d-block text-center fs-3'>
                                     <i className="bi bi-linkedin"></i>
                                 </span>
-                                <small>Linkedin</small>
+                                <small className='mt-1'>Linkedin</small>
                             </a>
                         </li>
                     </ul>

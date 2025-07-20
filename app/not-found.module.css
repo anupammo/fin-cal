@@ -1,0 +1,16 @@
+.sky {
+    margin: 0;
+    height: 100vh;
+    display: block;
+    background: rgb(130, 202, 255);
+    background: linear-gradient(0deg, rgba(130, 202, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(130, 202, 255, 1) 100%);
+}
+
+.sea {
+    background: linear-gradient(to bottom, #87CEEB, #4682B4); /* Light blue to dark blue gradient */
+    height: 50vh; /* Height can be adjusted */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
