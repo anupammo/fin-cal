@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -123,35 +124,62 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="canonical" href="https://nivesguru.in/bank-balance-check">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Bank Balance Check Tool - Free Missed Call & SMS Banking for All Indian Banks | Nivesguru</title>
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.nivesguru.com/bank-balance-check">
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Use Nivesguru's free Bank Balance Check Tool to get your latest account balance via missed call or SMS. Supports SBI, Bank of India, Canara Bank, Indian Bank, PNB, PFMS-linked accounts & more. No internet needed.">
-    <meta name="keywords" content="bank balance check, canara bank balance check number, indian bank balance check number, sbi bank balance check number, union bank balance check, missed call banking, SMS banking, check bank balance via mobile">
+    <meta name="description"
+        content="Check your bank balance instantly with a simple missed call. Available for all major Indian banks including SBI, HDFC, ICICI, and more.">
+    <meta name="keywords"
+        content="bank balance check, canara bank balance check number, indian bank balance check number, sbi bank balance check number, union bank balance check, missed call banking, SMS banking, check bank balance via mobile">
     <meta name="author" content="Nivesguru">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Bank Balance Check Tool - Free Missed Call & SMS Banking for All Indian Banks | Nivesguru">
-    <meta property="og:description" content="Use Nivesguru's free Bank Balance Check Tool to get your latest account balance via missed call or SMS. Supports SBI, Bank of India, Canara Bank, Indian Bank, PNB, PFMS-linked accounts & more. No internet needed.">
+    <meta property="og:title"
+        content="Bank Balance Check Tool - Free Missed Call & SMS Banking for All Indian Banks | Nivesguru">
+    <meta property="og:description"
+        content="Use Nivesguru's free Bank Balance Check Tool to get your latest account balance via missed call or SMS. Supports SBI, Bank of India, Canara Bank, Indian Bank, PNB, PFMS-linked accounts & more. No internet needed.">
     <meta property="og:url" content="https://www.nivesguru.com/bank-balance-check-tool">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.nivesguru.com/assets/balance-check-tool-banner.jpg">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bank Balance Check Tool - Free Missed Call & SMS Banking for All Indian Banks | Nivesguru">
-    <meta name="twitter:description" content="Use Nivesguru's free Bank Balance Check Tool to get your latest account balance via missed call or SMS. Supports SBI, Bank of India, Canara Bank, Indian Bank, PNB, PFMS-linked accounts & more. No internet needed.">
+    <meta name="twitter:title"
+        content="Bank Balance Check Tool - Free Missed Call & SMS Banking for All Indian Banks | Nivesguru">
+    <meta name="twitter:description"
+        content="Use Nivesguru's free Bank Balance Check Tool to get your latest account balance via missed call or SMS. Supports SBI, Bank of India, Canara Bank, Indian Bank, PNB, PFMS-linked accounts & more. No internet needed.">
     <meta name="twitter:image" content="https://www.nivesguru.com/assets/balance-check-tool-banner.jpg">
-
-    <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.nivesguru.com/bank-balance-check-tool">
-
-    <meta name="description" content="Check your bank balance instantly with a simple missed call. Available for all major Indian banks including SBI, HDFC, ICICI, and more.">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
+        .ng-card-white {
+            background: #fff;
+        }
+
+        .ng-title-blue {
+            color: #001169;
+        }
+
+        .ng-bank-details-hidden {
+            display: none;
+        }
+
+        .ng-bank-logo {
+            height: 36px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px #eaf1ff);
+        }
+
+        .ng-call-btn {
+            font-size: 1.1rem;
+        }
+
         nav.navbar {
             background-color: #00000077;
         }
@@ -160,11 +188,44 @@
             margin-top: -5px;
         }
 
-        header {
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* header {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
             background-attachment: fixed;
             background-size: cover;
+        } */
+
+        header {
+            background: #FF9933;
+            background: linear-gradient(165deg, rgba(255, 153, 51, 1) 0%, rgba(255, 153, 51, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 65%, rgba(19, 136, 8, 1) 65%, rgba(19, 136, 8, 1) 100%);
+            background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            /* Subtle watermark effect */
+            pointer-events: none;
+            /* Allows clicks to pass through */
+            z-index: 0;
         }
 
         .wave1 {
@@ -186,9 +247,9 @@
             list-style: none;
         }
 
-        .modal-content {
+        /* .modal-content {
             background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
-        }
+        } */
 
         a small,
         a svg {
@@ -205,536 +266,608 @@
             transition: none;
         }
 
-        .ico-container {
+        /* .ico-container {
             position: relative;
-        }
+        } */
 
-        .card:hover div div img.img-fluid {
+        /* .card:hover div div img.img-fluid {
             -webkit-animation: img-fluid 0.9s both;
             animation: img-fluid 0.9s both;
-        }
+        } */
 
         .bg-duo {
             background: rgb(255, 255, 255);
             background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 50%);
         }
-
-        .card-320 {
-            max-width: 360px;
-        }
-
-        @keyframes img-fluid {
-            0% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-
-            30% {
-                -webkit-transform: scale3d(1.25, 0.75, 1);
-                transform: scale3d(1.25, 0.75, 1);
-            }
-
-            40% {
-                -webkit-transform: scale3d(0.75, 1.25, 1);
-                transform: scale3d(0.75, 1.25, 1);
-            }
-
-            50% {
-                -webkit-transform: scale3d(1.15, 0.85, 1);
-                transform: scale3d(1.15, 0.85, 1);
-            }
-
-            65% {
-                -webkit-transform: scale3d(0.95, 1.05, 1);
-                transform: scale3d(0.95, 1.05, 1);
-            }
-
-            75% {
-                -webkit-transform: scale3d(1.05, 0.95, 1);
-                transform: scale3d(1.05, 0.95, 1);
-            }
-
-            100% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="wav1">
-        <nav class="navbar bg-dark navbar-expand-lg">
+    <header>
+        <div class="wave1">
+            <nav class="navbar bg-dark navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="icons-vector.svg" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle bg-white" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="income-tax-calculator">Income Tax Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="gst-calculator">GST Calculator</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="service-tax-calculator">Service Tax
+                                            Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="capital-gain-tax-calculator">Capital Gain Tax
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="tds-calculator">TDS Calculator</a></li>
+                                    <li><a class="dropdown-item" href="vat-calculator">VAT Calculator</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI Calculator</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP Calculator</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="Languages">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
+                                            </path>
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu" data-bs-popper="static">
+                                    <li><a class="dropdown-item" href="./">English</a></li>
+                                    <li><a class="dropdown-item" href="./hi/">हिंदी</a></li>
+                                    <li><a class="dropdown-item" href="./bn/">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div class="container">
-                <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
-                    <img src="icons-vector.svg" width="32" height="32"
-                        class="d-inline-block align-text-top rounded-circle bg-white" alt="Nivesguru Logo"
-                        title="Nivesguru Logo">
-                    <p class="d-inline-block h4">Nivesguru</p>
-                </a>
-                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle Navigation">
-                    <span class="text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            class="bi bi-grid-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
-                        </svg>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Investment Calculators
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item"
-                                        href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
-                                        Calculator</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="sgb-calculator">SGB Calculator</a></li>
-                                <li><a class="dropdown-item" href="kvp-calculator">KVP
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
-                                        Calculator</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="apy-calculator">APY
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="ppf-calculator">PPF
-                                        Calculator</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item"
-                                        href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
-                                        Calculator</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Finance Calculators
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="income-tax-calculator">Income Tax Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item" href="gst-calculator">GST Calculator</a></li>
-                                <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="service-tax-calculator">Service Tax
-                                        Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item" href="capital-gain-tax-calculator">Capital Gain Tax
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="tds-calculator">TDS Calculator</a></li>
-                                <li><a class="dropdown-item" href="vat-calculator">VAT Calculator</a></li>
-                                <li><a class="dropdown-item"
-                                        href="systematic-investment-plan-sip-return-calculator">SIP
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="emi-calculator-online">EMI Calculator</a></li>
-                                <li><a class="dropdown-item" href="swp-calculator-online">SWP Calculator</a></li>
-                                <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
-                                        Calculator</a></li>
-                                <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
-                                        Calculator</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Savings Calculators
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD Calculator</a>
-                                </li>
-                                <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD Calculator</a></li>
-                                <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD Calculator</a></li>
-                                <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD Calculator</a></li>
-                                <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD Calculator</a></li>
-                                <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD Calculator</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="rd-calculator">RD Calculator</a></li>
-                                <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD Calculator</a></li>
-                                <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD Calculator</a></li>
-                                <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD Calculator</a></li>
-                                <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD Calculator</a></li>
-                                <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD Calculator</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="sb-calculator">SB Calculator</a></li>
-                                <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB Calculator</a></li>
-                                <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB Calculator</a></li>
-                                <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB Calculator</a></li>
-                                <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB Calculator</a></li>
-                                <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB Calculator</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="about-us">About us</a></li>
-                                <li><a class="dropdown-item" href="contact-us">Contact us</a></li>
-                                <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Languages">
-                                <span class="d-inline-block">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
-                                        </path>
-                                        <path
-                                            d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu" data-bs-popper="static">
-                                <li><a class="dropdown-item" href="./">English</a></li>
-                                <li><a class="dropdown-item" href="./hi/">हिंदी</a></li>
-                                <li><a class="dropdown-item" href="./bn/">বাংলা</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center py-5">
-                    <h1 class="text-white">Bank Balance Check Tool <span class="d-block h3">Mobile Banking & SMS Banking by Nivesguru</span></h1>
-                    <p class="text-white mx-auto w-50">Looking for a quick and hassle-free way to check your bank account balance using your mobile phone? Nivesguru brings you the ultimate Bank Balance Check Tool - a free service that lets you get your latest account balance via SMS with just a missed call. No internet required, no app downloads, and absolutely no cost!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section>
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-7 col-md-9 col-12">
-                <div class="card shadow-lg border-0 rounded-4 p-4 mb-4" style="background: #fff;">
-                    <h2 class="h4 fw-bold mb-3 text-center" style="color:#001169;">Select Your Bank</h2>
-                    <select id="bankSelect" class="form-select form-select-lg mb-4 rounded-pill border-2" aria-label="Select your bank">
-                        <option value="" selected disabled>Choose a bank ...</option>
-                    </select>
-                    <div id="bankDetails" class="text-center" style="display:none;">
-                        <img id="bankLogo" src="" alt="Bank Logo" class="mb-3" style="height:64px;width:auto;max-width:180px;object-fit:contain;filter:drop-shadow(0 2px 8px #eaf1ff);">
-                        <h5 id="bankName" class="fw-bold mb-2" style="color:#001169;"></h5>
-                        <div class="mb-3">
-                            <span class="badge bg-primary bg-gradient fs-6 py-2 px-3" id="bankNumber"></span>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12">
+                        <div class="px-4">
+                            <h1 class="text-center mt-5">Bank Balance Check Tool
+                                <span class="d-block mt-2 h3">Mobile Banking & SMS Banking by Nivesguru</span>
+                            </h1>
+                            <p class="text-center my-5">Looking for a quick and hassle-free way to check your bank
+                                account balance using your mobile phone? Nivesguru brings you the ultimate Bank Balance
+                                Check Tool - a free service that lets you get your latest account balance via SMS with
+                                just a missed call. No internet required, no app downloads, and absolutely no cost!</p>
                         </div>
-                        <a id="callBtn" href="#" class="btn call-btn px-4 py-2 rounded-pill" style="font-size:1.1rem;">
-                            Call to get your bank balance
-                        </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-12">
+                        <div class="card glass-card shadow mb-5">
+                            <div class="card-body my-4 px-5">
+                                <h2 class="text-center mb-3">Select Your Bank</h2>
+                                <select id="bankSelect" class="form-select shadow-none mx-auto mb-4 border-2"
+                                    aria-label="Select your bank" style="width: 360px;">
+                                    <option value="" selected disabled>Choose a bank ...</option>
+                                </select>
+                                <div id="bankDetails" class="text-center ng-bank-details-hidden">
+                                    <img id="bankLogo" src="" alt="Bank Logo" class="mb-3 ng-bank-logo">
+                                    <h3 id="bankName" class="lead fw-bold mb-2 ng-title-blue"></h3>
+                                    <div class="d-none mb-3">
+                                        <span class="badge bg-primary bg-gradient fs-6 py-2 px-3"
+                                            id="bankNumber"></span>
+                                    </div>
+                                    <a id="callBtn" href="#" class="btn btn-primary rounded-pill shadow-none my-3 px-5">
+                                        Call to get your bank balance
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<section>
-    <div class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10 col-12">
-                <div class="card p-3">
-                    <!-- <h2 class="h5 fw-bold mb-3" style="color:#001169;">Supported Banks &amp; Balance Check Numbers</h2>
-                    <p>Nivesguru's tool supports all major Indian banks. Here are some of the most searched bank balance check numbers:</p>
-                    <div class="table-responsive mb-4">
-                        <table class="table table-bordered align-middle text-center">
-                            <thead class="table-primary">
-                                <tr>
-                                    <th>Bank Name</th>
-                                    <th>Balance Check Number</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Canara Bank</td><td>📞 9015 481 515</td></tr>
-                                <tr><td>Indian Bank</td><td>📞 9289 228 888</td></tr>
-                                <tr><td>Union Bank of India</td><td>📞 0922 300 8586</td></tr>
-                                <tr><td>SBI (State Bank of India)</td><td>📞 0922 376 6666</td></tr>
-                                <tr><td>Punjab National Bank</td><td>📞 1800 180 2223</td></tr>
-                                <tr><td>UCO Bank</td><td>📞 0927 879 0000</td></tr>
-                                <tr><td>Aryavart Bank</td><td>📞 9173 999 999</td></tr>
-                                <tr><td>Karnataka Bank</td><td>📞 1800 425 1444</td></tr>
-                                <tr><td>Bandhan Bank</td><td>📞 9223 009 900</td></tr>
-                                <tr><td>Axis Bank</td><td>📞 1800 419 5959</td></tr>
-                                <tr><td>Post Office Savings Bank</td><td>📞 8424 000 111</td></tr>
-                                <tr><td>PFMS Linked Bank Accounts</td><td>📞 Check via PFMS portal</td></tr>
-                            </tbody>
-                        </table>
-                    </div> -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <h2 class="mb-4">Why Use Nivesguru's Bank Balance Check Tool?</h2>
+                <div class="card">
                     <div class="card-body">
-                        <h2 class="">Why Use Nivesguru's Bank Balance Check Tool?</h2>
-                        <ul>
-                            <li>✅ <strong>Instant Results</strong> - Get your balance in seconds.</li>
-                            <li>✅ <strong>No Internet Needed</strong> - Works via SMS.</li>
-                            <li>✅ <strong>Free of Cost</strong> - No charges, no hidden fees.</li>
-                            <li>✅ <strong>Secure &amp; Reliable</strong> - Uses official bank numbers.</li>
-                            <li>✅ <strong>Supports All Major Banks</strong> - Including SBI, Canara Bank, Indian Bank, PNB, UCO Bank, and more.</li>
+                        <ul class="list-group list-group-flush text-start">
+                            <li class="list-group-item">
+                                <strong>Instant Results</strong> - Get your <strong>bank balance</strong> in seconds
+                                with just a missed call.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>No Internet Needed</strong> - Works via SMS, perfect for low-connectivity areas.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Free of Cost</strong> - No charges, no hidden fees. Just a missed call to your
+                                bank's official number.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Secure & Reliable</strong> - Uses verified <strong>bank balance check
+                                    numbers</strong> from official sources.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Supports All Major Banks</strong> - Including <strong>SBI</strong>,
+                                <strong>Canara Bank</strong>, <strong>Indian Bank</strong>, <strong>PNB</strong>,
+                                <strong>UCO
+                                    Bank</strong>, and more.
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<footer class="bg-dark">
-    <div class="container-fluid bg-duo">
-        <div class="row">
-            <div class="col-12">
-                <ul class="nav justify-content-center my-3">
-                    <li class="nav-item">
-                        <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
-                            href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
-                            <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                            </svg>
-                            <small class="mt-1">Facebook</small>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
-                            href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
-                            <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                            </svg>
-                            <small class="mt-1">Instagram</small>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
-                            href="https://www.youtube.com/@nivesguru-india" target="_blank">
-                            <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-youtube" viewBox="0 0 16 16">
-                                <path
-                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-                            </svg>
-                            <small class="mt-1">YouTube</small>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
-                            href="https://twitter.com/Nivesguru" target="_blank">
-                            <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-twitter" viewBox="0 0 16 16">
-                                <path
-                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                            </svg>
-                            <small class="mt-1">Twitter</small>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
-                            href="https://www.linkedin.com/company/nivesguru/" target="_blank">
-                            <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg>
-                            <small class="mt-1">Linkedin</small>
-                        </a>
-                    </li>
-                </ul>
+            <div class="col-lg-6 col-md-12">
+                <h2 class="mb-4">FAQ - Bank Balance Check Tool</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                How can I check my bank balance using a missed call?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can check your bank balance by making a missed call to your bank's official
+                                <strong>bank
+                                    balance check number</strong>. Once the call disconnects, you'll receive an SMS with
+                                your
+                                latest account balance. This service is free and works only if your mobile number is
+                                registered
+                                with your bank.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button shadow-none collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                                aria-controls="collapse2">
+                                What is the SBI bank balance check number?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                To check your SBI account balance, dial <strong>09223766666</strong> from your
+                                registered mobile
+                                number. You'll receive an SMS with your current balance. This is one of the most popular
+                                <strong>SBI bank balance check</strong> methods via missed call.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button shadow-none collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                                aria-controls="collapse3">
+                                Is there a Canara Bank balance check number for SMS banking?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, Canara Bank offers a free <strong>SMS banking balance check</strong> service. Just
+                                give a
+                                missed call to <strong>9015481515</strong> from your registered mobile number. You'll
+                                get an SMS
+                                with your Canara Bank account balance instantly.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button shadow-none collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                aria-controls="collapse4">
+                                How do I check my PFMS-linked bank account balance?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                For <strong>PFMS bank balance check</strong>, visit the official PFMS portal and enter
+                                your bank
+                                details to view your balance. PFMS does not support missed call banking, but it provides
+                                real-time balance info for linked accounts.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button shadow-none collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
+                                aria-controls="collapse5">
+                                Can I use this tool for Indian Bank and Bank of India balance check?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! Nivesguru's <strong>Bank Balance Check Tool</strong> supports both
+                                <strong>Indian
+                                    Bank balance check</strong> and <strong>Bank of India balance check</strong>. Just
+                                select
+                                your bank and make a missed call to the provided number. You'll receive an SMS with your
+                                account
+                                balance instantly.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <ul class="nav flex-column text-center mt-4">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./">Homepage</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="about-us">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="contact-us">Contact us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="faq-page">FAQ page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="privacy-policy">Privacy policy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="terms-and-conditions">Terms & condition</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <ul class="nav flex-column text-center mt-4">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="sb-calculator">SB Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="rd-calculator">RD Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
-                            Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="ppf-calculator">PPF
-                            Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
-                            Calculator</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <ul class="nav flex-column text-center mt-4">
+    </section>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="apy-calculator">APY Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white"
-                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white"
-                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="kvp-calculator">KVP Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
-                            Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="sgb-calculator">SGB Calculator</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12 mt-3">
-                <img src="maskable_icon_x192.png" width="130" height="130"
-                    class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
-                    alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
-                <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
-                <p class="text-center text-white"><a class="text-white" href="sitemap">HTML Sitemap</a> | <a
-                        class="text-white" href="sitemap.xml">XML Sitemap</a></p>
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <hr class="w-25 text-light d-block mx-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="sitemap">HTML Sitemap</a> | <a
+                            class="text-white" href="sitemap.xml">XML Sitemap</a></p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 text-light text-center">
-                <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
-                    <a class="text-white" href="https://wheelguru.in" target="_blank">Wheelguru</a>
-                    <br>
-                    Designed & Developed by : Team
-                    <a class="text-white" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
-                </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <hr class="w-25 text-light d-block mx-auto">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>Nivesguru &copy <span id="currentYear"></span> | Co-Sponserd -
+                        <a class="text-white" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-white" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const banks = [
-            { name: "HDFC Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HDFC_Bank_Logo.svg/375px-HDFC_Bank_Logo.svg.png", number: "18002703333" },
-            { name: "UCO Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/UCO_Bank.jpg/500px-UCO_Bank.jpg", number: "9278790000" },
-            { name: "Kotak Mahindra Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Kotak_Mahindra_Group_logo.svg/500px-Kotak_Mahindra_Group_logo.svg.png", number: "18002740110" },
-            { name: "ICICI Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/375px-ICICI_Bank_Logo.svg.png", number: "9594612612" },
-            { name: "State Bank of India", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/330px-State_Bank_of_India.svg.png", number: "9223766666" },
-            { name: "Kotak Mahindra Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Kotak_Mahindra_Group_logo.svg/500px-Kotak_Mahindra_Group_logo.svg.png", number: "18002740110" },
-            { name: "Axis Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AXISBank_Logo.svg/375px-AXISBank_Logo.svg.png", number: "18004195959" },
-            { name: "Bank of Baroda", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BankOfBarodaLogo.svg/500px-BankOfBarodaLogo.svg.png", number: "8468001111" },
-            { name: "Bank of India", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Bank_of_India_logo.svg/375px-Bank_of_India_logo.svg.png", number: "9015135135" },
-            { name: "Punjab National Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Punjab_National_Bank_new_logo.svg/375px-Punjab_National_Bank_new_logo.svg.png", number: "18001802223" },
-            { name: "Union Bank of India", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Union_Bank_of_India_Logo.svg/500px-Union_Bank_of_India_Logo.svg.png", number: "9223008586" },
-            { name: "Canara Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Canara_bank_logo.svg/375px-Canara_bank_logo.svg.png", number: "8886610360" },
-            { name: "IndusInd Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IndusInd_Bank_SVG_Logo.svg/375px-IndusInd_Bank_SVG_Logo.svg.png", number: "18002741000" }
-        ];
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const banks = [
+                { name: "Canara Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Canara_bank_logo.svg/375px-Canara_bank_logo.svg.png", number: "9015481515" },
+                { name: "Indian Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Indian_Bank_logo.svg/375px-Indian_Bank_logo.svg.png", number: "9289228888" },
+                { name: "Union Bank of India", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Union_Bank_of_India_Logo.svg/500px-Union_Bank_of_India_Logo.svg.png", number: "9223008586" },
+                { name: "SBI (State Bank of India)", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/330px-State_Bank_of_India.svg.png", number: "9223766666" },
+                { name: "Punjab National Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Punjab_National_Bank_new_logo.svg/375px-Punjab_National_Bank_new_logo.svg.png", number: "18001802223" },
+                { name: "UCO Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/UCO_Bank.jpg/500px-UCO_Bank.jpg", number: "9278790000" },
+                { name: "Karnataka Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Karnataka_Bank_svg_Logo.svg/500px-Karnataka_Bank_svg_Logo.svg.png", number: "18004251444" },
+                { name: "Bandhan Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bandhan_Bank_Svg_Logo.svg/375px-Bandhan_Bank_Svg_Logo.svg.png", number: "9223009900" },
+                { name: "Axis Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AXISBank_Logo.svg/375px-AXISBank_Logo.svg.png", number: "18004195959" },
+                { name: "Bank of India", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Bank_of_India_logo.svg/375px-Bank_of_India_logo.svg.png", number: "9015135135" },
+                { name: "Post Office Savings Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/India_Post.svg/375px-India_Post.svg.png", number: "8424000111" }
+            ];
 
-        const select = document.getElementById('bankSelect');
-        const details = document.getElementById('bankDetails');
-        const logo = document.getElementById('bankLogo');
-        const name = document.getElementById('bankName');
-        const number = document.getElementById('bankNumber');
-        const callBtn = document.getElementById('callBtn');
+            const select = document.getElementById('bankSelect');
+            const details = document.getElementById('bankDetails');
+            const logo = document.getElementById('bankLogo');
+            const name = document.getElementById('bankName');
+            const number = document.getElementById('bankNumber');
+            const callBtn = document.getElementById('callBtn');
 
-        // Populate dropdown
-        banks.forEach((bank, idx) => {
-            const opt = document.createElement('option');
-            opt.value = idx;
-            opt.textContent = bank.name;
-            select.appendChild(opt);
+            // Populate dropdown
+            banks.forEach((bank, idx) => {
+                const opt = document.createElement('option');
+                opt.value = idx;
+                opt.textContent = bank.name;
+                select.appendChild(opt);
+            });
+
+            select.addEventListener('change', function () {
+                const bank = banks[this.value];
+                if (bank) {
+                    logo.src = bank.logo;
+                    logo.alt = bank.name + ' Logo';
+                    name.textContent = bank.name;
+                    number.textContent = bank.number;
+                    if (bank.number && /^\d+$/.test(bank.number)) {
+                        callBtn.href = 'tel:' + bank.number;
+                        callBtn.setAttribute('aria-label', `Call ${bank.name} on ${bank.number}`);
+                        callBtn.style.display = '';
+                    } else {
+                        callBtn.href = '#';
+                        callBtn.setAttribute('aria-label', `No call number for ${bank.name}`);
+                        callBtn.style.display = 'none';
+                    }
+                    details.classList.remove('ng-bank-details-hidden');
+                } else {
+                    details.classList.add('ng-bank-details-hidden');
+                }
+            });
         });
+    </script>
+    <script>
+        // Set the current year in the footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 
-        select.addEventListener('change', function() {
-            const bank = banks[this.value];
-            if (bank) {
-                logo.src = bank.logo;
-                logo.alt = bank.name + ' Logo';
-                name.textContent = bank.name;
-                number.textContent = bank.number;
-                callBtn.href = 'tel:' + bank.number;
-                callBtn.setAttribute('aria-label', `Call ${bank.name} on ${bank.number}`);
-                details.style.display = '';
-            } else {
-                details.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
