@@ -243,12 +243,8 @@
             color: rgba(0, 17, 105, 1);
         }
 
-        ul li {
+        /* ul li {
             list-style: none;
-        }
-
-        /* .modal-content {
-            background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
         } */
 
         a small,
@@ -265,15 +261,6 @@
         a.nav-link {
             transition: none;
         }
-
-        /* .ico-container {
-            position: relative;
-        } */
-
-        /* .card:hover div div img.img-fluid {
-            -webkit-animation: img-fluid 0.9s both;
-            animation: img-fluid 0.9s both;
-        } */
 
         .bg-duo {
             background: rgb(255, 255, 255);
@@ -499,7 +486,7 @@
 
     <section class="container my-5">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-12">
                 <h2 class="mb-4">Why Use Nivesguru's Bank Balance Check Tool?</h2>
                 <div class="card">
                     <div class="card-body">
@@ -529,114 +516,123 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <h2 class="mb-4">FAQ - Bank Balance Check Tool</h2>
-                <div class="accordion" id="faqAccordion">
-                    <!-- FAQ 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq1">
-                            <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                How can I check my bank balance using a missed call?
-                            </button>
-                        </h2>
-                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                You can check your bank balance by making a missed call to your bank's official
-                                <strong>bank
-                                    balance check number</strong>. Once the call disconnects, you'll receive an SMS with
-                                your
-                                latest account balance. This service is free and works only if your mobile number is
-                                registered
-                                with your bank.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq2">
-                            <button class="accordion-button shadow-none collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
-                                aria-controls="collapse2">
-                                What is the SBI bank balance check number?
-                            </button>
-                        </h2>
-                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                To check your SBI account balance, dial <strong>09223766666</strong> from your
-                                registered mobile
-                                number. You'll receive an SMS with your current balance. This is one of the most popular
-                                <strong>SBI bank balance check</strong> methods via missed call.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq3">
-                            <button class="accordion-button shadow-none collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
-                                aria-controls="collapse3">
-                                Is there a Canara Bank balance check number for SMS banking?
-                            </button>
-                        </h2>
-                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, Canara Bank offers a free <strong>SMS banking balance check</strong> service. Just
-                                give a
-                                missed call to <strong>9015481515</strong> from your registered mobile number. You'll
-                                get an SMS
-                                with your Canara Bank account balance instantly.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 4 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq4">
-                            <button class="accordion-button shadow-none collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
-                                aria-controls="collapse4">
-                                How do I check my PFMS-linked bank account balance?
-                            </button>
-                        </h2>
-                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                For <strong>PFMS bank balance check</strong>, visit the official PFMS portal and enter
-                                your bank
-                                details to view your balance. PFMS does not support missed call banking, but it provides
-                                real-time balance info for linked accounts.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 5 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq5">
-                            <button class="accordion-button shadow-none collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false"
-                                aria-controls="collapse5">
-                                Can I use this tool for Indian Bank and Bank of India balance check?
-                            </button>
-                        </h2>
-                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
-                            data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Absolutely! Nivesguru's <strong>Bank Balance Check Tool</strong> supports both
-                                <strong>Indian
-                                    Bank balance check</strong> and <strong>Bank of India balance check</strong>. Just
-                                select
-                                your bank and make a missed call to the provided number. You'll receive an SMS with your
-                                account
-                                balance instantly.
-                            </div>
+        </div>
+    </section>
+
+    <section class="container my-5" itemscope itemtype="https://schema.org/FAQPage">
+        <h2 class="mb-4">FAQ - Bank Balance Check Tool</h2>
+        <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" itemprop="name">
+                        How can I check my bank balance using a missed call?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            You can check your bank balance by making a missed call to your bank's official <strong>bank
+                                balance check number</strong>. Once the call disconnects, you'll receive an SMS with
+                            your latest account balance. This service is free and works only if your mobile number is
+                            registered with your bank.
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" itemprop="name">
+                        What is the SBI bank balance check number?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            To check your SBI account balance, dial <strong>09223766666</strong> from your registered
+                            mobile number. You'll receive an SMS with your current balance. This is one of the most
+                            popular <strong>SBI bank balance check</strong> methods via missed call.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" itemprop="name">
+                        Is there a Canara Bank balance check number for SMS banking?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            Yes, Canara Bank offers a free <strong>SMS banking balance check</strong> service. Just give
+                            a missed call to <strong>9015481515</strong> from your registered mobile number. You'll get
+                            an SMS with your Canara Bank account balance instantly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" itemprop="name">
+                        How do I check my PFMS-linked bank account balance?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            For <strong>PFMS bank balance check</strong>, visit the official PFMS portal and enter your
+                            bank details to view your balance. PFMS does not support missed call banking, but it
+                            provides real-time balance info for linked accounts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h2 class="accordion-header" id="faq5">
+                    <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" itemprop="name">
+                        Can I use this tool for Indian Bank and Bank of India balance check?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" itemscope itemprop="acceptedAnswer"
+                        itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            Absolutely! Nivesguru's <strong>Bank Balance Check Tool</strong> supports both
+                            <strong>Indian Bank balance check</strong> and <strong>Bank of India balance check</strong>.
+                            Just select your bank and make a missed call to the provided number. You'll receive an SMS
+                            with your account balance instantly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
 
     <footer class="bg-dark">
         <div class="container-fluid bg-duo">
