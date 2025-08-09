@@ -831,18 +831,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const banks = [
+                { name: "SBI (State Bank of India)", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/330px-State_Bank_of_India.svg.png", number: "9223766666" },
+                { name: "HDFC Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HDFC_Bank_Logo.svg/375px-HDFC_Bank_Logo.svg.png", number: "18002703333" },
+                { name: "Punjab National Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Punjab_National_Bank_new_logo.svg/375px-Punjab_National_Bank_new_logo.svg.png", number: "18001802223" },
+                { name: "Bank of Baroda", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BankOfBarodaLogo.svg/500px-BankOfBarodaLogo.svg.png", number: "8468001111" },
+                { name: "ICICI Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/375px-ICICI_Bank_Logo.svg.png", number: "9594612612" },
+                { name: "Axis Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AXISBank_Logo.svg/375px-AXISBank_Logo.svg.png", number: "18004195959" },
+                { name: "Kotak Mahindra Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Kotak_Mahindra_Bank_logo.svg/375px-Kotak_Mahindra_Bank_logo.svg.png", number: "18602662666" },
+                { name: "Union Bank of India", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Union_Bank_of_India_Logo.svg/500px-Union_Bank_of_India_Logo.svg.png", number: "9223008586" },
+                { name: "Bank of India", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Bank_of_India_logo.svg/375px-Bank_of_India_logo.svg.png", number: "9266135135" },
                 { name: "Canara Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Canara_bank_logo.svg/375px-Canara_bank_logo.svg.png", number: "9015481515" },
                 { name: "Indian Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Indian_Bank_logo.svg/375px-Indian_Bank_logo.svg.png", number: "9289228888" },
-                { name: "Union Bank of India", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Union_Bank_of_India_Logo.svg/500px-Union_Bank_of_India_Logo.svg.png", number: "9223008586" },
-                { name: "SBI (State Bank of India)", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/State_Bank_of_India.svg/330px-State_Bank_of_India.svg.png", number: "9223766666" },
-                { name: "Punjab National Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Punjab_National_Bank_new_logo.svg/375px-Punjab_National_Bank_new_logo.svg.png", number: "18001802223" },
+                { name: "Central Bank of India", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Central_Bank_of_India.svg/375px-Central_Bank_of_India.svg.png", number: "9555244442" },
+                { name: "IDBI Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/IDBI_Logo.svg/500px-IDBI_Logo.svg.png", number: "18008431122" },
                 { name: "UCO Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/UCO_Bank.jpg/500px-UCO_Bank.jpg", number: "9278790000" },
-                { name: "ICICI Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/ICICI_Bank_Logo.svg/375px-ICICI_Bank_Logo.svg.png", number: "9594612612" },
+                { name: "Bank of Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Bank_of_Maharashtra_logo.svg/375px-Bank_of_Maharashtra_logo.svg.png", number: "18001024924" },
                 { name: "Karnataka Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Karnataka_Bank_svg_Logo.svg/500px-Karnataka_Bank_svg_Logo.svg.png", number: "18004251444" },
                 { name: "Bandhan Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bandhan_Bank_Svg_Logo.svg/375px-Bandhan_Bank_Svg_Logo.svg.png", number: "9223009900" },
-                { name: "Axis Bank", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/AXISBank_Logo.svg/375px-AXISBank_Logo.svg.png", number: "18004195959" },
-                { name: "Bank of India", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Bank_of_India_logo.svg/375px-Bank_of_India_logo.svg.png", number: "9266135135" },
-                { name: "Bank of Baroda", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BankOfBarodaLogo.svg/500px-BankOfBarodaLogo.svg.png", number: "8468001111" },
                 { name: "Post Office Savings Bank", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/India_Post.svg/375px-India_Post.svg.png", number: "8424000111" }
             ];
 
