@@ -722,4 +722,21 @@
 </url>
 
 
+
+<url>
+  <loc>https://nivesguru.in/bank-balance-check</loc>
+  <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/bn/bank-balance-check</loc>
+  <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/hi/bank-balance-check</loc>
+  <lastmod>2025-08-10T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
 </urlset>
