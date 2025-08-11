@@ -160,112 +160,105 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
+        /* Navbar background */
         nav.navbar {
             background-color: #00000077;
         }
-
+        /* Navbar brand logo alignment */
         a.navbar-brand img {
             margin-top: -5px;
         }
-
+        /* Tricolor header background with Ashoka Chakra overlay */
         header {
-            background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
-            background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+            background: linear-gradient(
+                165deg,
+                #FF9933 0%,
+                #FF9933 25%,
+                #fff 25%,
+                #fff 65%,
+                #138808 65%,
+                #138808 100%
+            );
             background-attachment: fixed;
             background-size: cover;
+            position: relative;
         }
-
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Section background wave */
         .wave1 {
-            background: #ffffff;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%);
-            /* text-decoration: none; */
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 75%,
+                #fff 75%,
+                #fff 100%
+            );
         }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        a {
-            color: rgba(0, 17, 105, 1);
+        /* Headings and links color */
+        h1, h2, h3, h4, h5, a {
+            color: #001169;
         }
-
         ul li {
             list-style: none;
         }
-
         .modal-content {
-            background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
+            background: linear-gradient(
+                125deg,
+                #ffc107 0%,
+                #ffc107 30%,
+                #fff calc(30% + 1px),
+                #fff 60%,
+                #fff calc(60% + 1px),
+                #fff 72%,
+                #fff calc(72% + 1px),
+                #fff 100%
+            );
         }
-
         a small,
         a svg {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
-
         a small {
             font-size: .6rem;
         }
-
-        a.nav-link {
-            transition: none;
-        }
-
-        .ico-container {
-            position: relative;
-        }
-
         .card:hover div div img.img-fluid {
-            -webkit-animation: img-fluid 0.9s both;
             animation: img-fluid 0.9s both;
         }
-
-        .bg-duo {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 50%);
-        }
-
         .card-320 {
             max-width: 360px;
         }
-
+        .bg-duo {
+            background: linear-gradient(
+                180deg,
+                #fff 50%,
+                rgba(0, 0, 0, 0) 50%
+            );
+        }
         @keyframes img-fluid {
-            0% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
-
-            30% {
-                -webkit-transform: scale3d(1.25, 0.75, 1);
-                transform: scale3d(1.25, 0.75, 1);
-            }
-
-            40% {
-                -webkit-transform: scale3d(0.75, 1.25, 1);
-                transform: scale3d(0.75, 1.25, 1);
-            }
-
-            50% {
-                -webkit-transform: scale3d(1.15, 0.85, 1);
-                transform: scale3d(1.15, 0.85, 1);
-            }
-
-            65% {
-                -webkit-transform: scale3d(0.95, 1.05, 1);
-                transform: scale3d(0.95, 1.05, 1);
-            }
-
-            75% {
-                -webkit-transform: scale3d(1.05, 0.95, 1);
-                transform: scale3d(1.05, 0.95, 1);
-            }
-
-            100% {
-                -webkit-transform: scale3d(1, 1, 1);
-                transform: scale3d(1, 1, 1);
-            }
+            0% { transform: scale3d(1, 1, 1); }
+            30% { transform: scale3d(1.25, 0.75, 1); }
+            40% { transform: scale3d(0.75, 1.25, 1); }
+            50% { transform: scale3d(1.15, 0.85, 1); }
+            65% { transform: scale3d(0.95, 1.05, 1); }
+            75% { transform: scale3d(1.05, 0.95, 1); }
+            100% { transform: scale3d(1, 1, 1); }
         }
     </style>
 </head>

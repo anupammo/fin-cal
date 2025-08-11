@@ -176,8 +176,36 @@
             margin-top: -5px;
         }
 
+        /* Tricolor header background with Ashoka Chakra overlay */
         header {
-            background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+            background: linear-gradient(
+                165deg,
+                #FF9933 0%,
+                #FF9933 25%,
+                #fff 25%,
+                #fff 65%,
+                #138808 65%,
+                #138808 100%
+            );
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .mix-bg {
@@ -543,88 +571,6 @@
             </div>
         </div>
     </header>
-    <!-- <section id="toc">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1></h1>Outline
-                    
-                    <h2 class="h4 my-5"></h2>I. Introduction
-                       - A brief explanation of what simple interest is
-                       - Importance of calculating simple interest accurately
-                    
-                    <h2 class="h4 my-5"></h2>II. Understanding Simple Interest
-                       - Definition and formula
-                       - Key components: principal, rate, and time
-                       - Real-world examples for clarity
-                    
-                    <h2 class="h4 my-5"></h2>III. Significance of Simple Interest Calculator
-                       - Time-saving aspect
-                       - Accuracy in calculations
-                       - How it aids financial planning
-                    
-                    <h2 class="h4 my-5"></h2>IV. Features of a Good Simple Interest Calculator
-                       - User-friendly interface
-                       - Inclusion of relevant options (monthly, quarterly, annually)
-                       - Accessibility on different devices
-                    
-                    <h2 class="h4 my-5"></h2>V. Step-by-Step Guide to Using a Simple Interest Calculator
-                       - Entering principal, rate, and time
-                       - Selecting the time frequency
-                       - Obtaining accurate results
-                    
-                    <h2 class="h4 my-5"></h2>VI. Advantages of Using a Simple Interest Calculator in Rupees
-                       - Currency-specific calculations
-                       - Comparison with other calculators
-                       - Implications for personal finance
-                    
-                    <h2 class="h4 my-5"></h2>VII. Common Mistakes to Avoid When Using Simple Interest Calculators
-                       - Misinterpretation of time units
-                       - Incorrect input of interest rate
-                       - Importance of double-checking results
-                    
-                    <h2 class="h4 my-5"></h2>VIII. Tips for Effective Financial Planning Using Simple Interest Calculators
-                       - Setting realistic financial goals
-                       - Understanding the impact of time on interest
-                       - Incorporating interest calculations into budgeting
-                    
-                    <h2 class="h4 my-5"></h2>IX. Real-life Applications of Simple Interest Calculations in Rupees
-                       - Loan planning
-                       - Investment decisions
-                       - Educational savings
-                    
-                    <h2 class="h4 my-5"></h2>X. How Online Calculators Have Revolutionized Financial Planning
-                       - Accessibility and convenience
-                       - Integration with personal finance apps
-                       - Positive impact on financial literacy
-                    
-                    <h2 class="h4 my-5"></h2>XI. Addressing Perplexity in Simple Interest Calculations
-                       - Clarifying common misconceptions
-                       - Providing examples for better understanding
-                    
-                    <h2 class="h4 my-5"></h2>XII. Burstiness in Financial Scenarios
-                       - Handling sudden changes in interest rates
-                       - Adapting calculations for unexpected financial events
-                    
-                    <h2 class="h4 my-5"></h2>XIII. Crafting a Personalized Financial Strategy
-                       - Tailoring calculations to individual needs
-                       - Incorporating long-term financial goals
-                       - Balancing risk and reward
-                    
-                    <h2 class="h4 my-5"></h2>XIV. Conclusion
-                       - Summarizing the importance of simple interest calculations
-                       - Encouraging readers to utilize online calculators for financial planning
-                    
-                    <h2 class="h4 my-5"></h2>XV. Frequently Asked Questions (FAQs)
-                       1<p></p>Is a simple interest calculator suitable for complex financial scenarios?**
-                       2<p></p>Can I use a simple interest calculator for international currencies?**
-                       3<p></p>How frequently should I review my interest calculations for optimal financial planning?**
-                       4<p></p>Are there any online calculators specifically designed for educational savings?**
-                       5<p></p>What steps can I take if I encounter discrepancies in my simple interest calculations?**
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section>
         <div class="container">
             <div class="row">

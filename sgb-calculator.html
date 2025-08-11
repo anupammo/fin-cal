@@ -230,8 +230,36 @@
             margin-top: -5px;
         }
 
+        /* Tricolor header background with Ashoka Chakra overlay */
         header {
-            background: linear-gradient(125deg, #ECFCFF 0%, #ECFCFF 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
+            background: linear-gradient(
+                165deg,
+                #FF9933 0%,
+                #FF9933 25%,
+                #fff 25%,
+                #fff 65%,
+                #138808 65%,
+                #138808 100%
+            );
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .mix-bg {

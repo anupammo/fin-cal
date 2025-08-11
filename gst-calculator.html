@@ -164,10 +164,42 @@
             margin-top: -5px;
         }
 
-        header,
-        .mix-bg {
-            background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
-            background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+        /* Tricolor header background with Ashoka Chakra overlay */
+        header {
+            background: linear-gradient(165deg,
+                    #FF9933 0%,
+                    #FF9933 25%,
+                    #fff 25%,
+                    #fff 65%,
+                    #138808 65%,
+                    #138808 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Section background wave */
+        .wave1 {
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 75%,
+                    #fff 75%,
+                    #fff 100%);
         }
 
         .bg-duo {
@@ -524,85 +556,6 @@
             </div>
         </div>
     </header>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-in-article-adsense"> <ins class="adsbygoogle"
-                            style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
-                            data-ad-client="ca-pub-1195438021979002" data-ad-slot="8059393466"></ins>
-                        <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Outline</h1>
-
-                    <h2 class="h4 my-5">I. Introduction</h2>
-                    A. Brief overview of GST (Goods and Services Tax)
-                    B. Importance of accurate GST calculation
-
-                    <h2 class="h4 my-5">II. Understanding GST</h2>
-                    A. Definition and purpose
-                    B. Different components of GST
-                    C. Impact on businesses and consumers
-
-                    <h2 class="h4 my-5">III. Importance of GST Calculator</h2>
-                    A. Simplifying complex calculations
-                    B. Ensuring accuracy in tax computations
-
-                    <h2 class="h4 my-5">IV. Exploring Online GST Calculators</h2>
-                    A. Overview of available options
-                    B. Benefits of using online GST calculators
-                    C. Key features to look for in a GST calculator app
-
-                    <h2 class="h4 my-5">V. GST Calculator in India</h2>
-                    A. Addressing specific needs in the Indian context
-                    B. How online GST calculators cater to Indian tax regulations
-
-                    <h2 class="h4 my-5">VI. Using GST Calculator for Interest Calculation</h2>
-                    A. Understanding GST interest and its implications
-                    B. Step-by-step guide on using a GST calculator for interest
-
-                    <h2 class="h4 my-5">VII. GST Calculator Apps</h2>
-                    A. Reviewing popular GST calculator apps
-                    B. User-friendly features and functionalities
-
-                    <h2 class="h4 my-5">VIII. How to Calculate GST on MRP</h2>
-                    A. Importance of accurate MRP calculations
-                    B. Step-by-step guide on calculating GST on MRP
-
-                    <h2 class="h4 my-5">IX. Calculating GST in a Regular Calculator</h2>
-                    A. Manual method for calculating GST
-                    B. Pros and cons of using a regular calculator
-
-                    <h2 class="h4 my-5">X. Removing GST from Total Amount Calculator</h2>
-                    A. Common scenarios where GST removal is necessary
-                    B. Step-by-step process for removing GST from the total amount
-
-                    <h2 class="h4 my-5">XI. Understanding 18% GST Calculation</h2>
-                    A. Explanation of 18% GST and its significance
-                    B. Easy methods for calculating 18% GST using a calculator
-
-                    <h2 class="h4 my-5">XII. Tips for Efficient GST Calculations</h2>
-                    A. Keeping up with updates and changes
-                    B. Common mistakes to avoid in GST calculations
-
-                    <h2 class="h4 my-5">XIII. Real-life Examples</h2>
-                    A. Case studies illustrating the importance of accurate GST calculations
-
-                    <h2 class="h4 my-5">XIV. Conclusion</h2>
-                    A. Recap of key points
-                    B. Encouragement to use reliable GST calculators
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section>
         <div class="container">
             <div class="row">
@@ -853,16 +806,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="g-adsense">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="g-multiplex-adsense"> <ins class="adsbygoogle" style="display:block"     data-ad-format="autorelaxed" data-ad-client="ca-pub-1195438021979002"     data-ad-slot="2998638475"></ins> <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <footer class="bg-dark">
         <div class="container-fluid bg-duo">
             <div class="row">

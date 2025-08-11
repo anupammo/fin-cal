@@ -172,9 +172,32 @@
         }
 
         header,
-        .mix-bg {
+        /* .mix-bg {
             background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%);
             background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+        } */
+        header {
+            background: #FF9933;
+            background: linear-gradient(165deg, rgba(255, 153, 51, 1) 0%, rgba(255, 153, 51, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 65%, rgba(19, 136, 8, 1) 65%, rgba(19, 136, 8, 1) 100%);
+            background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .bg-duo {
@@ -230,6 +253,45 @@
             margin: auto;
             width: 100%;
             max-width: 340px
+        }
+    </style>
+    <style>
+        /* Tricolor header background with Ashoka Chakra overlay */
+        header {
+            background: linear-gradient(165deg,
+                    #FF9933 0%,
+                    #FF9933 25%,
+                    #fff 25%,
+                    #fff 65%,
+                    #138808 65%,
+                    #138808 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Section background wave */
+        .wave1 {
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 75%,
+                    #fff 75%,
+                    #fff 100%);
         }
     </style>
 </head>
