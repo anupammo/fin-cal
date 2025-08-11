@@ -160,29 +160,24 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
-        /* Navbar background */
-        nav.navbar {
-            background-color: #00000077;
-        }
-        /* Navbar brand logo alignment */
+        /* header */
         a.navbar-brand img {
-            margin-top: -5px;
+            margin-top: -2px;
         }
-        /* Tricolor header background with Ashoka Chakra overlay */
+
         header {
-            background: linear-gradient(
-                165deg,
-                #FF9933 0%,
-                #FF9933 25%,
-                #fff 25%,
-                #fff 65%,
-                #138808 65%,
-                #138808 100%
-            );
+            background: linear-gradient(165deg,
+                    #FF9933 0%,
+                    #FF9933 25%,
+                    #fff 25%,
+                    #fff 65%,
+                    #138808 65%,
+                    #138808 100%);
             background-attachment: fixed;
             background-size: cover;
             position: relative;
         }
+
         header::before {
             content: "";
             position: absolute;
@@ -199,67 +194,49 @@
             pointer-events: none;
             z-index: 0;
         }
-        /* Section background wave */
+
         .wave1 {
-            background: linear-gradient(
-                180deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0) 75%,
-                #fff 75%,
-                #fff 100%
-            );
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 75%,
+                    #fff 75%,
+                    #fff 100%);
         }
+
+        /* header */
         /* Headings and links color */
-        h1, h2, h3, h4, h5, a {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a {
             color: #001169;
         }
-        ul li {
-            list-style: none;
+
+        a {
+            text-decoration: none;
         }
-        .modal-content {
-            background: linear-gradient(
-                125deg,
-                #ffc107 0%,
-                #ffc107 30%,
-                #fff calc(30% + 1px),
-                #fff 60%,
-                #fff calc(60% + 1px),
-                #fff 72%,
-                #fff calc(72% + 1px),
-                #fff 100%
-            );
+
+        /* footer */
+        .bg-duo {
+            background: linear-gradient(180deg,
+                    #fff 50%,
+                    rgba(0, 0, 0, 0) 50%);
         }
+
         a small,
         a svg {
             display: block;
             margin: 0 auto;
             text-align: center;
         }
+
         a small {
             font-size: .6rem;
         }
-        .card:hover div div img.img-fluid {
-            animation: img-fluid 0.9s both;
-        }
-        .card-320 {
-            max-width: 360px;
-        }
-        .bg-duo {
-            background: linear-gradient(
-                180deg,
-                #fff 50%,
-                rgba(0, 0, 0, 0) 50%
-            );
-        }
-        @keyframes img-fluid {
-            0% { transform: scale3d(1, 1, 1); }
-            30% { transform: scale3d(1.25, 0.75, 1); }
-            40% { transform: scale3d(0.75, 1.25, 1); }
-            50% { transform: scale3d(1.15, 0.85, 1); }
-            65% { transform: scale3d(0.95, 1.05, 1); }
-            75% { transform: scale3d(1.05, 0.95, 1); }
-            100% { transform: scale3d(1, 1, 1); }
-        }
+
+        /* footer */
     </style>
 </head>
 
@@ -441,14 +418,23 @@
                         <div class="card shadow border-0 mt-5">
                             <div class="card-body">
                                 <div class="p-5">
-                                    <nav aria-label="breadcrumb">
+                                    <nav aria-label="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item active" aria-current="homepage">Home</li>
+                                            <li class="breadcrumb-item active" aria-current="homepage"
+                                                itemprop="itemListElement" itemscope
+                                                itemtype="https://schema.org/ListItem">
+                                                <a href="/" itemprop="item">
+                                                    <span itemprop="name">Home</span>
+                                                </a>
+                                                <meta itemprop="position" content="1" />
+                                            </li>
                                         </ol>
                                     </nav>
+
                                     <h1 class="lead fw-bold fs-3">Investment Calculator - Plan Financial Future |
                                         Nivesguru
                                     </h1>
+
                                     <hr class="w-50">
                                     <p class="lead fs-6"> Nivesguru is a online calculation tool for investments
                                         absolutely free of cost. A initiative for Indian to motivate on investments for
@@ -1325,7 +1311,26 @@
             </div>
         </div>
     </section>
-    <section class="internal-links py-5">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <hr class="d-block mx-auto w-25" /> -->
+                    <ul class="nav nav-pills nav-fill mt-3 mb-5" itemscope itemtype="https://schema.org/Article">
+                        <li class="nav-item">
+                            <strong>Published on : </strong>
+                            <time itemprop="datePublished" datetime="2025-08-11">Aug 11, 2025</time>
+                        </li>
+                        <li class="nav-item">
+                            <strong>Last updated : </strong>
+                            <time itemprop="dateModified" datetime="2025-08-15">Aug 15, 2025</time>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="internal-links py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
@@ -1423,8 +1428,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="bank-links">
+    </section> -->
+    <!-- <section id="bank-links">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-12">
@@ -1495,7 +1500,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <footer class="bg-dark">
         <div class="container-fluid bg-duo">
             <div class="row">
