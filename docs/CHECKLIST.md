@@ -8,35 +8,38 @@
 ## Phase 0 — Triage & Emergency Fixes (20 Jul – 2 Aug 2026)
 
 ### Diagnosis
-- [ ] Pull 24-month GSC performance export (clicks, impressions, CTR, position — by page & query)
-- [ ] Check GSC **Manual Actions** and **Security Issues** panels; file reconsideration if anything is flagged
-- [ ] Identify the drop: date range, affected page cohorts, affected query classes; map against known Google update dates
-- [ ] Record the real current baseline: organic visitors/day (30-day avg), top-10 keyword count, indexed-page count
-- [ ] Check Page Indexing report for "Crawled – not indexed" / "Duplicate" clusters
-- [ ] Run CrUX / PageSpeed Insights on the 10 highest-traffic pages; log LCP/INP/CLS
+> ⚠️ These need **your** GSC login (property `nivesguru.in`) — I can't access a private Google account. Turnkey runbook: [scripts/gsc-diagnosis.md](../scripts/gsc-diagnosis.md). Paste outputs back and I'll fill the baseline + diagnose the drop.
+- [ ] Pull 24-month GSC performance export (clicks, impressions, CTR, position — by page & query) → runbook §2
+- [ ] Check GSC **Manual Actions** and **Security Issues** panels; file reconsideration if anything is flagged → runbook §1 *(most urgent)*
+- [ ] Identify the drop: date range, affected page cohorts, affected query classes; map against known Google update dates → runbook §2
+- [ ] Record the real current baseline: organic visitors/day (30-day avg), top-10 keyword count, indexed-page count → runbook §3
+- [ ] Check Page Indexing report for "Crawled – not indexed" / "Duplicate" clusters → runbook §4
+- [~] Run CrUX / PageSpeed Insights on the 10 highest-traffic pages; log LCP/INP/CLS — **script ready** (`node scripts/psi-check.mjs <API_KEY>`); anonymous run hit PSI's daily quota (429), needs your free key
 
 ### Schema emergency surgery
-- [ ] Delete `LocalBusiness` `aggregateRating` + review block from `index.html`
-- [ ] Delete duplicate `WebSite` JSON-LD block (the `alternateName: "EC"` one)
-- [ ] Replace with one `WebSite` + one `Organization` block (logo, sameAs, contactPoint)
-- [ ] Grep all 148 pages for other `aggregateRating` / `review` markup; remove every self-serving instance
-- [ ] Validate 10 sample pages in Rich Results Test + Schema.org validator — zero errors/warnings
+- [x] Delete `LocalBusiness` `aggregateRating` + review block from `index.html` (2026-07-20)
+- [x] Delete duplicate `WebSite` JSON-LD block (the `alternateName: "EC"` one) (2026-07-20)
+- [x] Replace with one `WebSite` + one `Organization` block (logo, sameAs, contactPoint) (2026-07-20)
+- [x] Grep all 148 pages for other `aggregateRating` / `review` markup; remove every self-serving instance — also fixed SGB `Product`/`WebApplication` fake ratings (2026-07-20)
+- [x] Validate JSON-LD locally (0 errors, all 8 touched files) — ⚠️ still run Rich Results Test in production after deploy
 
 ### Data correctness sweep
-- [ ] Verify small-savings rates (PPF, SSY, NSC, SCSS, KVP, MIS, TD, MSSC) against the current quarter's Ministry of Finance notification
-- [ ] Verify FD/RD/SB slabs for SBI, PNB, BOB, BOI, UBI against each bank's official rate page
-- [ ] Update Income Tax calculator to FY 2026-27 / AY 2027-28 new-regime slabs (Budget 2026); label regime + assessment year visibly
+- [x] Verify small-savings rates against Jul–Sep 2026 MoF notification — PPF/NSC/SCSS/KVP/POMIS correct; **SSY fixed 8%→8.2%** (EN/HI/BN) (2026-07-20). ☐ still spot-check POTD/PORD tenures
+- [ ] Verify FD/RD/SB slabs for SBI, PNB, BOB, BOI, UBI against each bank's official rate page — **needs owner** (per-bank, changes often)
+- [x] Update Income Tax calculator to FY 2026-27 / AY 2027-28 new-regime slabs (Budget 2026); label regime + assessment year visibly — rebuilt as correct progressive calc, verified in-browser (2026-07-20). ⚠️ EN only; marginal relief not yet applied
 - [ ] Verify APY, PMJJBY, PMSBY premium figures
 - [ ] Add/refresh a visible "Rates updated: {date} · Source" line on every page touched
 - [ ] Mirror every fix into `/hi` and `/bn` versions
 
 ### Crawl & infrastructure hygiene
-- [ ] Regenerate `sitemap.xml` with real lastmod dates; resubmit in GSC
-- [ ] Fix `robots.txt` (remove malformed `Allow: /ads.txt` + empty `Disallow:` lines)
-- [ ] Delete `ror.xml`, `urllist.txt`, `sitemaps25022024.zip`, stray verification/demo files from web root
-- [ ] Consolidate `sw.js` / `serviceWorker.js` / `pwabuilder-sw.js` into ONE service worker; version the cache; network-first for HTML
-- [ ] Confirm 404 page returns HTTP 404 (not soft-200)
+- [x] Regenerate `sitemap.xml` with real lastmod dates (from git history) (2026-07-20) — ☐ resubmit in GSC after deploy
+- [x] Fix `robots.txt` (remove malformed `Allow: /ads.txt` + empty `Disallow:` lines) (2026-07-20)
+- [x] Delete `ror.xml`, `urllist.txt`, `sitemaps25022024.zip` from web root (2026-07-20)
+- [x] Consolidate `sw.js` / `serviceWorker.js` / `pwabuilder-sw.js` into ONE service worker; version the cache; network-first for HTML (2026-07-20)
+- [x] Confirm 404 page returns HTTP 404 (not soft-200) — verified live: `nivesguru.in/<missing>` → **404**, pages → 200 (2026-07-20)
 - [ ] Set up weekly KPI snapshot (GSC API or manual sheet): clicks/day, impressions, top queries
+
+> **Handoff:** code-side Phase 0 is complete — see [PHASE-0-STATUS.md](./PHASE-0-STATUS.md). Remaining items (GSC diagnosis 0.1, rate verification 0.3, income-tax FY2026-27 0.4) need your external access / official figures.
 
 **Phase 0 exit gate:** ☐ all above checked · ☐ baseline documented in REVAMP-PLAN §3 table
 

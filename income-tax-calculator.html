@@ -448,6 +448,9 @@
                                 </div>
                                 <h1 class="lead mb-4 px-5 fs-3">Income Tax Calculator: Demystifying Financial
                                     Obligations</h1>
+                                <p class="px-5 mb-3"><span class="badge bg-primary">FY 2026-27 · AY 2027-28</span>
+                                    <span class="text-muted small">New &amp; old regime · as per Budget 2026 (slabs unchanged)</span>
+                                </p>
                                 <form class="px-5 lead fs-6">
                                     <div class="mb-3">
                                         <div class="row">
@@ -460,17 +463,17 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="range" class="form-range" min="0" max="2000000" step="25000"
-                                            value="400000" id="gstPrice" onchange="dipsPrice()">
+                                        <input type="range" class="form-range" min="0" max="3000000" step="25000"
+                                            value="400000" id="gstPrice" oninput="dipsPrice()" onchange="dipsPrice()">
                                         <div class="row">
                                             <span class="col">0</span>
-                                            <span class="text-end col">2000000</span>
+                                            <span class="text-end col">3000000</span>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fd_toti" class="form-label my-2">Income Tax Rate</label>
+                                                <label for="fd_toti" class="form-label my-2">Effective Tax Rate</label>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label float-end">
@@ -1033,64 +1036,49 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        let income = 400000, taxrate = 5, ages = 25, taxAmount = 0, regmtyp;
+        let income = 400000, ages = 25, taxAmount = 0, regmtyp = false, myChartInstance = null;
+
+        // --- FY 2026-27 (AY 2027-28) income-tax logic ---
+        // Progressive computation. New-regime slabs are unchanged from FY 2025-26
+        // (Union Budget 2026 announced no change to slabs or exemption limits).
+        // Sources: incometax.gov.in; Ministry of Finance; cleartax.in/s/income-tax-slabs
+        function progressiveTax(ti, slabs) {
+            let tax = 0, lower = 0;
+            for (const [upper, rate] of slabs) {
+                if (ti > lower) { tax += (Math.min(ti, upper) - lower) * rate; lower = upper; }
+            }
+            return tax;
+        }
+
+        // New regime: nil up to 4L, then 5/10/15/20/25/30%. Rebate u/s 87A up to
+        // ₹60,000 makes taxable income up to ₹12,00,000 tax-free.
+        function newRegimeTax(ti) {
+            const slabs = [[400000, 0], [800000, 0.05], [1200000, 0.10],
+                           [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]];
+            let tax = progressiveTax(ti, slabs);
+            if (ti <= 1200000) tax = Math.max(0, tax - 60000);
+            return tax;
+        }
+
+        // Old regime: age-based basic exemption; rebate u/s 87A up to ₹12,500
+        // makes taxable income up to ₹5,00,000 tax-free.
+        function oldRegimeTax(ti, age) {
+            const exempt = age >= 80 ? 500000 : age >= 60 ? 300000 : 250000;
+            const slabs = [[exempt, 0], [500000, 0.05], [1000000, 0.20], [Infinity, 0.30]];
+            let tax = progressiveTax(ti, slabs);
+            if (ti <= 500000) tax = Math.max(0, tax - 12500);
+            return tax;
+        }
 
         function dipsPrice() {
-            income = document.getElementById("gstPrice").value;
+            income = Number(document.getElementById("gstPrice").value);
             regmtyp = document.getElementById("tax-regime").checked;
-            document.getElementById("priceDisp").innerHTML = income;
-            let domemiroi = document.getElementById("emi-roi");
-            let domroidisp = document.getElementById("roi-disp");
-            if (regmtyp == false) {
-                if (ages < 60) {
-                    if (income < 250001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 0;
-                    } else if (income < 500001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 5;
-                    } else if (income < 1000001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 20;
-                    } else {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 30;
-                    }
-                } else if (ages < 80) {
-                    if (income < 300001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 0;
-                    } else if (income < 500001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 5;
-                    } else if (income < 1000001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 20;
-                    } else {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 30;
-                    }
-                } else {
-                    if (income < 500001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 0;
-                    } else if (income < 1000001) {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 20;
-                    } else {
-                        taxrate = domemiroi.value = domroidisp.innerHTML = 30;
-                    }
-                }
-            } else {
-                if (income < 300001) {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 0;
-                } else if (income < 600001) {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 5;
-                } else if (income < 900001) {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 10;
-                } else if (income < 1200001) {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 15;
-                } else if (income < 1500001) {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 20;
-                } else {
-                    taxrate = domemiroi.value = domroidisp.innerHTML = 30;
-                }
-            }
+            document.getElementById("priceDisp").innerHTML = income.toLocaleString("en-IN");
             calculateTax();
         }
 
         function dispTime() {
-            ages = document.getElementById("fd_idur").value;
+            ages = Number(document.getElementById("fd_idur").value);
             document.getElementById("dur-disp").innerHTML = ages;
             dipsPrice();
         }
@@ -1098,41 +1086,45 @@
         function regimetype() {
             const showHide = document.getElementById('showHide');
             regmtyp = document.getElementById("tax-regime").checked;
-            if (regmtyp == false) {
-                showHide.classList.remove('hidden');
-            } else {
-                showHide.classList.add('hidden');
-            }
+            // Age-based exemption applies only to the old regime.
+            if (regmtyp) { showHide.classList.add('hidden'); }
+            else { showHide.classList.remove('hidden'); }
             dipsPrice();
         }
 
         function calculateTax() {
-            taxAmount = (income * taxrate) / 100;
-            document.getElementById("result").innerHTML = taxAmount;
+            const ti = income;
+            const baseTax = regmtyp ? newRegimeTax(ti) : oldRegimeTax(ti, ages);
+            const cess = Math.round(baseTax * 0.04);
+            taxAmount = Math.round(baseTax + cess);
+            const effRate = ti > 0 ? ((taxAmount / ti) * 100).toFixed(2) : "0.00";
 
-            let tblVal = `<tbody><tr><td>Income</td><td class='text-end'>₹ <span class='fs-5'>${income}</span></td></tr><tr><td>Income Tax Rate</td><td class='text-end'><span class='fs-5'>${taxrate}</span> %</td</tr><tr><td>Tax Amount</td><td class='text-end'>₹ <span class='fs-5'>${taxAmount}</span></td></tr></tbody>`;
+            document.getElementById("result").innerHTML = taxAmount.toLocaleString("en-IN");
+            document.getElementById("roi-disp").innerHTML = effRate;
+            const emiRoi = document.getElementById("emi-roi");
+            if (emiRoi) emiRoi.value = Math.round(effRate);
+
+            const fmt = n => "₹ " + Math.round(n).toLocaleString("en-IN");
+            const regimeName = regmtyp ? "New Regime" : "Old Regime";
+            let tblVal = `<tbody>
+                <tr><td>Assessment Year</td><td class='text-end'><span class='fs-6'>2027-28</span></td></tr>
+                <tr><td>Regime</td><td class='text-end'><span class='fs-6'>${regimeName}</span></td></tr>
+                <tr><td>Taxable Income</td><td class='text-end'>${fmt(ti)}</td></tr>
+                <tr><td>Income Tax</td><td class='text-end'>${fmt(baseTax)}</td></tr>
+                <tr><td>Health &amp; Education Cess (4%)</td><td class='text-end'>${fmt(cess)}</td></tr>
+                <tr class='fw-bold'><td>Total Tax Payable</td><td class='text-end'>${fmt(taxAmount)}</td></tr>
+                <tr><td>Effective Rate</td><td class='text-end'>${effRate} %</td></tr>
+                </tbody>`;
             document.getElementById("myTbl").innerHTML = tblVal;
 
-            var xValues = ["Total Income", "Total Tax"];
-            var yValues = [income, taxAmount];
+            var xValues = ["Income (post-tax)", "Total Tax"];
+            var yValues = [Math.max(0, ti - taxAmount), taxAmount];
             var barColors = ["#03a9f4", "#f50057"];
-
-            new Chart("myChart", {
+            if (myChartInstance) myChartInstance.destroy();
+            myChartInstance = new Chart("myChart", {
                 type: "pie",
-                data: {
-                    labels: xValues,
-                    datasets: [{
-                        backgroundColor: barColors, data: yValues
-                    }]
-                },
-                options: {
-                    legend: {
-                        display: true
-                    },
-                    title: {
-                        display: true
-                    }
-                }
+                data: { labels: xValues, datasets: [{ backgroundColor: barColors, data: yValues }] },
+                options: { legend: { display: true }, title: { display: true } }
             });
         }
     </script>
