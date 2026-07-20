@@ -8,13 +8,13 @@
 ## Phase 0 — Triage & Emergency Fixes (20 Jul – 2 Aug 2026)
 
 ### Diagnosis
-> ⚠️ These need **your** GSC login (property `nivesguru.in`) — I can't access a private Google account. Turnkey runbook: [scripts/gsc-diagnosis.md](../scripts/gsc-diagnosis.md). Paste outputs back and I'll fill the baseline + diagnose the drop.
-- [ ] Pull 24-month GSC performance export (clicks, impressions, CTR, position — by page & query) → runbook §2
-- [ ] Check GSC **Manual Actions** and **Security Issues** panels; file reconsideration if anything is flagged → runbook §1 *(most urgent)*
-- [ ] Identify the drop: date range, affected page cohorts, affected query classes; map against known Google update dates → runbook §2
-- [ ] Record the real current baseline: organic visitors/day (30-day avg), top-10 keyword count, indexed-page count → runbook §3
-- [ ] Check Page Indexing report for "Crawled – not indexed" / "Duplicate" clusters → runbook §4
-- [~] Run CrUX / PageSpeed Insights on the 10 highest-traffic pages; log LCP/INP/CLS — **script ready** (`node scripts/psi-check.mjs <API_KEY>`); anonymous run hit PSI's daily quota (429), needs your free key
+> ✅ Analyzed from your GSC export + PageSpeed PDF (2026-07-20). Full write-up: [PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md); baseline in [REVAMP-PLAN §3](./REVAMP-PLAN-2026.md#3-targets--kpis).
+- [x] Pull 16-month GSC performance export — analyzed: clicks/impr/CTR/position by page, query, device, country (2026-07-20)
+- [x] Check GSC Security Issues — **you confirmed clean** ✓. ☐ still explicitly check **Manual actions** panel (only Security Issues was confirmed)
+- [x] Identify the drop — two phases: gradual demotion Mar–Sep 2025 (pos 23→53), then **impression cliff −76% Sep→Oct 2025**, flatlined since (2026-07-20)
+- [x] Record the real baseline — **0.57 clicks/day** (28-day), 195 impr/day, avg pos 29.4, 197 queries in top-10, ~141 pages (2026-07-20)
+- [ ] Check **Page Indexing** report for "Crawled – not indexed" / "Duplicate" clusters — not in the Performance export; pull from Indexing → Pages (confirms whether the cliff = indexing loss)
+- [x] Run CrUX / PageSpeed on top page — **SGB: perf 42, LCP 6.9s, CLS 0.162, TBT 610ms, no field data**; 371KiB unused JS, 26KiB unused CSS, 14 long tasks (2026-07-20). Script `scripts/psi-check.mjs` ready for the full top-10 sweep with your API key
 
 ### Schema emergency surgery
 - [x] Delete `LocalBusiness` `aggregateRating` + review block from `index.html` (2026-07-20)

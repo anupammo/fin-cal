@@ -91,16 +91,20 @@ Ranked by likely impact:
 
 ## 3. Targets & KPIs
 
-| Metric | Baseline (audit, Jul 2026) | Dec 2026 | Mar 2027 |
-|---|---|---|---|
-| Organic visitors/day | *establish from GSC in Phase 0* | 5,000 | **8,500+ (record) → 12,000 stretch** |
-| Indexed, non-duplicate pages | ~146 | 220 | 300+ |
-| Pages passing CWV (mobile) | unverified | 90% | 100% |
-| Keywords in top 10 (IN) | *establish in Phase 0* | +50% | +150% |
-| Rate freshness lag | months | < 7 days | **< 24 hours** |
-| Pages with author + review date | 0 | 100% (EN) | 100% (EN/HI/BN) |
+_Baseline established from real GSC data 2026-07-20 — see [PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md). The hole is far deeper than a shallow dip: organic has collapsed to ~0.6 clicks/day. Targets recalibrated to reflect a rebuild, not a bounce-back._
 
-> ⚠️ Phase 0 must pull the *actual* current GSC baseline before targets are finalized — the numbers above assume a significant decline from the 8.5K peak; recalibrate once real data is in hand.
+| Metric | Baseline (GSC, Jul 2026) | Dec 2026 | Mar 2027 | H2 2027 |
+|---|---|---|---|---|
+| Organic clicks/day | **0.57** (28-day avg) | 50 (recover the demotion) | 500 | chase 8,500 record |
+| Impressions/day | ~195 | 1,500 | 5,000 | — |
+| Avg position (IN) | 29.4 | < 20 | < 12 | top-5 on core terms |
+| Indexed, non-duplicate pages | ~141 | 220 | 300+ | — |
+| Pages passing CWV (mobile) | **0%** (SGB: LCP 6.9s, CLS 0.162, perf 42) | 90% | 100% | — |
+| Queries in top 10 (IN) | **197** | 300 | 500 | — |
+| Rate freshness lag | months | < 7 days | **< 24 hours** | — |
+| Pages with author + review date | 0 | 100% (EN) | 100% (EN/HI/BN) | — |
+
+> **Fastest recovery levers (from the data):** the MIS/POMIS cluster (71K impressions @ pos 21, CTR 0.02%), SBI deposit calculators (buried at pos 63–77), and the Bengali/Bangladesh content (already at pos 7). See diagnosis §"Recovery footholds".
 
 ## 4. Risks & Mitigations
 

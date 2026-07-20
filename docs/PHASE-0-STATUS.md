@@ -35,8 +35,8 @@ Phase 0 of the [CHECKLIST](./CHECKLIST.md) splits into **code work (done in this
 
 ## ⛔ Needs YOU (external access — I can't do these)
 
-### 0.1 GSC forensic diagnosis
-> **Turnkey runbook: [scripts/gsc-diagnosis.md](../scripts/gsc-diagnosis.md)** — every step below is spelled out there. I can't log into your Google account, but these are a few clicks each; paste the outputs back and I'll finish the baseline + drop diagnosis. CWV part is scriptable now: `node scripts/psi-check.mjs <API_KEY>` (anonymous run hit PSI's daily quota).
+### 0.1 GSC forensic diagnosis — ✅ DONE from your export (2026-07-20)
+> **Full analysis: [PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md).** Baseline recorded in [REVAMP-PLAN §3](./REVAMP-PLAN-2026.md#3-targets--kpis). Headline: organic collapsed to **0.57 clicks/day**; two-phase decline (gradual demotion Mar–Sep 2025 → impression cliff Sep–Oct 2025); CWV all failing (SGB perf 42, LCP 6.9s). **Two small confirmations still need you:** (a) check the **Manual actions** panel explicitly — you confirmed Security Issues clean but not this; (b) export the **Page Indexing** report to confirm the Oct-2025 cliff was an indexing loss.
 
 1. **Manual Actions** (GSC → Security & Manual Actions → Manual actions) — confirm none. If the fake-review schema triggered one, the removal above is the fix; file a **reconsideration request** once deployed.
 2. **Security Issues** panel — confirm clean.
