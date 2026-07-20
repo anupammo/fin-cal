@@ -27,9 +27,9 @@
 - [x] Verify small-savings rates against Jul–Sep 2026 MoF notification — PPF/NSC/SCSS/KVP/POMIS correct; **SSY fixed 8%→8.2%** (EN/HI/BN) (2026-07-20). ☐ still spot-check POTD/PORD tenures
 - [ ] Verify FD/RD/SB slabs for SBI, PNB, BOB, BOI, UBI against each bank's official rate page — **needs owner** (per-bank, changes often)
 - [x] Update Income Tax calculator to FY 2026-27 / AY 2027-28 new-regime slabs (Budget 2026); label regime + assessment year visibly — rebuilt as correct progressive calc, verified in-browser (2026-07-20). ⚠️ EN only; marginal relief not yet applied
-- [ ] Verify APY, PMJJBY, PMSBY premium figures
-- [ ] Add/refresh a visible "Rates updated: {date} · Source" line on every page touched
-- [ ] Mirror every fix into `/hi` and `/bn` versions
+- [x] Verify APY, PMJJBY, PMSBY premium figures — **PMJJBY fixed** (stale "₹330/2021" prose → ₹436, EN/HI/BN); PMSBY ₹20 & APY ₹42–₹1,454 verified correct (2026-07-20)
+- [x] Add/refresh a visible "Rates updated: {date} · Source" line on rate pages touched — added (localized) to SSY ×3 + MIS strong page (2026-07-20). Sitewide rollout becomes automatic via `rates.json` in Phase 1
+- [x] Mirror every fix into `/hi` and `/bn` versions — SSY (rate + verified line) and PMJJBY (premium) mirrored ×3 langs. Note: income-tax & MIS-strong pages have no hi/bn counterpart yet (create in Phase 2)
 
 ### Crawl & infrastructure hygiene
 - [x] Regenerate `sitemap.xml` with real lastmod dates (from git history) (2026-07-20) — ☐ resubmit in GSC after deploy
@@ -37,7 +37,7 @@
 - [x] Delete `ror.xml`, `urllist.txt`, `sitemaps25022024.zip` from web root (2026-07-20)
 - [x] Consolidate `sw.js` / `serviceWorker.js` / `pwabuilder-sw.js` into ONE service worker; version the cache; network-first for HTML (2026-07-20)
 - [x] Confirm 404 page returns HTTP 404 (not soft-200) — verified live: `nivesguru.in/<missing>` → **404**, pages → 200 (2026-07-20)
-- [ ] Set up weekly KPI snapshot (GSC API or manual sheet): clicks/day, impressions, top queries
+- [x] Set up weekly KPI snapshot: `scripts/kpi-snapshot.mjs` — feed it the weekly GSC Chart.csv export → appends dated row to `docs/kpi-log.csv` (clicks/day, impr/day, CTR, position, WoW deltas). First row logged (2026-07-20)
 
 > **Handoff:** code-side Phase 0 is complete — see [PHASE-0-STATUS.md](./PHASE-0-STATUS.md). Remaining items (GSC diagnosis 0.1, rate verification 0.3, income-tax FY2026-27 0.4) need your external access / official figures.
 
