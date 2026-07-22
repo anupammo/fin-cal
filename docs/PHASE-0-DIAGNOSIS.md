@@ -76,6 +76,32 @@ Accessibility 91 · **Best Practices 77** · SEO 100.
 - **Phase 1 (performance)** is non-optional: LCP 6.9s / CLS 0.162 / TBT 610ms all fail and are ranking inputs.
 - **Recalibrate targets:** getting back to 8.5K/day from 0.57/day is a rebuild, not a bounce-back. Suggested interim: **50 clicks/day by Dec 2026** (≈ the Mar-2025 level, i.e. recover the demotion), **500/day by Mar 2027**, then chase the record through H2 2027. (The [REVAMP-PLAN §3](./REVAMP-PLAN-2026.md#3-targets--kpis) 5,000/8,500 numbers were placeholders assuming a shallow dip — the real hole is far deeper.)
 
-## Still open (needs you)
-- **Manual Actions panel** — you confirmed *Security Issues* = clean, but please also check **Manual actions** explicitly. The Sep–Oct 2025 impression cliff *could* be a manual action (though the gradual pattern leans algorithmic). If flagged → deploy fixes, then Request Review.
-- **Page Indexing report** — export the "Why pages aren't indexed" counts (Crawled-not-indexed / Duplicate) to confirm whether the cliff was an indexing loss.
+## Manual Actions — ✅ CONFIRMED CLEAN (2026-07-20)
+Both **Manual actions** and **Security Issues** panels: *"No issues detected."*
+
+**Conclusion: the collapse is purely algorithmic — there is no penalty.** This settles the diagnosis:
+- No reconsideration request is needed or possible; there is nothing to appeal.
+- Recovery path = exactly what the revamp is doing: remove the trust-poison (fake-review schema — done), restore freshness (rates + honest sitemap — done), fix CWV (Phase 1), rebuild E-E-A-T (Phase 2), then earn back rankings on re-crawl.
+- Timeline implication: algorithmic recoveries re-rate over weeks-to-months as Google re-crawls and often step up at core updates — expect gradual improvement, not an overnight jump.
+
+## Page Indexing — ✅ CONFIRMED (2026-07-20): **Indexed 100 / Not indexed 52**
+
+**Conclusion: the Oct-2025 impression cliff was de-ranking, not mass deindexing.** With 100 of ~150 pages still indexed but only ~195 impressions/day at avg position ~60, the pages are *in* the index — they just rank too low to surface. This completes the diagnosis:
+
+| Question | Answer |
+|---|---|
+| Manual penalty? | **No** — Manual actions + Security Issues both clean |
+| Deindexed? | **No** — 100 pages indexed |
+| Root cause | **Algorithmic quality demotion** (trust/staleness/CWV) |
+| Recovery path | Deploy fixes → resubmit sitemap + request indexing → Phase 1 performance & URL consolidation → Phase 2 E-E-A-T. Re-rating over weeks-to-months, stepping up at core updates |
+
+**Reason breakdown (GSC → Indexing → Pages, 2026-07-20):**
+
+| Reason | Pages | What it means |
+|---|---|---|
+| **Crawled – currently not indexed** | **41** | 🎯 **The smoking gun.** Google crawled these and *chose* not to index them — its explicit thin-content/low-quality verdict on ~28% of the site. Direct target of Phase 2 (content depth, E-E-A-T, unique value per page) |
+| Discovered – currently not indexed | 8 | Google didn't consider them worth crawling — low priority/demand signal; improves as site quality recovers |
+| Not found (404) | 3 | Broken URLs — identify in the report's URL list; fix or remove from sitemap/links |
+| Alternate page with proper canonical | 0 | Notably **zero** — the dual MIS/SGB URLs are *not* being deduplicated by Google; they're likely splitting equity as separately indexed (or sitting in the 41). Consolidation still worthwhile |
+
+This sharpens the recovery order: the 41 crawled-not-indexed pages are Google telling us *exactly which pages it considers thin*. Phase 2's per-page depth work (formula sections, sourced rate tables, FAQs) should start with those 41 — export their URL list from this report to drive the Phase 2 priority queue.

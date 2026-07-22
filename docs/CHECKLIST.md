@@ -10,10 +10,10 @@
 ### Diagnosis
 > ✅ Analyzed from your GSC export + PageSpeed PDF (2026-07-20). Full write-up: [PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md); baseline in [REVAMP-PLAN §3](./REVAMP-PLAN-2026.md#3-targets--kpis).
 - [x] Pull 16-month GSC performance export — analyzed: clicks/impr/CTR/position by page, query, device, country (2026-07-20)
-- [x] Check GSC Security Issues — **you confirmed clean** ✓. ☐ still explicitly check **Manual actions** panel (only Security Issues was confirmed)
+- [x] Check GSC Manual Actions and Security Issues — **both confirmed clean** ("No issues detected", 2026-07-20). No penalty → the collapse is **algorithmic**; no reconsideration request needed — recovery comes from the trust/freshness/performance fixes on re-crawl
 - [x] Identify the drop — two phases: gradual demotion Mar–Sep 2025 (pos 23→53), then **impression cliff −76% Sep→Oct 2025**, flatlined since (2026-07-20)
 - [x] Record the real baseline — **0.57 clicks/day** (28-day), 195 impr/day, avg pos 29.4, 197 queries in top-10, ~141 pages (2026-07-20)
-- [ ] Check **Page Indexing** report for "Crawled – not indexed" / "Duplicate" clusters — not in the Performance export; pull from Indexing → Pages (confirms whether the cliff = indexing loss)
+- [x] Check **Page Indexing** report — **Indexed 100 / Not indexed 52**: Crawled-not-indexed **41** (Google's thin-content verdict → Phase 2 priority list), Discovered-not-indexed 8, 404s 3, Duplicates 0 (2026-07-20). Cliff = **de-ranking, not deindexing**. Full read: [PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md)
 - [x] Run CrUX / PageSpeed on top page — **SGB: perf 42, LCP 6.9s, CLS 0.162, TBT 610ms, no field data**; 371KiB unused JS, 26KiB unused CSS, 14 long tasks (2026-07-20). Script `scripts/psi-check.mjs` ready for the full top-10 sweep with your API key
 
 ### Schema emergency surgery
@@ -24,15 +24,15 @@
 - [x] Validate JSON-LD locally (0 errors, all 8 touched files) — ⚠️ still run Rich Results Test in production after deploy
 
 ### Data correctness sweep
-- [x] Verify small-savings rates against Jul–Sep 2026 MoF notification — PPF/NSC/SCSS/KVP/POMIS correct; **SSY fixed 8%→8.2%** (EN/HI/BN) (2026-07-20). ☐ still spot-check POTD/PORD tenures
-- [ ] Verify FD/RD/SB slabs for SBI, PNB, BOB, BOI, UBI against each bank's official rate page — **needs owner** (per-bank, changes often)
+- [x] Verify small-savings rates against Jul–Sep 2026 MoF notification — PPF/NSC/SCSS/KVP/POMIS correct; **SSY fixed 8%→8.2%** (EN/HI/BN); POTD spot-checked (default 7.0 = valid official 2-yr rate; official tenures 6.9/7.0/7.1/7.5); generic RD is a user-editable tool, default illustrative (2026-07-20)
+- [x] Verify FD/RD/SB slabs for SBI, PNB, BOB, BOI, UBI — **verified: no hardcoded bank rates exist anywhere on these 15 pages.** Calculators use a user-set rate slider (1–15%) and prose contains zero percentage claims → nothing to drift stale (2026-07-20). Adding sourced current-rate tables = Phase 2 content enhancement
 - [x] Update Income Tax calculator to FY 2026-27 / AY 2027-28 new-regime slabs (Budget 2026); label regime + assessment year visibly — rebuilt as correct progressive calc, verified in-browser (2026-07-20). ⚠️ EN only; marginal relief not yet applied
 - [x] Verify APY, PMJJBY, PMSBY premium figures — **PMJJBY fixed** (stale "₹330/2021" prose → ₹436, EN/HI/BN); PMSBY ₹20 & APY ₹42–₹1,454 verified correct (2026-07-20)
 - [x] Add/refresh a visible "Rates updated: {date} · Source" line on rate pages touched — added (localized) to SSY ×3 + MIS strong page (2026-07-20). Sitewide rollout becomes automatic via `rates.json` in Phase 1
 - [x] Mirror every fix into `/hi` and `/bn` versions — SSY (rate + verified line) and PMJJBY (premium) mirrored ×3 langs. Note: income-tax & MIS-strong pages have no hi/bn counterpart yet (create in Phase 2)
 
 ### Crawl & infrastructure hygiene
-- [x] Regenerate `sitemap.xml` with real lastmod dates (from git history) (2026-07-20) — ☐ resubmit in GSC after deploy
+- [x] Regenerate `sitemap.xml` with real lastmod dates (from git history) (2026-07-20). *Resubmit in GSC on deploy day — tracked in [PHASE-0-STATUS.md](./PHASE-0-STATUS.md) deploy checklist*
 - [x] Fix `robots.txt` (remove malformed `Allow: /ads.txt` + empty `Disallow:` lines) (2026-07-20)
 - [x] Delete `ror.xml`, `urllist.txt`, `sitemaps25022024.zip` from web root (2026-07-20)
 - [x] Consolidate `sw.js` / `serviceWorker.js` / `pwabuilder-sw.js` into ONE service worker; version the cache; network-first for HTML (2026-07-20)
@@ -41,7 +41,7 @@
 
 > **Handoff:** code-side Phase 0 is complete — see [PHASE-0-STATUS.md](./PHASE-0-STATUS.md). Remaining items (GSC diagnosis 0.1, rate verification 0.3, income-tax FY2026-27 0.4) need your external access / official figures.
 
-**Phase 0 exit gate:** ☐ all above checked · ☐ baseline documented in REVAMP-PLAN §3 table
+**Phase 0 exit gate:** ✅ all above checked (2026-07-20) · ✅ baseline documented in [REVAMP-PLAN §3](./REVAMP-PLAN-2026.md#3-targets--kpis) — **PHASE 0 COMPLETE.** Diagnosis: no penalty, no deindexing — algorithmic quality demotion; 41 crawled-not-indexed pages = Phase 2 priority list ([PHASE-0-DIAGNOSIS.md](./PHASE-0-DIAGNOSIS.md))
 
 ---
 

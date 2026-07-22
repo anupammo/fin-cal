@@ -28,7 +28,7 @@ Phase 0 of the [CHECKLIST](./CHECKLIST.md) splits into **code work (done in this
 ### 📝 Found-in-passing (not Phase 0 — logged for later phases)
 - **`about-us.html`**: schema `@type` is `LocalBusiness` (should be `Organization`/`AboutPage`) and the `Article` `articleBody` is boilerplate about **"web development services / SEO services"** — wrong content for a finance site. → Phase 2 (E-E-A-T rewrite).
 - **`bank-balance-check.html`**: `canonical` and some `og:url` point to `nivesguru.**com**` (wrong TLD — site is `.in`). → fix before/with next deploy.
-- **`sitemap.xml`**: duplicate entries for `/hi/` and `/bn/` (each appears twice). → dedup in Phase 1 build-time sitemap.
+- ~~**`sitemap.xml`**: duplicate entries for `/hi/` and `/bn/`~~ → **FIXED 2026-07-20**: sitemap deduped (146→139 entries) and the two canonicalized weak URLs removed. **URL consolidation done:** `/sovereign-gold-bond-calculator` → canonical `/sgb-calculator`; `/post-office-monthly-income-scheme-mis-calculator` → canonical `/post-office-monthly-income-scheme-calculator` (hi/bn hreflang rewired to the strong EN URL).
 - **SGB pages**: `Product` markup still describes the expired **Feb 2024 Series IV** with hardcoded prices. → refresh or drop the Product block in Phase 2.
 
 ---
