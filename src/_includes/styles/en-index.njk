@@ -1,0 +1,81 @@
+{% raw %}
+<style>
+        /* header */
+        a.navbar-brand img {
+            margin-top: -2px;
+        }
+
+        header {
+            background: linear-gradient(165deg,
+                    #FF9933 0%,
+                    #FF9933 25%,
+                    #fff 25%,
+                    #fff 65%,
+                    #138808 65%,
+                    #138808 100%);
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wave1 {
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0) 75%,
+                    #fff 75%,
+                    #fff 100%);
+        }
+
+        /* header */
+        /* Headings and links color */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a {
+            color: #001169;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* footer */
+        .bg-duo {
+            background: linear-gradient(180deg,
+                    #fff 50%,
+                    rgba(0, 0, 0, 0) 50%);
+        }
+
+        a small,
+        a svg {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        a small {
+            font-size: .6rem;
+        }
+
+        /* footer */
+    </style>
+{% endraw %}

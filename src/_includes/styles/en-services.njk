@@ -1,0 +1,104 @@
+{% raw %}
+<style>
+        /* Navbar background */
+        nav.navbar {
+            background-color: #00000077;
+        }
+        /* Navbar brand logo alignment */
+        a.navbar-brand img {
+            margin-top: -5px;
+        }
+        /* Tricolor header background with Ashoka Chakra overlay */
+        header {
+            background: linear-gradient(
+                165deg,
+                #FF9933 0%,
+                #FF9933 25%,
+                #fff 25%,
+                #fff 65%,
+                #138808 65%,
+                #138808 100%
+            );
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Section background wave */
+        .wave1 {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 75%,
+                #fff 75%,
+                #fff 100%
+            );
+        }
+        /* Headings and links color */
+        h1, h2, h3, h4, h5, a {
+            color: #001169;
+        }
+        ul li {
+            list-style: none;
+        }
+        .modal-content {
+            background: linear-gradient(
+                125deg,
+                #ffc107 0%,
+                #ffc107 30%,
+                #fff calc(30% + 1px),
+                #fff 60%,
+                #fff calc(60% + 1px),
+                #fff 72%,
+                #fff calc(72% + 1px),
+                #fff 100%
+            );
+        }
+        a small,
+        a svg {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+        a small {
+            font-size: .6rem;
+        }
+        .card:hover div div img.img-fluid {
+            animation: img-fluid 0.9s both;
+        }
+        .card-320 {
+            max-width: 360px;
+        }
+        .bg-duo {
+            background: linear-gradient(
+                180deg,
+                #fff 50%,
+                rgba(0, 0, 0, 0) 50%
+            );
+        }
+        @keyframes img-fluid {
+            0% { transform: scale3d(1, 1, 1); }
+            30% { transform: scale3d(1.25, 0.75, 1); }
+            40% { transform: scale3d(0.75, 1.25, 1); }
+            50% { transform: scale3d(1.15, 0.85, 1); }
+            65% { transform: scale3d(0.95, 1.05, 1); }
+            75% { transform: scale3d(1.05, 0.95, 1); }
+            100% { transform: scale3d(1, 1, 1); }
+        }
+    </style>
+{% endraw %}

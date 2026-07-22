@@ -1,0 +1,1078 @@
+---json
+{
+  "title": "মুদ্রাস্ফীতি ক্যালকুলেটর ভারতীয় বিনিয়োগের জন্য বিনামূল্যে",
+  "description": "ভারতে মুদ্রাস্ফীতি ক্যালকুলেটরের তাৎপর্য অন্বেষণ করুন। কীভাবে মুদ্রাস্ফীতির হার গণনা করতে হয়, রুপির মান ট্র্যাক করতে হয় এবং এর প্রভাব বুঝতে শিখুন",
+  "translations": [
+    "en",
+    "bn",
+    "hi"
+  ],
+  "ogImage": "https://nivesguru.in/res/meta/inflation-calculator.png",
+  "pageStyle": "styles/bn-inflation-calculator-india.njk",
+  "pageSchema": "schema/bn-inflation-calculator-india.njk"
+}
+---
+{% raw %}
+    <header id="calculator">
+        <div class="wave1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="../favicon-32x32.png" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI Calculator</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP Calculator</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            Calculator</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings Calculators
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD Calculator</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOI FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOI RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD Calculator</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOI SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB Calculator</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB Calculator</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
+                                            </path>
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu" data-bs-popper="static">
+                                    <li><a class="dropdown-item" href="../inflation-calculator-india">English</a></li>
+                                    <li><a class="dropdown-item" href="../hi/inflation-calculator-india">हिंदी</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body">
+                                <div class="px-5 pt-5">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a title="Home" href="./">🏠 Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="inflation-calculator">
+                                                Inflation Calculator</li>
+                                        </ol>
+                                    </nav>
+                                    <h1 class="lead fw-bold mb-5 fs-3">বিনামূল্যে অনলাইন মুদ্রাস্ফীতি ক্যালকুলেটর
+                                        ইন্ডিয়া ইনভেস্টমেন্ট Nivesguru</h1>
+                                    <form>
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="fd_toti" class="form-label">Current Amount</label>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="form-label fw-bold float-end"
+                                                        id="inv-disp">100000</label>
+                                                </div>
+                                            </div>
+                                            <input type="range" class="form-range" min="0" max="5000000" step="50000"
+                                                value="100000" id="fd_toti" onchange="dispInv()">
+                                            <div class="row">
+                                                <span class="col">0</span>
+                                                <span class="text-end col">5000000</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="fd_roi" class="form-label">Inflation Rate (Year)</label>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="form-label fw-bold float-end" id="age-disp">6</label>
+                                                </div>
+                                            </div>
+                                            <input type="range" class="form-range" min="1" max="15" step=".1" value="6"
+                                                id="fd_roi" onchange="dispROI()">
+                                            <div class="row">
+                                                <span class="col">1</span>
+                                                <span class="text-end col">15</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="fd_idur" class="form-label">Time (Duration)</label>
+                                                </div>
+                                                <div class="col">
+                                                    <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                                </div>
+                                            </div>
+                                            <input type="range" class="form-range" min="1" max="25" step="1" value="5"
+                                                id="fd_idur" onchange="dispTime()">
+                                            <div class="row">
+                                                <span class="col">1</span>
+                                                <span class="text-end col">25</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
+                                                onclick="fdCalc();">Calculate</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body py-0">
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow border-0 my-3">
+                            <div class="card-body">
+                                <div class="px-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
+                                            <time pubdate="pubdate" datetime="2023-09-10">Updated on : Sep 10,
+                                                2023</time>
+                                        </li>
+                                        <li class="list-group-item lead fs-6 pt-0 px-0">
+                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                                rel="author">Anupam Mondal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <section id="toc" class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center my-5">Table of Contents [TOC]</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <ul class="lead fs-6">
+                        <li>1. Introduction</li>
+                        <li>2. What is Inflation?</li>
+                        <li>3. The Importance of Measuring Inflation</li>
+                        <li>4. Introducing Inflation Calculators</li>
+                        <li>5. How Do Inflation Calculators Work?</li>
+                        <li>6. Calculating Inflation Rate: A Step-by-Step Guide</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12">
+                    <ul class="lead fs-6">
+                        <li>7. Inflation Calculators in India: Tailored for the Rupee</li>
+                        <li>8. Benefits of Using an Inflation Calculator</li>
+                        <li>9. Making Informed Financial Decisions</li>
+                        <li>10. The Future of Inflation and Economic Outlook</li>
+                        <li>11. Conclusion</li>
+                        <li>12. FAQs</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12">
+                    <ul class="lead fs-6">
+                        <li>1. How accurate are inflation calculators?</li>
+                        <li>2. Can I use an inflation calculator for long-term financial planning?</li>
+                        <li>3. Are inflation calculators user-friendly?</li>
+                        <li>4. Is historical inflation data easily accessible?</li>
+                        <li>5. Are inflation rates consistent across different countries?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">একটি ব্যাপক গাইড <span class="d-block h4 mt-2">মুদ্রাস্ফীতি
+                                ভারতে ক্যালকুলেটর</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-4">ভূমিকা: মুদ্রাস্ফীতি ক্যালকুলেটর</h3>
+                    <p class="lead fs-6">আজকের গতিশীল অর্থনৈতিক ল্যান্ডস্কেপে, মুদ্রাস্ফীতি এবং এর প্রভাব বোঝা
+                        ব্যক্তি এবং ব্যবসা উভয়ের জন্যই গুরুত্বপূর্ণ। একটি শক্তিশালী টুল যা আমাদের বুঝতে সাহায্য করে
+                        মুদ্রাস্ফীতির প্রভাব একটি মুদ্রাস্ফীতি ক্যালকুলেটর। এই নিবন্ধে, আমরা ধারণাটি নিয়ে আলোচনা করব
+                        মুদ্রাস্ফীতি, ভারতে মুদ্রাস্ফীতি ক্যালকুলেটরগুলির তাৎপর্য অন্বেষণ করুন এবং অন্তর্দৃষ্টি প্রদান
+                        করুন
+                        তারা কিভাবে কাজ করে এবং তাদের সুবিধা।</p>
+                </div>
+                <div class="col-lg-8 col-md-6 col-12">
+                    <p class="lead fs-6">এমন একটি বিশ্বে যেখানে অর্থনীতি ক্রমাগত বিকশিত হচ্ছে, এটি বোঝা অত্যন্ত
+                        গুরুত্বপূর্ণ
+                        মুদ্রাস্ফীতির প্রভাব, বিশেষ করে ভারতের মতো গতিশীল দেশে। বোঝার জন্য
+                        রুপির মূল্যের ওঠানামা এবং এর ব্যাপক প্রভাব, একটি হাতিয়ার অমূল্য প্রমাণ করে:
+                        মুদ্রাস্ফীতি ক্যালকুলেটর। এই নিবন্ধটি মুদ্রাস্ফীতির জগতের সন্ধান করে, কীভাবে সে সম্পর্কে
+                        অন্তর্দৃষ্টি প্রদান করে
+                        একটি মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহার করতে, এর সুবিধা এবং ভারতীয় অর্থনীতির জন্য এর তাৎপর্য।</p>
+                    <h3 class="mb-4">এর তাৎপর্য বোঝা</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি, একটি মৌলিক অর্থনৈতিক ধারণা, স্থিতিশীল বৃদ্ধিকে বোঝায়
+                        নির্দিষ্ট সময়ের মধ্যে পণ্য এবং পরিষেবার সাধারণ মূল্য স্তর। এই ঘটনাটি ক্ষয় করে
+                        অর্থের ক্রয় ক্ষমতা এবং ব্যক্তিগত অর্থ, সঞ্চয়,
+                        বিনিয়োগ, এবং অর্থনৈতিক নীতি.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="../inflation-calculator-india-nivesguru.svg" class="img-fluid rounded mb-3"
+                        alt="Inflation Calculator of India by Nivesguru">
+                </div>
+                <div class="col-12">
+                    <p class="lead fs-6">একটি <strong>মুদ্রাস্ফীতি ক্যালকুলেটর</strong> পরিমাপ করার জন্য একটি শক্তিশালী
+                        হাতিয়ার হিসেবে কাজ করে
+                        সময়ের সাথে সাথে অর্থের ক্রয় ক্ষমতার পরিবর্তন। পণ্য ও পরিষেবার ক্রমবর্ধমান ব্যয়ের সাথে,
+                        অবহিত আর্থিক সিদ্ধান্ত নেওয়ার জন্য মূল্যস্ফীতি বোঝা গুরুত্বপূর্ণ হয়ে ওঠে। মধ্যে ফ্যাক্টরিং
+                        দ্বারা
+                        মুদ্রাস্ফীতি, ব্যক্তি, ব্যবসা এবং নীতিনির্ধারকরা কার্যকরভাবে ভবিষ্যতের জন্য পরিকল্পনা করতে পারে৷
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 mb-4">মুদ্রাস্ফীতি কি?</h2>
+                    <p class="lead fs-6">মূল্যস্ফীতি বিভিন্ন অর্থনৈতিক কারণের ফল, যেমন চাহিদা বৃদ্ধি,
+                        সরবরাহ ঘাটতি, এবং উত্পাদন খরচ পরিবর্তন. যখন মুদ্রাস্ফীতির হার মাঝারি হয়, তারা করতে পারে
+                        অর্থনৈতিক প্রবৃদ্ধিকে উদ্দীপিত করে, কিন্তু উচ্চ মুদ্রাস্ফীতি অর্থনৈতিক অস্থিতিশীলতার দিকে নিয়ে
+                        যেতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 mb-4">মূল্যস্ফীতি পরিমাপের গুরুত্ব</h2>
+                    <p class="lead fs-6">মূল্যস্ফীতি সঠিকভাবে পরিমাপ করা সরকার, কেন্দ্রীয় ব্যাংক,
+                        ব্যবসা, এবং ব্যক্তি. এটি একটি অর্থনীতির স্বাস্থ্যের মূল্যায়ন করতে সাহায্য করে, প্রণয়ন করে
+                        আর্থিক নীতি, এবং অবহিত আর্থিক সিদ্ধান্ত গ্রহণ।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 mb-4">মুদ্রাস্ফীতি ক্যালকুলেটর প্রবর্তন</h2>
+                    <p class="lead fs-6">একটি মুদ্রাস্ফীতি ক্যালকুলেটর হল একটি মূল্যবান অনলাইন টুল যা আপনাকে বুঝতে দেয়
+                        টাকার ক্রয় ক্ষমতার উপর মুদ্রাস্ফীতির প্রভাব। এটি আপনাকে পণ্যের দাম তুলনা করতে সহায়তা করে
+                        এবং বিভিন্ন সময়কাল জুড়ে পরিষেবা।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 mb-4">মুদ্রাস্ফীতি ক্যালকুলেটর কিভাবে কাজ করে?</h2>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি ক্যালকুলেটরগুলি সামঞ্জস্য করতে ঐতিহাসিক মূল্য ডেটা এবং
+                        মুদ্রাস্ফীতির হার ব্যবহার করে
+                        সময়ের সাথে টাকার মূল্য। তারা ভোক্তা মূল্য সূচক (সিপিআই) এর মতো বিষয়গুলি বিবেচনা করে
+                        সঠিক ফলাফল প্রদান।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-4">মূল্যস্ফীতির হার গণনা করা: একটি ধাপে ধাপে নির্দেশিকা</h2>
+                    <p class="lead fs-6">মুদ্রাস্ফীতির হার গণনা করতে, একটি নির্দিষ্ট আইটেমের দামের ডেটা সংগ্রহ করুন বা ক
+                        দুটি ভিন্ন সময়ের মধ্যে পণ্যের ঝুড়ি। পরবর্তী মূল্যকে পূর্বের মূল্য দ্বারা ভাগ করুন,
+                        একটি বিয়োগ করুন এবং মুদ্রাস্ফীতির হার পেতে 100 দ্বারা গুণ করুন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h5 my-4">ভারতে মুদ্রাস্ফীতি ক্যালকুলেটর: <span
+                                class="d-block mt-2 h3">রুপির জন্য তৈরি</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="inflation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead fs-6">ভারতে, মুদ্রাস্ফীতি ক্যালকুলেটরগুলি ভারতীয়দের জন্য অনন্যভাবে ডিজাইন করা হয়েছে
+                        রুপি (INR)। তারা ভারতের নির্দিষ্ট মুদ্রাস্ফীতির হার এবং ভোক্তা ক্রয়ের ধরণ বিবেচনা করে।
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <h3 class="mb-4">মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহার করার সুবিধা</h3>
+                    <p class="lead fs-6 mb-4">
+                        <strong>অবহিত আর্থিক পরিকল্পনা:</strong> মুদ্রাস্ফীতি কীভাবে আপনার প্রভাবিত করে তা বোঝার মাধ্যমে
+                        অর্থের মূল্য, আপনি অবসর, শিক্ষা এবং বড় খরচের জন্য আরও কার্যকরভাবে পরিকল্পনা করতে পারেন।
+                    </p>
+                    <p class="lead fs-6 mb-4">
+                        <strong>বাস্তবসম্মত লক্ষ্য নির্ধারণ:</strong> মুদ্রাস্ফীতি ক্যালকুলেটর বাস্তবসম্মত আর্থিক সেট
+                        করতে সাহায্য করে
+                        জীবনযাত্রার পরিবর্তিত খরচের জন্য অ্যাকাউন্টিং দ্বারা লক্ষ্য।
+                    </p>
+                    <p class="lead fs-6 mb-4">
+                        <strong>বিনিয়োগের সিদ্ধান্ত:</strong> ফ্যাক্টরিংয়ের মাধ্যমে বিনিয়োগের সুযোগগুলি আরও ভালভাবে
+                        মূল্যায়ন করুন
+                        আয়ের উপর মুদ্রাস্ফীতির প্রভাবে।
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/7136068/pexels-photo-7136068.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-2" alt="Benefits of Inflation Calculator - Nivesguru">
+                </div>
+                <div class="col-12">
+                    <h3 class="h4 mb-4">অবহিত আর্থিক সিদ্ধান্ত নেওয়া</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি ক্যালকুলেটর ব্যক্তিদেরকে সু-অবহিত আর্থিক করার ক্ষমতা দেয়
+                        পছন্দ তারা সঠিক বাজেট, বিজ্ঞ বিনিয়োগ কৌশল এবং দীর্ঘমেয়াদী পরিকল্পনার অনুমতি দেয়।
+                    </p>
+                    <h3 class="h4 mb-4">মুদ্রাস্ফীতি এবং অর্থনৈতিক আউটলুকের ভবিষ্যত</h3>
+                    <p class="lead fs-6">অর্থনীতির বিকাশের সাথে সাথে মুদ্রাস্ফীতিও ঘটে। মুদ্রাস্ফীতির প্রবণতার উপর নজর
+                        রাখা
+                        আমাদের ভবিষ্যৎ অর্থনৈতিক অবস্থার পূর্বাভাস দিতে এবং সেই অনুযায়ী আমাদের আর্থিক কৌশলগুলিকে
+                        মানিয়ে নিতে সাহায্য করে।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">মূল্যস্ফীতি গণনা: একটি ঘনিষ্ঠ চেহারা</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="calculating">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">মুদ্রাস্ফীতি হার ক্যালকুলেটর ব্যবহার করে</h3>
+                    <p class="lead fs-6"><strong>মূল্যস্ফীতি হার ক্যালকুলেটর</strong> পরিমাপ করার জন্য একটি অপরিহার্য
+                        হাতিয়ার
+                        ক্রয় ক্ষমতার উপর মুদ্রাস্ফীতির প্রভাব। এটি সাধারণ শতাংশ বৃদ্ধি বিবেচনা করে
+                        একটি নির্দিষ্ট সময়ের মধ্যে পণ্য এবং পরিষেবার মূল্য স্তর। এই টুলটি সাধারণত একটি ঝুড়ি ব্যবহার
+                        করে
+                        জীবনযাত্রার ব্যয়ের পরিবর্তন অনুমান করার জন্য গৃহীত আইটেম।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">ক্যালকুলেটরের পিছনের সূত্র</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি গণনা করতে, আপনি সূত্রটি ব্যবহার করতে পারেন:</p>
+
+                    <code>মুদ্রাস্ফীতির হার = ((বর্তমান CPI - আগের CPI) / আগের CPI) * 100</code>
+
+                    <p class="lead fs-6">যেখানে CPI মানে কনজিউমার প্রাইস ইনডেক্স।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dynamics">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">ভারতে মুদ্রাস্ফীতি ক্যালকুলেটর: রুপির মূল্যের উপর প্রভাব</h3>
+                    <p class="lead fs-6"><strong>রুপির মূল্যস্ফীতি ক্যালকুলেটর</strong> এটির জন্য সহায়ক
+                        মুদ্রাস্ফীতি কীভাবে ভারতীয় রুপির মানকে প্রভাবিত করে তা বোঝা। মুদ্রাস্ফীতি বৃদ্ধির সাথে সাথে,
+                        রুপির ক্রয়ক্ষমতা হ্রাস পায়, যার ফলে এর প্রকৃত মূল্য হ্রাস পায়। এই বিশেষ করে
+                        আন্তর্জাতিক বাণিজ্য ও বিনিয়োগের জন্য গুরুত্বপূর্ণ, কারণ দুর্বল রুপি আমদানি ও রপ্তানিকে প্রভাবিত
+                        করে
+                        গতিবিদ্যা।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">ভারত মুদ্রাস্ফীতি ক্যালকুলেটর: নেভিগেটিং অর্থনৈতিক প্রবণতা</h3>
+                    <p class="lead fs-6"><strong>ভারত মুদ্রাস্ফীতি ক্যালকুলেটর</strong> এর জন্য একটি শক্তিশালী হাতিয়ার
+                        দেশের ঐতিহাসিক মুদ্রাস্ফীতির প্রবণতা বিশ্লেষণ করা। বিভিন্ন সময়ের ডেটা ইনপুট করে,
+                        ব্যবহারকারীরা পরিবর্তনশীল অর্থনৈতিক ল্যান্ডস্কেপ কল্পনা করতে পারে। এই টুলটি অর্থনীতিবিদ,
+                        গবেষকদের সাহায্য করে,
+                        এবং নীতিনির্ধারকরা মূল্যস্ফীতিকে কার্যকরভাবে পরিচালনা করার জন্য নিদর্শনগুলি সনাক্ত করে এবং
+                        কৌশলগুলি তৈরি করে।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="understanding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h3 mt-5 mb-4">মুদ্রাস্ফীতি ক্যালকুলেটর INR: <br />আপনার বিনিয়োগ ট্র্যাকিং</h2>
+                    <h3 class="h4 mb-3">দীর্ঘমেয়াদী বিনিয়োগ ব্যবস্থাপনা</h3>
+                    <p class="lead fs-6"><strong>মূল্যস্ফীতি ক্যালকুলেটর INR</strong> বিনিয়োগকারীদের মূল্যায়ন করার
+                        ক্ষমতা দেয়
+                        তাদের বিনিয়োগের প্রকৃত আয়। যদিও একটি বিনিয়োগ ইতিবাচক নামমাত্র রিটার্ন দিতে পারে,
+                        মূল্যস্ফীতি ফ্যাক্টরিং একটি আরো সঠিক ছবি আঁকা. এই টুল বিনিয়োগকারীদের নির্ধারণ করতে সাহায্য করে
+                        তাদের বিনিয়োগ সত্যিকার অর্থে বাড়ছে নাকি মুদ্রাস্ফীতির সাথে তাল মিলিয়ে চলছে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h3 mt-5 mb-4">মুদ্রাস্ফীতি হার ক্যালকুলেটর ভারত: <br />ভবিষ্যত প্রবণতা পূর্বাভাস</h2>
+                    <h3 class="h4 mb-3">আর্থিক পরিকল্পনা গঠন</h3>
+                    <p class="lead fs-6"><strong>মুদ্রাস্ফীতি হার ক্যালকুলেটর ভারত</strong> এর জন্য অপরিহার্য
+                        আর্থিক পরিকল্পনা. ঐতিহাসিক তথ্য বিশ্লেষণ করে, ব্যক্তি এবং ব্যবসা করতে পারেন
+                        ভবিষ্যতের জন্য অনুমান। এই সক্রিয় পদ্ধতি তাদের বাজেট, সঞ্চয় সামঞ্জস্য করতে সক্ষম করে
+                        লক্ষ্য, এবং মুদ্রাস্ফীতির প্রভাব মোকাবেলায় বিনিয়োগ কৌশল।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="role">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center my-4">কেন্দ্রীয় ব্যাংকের ভূমিকা</h2>
+                    <p class="lead fs-6">কেন্দ্রীয় ব্যাংক মুদ্রাস্ফীতি নিয়ন্ত্রণে এবং স্থিতিশীল করার ক্ষেত্রে একটি
+                        গুরুত্বপূর্ণ ভূমিকা পালন করে
+                        অর্থনীতি সুদের হার এবং খোলা বাজারের মতো বিভিন্ন মুদ্রানীতির সরঞ্জাম ব্যবহার করে
+                        কার্যক্রম, কেন্দ্রীয় ব্যাংকের লক্ষ্য মুদ্রাস্ফীতি নিয়ন্ত্রণ করা এবং অর্থনৈতিক অশান্তি প্রতিরোধ
+                        করা।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h3 my-4">উপলব্ধ সরঞ্জামগুলি অন্বেষণ করা: ভারতে সেরা মুদ্রাস্ফীতি ক্যালকুলেটর৷</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <h3 class="h4 my-4">1. আরবিআই-এর মুদ্রাস্ফীতি ক্যালকুলেটর</h3>
+                    <p class="lead fs-6">ভারতীয় রিজার্ভ ব্যাঙ্ক অফিশিয়াল <strong>স্ফীতি প্রস্তাব করে৷
+                            ক্যালকুলেটর</strong>এর ওয়েবসাইটে। এই টুল ব্যবহারকারীদের মান গণনা করতে পারবেন
+                        মুদ্রাস্ফীতির প্রভাব সম্পর্কে মূল্যবান অন্তর্দৃষ্টি প্রদান করে বিভিন্ন বছরে রুপি।</p>
+                    <h3 class="h4 my-4">2.অনলাইন আর্থিক প্ল্যাটফর্ম</h3>
+                    <p class="lead fs-6">অসংখ্য অনলাইন প্ল্যাটফর্ম <strong>স্ফীতি হার ক্যালকুলেটর</strong> প্রদান করে
+                        ব্যবহারকারী-বান্ধব এবং সঠিক সরঞ্জাম। এই প্ল্যাটফর্মগুলি প্রায়ই অতিরিক্ত বৈশিষ্ট্য অফার করে
+                        মুদ্রাস্ফীতির প্রবণতা এবং বিভিন্ন সময়ের মধ্যে তুলনার দৃশ্যায়ন।</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/6347720/pexels-photo-6347720.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-3" alt="Best Inflation Calculator of India">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">মুদ্রাস্ফীতি বোঝা <span class="d-block mt-2 h4">এবং তার
+                                বিনিয়োগের উপর প্রভাব</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5" id="understanding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead fs-6">মুদ্রাস্ফীতি এবং এর প্রভাব সম্পর্কে আমাদের ব্যাপক নির্দেশিকাতে স্বাগতম
+                        বিনিয়োগ এই নিবন্ধে, আমরা মুদ্রাস্ফীতির জটিলতা, আপনার উপর এর প্রভাবগুলি নিয়ে আলোচনা করব
+                        অর্থের ক্রয় ক্ষমতা, এবং কীভাবে আপনি কৌশলগতভাবে এর বিরুদ্ধে আপনার বিনিয়োগগুলিকে রক্ষা করতে
+                        পারেন
+                        ক্ষয়কারী প্রভাব।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-3">মুদ্রাস্ফীতি কি?</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি হল পণ্যের সাধারণ মূল্য স্তরের ক্রমাগত বৃদ্ধি এবং
+                        সময়ের সাথে সাথে একটি অর্থনীতির মধ্যে পরিষেবা। এই ঘটনাটি ভোক্তা মূল্য সূচক ব্যবহার করে পরিমাপ
+                        করা হয়
+                        (CPI), যা অপরিহার্য পণ্যের একটি ঝুড়ির গড় দামের পরিবর্তনগুলি ট্র্যাক করে এবং
+                        সেবা. যখন মুদ্রাস্ফীতি ঘটে, মুদ্রার প্রতিটি ইউনিট শেষ পর্যন্ত কম পণ্য এবং পরিষেবা ক্রয় করে
+                        ক্রয় ক্ষমতা হ্রাস নেতৃস্থানীয়.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-3">বিনিয়োগের উপর মুদ্রাস্ফীতির প্রভাব</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি উল্লেখযোগ্যভাবে আপনার বিনিয়োগ প্রভাবিত করতে পারে. জীবনযাত্রার খরচ
+                        হিসেবে
+                        বৃদ্ধি, সঞ্চয় অ্যাকাউন্ট এবং বন্ড মত ঐতিহ্যগত বিনিয়োগ যানবাহন উপর রিটার্ন হতে পারে
+                        গতি বজায় রাখার জন্য সংগ্রাম। উদাহরণস্বরূপ, যদি আপনার সেভিংস অ্যাকাউন্ট একটি নির্দিষ্ট সুদের হার
+                        অফার করে
+                        2%, কিন্তু মুদ্রাস্ফীতি 3% এ, আপনার ক্রয় ক্ষমতা কার্যকরভাবে প্রতি বছর 1% দ্বারা হ্রাস পায়।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="safeguarding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center my-4">মুদ্রাস্ফীতির বিরুদ্ধে আপনার বিনিয়োগকে সুরক্ষিত করা</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <h4 class="h6 my-4">1.স্টক এবং রিয়েল এস্টেট বিনিয়োগ</h4>
+                    <p class="lead fs-6">ঐতিহাসিকভাবে, স্টক এবং রিয়েল এস্টেট ছাড়িয়ে যাওয়ার ক্ষমতা দেখিয়েছে
+                        দীর্ঘ মেয়াদে মুদ্রাস্ফীতি। স্টক কোম্পানির মালিকানা অফার করে যা দাম সামঞ্জস্য করতে পারে
+                        মুদ্রাস্ফীতি প্রতিফলিত করে, যখন রিয়েল এস্টেটের মূল্য মুদ্রাস্ফীতির সাথে তাল মিলিয়ে বৃদ্ধি
+                        পায়।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h4 class="h6 my-4">2. ট্রেজারি মুদ্রাস্ফীতি-সুরক্ষিত সিকিউরিটিজ (টিআইপিএস) বিবেচনা করুন</h4>
+                    <p class="lead fs-6">টিআইপিএস হল সরকার-সমর্থিত বন্ডগুলির বিরুদ্ধে সুরক্ষা প্রদানের জন্য ডিজাইন করা
+                        হয়েছে৷
+                        মুদ্রাস্ফীতি এই বন্ডগুলির মূল মান CPI-তে পরিবর্তনের সাথে সামঞ্জস্য করে, তা নিশ্চিত করে
+                        আপনার বিনিয়োগ ক্রমবর্ধমান দামের সাথে তাল মিলিয়ে চলে।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h4 class="h6 my-4">3. আপনার পোর্টফোলিও বৈচিত্র্যময়</h4>
+                    <p class="lead fs-6">একটি ভাল-বৈচিত্রপূর্ণ পোর্টফোলিও মুদ্রাস্ফীতির বিরুদ্ধে একটি বাফার প্রদান করতে
+                        পারে। দ্বারা
+                        স্টক, বন্ড, রিয়েল এস্টেট, এনডির মতো বিভিন্ন সম্পদ শ্রেণিতে আপনার বিনিয়োগ ছড়িয়ে দেওয়া
+                        পণ্য, আপনি একটি সেক্টর অসমতলভাবে প্রভাবিত হচ্ছে তার ঝুঁকি কমাতে পারেন
+                        মুদ্রাস্ফীতি</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5" id="compounding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="h4 my-4">মুদ্রাস্ফীতি মোকাবেলায় চক্রবৃদ্ধির ভূমিকা</h3>
+                    <p class="lead fs-6">চক্রবৃদ্ধি সুদ মুদ্রাস্ফীতির প্রভাব মোকাবেলার একটি শক্তিশালী হাতিয়ার হতে পারে।
+                        আপনার বিনিয়োগ যখন রিটার্ন জেনারেট করে, তখন সেই রিটার্নগুলি নিজেই অতিরিক্ত রিটার্ন তৈরি করে।
+                        সময়ের সাথে সাথে, এই চক্রবৃদ্ধি প্রভাব আপনার বিনিয়োগ পোর্টফোলিওকে হারের চেয়ে দ্রুত বৃদ্ধি করতে
+                        সাহায্য করতে পারে
+                        মুদ্রাস্ফীতি</p>
+                </div>
+                <div class="col-12">
+                    <h3 class="h4 my-4">মুদ্রাস্ফীতি এবং সুদের হারের মধ্যে সম্পর্ক বোঝা</h3>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি এবং সুদের হার প্রায়ই একটি বিপরীত সম্পর্ক ভাগ করে। কেন্দ্রীয়
+                        ব্যাংক
+                        মুদ্রাস্ফীতি নিয়ন্ত্রণে সুদের হার বাড়াতে পারে। উচ্চ সুদের হার আরো ঋণ করতে পারে
+                        ব্যয়বহুল, যার ফলে ভোক্তাদের ব্যয় হ্রাস এবং অর্থনৈতিক প্রবৃদ্ধি মন্থর হতে পারে।</p>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-12">
+                    <h3 class="h4 my-4">Mermaid Diagram: Inflation and Investment Returns</h3>
+                    <code>mermaid
+                    graph TD
+                    A[Time] -- Increasing Inflation - -> B{Purchasing Power Erosion}
+                    A -- Decreasing Inflation - -> C{Maintained Purchasing Power}
+                    A -- Volatile Inflation - -> D{Varied Purchasing Power}
+                    B -- Impact on Fixed-Income Investments - -> E{Decreased Returns}
+                    B -- Impact on Stocks & Real Estate - -> F{Potential for Higher Returns}
+                    C -- Investment Strategies - -> F
+                    D -- Complex Investment Strategies - -> F
+                    F -- Long-Term Focus - -> G{Potential for Wealth Accumulation}
+                    G -- Compound Interest - -> H{Growing Investment Portfolio}
+                    </code>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">FAQs <span class="d-block mt-2 h4">মুদ্রাস্ফীতি এবং তার সম্পর্কে
+                                ক্যালকুলেটর</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p>1.মুদ্রাস্ফীতির কারণ কি?</p>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি মূলত অর্থ সরবরাহ বৃদ্ধির কারণে ঘটে
+                        সম্পর্কিত
+                        উপলব্ধ পণ্য এবং সেবা. এই অতিরিক্ত অর্থ সরবরাহের ফলে দাম বেড়ে যায়।</p>
+
+                    <p>2. মুদ্রাস্ফীতি কীভাবে গড় নাগরিককে প্রভাবিত করে?</p>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি অর্থের ক্রয়ক্ষমতা হ্রাস করে। দাম বাড়ার সাথে সাথে একই
+                        পরিমাণ
+                        অর্থের বিনিময়ে কম পণ্য এবং পরিষেবা কেনা হয়, যা মানুষের জীবনযাত্রার মানকে প্রভাবিত করে৷</p>
+
+                    <p>3. মুদ্রাস্ফীতি কি উপকারী হতে পারে?</p>
+                    <p class="lead fs-6">মাঝারি মুদ্রাস্ফীতি ব্যয় এবং বিনিয়োগকে উত্সাহিত করতে পারে, যেমন মানুষ
+                        কম
+                        অর্থ জমা করার সম্ভাবনা। এটি কেন্দ্রীয় ব্যাংকগুলিকে কার্যকরভাবে সুদের হার সামঞ্জস্য করার অনুমতি
+                        দেয়।
+                    </p>
+
+                    <p>4. আমি কীভাবে আমার সঞ্চয়কে মুদ্রাস্ফীতি থেকে রক্ষা করতে পারি?</p>
+                    <p class="lead fs-6">সম্পদে বিনিয়োগ করা যা মুদ্রাস্ফীতিকে ছাড়িয়ে যায়, যেমন স্টক, আসল
+                        এস্টেট, এবং পণ্য, আপনার সঞ্চয় রক্ষা করতে সাহায্য করতে পারে৷</p>
+
+                    <p>5. মুদ্রাস্ফীতির চেয়ে ডিফ্লেশন কি পছন্দনীয়?</p>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি, বা দামের একটি টেকসই হ্রাস, ভোক্তাকে হ্রাস করতে পারে
+                        ব্যয় এবং অর্থনৈতিক স্থবিরতা, এটিকে মাঝারি থেকে সাধারণত কম পছন্দসই করে তোলে
+                        মুদ্রাস্ফীতি
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>6. আদর্শ মুদ্রাস্ফীতির হার কত?</p>
+                    <p class="lead fs-6">একটি আদর্শ মুদ্রাস্ফীতির হার দেশ এবং অর্থনৈতিক অবস্থা অনুসারে পরিবর্তিত হয়।
+                        কেন্দ্রীয়
+                        অর্থনৈতিক প্রবৃদ্ধি এবং মূল্য স্থিতিশীলতার ভারসাম্য বজায় রাখার জন্য ব্যাঙ্কগুলি প্রায়শই প্রায়
+                        2% মুদ্রাস্ফীতির লক্ষ্য করে৷</p>
+
+                    <p>7. মুদ্রাস্ফীতি ক্যালকুলেটর কতটা সঠিক?</p>
+                    <p class="lead fs-6">মুদ্রাস্ফীতি ক্যালকুলেটরগুলি অত্যন্ত নির্ভুল কারণ তারা ঐতিহাসিক ডেটা ব্যবহার
+                        করে এবং
+                        সুনির্দিষ্ট অনুমান প্রদানের জন্য বিশ্বাসযোগ্য মুদ্রাস্ফীতির হার।</p>
+
+                    <p>8. আমি কি দীর্ঘমেয়াদী আর্থিক পরিকল্পনার জন্য একটি মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহার করতে পারি?
+                    </p>
+                    <p class="lead fs-6">একেবারেই! মুদ্রাস্ফীতি ক্যালকুলেটর বিভিন্ন সময় ফ্রেমের জন্য ডিজাইন করা হয়েছে,
+                        তৈরী
+                        এগুলি দীর্ঘমেয়াদী আর্থিক পরিকল্পনার জন্য নিখুঁত৷</p>
+
+                    <p>9. মুদ্রাস্ফীতি ক্যালকুলেটর কি ব্যবহারকারী-বান্ধব?</p>
+                    <p class="lead fs-6">হ্যাঁ, বেশিরভাগ মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহারকারী-বান্ধব এবং মৌলিক ইনপুট
+                        প্রয়োজন
+                        প্রতি
+                        মূল্যবান আউটপুট তৈরি করুন।</p>
+
+                    <p>10. ঐতিহাসিক মুদ্রাস্ফীতির তথ্য কি সহজেই অ্যাক্সেসযোগ্য?</p>
+                    <p class="lead fs-6">হ্যাঁ, ঐতিহাসিক মুদ্রাস্ফীতির তথ্য সরকারের মাধ্যমে সহজেই পাওয়া যায়
+                        রিপোর্ট,
+                        আর্থিক প্রতিষ্ঠান, এবং অনলাইন সম্পদ।</p>
+
+                    <p>11. বিভিন্ন দেশে মুদ্রাস্ফীতির হার কি সামঞ্জস্যপূর্ণ?</p>
+                    <p class="lead fs-6">না, স্বতন্ত্র অর্থনৈতিক কারণে দেশ থেকে দেশে মুদ্রাস্ফীতির হার পরিবর্তিত হয়
+                        শর্ত এবং নীতি।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">উপসংহার</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p class="lead fs-6">মুদ্রাস্ফীতি একটি গুরুত্বপূর্ণ কারণ যা আপনার অর্থের মূল্য হ্রাস করতে পারে এবং
+                        আপনার বিনিয়োগ প্রভাবিত। এর প্রভাব বুঝতে এবং বিচক্ষণ বিনিয়োগ গ্রহণ করে
+                        কৌশল, আপনি আপনার আর্থিক ভবিষ্যত রক্ষা করতে পারেন. আপনার পোর্টফোলিওতে বৈচিত্র্য আনার কথা বিবেচনা
+                        করুন,
+                        ঐতিহাসিকভাবে মূল্যস্ফীতিকে ছাড়িয়ে যায় এমন সম্পদে বিনিয়োগ করা এবং এর শক্তিকে কাজে লাগানো
+                        চক্রবৃদ্ধিহারে সুদ. মনে রাখবেন, প্রস্তুতি এবং জ্ঞান যুদ্ধে আপনার সেরা মিত্র
+                        মুদ্রাস্ফীতির নীরব সম্পদের ক্ষয়ের বিরুদ্ধে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p class="lead fs-6">মুদ্রাস্ফীতি ক্যালকুলেটরগুলি আজকের অর্থনৈতিক ল্যান্ডস্কেপে অপরিহার্য হাতিয়ার।
+                        তারা আমাদের অর্থের পরিবর্তিত মূল্য সম্পর্কে অন্তর্দৃষ্টি প্রদান করে, আমাদের সক্রিয় করতে সক্ষম
+                        করে
+                        আর্থিক সিদ্ধান্ত এবং আমাদের আর্থিক ভবিষ্যত নিরাপদ.</p>
+                    <p class="lead fs-6">একটি সমৃদ্ধ আগামীকাল সুরক্ষিত করতে আজ আপনার আর্থিক যাত্রার দায়িত্ব নিন।
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p class="lead fs-6">মুদ্রাস্ফীতি একটি জটিল অর্থনৈতিক ঘটনা যা উল্লেখযোগ্যভাবে প্রভাবিত করে
+                        ব্যক্তি, ব্যবসা, এবং সামগ্রিকভাবে অর্থনীতি। মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহার, যেমন
+                        <strong>মুদ্রাস্ফীতি ক্যালকুলেটর ভারত</strong> বা <strong>রুপির মূল্যস্ফীতি
+                            ক্যালকুলেটর</strong>,
+                        মূল্যস্ফীতির জটিলতাগুলি নেভিগেট করতে, জ্ঞাত সিদ্ধান্ত নিতে এবং এর জন্য পরিকল্পনা করার ক্ষমতা
+                        দেয়
+                        আর্থিকভাবে নিরাপদ ভবিষ্যত।
+                    </p>
+                    <p class="lead fs-6">আপনি আপনার সম্পদ রক্ষা করতে চাওয়া একজন বিনিয়োগকারী বা নীতিনির্ধারক
+                        অর্থনৈতিক স্থিতিশীলতার জন্য কৌশল, বোঝা এবং কার্যকরভাবে মুদ্রাস্ফীতি ক্যালকুলেটর ব্যবহার করা
+                        মূল এই সরঞ্জামগুলিকে আলিঙ্গন করে, আমরা গতিশীলভাবে উন্নতির জন্য তথ্যের শক্তিকে কাজে লাগাতে পারি
+                        অর্থনৈতিক ল্যান্ডস্কেপ।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="../maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="../sitemap">HTML Sitemap</a> | <a
+                            class="text-white" href="../sitemap.xml">XML Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
+                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function dispInv() {
+            let invdisp = document.getElementById("fd_toti").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
+        }
+
+        function dispROI() {
+            let aged = document.getElementById("fd_roi").value;
+            document.getElementById("age-disp").innerHTML = aged;
+        }
+
+        function dispTime() {
+            let invdisp = document.getElementById("fd_idur").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
+
+
+        function fdCalc() {
+
+            let fdtoti = parseInt(document.getElementById("fd_toti").value);
+            let fdroi = parseFloat(document.getElementById("fd_roi").value) / 100;
+            let fdidur = parseInt(document.getElementById("fd_idur").value);
+
+            const futureValue = inflationVal(fdtoti, fdidur, fdroi);
+
+            console.log(fdtoti, fdroi, fdidur, futureValue.toFixed(2));
+
+            function inflationVal(fdtoti, fdidur, fdroi) {
+                const adjustedValue = fdtoti * Math.pow(1 - fdroi, fdidur);
+                return adjustedValue;
+            }
+
+            let xtinv = futureValue.toFixed(0);
+            let mamnt = (fdtoti - futureValue.toFixed(0));
+
+
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Current Amount</td><th class='text-end'>" + fdtoti + "</td></tr><tr><td>Impacted Value</td><th class='text-end'>" + mamnt + "</td</tr><tr><td>Future Value</td><th class='text-end'>" + futureValue.toFixed(0) + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
+
+            // Pie Chart 
+            var xValues = ["Future Value", "Inflation Impact"];
+            var yValues = [xtinv, mamnt];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
+        }
+    </script>
+    <script src="../app.js"></script>
+{% endraw %}

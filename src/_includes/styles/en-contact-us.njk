@@ -1,0 +1,94 @@
+{% raw %}
+<style>
+        nav.navbar {
+            background-color: #00000077;
+        }
+
+        a.navbar-brand img {
+            margin-top: -5px;
+        }
+
+        /* Tricolor header background with Ashoka Chakra overlay */
+        header {
+            background: linear-gradient(
+                165deg,
+                #FF9933 0%,
+                #FF9933 25%,
+                #fff 25%,
+                #fff 65%,
+                #138808 65%,
+                #138808 100%
+            );
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* Section background wave */
+        .wave1 {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 75%,
+                #fff 75%,
+                #fff 100%
+            );
+        }
+
+        .bg-duo {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 50%);
+        }
+
+        .right-dark-strip-bg {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgba(0, 17, 105, 1) 80%, rgba(0, 17, 105, 1) 100%);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            color: rgba(0, 17, 105, 1);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .modal-content {
+            background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
+        }
+
+        a small,
+        a svg {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        a small {
+            font-size: .6rem;
+        }
+
+        a.nav-link {
+            transition: none;
+        }
+    </style>
+{% endraw %}

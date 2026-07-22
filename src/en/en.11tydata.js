@@ -2,9 +2,12 @@ module.exports = {
   lang: "en",
   layout: "base.njk",
   eleventyComputed: {
-    // Flat .html output at site root — matches the live URL contract.
-    permalink: (data) => `/${data.page.fileSlug}.html`,
-    // Extensionless public URL used for canonical/og/hreflang.
-    pageUrl: (data) => `/${data.page.fileSlug}`
+    // index.njk fileSlug is the parent dir name in Eleventy — use filePathStem.
+    permalink: (data) =>
+      data.page.filePathStem.endsWith("/index")
+        ? "/index.html"
+        : `/${data.page.fileSlug}.html`,
+    pageUrl: (data) =>
+      data.page.filePathStem.endsWith("/index") ? "/" : `/${data.page.fileSlug}`
   }
 };

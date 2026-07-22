@@ -1,0 +1,1020 @@
+---json
+{
+  "title": "मुफ़्त ऑनलाइन चक्रवृद्धि ब्याज कैलकुलेटर, सूत्र निवेशगुरु",
+  "description": "अपने धन को अधिकतम करने के लिए चक्रवृद्धि ब्याज गणना, चक्रवृद्धि सूत्रों और चक्रवृद्धि ब्याज कैलकुलेटर का उपयोग करने के तरीके के बारे में जानें",
+  "translations": [
+    "en",
+    "hi",
+    "bn"
+  ],
+  "ogImage": "https://nivesguru.in/res/meta/compound-interest-calculator.png",
+  "pageStyle": "styles/hi-compound-interest-calculator.njk",
+  "pageSchema": "schema/hi-compound-interest-calculator.njk"
+}
+---
+{% raw %}
+    <header id="calculator">
+        <div class="wave1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="../favicon-32x32.png" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About Us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../compound-interest-calculator">English</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">हिंदी</a></li>
+                                    <li><a class="dropdown-item" href="../bn/compound-interest-calculator">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body">
+                                <div class="px-5 pt-5">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a title="Home" href="./">🏠 Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active"
+                                                aria-current="compund-interest-calculator">
+                                                Compund Interest कैलकुलेटर</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <h1 class="px-5 mb-5 lead fw-bold fs-3">मुफ़्त ऑनलाइन चक्रवृद्धि ब्याज कैलकुलेटर, सूत्र निवेशगुरु</h1>
+                                <form class="px-5">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="p" class="form-label">Total Investment</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end bg-warning rounded-pill fs-5 px-2">₹
+                                                    <span id="inv-disp">100000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="500000" step="10000"
+                                            value="100000" id="p" onchange="dispP()">
+                                        <div class="row">
+                                            <small class="col">0</small>
+                                            <small class="text-end col">500000</small>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="i" class="form-label">Interest Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end bg-warning rounded-pill fs-5 px-2">
+                                                    <span id="age-disp">5</span>%
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="15" step="1" value="5"
+                                            id="i" onchange="dispI()">
+                                        <div class="row">
+                                            <small class="col">0</small>
+                                            <small class="text-end col">15</small>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="fd_idur" class="form-label">Time</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label
+                                                            class="form-label float-end bg-warning rounded-pill px-2">
+                                                            <small id="dur-disp">2</small> year(s)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <input type="range" class="form-range" min="1" max="15" step="1"
+                                                    value="2" id="t" onchange="dispT()">
+                                                <div class="row">
+                                                    <small class="col">2</small>
+                                                    <small class="text-end col">15</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="fd_idur" class="form-label">Frequency</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label
+                                                            class="form-label float-end bg-warning rounded-pill px-2">
+                                                            <span id="freq-disp">1</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <select
+                                                    class="form-select shadow-none rounded-pill border-warning bg-warning"
+                                                    id="f" onchange="dispF()">
+                                                    <option value="1" selected>Yearly</option>
+                                                    <option value="2">Half Yearly</option>
+                                                    <option value="3">Quaterly</option>
+                                                    <option value="12">Monthly</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
+                                            onclick="vDisp();">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body py-0">
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow border-0 my-3">
+                            <div class="card-body">
+                                <div class="px-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
+                                            <time pubdate="pubdate" datetime="2023-09-10">Updated on : Sep 10,
+                                                2023</time>
+                                        </li>
+                                        <li class="list-group-item lead fs-6 pt-0 px-0">
+                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                                rel="author">Anupam Mondal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5" id="toc">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center h3 my-4">विषयसूची</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <ul class="lead fs-6">
+                        <li>
+                            <a href="#">1. चक्रवृद्धि ब्याज का परिचय</a>
+                        </li>
+                        <li>
+                            <a href="#">2. चक्रवृद्धि ब्याज गणना की मूल बातें</a>
+                        </li>
+                        <li>
+                            <a href="#">3. चक्रवृद्धि ब्याज फॉर्मूला को समझना</a>
+                        </li>
+                        <li>
+                            <a href="#">4. चक्रवृद्धि ब्याज में आवृत्ति और समय की भूमिका</a>
+                        </li>
+                        <li>
+                            <a href="#">5. ऑनलाइन टूल का लाभ उठाना: कीवर्ड "चक्रवृद्धि ब्याज कैलकुलेटर"</a>
+                        </li>
+                        <li>
+                            <a href="#">6.चक्रवृद्धि ब्याज साधारण ब्याज से किस प्रकार भिन्न है?</a>
+                        </li>
+                        <li>
+                            <a href="#">7. चक्रवृद्धि ब्याज के वास्तविक दुनिया के उदाहरणों की खोज</a>
+                        </li>
+                        <li>
+                            <a href="#">8. निवेश पर चक्रवृद्धि प्रभाव</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-12">
+                    <ul class="lead fs-6">
+                        <li>
+                            <a href="#">9. यौगिक वृद्धि को अधिकतम करने की रणनीतियाँ</a>
+                        </li>
+                        <li>
+                            <a href="#">10. चक्रवृद्धि ब्याज के बारे में आम गलत धारणाओं पर काबू पाना</a>
+                        </li>
+                        <li>
+                            <a href="#">11. चक्रवृद्धि ब्याज बनाम मुद्रास्फीति: एक संतुलन अधिनियम</a>
+                        </li>
+                        <li>
+                            <a href="#">12. वित्तीय साक्षरता सिखाना: छात्रों को चक्रवृद्धि ब्याज का परिचय देना</a>
+                        </li>
+                        <li>
+                            <a href="#">13. चक्रवृद्धि ब्याज के साथ दीर्घकालिक लक्ष्यों के लिए योजना बनाना</a>
+                        </li>
+                        <li>
+                            <a href="#">14. गहराई तक जाना: विभिन्न वित्तीय साधनों में चक्रवृद्धि ब्याज</a>
+                        </li>
+                        <li>
+                            <a href="#">15. निष्कर्ष: अनंत संभावनाओं की दुनिया</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">चक्रवृद्धि ब्याज का परिचय</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज गणना</h2>
+                    <p class="lead fs-6">एक ऐसे परिदृश्य की कल्पना करें जहां आपका पैसा न केवल प्रारंभिक पर ब्याज अर्जित करता है
+                        राशि बल्कि समय के साथ संचित ब्याज पर भी। यह चक्रवृद्धि ब्याज का जादू है।
+                        यह एक वित्तीय अवधारणा है जो एक मामूली राशि को बड़ी संपत्ति में बदलने की क्षमता रखती है।
+                    </p>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज वह वित्तीय घटना है जो आपके पैसे कमाने की अनुमति देती है
+                        ब्याज न केवल निवेश की गई आरंभिक राशि पर बल्कि समय के साथ संचित ब्याज पर भी।
+                        सरल शब्दों में कहें तो यह ब्याज कमाने जैसा है। इस मिश्रित प्रभाव की क्षमता है
+                        लंबी अवधि में आपकी बचत और निवेश को उल्लेखनीय रूप से बढ़ावा देने के लिए।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="https://images.pexels.com/photos/53621/calculator-calculation-insurance-finance-53621.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="img-fluid rounded my-3" alt="Free Online Compound Interest कैलकुलेटर">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h3 mb-4"><span class="h4 d-block mt-3">विकास की शक्ति का अनावरण</span></h2>
+                    <p class="lead fs-6">क्या आपने कभी सोचा है कि समय के साथ आपका पैसा तेजी से कैसे बढ़ सकता है? वह है
+                        जहां चक्रवृद्धि ब्याज चलन में आता है। इस लेख में, हम यौगिक की दुनिया में उतरेंगे
+                        ब्याज, इसकी गणना की खोज, "चक्रवृद्धि ब्याज" जैसे कीवर्ड का महत्व
+                        कैलकुलेटर" और "चक्रवृद्धि ब्याज फार्मूला", और आप अपना निर्माण करने के लिए इसकी क्षमता का उपयोग कैसे कर सकते हैं
+                        संपत्ति।</p>
+                </div>
+                <div class="col-md 4 col-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज गणना की मूल बातें</h2>
+                    <p class="lead fs-6">इसके मूल में, चक्रवृद्धि ब्याज अर्जित ब्याज को पुनः निवेश करने के बारे में है। भिन्न
+                        साधारण ब्याज, जहां केवल मूल राशि पर ब्याज मिलता है, चक्रवृद्धि ब्याज दोनों की अनुमति देता है
+                        अधिक कमाई उत्पन्न करने के लिए मूलधन और पहले अर्जित ब्याज।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज गणना: एक नज़दीकी नज़र</h2>
+                    <h3 class="h5">चक्रवृद्धि ब्याज फॉर्मूला और उसके घटक</h3>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज का मूल सूत्र है: <br />चक्रवृद्धि की गणना करना
+                        रुचि, आप सूत्र का उपयोग कर सकते हैं:</p>
+                    <code>
+                    A = P * (1 + r/n)^(nt)
+                    </code>
+                    <p class="lead fs-6">Where:</p>
+                    <ul class="lead fs-6">
+                        <li>- A = ब्याज के बाद कुल राशि</li>
+                         <li>- P = मूल राशि (प्रारंभिक निवेश)</li>
+                         <li>- r = वार्षिक ब्याज दर (दशमलव)</li>
+                         <li>- n = प्रति वर्ष ब्याज चक्रवृद्धि की संख्या</li>
+                         <li>- t = वर्षों की संख्या</li>
+                    </ul>
+                    <p class="lead fs-6">सफल चक्रवृद्धि ब्याज गणना की कुंजी इन्हें समझने में निहित है
+                        घटक और उनकी अंतःक्रियाएँ। आइए इसे और अधिक विस्तार से बताएं:</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mt-4">
+                        <img src="../compound-interest-calculator.svg" class="img-fluid rounded my-3"
+                            alt="Compound Interest Calculation with Nivesguru">
+                        <div class="card-body px-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h5 my-4">चक्रवृद्धि ब्याज गणना <span class="d-block mt-2 h3">A
+                            करीब से देखो</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="closer-look">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज में आवृत्ति और समय की भूमिका</h2>
+                    <p class="lead fs-6">कंपाउंडिंग की आवृत्ति आपके विकास पर महत्वपूर्ण प्रभाव डालती है
+                        निवेश. जितनी अधिक बार ब्याज चक्रवृद्धि होती है, आपका पैसा उतनी ही तेजी से बढ़ता है। समय भी
+                        एक महत्वपूर्ण भूमिका निभाता है. आपका पैसा जितने लंबे समय तक निवेशित रहेगा, प्रभाव उतना ही अधिक होगा
+                        समझौता.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">ऑनलाइन टूल: चक्रवृद्धि ब्याज कैलकुलेटर</h2>
+                    <p class="lead fs-6">डिजिटल युग में, चक्रवृद्धि ब्याज की गणना करना पहले से कहीं अधिक आसान है। एक साधारण
+                        "चक्रवृद्धि ब्याज कैलकुलेटर" की ऑनलाइन खोज से अनेक उपयोगकर्ता-अनुकूल टूल का पता चलता है
+                        अपने लिए गणित करो. ये कैलकुलेटर आपको विभिन्न चरों के साथ प्रयोग करने की अनुमति देते हैं
+                        संभावित परिणामों को देखने के लिए निवेश परिदृश्य।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज साधारण ब्याज से किस प्रकार भिन्न है?</h2>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज के विपरीत, जहां ब्याज ब्याज उत्पन्न करता है, साधारण ब्याज है
+                        केवल मूल राशि पर गणना की गई। यह मूलभूत अंतर महत्वपूर्ण परिणाम दे सकता है
+                        समय के साथ कमाई में बदलाव।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज के वास्तविक दुनिया के उदाहरणों की खोज</h2>
+                    <p class="lead fs-6">आइए वास्तविक दुनिया के उदाहरण पर विचार करें: सारा एक बचत खाते में $10,000 का निवेश करती है
+                        5% वार्षिक ब्याज दर के साथ, जो वार्षिक रूप से संयोजित होती है। 10 साल बाद उनका निवेश बढ़ेगा
+                        लगभग $16,386.92। साधारण ब्याज के साथ समान परिदृश्य में केवल $15,000 प्राप्त होंगे।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">निवेश पर चक्रवृद्धि प्रभाव</h2>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज बचत खातों तक ही सीमित नहीं है; यह निवेश पर लागू होता है
+                        भी। स्टॉक, बॉन्ड और म्यूचुअल फंड में लाभांश और ब्याज का पुनर्निवेश नेतृत्व कर सकता है
+                        पर्याप्त दीर्घकालिक लाभ के लिए।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">यौगिक वृद्धि को अधिकतम करने की रणनीतियाँ</h2>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज का अधिकतम लाभ उठाने के लिए, इन रणनीतियों पर विचार करें:</p>
+                    <ul class="lead fs-6">
+                        <li>कंपाउंडिंग के लिए समय देने के लिए जल्दी शुरुआत करें</li>
+                        <li>नियमित रूप से अपने निवेश में योगदान दें</li>
+                        <li>उच्च चक्रवृद्धि आवृत्तियों वाला निवेश चुनें</li>
+                        <li>लाभांश और ब्याज का पुनर्निवेश</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज के बारे में सामान्य ग़लतफ़हमियाँ</h2>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज के बारे में भ्रांतियाँ बहुत अधिक हैं। एक आम धारणा यह है कि यह है
+                        केवल अमीरों के लिए प्रासंगिक। वास्तव में, कोई भी शुरुआत करके चक्रवृद्धि ब्याज से लाभ उठा सकता है
+                        जल्दी और लगातार योगदान दे रहे हैं।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज बनाम मुद्रास्फीति: एक संतुलन अधिनियम</h2>
+                    <p class="lead fs-6">जबकि चक्रवृद्धि ब्याज आपके पैसे को बढ़ने में मदद करता है, मुद्रास्फीति इसकी खरीदारी को नष्ट कर देती है
+                        शक्ति। मुद्रास्फीति के प्रभावों से निपटने के लिए, ऐसे निवेश का लक्ष्य रखें जो मुद्रास्फीति दर से अधिक हो।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज गणना के लिए वित्तीय साक्षरता</h2>
+                    <p class="lead fs-6">युवा पीढ़ी को चक्रवृद्धि ब्याज के बारे में शिक्षित करना आवश्यक है
+                        वित्तीय साक्षरता को बढ़ावा देना। उन्हें कंपाउंडिंग के "जादू" जैसी अवधारणाओं से परिचित कराया जा सकता है
+                        तय करना
+                        वे स्मार्ट वित्तीय निर्णयों की राह पर हैं।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज के साथ दीर्घकालिक लक्ष्यों के लिए योजना बनाना</h2>
+                    <p class="lead fs-6">दीर्घकालिक वित्तीय लक्ष्यों को प्राप्त करने के लिए चक्रवृद्धि ब्याज एक शक्तिशाली उपकरण है,
+                        जैसे कि सेवानिवृत्ति योजना, घर खरीदना, या शिक्षा का वित्तपोषण। जितनी जल्दी आप शुरू करेंगे,
+                        आपके निवेश को बढ़ने में अधिक समय लगेगा।</p>
+                </div>
+                <div class="col-12">
+                    <h2 class="h4 my-4">विभिन्न वित्तीय साधनों में चक्रवृद्धि ब्याज</h2>
+                    <p class="lead fs-6">चक्रवृद्धि ब्याज विभिन्न वित्तीय साधनों में संचालित होता है, जिनमें शामिल हैं
+                        बांड, जमा प्रमाणपत्र और यहां तक कि ऋण भी। प्रत्येक संदर्भ में इसके निहितार्थ को समझना
+                        आपको सूचित वित्तीय निर्णय लेने में मदद मिल सकती है।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">चक्रवृद्धि ब्याज <span class="d-block mt-2 h4">का जादू
+                            बढ़ती हुई संपत्ति</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5" id="growing">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <h2 class="h4 my-3">Compound Interest: Unraveling the Magic of Growing Wealth</h2> -->
+                    <p class="lead fs-6">कल्पना करें कि आपका पैसा ऑटोपायलट पर बढ़ रहा है, जितना आपने सोचा था उससे कहीं अधिक तेजी से बढ़ रहा है
+                        संभव। यह वित्तीय जादू चक्रवृद्धि ब्याज की शक्ति के माध्यम से हासिल किया जाता है। इस में
+                        व्यापक मार्गदर्शिका, हम चक्रवृद्धि ब्याज गणना की दुनिया में गहराई से उतरेंगे, अन्वेषण करेंगे
+                        चक्रवृद्धि ब्याज फ़ॉर्मूले की पेचीदगियाँ, और आपको विशेषज्ञ अंतर्दृष्टि प्रदान करते हैं कि कैसे
+                        अपनी वित्तीय यात्रा में चक्रवृद्धि ब्याज का अधिकतम लाभ उठाएँ।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">मूल राशि (पी)</h3>
+                    <p class="lead fs-6">आपके द्वारा निवेश या जमा की गई प्रारंभिक राशि को मूलधन के रूप में जाना जाता है। यह
+                        आपकी ब्याज आय के लिए आधार के रूप में कार्य करता है।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">वार्षिक ब्याज दर (आर)</h3>
+                    <p class="lead fs-6">जिस दर से आपका निवेश सालाना बढ़ता है वह वार्षिक ब्याज है
+                        दर। सटीक गणना के लिए दर का दशमलव रूप में उपयोग करना महत्वपूर्ण है।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">कंपाउंडिंग आवृत्ति (एन)</h3>
+                    <p class="lead fs-6">ब्याज कितनी बार चक्रवृद्धि होता है इसका आप पर महत्वपूर्ण प्रभाव पड़ सकता है
+                        अंतिम राशि। सामान्य कंपाउंडिंग आवृत्तियों में वार्षिक, अर्ध-वार्षिक, त्रैमासिक और शामिल हैं
+                        महीने के।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">समय (टी)</h3>
+                    <p class="lead fs-6">आप अपने निवेश को कितने वर्षों तक बढ़ने देते हैं इसका सीधा असर पड़ता है
+                        नतीजा। जितना अधिक समय होगा, यौगिक प्रभाव उतना ही अधिक स्पष्ट होगा।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="exploring">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-4">चक्रवृद्धि ब्याज कैलकुलेटर उपकरण की खोज</h2>
+                    <p class="lead fs-6">जटिल गणनाओं को सरल बनाने के लिए, चक्रवृद्धि ब्याज कैलकुलेटर आते हैं
+                        बचाव। ये उपयोगी उपकरण आपको मूलधन, ब्याज दर, चक्रवृद्धि इनपुट करने की अनुमति देते हैं
+                        आवृत्ति, और समय, और वे तेजी से आपको अंत में आपके पास मौजूद कुल राशि प्रदान करते हैं
+                        निवेश अवधि का.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h3 class="h4 my-4">चक्रवृद्धि ब्याज कैलकुलेटर का उपयोग करने के लाभ</h3>
+                            <p class='lead fs-6'><strong>समय की बचत: </strong>मैन्युअल गणना की जा सकती है
+                                समय लेने वाली और त्रुटि-प्रवण। कैलकुलेटर त्वरित परिणाम प्रदान करते हैं।</p>
+                            <p class='lead fs-6'><strong>सटीकता: </strong>मानवीय त्रुटियों के जोखिम को खत्म करें
+                                जटिल गणनाएँ, सटीक परिणाम सुनिश्चित करती हैं।</p>
+                            <p class='lead fs-6'><strong>परिदृश्य विश्लेषण: </strong>विभिन्न इनपुट के साथ प्रयोग
+                                विभिन्न निवेश परिदृश्यों के प्रभाव की कल्पना करें।</p>
+                            <p class='lead fs-6'><strong>सूचनापूर्ण निर्णय : </strong>अच्छी तरह सोच-समझकर वित्तीय निर्णय लें
+                                सटीक अनुमानों पर आधारित निर्णय.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <img src="https://images.pexels.com/photos/4968631/pexels-photo-4968631.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                class="img-fluid rounded my-4" alt="Compound Interest कैलकुलेटर - Free Online Tool">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h3 my-4">
+                            अक्सर पूछे जाने वाले प्रश्नों
+                            <span class="d-block h2">(सामान्य प्रश्न)</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p>1. चक्रवृद्धि ब्याज क्या है?</p>
+                     <p class='lead fs-6'>चक्रवृद्धि ब्याज दोनों प्रारंभिक राशि पर अर्जित ब्याज है
+                         (मूलधन) और संचित ब्याज।</p>
+
+                     <p>2. कंपाउंडिंग फ़्रीक्वेंसी विकास को कैसे प्रभावित करती है?</p>
+                     <p class='lead fs-6'>उच्च कंपाउंडिंग आवृत्ति के कारण अधिक तेजी से विकास होता है
+                         पुनर्निवेश.</p>
+
+                     <p>3. क्या चक्रवृद्धि ब्याज मुद्रास्फीति को मात दे सकता है?</p>
+                     <p class='lead fs-6'>हां, चक्रवृद्धि ब्याज वाला निवेश संभावित रूप से प्रभावों को दूर कर सकता है
+                         महंगाई का.</p>
+
+                     <p>4. क्या चक्रवृद्धि ब्याज केवल अमीरों के लिए है?</p>
+                     <p class='lead fs-6'>नहीं, जल्दी शुरुआत करके कोई भी व्यक्ति चक्रवृद्धि ब्याज से लाभ उठा सकता है
+                         सुसंगत.</p>
+
+                     <p>5. बच्चों को चक्रवृद्धि ब्याज से परिचित कराने का सबसे अच्छा तरीका क्या है?</p>
+                     <p class='lead fs-6'>पैसा बढ़ने की अवधारणा को समझाने के लिए संबंधित उदाहरणों और दृश्यों का उपयोग करें
+                         समय के साथ.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>प्रश्न: चक्रवृद्धि ब्याज साधारण ब्याज से किस प्रकार भिन्न है?</p>
+                    <p class='lead fs-6'>चक्रवृद्धि ब्याज प्रारंभिक निवेश और दोनों को ध्यान में रखता है
+                        संचित ब्याज, जिसके परिणामस्वरूप साधारण ब्याज की तुलना में अधिक कमाई होती है, जो केवल
+                        प्रिंसिपल पर लागू होता है.</p>
+
+                    <p>प्रश्न: क्या मैं बिना किसी फॉर्मूले के चक्रवृद्धि ब्याज की गणना कर सकता हूं?</p>
+                    <p class='lead fs-6'>बिल्कुल! चक्रवृद्धि ब्याज कैलकुलेटर प्रक्रिया को स्वचालित करते हैं और प्रदान करते हैं
+                        न्यूनतम प्रयास के साथ सटीक परिणाम।</p>
+
+                    <p>प्रश्न: क्या चक्रवृद्धि ब्याज केवल बचत खातों पर लागू होता है?</p>
+                    <p class='lead fs-6'>नहीं, चक्रवृद्धि ब्याज को विभिन्न वित्तीय साधनों पर लागू किया जा सकता है
+                        निवेश, ऋण और क्रेडिट कार्ड।</p>
+
+                    <p>प्रश्न: कंपाउंडिंग आवृत्ति अंतिम राशि को कैसे प्रभावित करती है?</p>
+                    <p class='lead fs-6'>जितनी अधिक बार कंपाउंडिंग होगी, संभावित कमाई उतनी ही अधिक होगी
+                        बढ़ते हुए शेष पर ब्याज अधिक बार लगाया जाता है।</p>
+
+                    <p>प्रश्न: क्या चक्रवृद्धि ब्याज जोखिम-मुक्त है?</p>
+                    <p class='lead fs-6'>हालाँकि चक्रवृद्धि ब्याज स्वयं जोखिम भरा नहीं है, अंतर्निहित निवेश वहन करता है
+                        इसके अपने जोखिम हैं. निवेश का चयन सोच-समझकर करना जरूरी है।</p>
+                </div>
+                <div class="col-12">
+                    <p>प्रश्न: क्या मैं ऋण को तेजी से चुकाने के लिए चक्रवृद्धि ब्याज का उपयोग कर सकता हूँ?</p>
+                    <p class="lead fs-6">हां, इस अवधारणा को ऋणों पर लागू किया जा सकता है, जिससे आपको ब्याज की गणना करने में मदद मिलेगी
+                        और भुगतान अनुकूलित करें।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center h4 my-4">
+                            चक्रवृद्धि ब्याज का लाभ उठाना
+                            <span class="d-block h2">धन संचय</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-5" id="leveraging">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-2">जल्दी शुरुआत करने की शक्ति</h3>
+                    <p class='lead fs-6'>चक्रवृद्धि ब्याज को अधिकतम करने के लिए सबसे मूल्यवान रणनीतियों में से एक है
+                        जल्दी शुरू करें। यहां तक कि छोटे योगदान से भी समय के साथ महत्वपूर्ण लाभ हो सकते हैं
+                        कंपाउंडिंग की विस्तारित अवधि.</p>
+                </div>
+                <div class='col-md-6 col-12'>
+                    <h3 class="h5 my-2">निरंतर योगदान</h3>
+                    <p class=”lead fs-6”>नियमित रूप से आपके निवेश में योगदान करने से धन का निरंतर प्रवाह बढ़ता है
+                        कंपाउंडिंग प्रभाव का लाभ उठाया जा सकता है। यह दृष्टिकोण दीर्घावधि में विशेष रूप से प्रभावी है
+                        निवेश.</p>
+                </div>
+                <div class='col-md-6 col-12'>
+                    <h3 class="h5 my-2">पुनर्निवेश ब्याज</h3>
+                    <p class=”lead fs-6”>ब्याज आय को वापस लेने के बजाय, उन्हें इसमें पुनः निवेश करने पर विचार करें
+                        निवेश. इससे चक्रवृद्धि प्रक्रिया में तेजी आती है, क्योंकि पुनर्निवेशित ब्याज स्वयं अर्जित होता है
+                        रुचि.</p>
+                </div>
+                <div class='col-md-6 col-12'>
+                    <h3 class="h5 my-2">विविधीकरण</h3>
+                    <p class='lead fs-6'>अपने निवेश में विविधता लाने से जोखिम फैलने और संभावित रिटर्न बढ़ाने में मदद मिलती है।
+                        स्टॉक, बॉन्ड, म्यूचुअल फंड और रियल जैसे विभिन्न निवेश साधनों का पता लगाने की सलाह दी जाती है
+                        संपत्ति.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-5" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center my-4">निष्कर्ष</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-4">अनंत संभावनाओं की दुनिया</h3>
+                    <p class="lead fs-6">ऐसी दुनिया में जहां समय आपकी सबसे बड़ी संपत्ति हो सकता है, चक्रवृद्धि ब्याज एक के रूप में चमकता है
+                        वित्तीय विकास का प्रतीक. अपनी क्षमता का दोहन करके, सोच-समझकर निवेश निर्णय लेना,
+                        और संयोजन की शक्ति को अपनाकर, आप अनंत से भरे भविष्य को आकार दे सकते हैं
+                        संभावनाएं.</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 my-4">चक्रवृद्धि ब्याज की क्षमता को उजागर करें</h3>
+                    <p class="lead fs-6">ऐसी दुनिया में जहां समय ही पैसा है, चक्रवृद्धि ब्याज अविश्वसनीय ऑफर करता है
+                        निरंतर प्रयास के बिना अपना धन बढ़ाने का अवसर। चक्रवृद्धि ब्याज को समझकर
+                        फॉर्मूला, कैलकुलेटर का लाभ उठाना और स्मार्ट निवेश रणनीतियों को अपनाकर, आप खुद को सेट कर सकते हैं
+                        वित्तीय समृद्धि की राह पर.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead fs-6">तो, इंतज़ार क्यों करें? आज ही चक्रवृद्धि ब्याज की शक्ति का उपयोग करना शुरू करें और देखें
+                        आपका पैसा एक उज्जवल वित्तीय भविष्य सुरक्षित करने के लिए अथक प्रयास करता है।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                कैलकुलेटर</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB कैलकुलेटर</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="../maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="../sitemap.html">HTML Sitemap</a> | <a
+                            class="text-white" href="../sitemap.xml">XML Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
+                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function dispP() {
+            let pValue = parseInt(document.getElementById("p").value);
+            document.getElementById("inv-disp").innerHTML = pValue;
+        }
+        function dispI() {
+            let iValue = parseInt(document.getElementById("i").value);
+            document.getElementById("age-disp").innerHTML = iValue;
+        }
+        function dispT() {
+            let tValue = parseInt(document.getElementById("t").value);
+            document.getElementById("dur-disp").innerHTML = tValue;
+        }
+        function dispF() {
+            let fValue = parseInt(document.getElementById("f").value);
+            document.getElementById("freq-disp").innerHTML = fValue;
+        }
+        function vDisp() {
+            const varp = parseInt(document.getElementById("p").value);
+            const vari = parseFloat(document.getElementById("i").value) / 100;
+            const vart = parseInt(document.getElementById("t").value);
+            const n = parseInt(document.getElementById("f").value);
+
+            // const n = varf === "annually" ? 1 : varf === "semiannually" ? 2 : varf === "quarterly" ? 4 : varf === "monthly" ? 12 : 1;
+
+            const amount = (varp * Math.pow(1 + (vari / n), n * vart)).toFixed(0);
+            const interest = (amount - varp).toFixed(0);
+
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + varp + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + interest + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + amount + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
+
+            // Pie Chart 
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [varp, interest];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
+        }
+    </script>
+    <script src="../app.js"></script>
+{% endraw %}

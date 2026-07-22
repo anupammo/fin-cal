@@ -1,0 +1,985 @@
+---json
+{
+  "title": "डाकघर मासिक आय योजना / एमआईएस कैलकुलेटर निवेसगुरु",
+  "description": "जब आपकी मेहनत की कमाई को निवेश करने की बात आती है, तो एक सुरक्षित और विश्वसनीय विकल्प ढूंढना महत्वपूर्ण है। डाकघर मासिक आय योजना (एमआईएस) निवेश",
+  "translations": [
+    "en",
+    "bn",
+    "hi"
+  ],
+  "ogImage": "https://nivesguru.in/res/meta/post-office-monthly-income-scheme-calculator.png",
+  "pageStyle": "styles/hi-post-office-monthly-income-scheme-mis-calculator.njk",
+  "pageSchema": "schema/hi-post-office-monthly-income-scheme-mis-calculator.njk"
+}
+---
+{% raw %}
+    <header>
+        <div class="wave1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="../favicon-32x32.png" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings कैलकुलेटर
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD कैलकुलेटर</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD कैलकुलेटर</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB कैलकुलेटर</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB कैलकुलेटर</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About Us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="../post-office-monthly-income-scheme-mis-calculator">English</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">हिंदी</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../bn/post-office-monthly-income-scheme-mis-calculator">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body">
+                                <div class="px-5 pt-5">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="./">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="mis-calculator">MIS
+                                                कैलकुलेटर</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <h1 class="lead fw-bold fs-3 mb-5 px-5">डाकघर मासिक आय योजना / एमआईएस कैलकुलेटर
+                                    निवेसगुरु</h1>
+                                <form class="px-5">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Total Investment</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end">₹
+                                                    <span id="inv-disp">100000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="900000" step="10000"
+                                            value="100000" id="fd_toti" onchange="dispInv()">
+                                        <div class="row">
+                                            <span class="col">₹1000</span>
+                                            <span class="text-end col">₹900000</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <p class="form-label">Rate of interest : <strong
+                                                        class="fs-4">7.4</strong> %</p>
+                                                <input type="hidden" class="form-control" id="fd_roi" value="7.4">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <p class="form-label text-end">Tenure / Time : <strong
+                                                        class="fs-4">5</strong>
+                                                    Years</p>
+                                                <input type="hidden" class="form-control" id="fd_idur" value="5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="form-label fw-bold">Income / Month : ₹ <strong class="fs-4"
+                                                id="pm_income">617</strong></p>
+                                    </div>
+                                    <div class="my-4">
+                                        <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
+                                            onclick="fdCalc();">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0">
+                            <div class="card-body py-0">
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mb-0"></table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="p-5">
+                            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_06a6pf9i.json"
+                                background="transparent" speed="1" class="img-fluid" loop autoplay></lottie-player>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow border-0 my-3">
+                            <div class="card-body">
+                                <div class="px-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
+                                            <time pubdate="pubdate" datetime="2023-09-10">Updated on : Sep 10,
+                                                2023</time>
+                                        </li>
+                                        <li class="list-group-item lead fs-6 pt-0 px-0">
+                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                                rel="author">Anupam Mondal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="mt-5" id="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-9 col-12">
+                    <h2 class="h4 mb-3">परिचय: एमआईएस/पोमिस कैलकुलेटर</h2>
+                    <p class="lead fs-6">जब आपकी मेहनत की कमाई को निवेश करने की बात आती है, तो एक सुरक्षित विकल्प
+                        ढूंढ़ना
+                        विश्वसनीय विकल्प महत्वपूर्ण है. डाकघर मासिक आय योजना (एमआईएस) निवेश
+                        ऐसा मार्ग जो सुरक्षा और नियमित आय का संयोजन प्रदान करता है। इस लेख में, हम अन्वेषण करेंगे
+                        डाकघर एमआईएस की विशेषताएं, लाभ और प्रक्रिया। इसके अतिरिक्त, हम परिचय देंगे
+                        एक एमआईएस कैलकुलेटर की अवधारणा, जो आपको अपने निवेश की बुद्धिमानी से योजना बनाने में मदद कर सकती
+                        है। क्या आप
+                        आप अपने डाकघर मासिक आय योजना (एमआईएस) निवेश को प्रबंधित करने में अधिक रुचि रखते हैं
+                        कुशलता से? डाकघर एमआईएस कैलकुलेटर के अलावा और कुछ न देखें। यह कैलकुलेटर आपकी मदद करता है
+                        अपने निवेश से अर्जित ब्याज की गणना शीघ्रता और आसानी से करें। आप चुन सकते हैं
+                        अपनी पसंद के आधार पर मासिक, त्रैमासिक या वार्षिक आधार पर ब्याज की गणना करें।
+                        यह टूल आपकी कमाई को ट्रैक करना आसान बनाता है और यह सुनिश्चित करता है कि आप अधिकतम लाभ प्राप्त कर
+                        रहे हैं
+                        आपका निवेश.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-3 col-12">
+                    <div class="">
+                        <img class="float-end" src="../post-office-mis-calculator-nivesguru.svg" width="300"
+                            height="300" alt="Post Office MIS कैलकुलेटर" title="Post Office MIS कैलकुलेटर">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="mt-5" id="toc">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3 ps-3">Table of Contents</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">1. What is the Post Office Monthly Income Scheme (MIS)?</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">2. Eligibility Criteria for Investing in MIS</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">3. Key Features of the Post Office MIS</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">4. How to Open an MIS Account?</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">5. Understanding the Interest Rates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">6. Tenure Options and Premature Withdrawals</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">7. Tax Implications on MIS Earnings</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">8. Advantages of Investing in MIS</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">9. Limitations of the Post Office MIS</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">10. Tips for Maximizing Returns</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">11. Introduction to the MIS कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">12. How the MIS कैलकुलेटर Works</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">13. Benefits of Using the MIS कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">14. Planning Your Investments with the MIS कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a class="lead fs-6" href="#">15. Conclusion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12">
+                    <ul class="list-group list-group-flush lead fw-bold fs-6 my-3">
+                        <li class="list-group-item border-0">
+                            <a href="fixed-deposit-fd-calculator"><span class="fs-5">🪙</span> FD कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sb-calculator"><span class="fs-5">🪙</span> SB
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="rd-calculator"><span class="fs-5">🪙</span> RD
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sukanya-samriddhi-yojana-ssy-calculator"><span class="fs-5">🪙</span> SSY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="ppf-calculator"><span class="fs-5">🪙</span> PPF
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="national-pension-system-nps-calculator"><span class="fs-5">🪙</span> NPS
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="apy-calculator"><span class="fs-5">🪙</span> APY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator"><span
+                                    class="fs-5">🪙</span> PMJJBY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator"><span class="fs-5">🪙</span>
+                                PMSBY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="kvp-calculator"><span class="fs-5">🪙</span> KVP
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="national-savings-certificate-nsc-calculator"><span class="fs-5">🪙</span> NSC
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sgb-calculator"><span class="fs-5">🪙</span> SGB
+                                कैलकुलेटर</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <h2 class="h4 mb-3 ps-3">POMIS या डाकघर मासिक आय योजना क्या है?</h2>
+                    <p class="lead fs-6 ps-3">डाकघर मासिक आय योजना (POMIS) भारत सरकार द्वारा समर्थित है।
+                        यह बचत योजना निवेशकों को एक स्थिर और निश्चित मासिक आय प्रदान करती है या लौटाती है। यह
+                        बिना जोखिम के नियमित रिटर्न चाहने वाले व्यक्तियों के लिए यह एक उत्कृष्ट निवेश विकल्प है
+                        बाज़ार संबंधी अनिश्चितताएँ।
+                    </p>
+                    <h2 class="h4 mb-3 ps-3">एमआईएस में निवेश के लिए पात्रता मानदंड</h2>
+                    <p class="lead fs-6 ps-3">एमआईएस खाता खोलने के लिए व्यक्ति को कुछ शर्तों को पूरा करना होगा
+                        पात्रता मापदंड। यह योजना 18 वर्ष से ऊपर के निवासी भारतीय व्यक्तियों के लिए उपलब्ध है
+                        उम्र के साल। नाबालिग भी निवेश कर सकते हैं, लेकिन खाता उनके अभिभावक का खुला होना चाहिए
+                        नाम। इसके अतिरिक्त, अधिकतम तीन वयस्कों के साथ संयुक्त खाता खोला जा सकता है।</p>
+                    <h2 class="h4 mb-3 ps-3">डाकघर एमआईएस की मुख्य विशेषताएं</h2>
+                    <p class="lead fs-6 ps-3"><strong>निवेश सीमा :</strong> अधिकतम निवेश की अनुमति
+                        एकल खाते के लिए अधिकतम राशि ₹4.5 लाख है, जबकि संयुक्त खाते के लिए अधिकतम राशि ₹9 लाख है।
+                    </p>
+                    <p class="lead fs-6 ps-3"><strong>कार्यकाल :</strong> एमआईएस का निश्चित कार्यकाल 5 वर्ष है,
+                        निवेश अवधि के दौरान स्थिर रिटर्न प्रदान करना।</p>
+                    <p class="lead fs-6 ps-3"><strong>ब्याज दर :</strong> [वर्तमान तिथि] के अनुसार,
+                        डाकघर एमआईएस के लिए ब्याज दर [वर्तमान ब्याज दर]% प्रति वर्ष देय है
+                        महीने के।</p>
+                    <p class="lead fs-6 ps-3"><strong>ब्याज भुगतान :</strong> ब्याज का भुगतान किया जाता है
+                        मासिक और स्वचालित रूप से निवेशक के बचत खाते में जमा किया जा सकता है।</p>
+                    <p class="lead fs-6 ps-3"><strong>परिपक्वता राशि :</strong> परिपक्वता पर, मूलधन
+                        निवेशक को राशि लौटा दी जाती है।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस खाता कैसे खोलें?</h2>
+                            <p class="lead fs-6 ps-3">एमआईएस खाता खोलना एक सीधी प्रक्रिया है। आपको
+                                अपने नजदीकी डाकघर में जाएँ और आवेदन पत्र भरें। आवश्यक
+                                दस्तावेज़ों में पहचान का प्रमाण, पते का प्रमाण, पासपोर्ट आकार की तस्वीरें, और शामिल हैं
+                                पैन कार्ड विवरण (यदि लागू हो)। खाता भारत में ऑनलाइन भी खोला जा सकता है
+                                पोस्ट की आधिकारिक वेबसाइट.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">ब्याज दरों को समझना</h2>
+                            <p class="lead fs-6 ps-3">डाकघर एमआईएस पर ब्याज दरें आवधिक के अधीन हैं
+                                सरकार द्वारा संशोधन. वर्तमान रुचि के साथ अद्यतन रहना आवश्यक है
+                                निवेश निर्णय लेने से पहले दरें। ब्याज दरें किसी विशेष के लिए तय की जाती हैं
+                                वित्तीय वर्ष और निवेश की पूरी अवधि के दौरान समान रहेगा।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">कार्यकाल विकल्प और समय से पहले निकासी</h2>
+                            <p class="lead fs-6 ps-3">पोस्ट ऑफिस एमआईएस का कार्यकाल 5 वर्ष का निश्चित होता है। असामयिक
+                                निकासी की अनुमति है, लेकिन वे कुछ शर्तों के अधीन हैं और आकर्षित हो सकते हैं
+                                दंड. निवेशकों को समय से पहले निकासी के निहितार्थ को पहले ही समझ लेना चाहिए
+                                उन्हें चुनना.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस आय पर कर निहितार्थ</h2>
+                            <p class="lead fs-6 ps-3">पोस्ट ऑफिस एमआईएस से अर्जित ब्याज पर कर देय है
+                                निवेशक का आयकर स्लैब। वहीं टैक्स देनदारी पर विचार करना जरूरी है
+                                निवेश से प्रभावी रिटर्न की गणना।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस में निवेश के लाभ</h2>
+                            <p class="lead fs-6 ps-3"><strong>गारंटीशुदा आय :</strong> डाकघर एमआईएस प्रदान करता है
+                                एक स्थिर आय प्रवाह, वित्तीय स्थिरता सुनिश्चित करना।</p>
+                            <p class="lead fs-6 ps-3"><strong>कम जोखिम :</strong>सरकार समर्थित योजना होने के नाते,
+                                निवेश से जुड़ा जोखिम न्यूनतम है.</p>
+                            <p class="lead fs-6 ps-3"><strong>नियमित भुगतान:</strong> मासिक ब्याज भुगतान
+                                सेवानिवृत्त लोगों और पूरक आय चाहने वाले व्यक्तियों के लिए फायदेमंद हैं।</p>
+                            <p class="lead fs-6 ps-3"><strong>आसान पहुंच:</strong> अनेक डाकघरों के साथ
+                                पूरे देश में, एमआईएस खाता खोलना और प्रबंधित करना सुविधाजनक है।</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12">
+                    <img class="float-end" src="../post-office-monthly-income-scheme.svg" width="300" height="300"
+                        alt="Post Office Monthly Income Scheme" title="Post Office Monthly Income Scheme">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">डाकघर एमआईएस की सीमाएँ</h2>
+                            <ul class="lead list-group list-group-flush fs-6 ps-0">
+                                <li class="list-group-item border-0">
+                                    <strong>सटीक योजना :</strong>कैलकुलेटर सटीक आंकड़े प्रदान करता है,
+                                    निवेशकों को तदनुसार अपने खर्चों की योजना बनाने की अनुमति देना।
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <strong>तुलना उपकरण:</strong> निवेशक विभिन्न निवेशों की तुलना कर सकते हैं
+                                    परिदृश्य और सूचित निर्णय लें।
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">अधिकतम रिटर्न के लिए युक्तियाँ</h2>
+                            <ul class="lead list-group list-group-flush fs-6 ps-0">
+                                <li class="list-group-item border-0">
+                                    <strong>सीढ़ी बनाने की रणनीति:</strong> अपने निवेशों को धीरे-धीरे बढ़ाने पर विचार
+                                    करें
+                                    विभिन्न ब्याज दर चक्रों से लाभ पाने के लिए एकाधिक एमआईएस खाते।
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <strong>पुनर्निवेश :</strong> परिपक्वता पर, रिटर्न को पुनः निवेश करने पर विचार करें
+                                    नियमित आय प्राप्त करना जारी रखने के लिए एक नया एमआईएस खाता।
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस कैलकुलेटर का परिचय</h2>
+                            <p class="lead fs-6 ps-3">एमआईएस कैलकुलेटर एक शक्तिशाली उपकरण है जो निवेशकों को योजना बनाने
+                                में मदद करता है
+                                उनका
+                                प्रभावी ढंग से निवेश. इसमें निवेश राशि, ब्याज दर आदि को ध्यान में रखा जाता है
+                                मासिक आय और परिपक्वता राशि की गणना करने के लिए कार्यकाल।</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस कैलकुलेटर कैसे काम करता है</h2>
+                            <p class="lead fs-6 ps-3">एमआईएस कैलकुलेटर का उपयोग करने के लिए, वांछित निवेश राशि दर्ज
+                                करें,
+                                चुनना
+                                प्रचलित ब्याज दर, और निवेश अवधि का चयन करें। तब कैलकुलेटर करेगा
+                                अपेक्षित मासिक आय और परिपक्वता राशि प्रदर्शित करें।</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ps-3">एमआईएस कैलकुलेटर का उपयोग करने के लाभ</h2>
+                            <ul class="lead list-group list-group-flush fs-6">
+                                <li class="list-group-item border-0">
+                                    <strong>सीमित कार्यकाल:</strong> निश्चित 5 साल का कार्यकाल निवेशकों के लिए उपयुक्त
+                                    नहीं हो सकता है
+                                    अल्पकालिक वित्तीय लक्ष्यों के साथ।
+                                </li>
+                                <li class="list-group-item border-0">
+                                    <strong>मुद्रास्फीति का प्रभाव:</strong> निश्चित ब्याज दर मुद्रास्फीति को मात नहीं
+                                    दे सकती,
+                                    जिससे समय के साथ वास्तविक रिटर्न में कमी आती है।
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card border-0 mb-4">
+                        <div class="card-body">
+                            <h2 class="h4 mb-3 ms-3">एमआईएस कैलकुलेटर के लिए निवेश की योजना बनाना</h2>
+                            <ul class="lead list-group list-group-flush fs-6 ps-3">
+                                <li class="list-group-item border-0">
+                                    अपने वित्तीय लक्ष्यों को परिभाषित करें: अपने वित्तीय लक्ष्यों को पहचानें और योजना
+                                    बनाएं
+                                    तदनुसार निवेश राशि.
+                                </li>
+                                <li class="list-group-item border-0">
+                                    जोखिम सहनशीलता का आकलन करें: उचित विकल्प चुनने के लिए अपनी जोखिम सहनशीलता को समझें
+                                    ब्याज दर और अवधि.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5" id="tax-benifit">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3">एमआईएस/मासिक आय योजना के लिए कर लाभ</h2>
+                    <p class="lead fs-6">डाकघर मासिक आय योजना में 80सी या जैसी कोई कर छूट नहीं है
+                        80सीसीडी, योजना का कोई लाभ नहीं। POMIS से आपकी ब्याज आय पर टीडीएस भी काटा जाता है।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5" id="faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3">अक्सर पूछे जाने वाले प्रश्न - अक्सर पूछे जाने वाले प्रश्न</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p>क्या डाकघर एमआईएस कर योग्य है?</p>
+                    <p class="lead fs-6">हां, पोस्ट ऑफिस एमआईएस से अर्जित ब्याज पर टैक्स लगता है
+                        निवेशक का आयकर स्लैब।</p>
+                    <p>क्या मैं परिपक्वता अवधि समाप्त होने से पहले अपना निवेश वापस ले सकता हूँ?</p>
+                    <p class="lead fs-6">हां, समय से पहले निकासी की अनुमति है, लेकिन वे कुछ शर्तों के अधीन हैं
+                        शर्तें और दंड.</p>
+                    <p>संयुक्त एमआईएस खाते के लिए अधिकतम निवेश सीमा क्या है?</p>
+                    <p class="lead fs-6">संयुक्त खाते के लिए अधिकतम निवेश सीमा ₹9 लाख है।</p>
+                    <p>क्या डाकघर एमआईएस पर ब्याज दर तय है?</p>
+                    <p class="lead fs-6">हां, निवेश की पूरी अवधि के लिए ब्याज दर स्थिर रहती है।
+                    </p>
+                    <p>क्या मैं ऑनलाइन एमआईएस खाता खोल सकता हूँ?</p>
+                    <p class="lead fs-6">हां, आप इंडिया पोस्ट की आधिकारिक वेबसाइट के माध्यम से ऑनलाइन एमआईएस खाता खोल
+                        सकते हैं।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>डाकघर मासिक आय योजना खाता (एमआईएस) द्वारा कितना ब्याज दिया जाता है?</p>
+                    <p class="lead fs-6">7.4% प्रति वर्ष की ब्याज दर। डाकघर की मासिक आय पर लागू है
+                        योजना खाता (एमआईएस) वर्तमान में।</p>
+                    <p>क्या डाकघर एमआईएस वरिष्ठ नागरिकों के लिए उपयुक्त है?</p>
+                    <p class="lead fs-6">हां, वरिष्ठ नागरिक अपनी पूरी जिंदगी की बचत इसमें जमा कर सकेंगे
+                        खाता। और इससे अपने मासिक खर्चों को पूरा करने के लिए जोखिम मुक्त, अच्छा ब्याज कमा सकते हैं
+                        डाकघर एमआईएस योजना</p>
+                    <p>क्या हम मैच्योरिटी से पहले एमआईएस से पैसा निकाल सकते हैं?</p>
+                    <p class="lead fs-6">हां, 1 साल के बाद यहां समय से पहले निकासी की सुविधा दी गई है। हालांकि, यदि
+                        आप
+                        3 साल से पहले निकासी पर जमा पर 2% की कटौती और 3 साल के बाद 1% की कटौती
+                        जमा लागू है.</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="socializer a sr-32px sr-opacity sr-icon-white sr-pad">
+                        <div class="sr-google"><a
+                                href="https://www.google.com/bookmarks/mark?op=edit&amp;bkmk=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;title=FD%20calculator&amp;annotation="
+                                target="_blank" title="Google"><i class="fab fa-google"></i></a></div>
+                        <div class="sr-linkedin"><a
+                                href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;title=FD%20calculator&amp;summary="
+                                target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div>
+                        <div class="sr-facebook"><a
+                                href="https://www.facebook.com/share.php?u=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;t=FD%20calculator"
+                                target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></div>
+                        <div class="sr-whatsapp"><a
+                                href="https://api.whatsapp.com/send?text=FD%20calculator%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+                        <div class="sr-fbmessenger"><a
+                                href="fb-messenger://share?link=https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                                target="_blank" title="Facebook messenger"><i class="fa fa-comment"></i></a></div>
+                        <div class="sr-snapchat"><a href="https://snapchat.com" target="_blank" title="Snapchat"><i
+                                    class="fab fa-snapchat"></i></a></div>
+                        <div class="sr-twitter"><a
+                                href="https://twitter.com/intent/tweet?text=FD%20calculator%20-%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator%20"
+                                target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></div>
+                        <div class="sr-instagram"><a href="https://instagram.com" target="_blank" title="Instagram"><i
+                                    class="fab fa-instagram"></i></a></div>
+                        <div class="sr-pinterest"><a
+                                href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;media=&amp;description="
+                                target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a></div>
+                        <div class="sr-stackoverflow"><a href="https://stackoverflow.com/" target="_blank"
+                                title="StackOverflow"><i class="fab fa-stack-overflow"></i></a></div>
+                        <span class="sr-quora"><a href="https://www.quora.com" target="_blank" title="Quora"><i
+                                    class="fab fa-quora"></i></a>
+                    </div>
+                    <div class="sr-rss"><a href="" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div>
+                    <div class="sr-telegram"><a
+                            href="https://telegram.me/share/url?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator&amp;text=FD%20calculator"
+                            target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a></div>
+                    <div class="sr-skype"><a
+                            href="https://web.skype.com/share?url=https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                            target="_blank" title="Skype"><i class="fab fa-skype"></i></a></div>
+                    <div class="sr-email"><a
+                            href="mailto:?subject=FD%20calculator&amp;body=%20-%20https%3A%2F%2Fnivesguru.in%2Ffd-calculator"
+                            target="_blank" title="Email"><i class="fa fa-envelope"></i></a></div>
+                    <div class="sr-more"><a href="#" target="_blank" title="More"><i class="fa fa-share-alt"></i></a>
+                        <ul class="socializer"></ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <section id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 mb-3">निष्कर्ष : डाकघर मासिक आय योजना (पीओएमआईएस/एमआईएस)</h2>
+                    <p class="lead fs-6">डाकघर मासिक आय योजना (एमआईएस) एक विश्वसनीय निवेश विकल्प है
+                        नियमित आय चाहने वाले जोखिम से बचने वाले व्यक्ति। यह एक निश्चित ब्याज दर और गारंटी प्रदान करता है
+                        रिटर्न, इसे सेवानिवृत्त और रूढ़िवादी निवेशकों के लिए उपयुक्त बनाता है। एमआईएस कैलकुलेटर एक है
+                        निवेश की योजना बनाने और वित्तीय लक्ष्यों को प्रभावी ढंग से प्राप्त करने के लिए मूल्यवान उपकरण।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                कैलकुलेटर</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                कैलकुलेटर</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB कैलकुलेटर</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="../maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="../sitemap.html">HTML Sitemap</a> | <a
+                            class="text-white" href="../sitemap.xml">XML Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
+                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        function dispInv() {
+            let invdisp = document.getElementById("fd_toti").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
+        }
+
+        function dispROI() {
+            let aged = document.getElementById("fd_roi").value;
+            document.getElementById("age-disp").innerHTML = aged;
+        }
+
+        function dispTime() {
+            let invdisp = document.getElementById("fd_idur").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
+
+        function fdCalc() {
+            // let tinv = 0;
+            let fdtoti = document.getElementById("fd_toti").value;
+            let fdroi = document.getElementById("fd_roi").value;
+            let fdidur = document.getElementById("fd_idur").value;
+            let toti = ((fdtoti * fdroi * fdidur) / 100);
+            let pmincome = (Math.round(toti / 60));
+            document.getElementById("pm_income").innerHTML = pmincome;
+            // console.log(Math.round(toti / 60));
+            let mamnt = (parseInt(toti) + parseInt(fdtoti));
+            let xtinv = (mamnt - toti);
+            // document.getElementById("inte").innerHTML = "interest earned : ₹" + toti;
+            // document.getElementById("mval").innerHTML = "Maturity Value : ₹" + mamnt;
+
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end'>" + xtinv + "</td></tr><tr><td>Total Interest</td><th class='text-end'>" + toti + "</td</tr><tr><td>Maturity Value</td><th class='text-end'>" + mamnt + "</td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+            // Table of Investments 
+
+            // Pie Chart 
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [xtinv, toti];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
+        }
+    </script>
+    <script src="../app.js"></script>
+{% endraw %}

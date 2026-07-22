@@ -2,7 +2,12 @@ module.exports = {
   lang: "bn",
   layout: "base.njk",
   eleventyComputed: {
-    permalink: (data) => `/bn/${data.page.fileSlug}.html`,
-    pageUrl: (data) => `/bn/${data.page.fileSlug}`
+    // index.njk fileSlug is the parent dir name in Eleventy — use filePathStem.
+    permalink: (data) =>
+      data.page.filePathStem.endsWith("/index")
+        ? "/bn/index.html"
+        : `/bn/${data.page.fileSlug}.html`,
+    pageUrl: (data) =>
+      data.page.filePathStem.endsWith("/index") ? "/bn/" : `/bn/${data.page.fileSlug}`
   }
 };

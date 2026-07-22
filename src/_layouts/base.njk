@@ -50,6 +50,9 @@
         {{ schema | dump | safe }}
     </script>
     {%- endif %}
+    {%- if pageSchema %}
+    {% include pageSchema %}
+    {%- endif %}
     <!-- Primary Meta Tags -->
     <title>{{ title }}</title>
     <meta name="title" content="{{ title }}">

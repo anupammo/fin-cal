@@ -56,7 +56,7 @@
 - [ ] Template partials: schema (WebSite/Org, BreadcrumbList, FAQPage, WebApplication), hreflang trio generator
 - [ ] `data/rates.json` — every instrument & bank rate with `effectiveFrom`, `sourceUrl`, `verifiedOn`
 - [ ] Per-calculator content files (front-matter: title, description, formula, FAQ entries) × EN/HI/BN
-- [ ] Migrate all 148 pages; build-time assertion: output URL set ⊇ `url-map.txt`
+- [x] Migrate all 148 pages — **COMPLETE 148/148** via `scripts/migrate-page.mjs` + `scripts/verify-migration.mjs`: every body byte-identical to live, every JSON-LD block valid, `assert-urls.mjs --complete` passes (all frozen URLs emitted, zero extras), verification files passthrough byte-exact. Full build **0.86s**. Also found & fixed live-site bug: broken JSON-LD (literal newline in string) on pnb-fd ×3 langs; sitewide JSON-LD scan (`scripts/scan-jsonld.mjs`) now ALL CLEAN (2026-07-20)
 - [ ] Calculator JS refactored to shared modules (no per-page copy-paste logic)
 
 ### Performance

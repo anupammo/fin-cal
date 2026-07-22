@@ -12,7 +12,11 @@
       "Bash(mkdir -p src/_includes/styles)",
       "Bash(sed -n '149,220p' ppf-calculator.html)",
       "Bash(npx @11ty/eleventy)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(rm -f src/_includes/styles/ppf.njk)",
+      "Bash(node scripts/migrate-page.mjs ppf-calculator.html hi/ppf-calculator.html bn/ppf-calculator.html sukanya-samriddhi-yojana-ssy-calculator.html hi/sukanya-samriddhi-yojana-ssy-calculator.html bn/sukanya-samriddhi-yojana-ssy-calculator.html national-savings-certificate-nsc-calculator.html hi/national-savings-certificate-nsc-calculator.html bn/national-savings-certificate-nsc-calculator.html kvp-calculator.html hi/kvp-calculator.html bn/kvp-calculator.html senior-citizens-savings-scheme-scss-calculator.html hi/senior-citizens-savings-scheme-scss-calculator.html bn/senior-citizens-savings-scheme-scss-calculator.html post-office-monthly-income-scheme-calculator.html post-office-monthly-income-scheme-mis-calculator.html hi/post-office-monthly-income-scheme-mis-calculator.html bn/post-office-monthly-income-scheme-mis-calculator.html post-office-time-deposit-td-calculator.html hi/post-office-time-deposit-td-calculator.html bn/post-office-time-deposit-td-calculator.html mahila-samman-savings-certificate-mssc-calculator.html hi/mahila-samman-savings-certificate-mssc-calculator.html bn/mahila-samman-savings-certificate-mssc-calculator.html scss-interest-rate-calculator.html)",
+      "Bash(node scripts/assert-urls.mjs)",
+      "Bash(node scripts/verify-migration.mjs)"
     ]
   }
 }

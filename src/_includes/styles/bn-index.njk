@@ -1,0 +1,180 @@
+{% raw %}
+<style>
+        canvas {
+            position: absolute;
+        }
+
+        nav.navbar {
+            background-color: #00000077;
+        }
+
+        a.navbar-brand img {
+            margin-top: -5px;
+        }
+
+        header {
+            /* Existing background styles commented out for new tricolor header */
+            /* background: linear-gradient(245deg, #3b3b3b 0%, #FDFF96 100%), linear-gradient(245deg, #0038FF 0%, #000000 100%), radial-gradient(100% 225% at 100% 0%, #4200FF 0%, #001169 100%), linear-gradient(245deg, #000000 0%, #FFB800 100%), radial-gradient(115% 107% at 40% 100%, #EAF5FF 0%, #EAF5FF 40%, #A9C6DE calc(40% + 1px), #A9C6DE 70%, #247E6C calc(70% + 2px), #247E6C 85%, #E4C666 calc(85% + 2px), #E4C666 100%), linear-gradient(65deg, #083836 0%, #083836 40%, #66D37E calc(40% + 1px), #66D37E 60%, #C6E872 calc(60% + 1px), #C6E872 100%); */
+            /* background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal; */
+            /* background-attachment: fixed; */
+            /* background-size: cover; */
+
+            background: #FF9933;
+            background: linear-gradient(165deg, rgba(255, 153, 51, 1) 0%, rgba(255, 153, 51, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 65%, rgba(19, 136, 8, 1) 65%, rgba(19, 136, 8, 1) 100%);
+            background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/330px-Ashoka_Chakra.svg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .wave1 {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+
+        .bg-1 {
+            background: linear-gradient(58.72deg, #FF20DB 0%, #FFFFFF 100%), linear-gradient(180deg, #FFFFFF 0%, #060046 100%), linear-gradient(64.82deg, #AD00FF 0%, #FF0000 100%), linear-gradient(307.27deg, #FF9900 0.37%, #150052 100%), radial-gradient(67.08% 100% at 50% 0%, #76005C 0%, #0500FF 100%), radial-gradient(100% 140% at 100% 0%, #5ED500 0%, #2200AA 100%);
+            background-blend-mode: soft-light, overlay, difference, difference, color-burn, normal;
+        }
+
+        .bg-2 {
+            background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
+            background-blend-mode: overlay, overlay, normal;
+        }
+
+        .bg-3 {
+            background: linear-gradient(238.72deg, #FFB864 0%, #006C4C 100%), radial-gradient(100% 224.43% at 0% 0%, #6CFF72 0%, #002C6D 100%), linear-gradient(121.28deg, #FFEAB6 0%, #00563C 100%), radial-gradient(56.26% 101.79% at 50% 0%, #8F00FF 0%, #000000 100%), linear-gradient(65.05deg, #6F0072 0%, #DBFFE5 100%);
+            background-blend-mode: overlay, screen, color-burn, screen, normal;
+        }
+
+        .bg-duo {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 50%);
+        }
+
+        .wave1 {
+            /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0 224L24 234.7C48 245 96 267 144 256C192 245 240 203 288 165.3C336 128 384 96 432 90.7C480 85 528 107 576 128C624 149 672 171 720 186.7C768 203 816 213 864 234.7C912 256 960 288 1008 266.7C1056 245 1104 171 1152 165.3C1200 160 1248 224 1296 224C1344 224 1392 160 1416 128L1440 96L1440 320L1416 320C1392 320 1344 320 1296 320C1248 320 1200 320 1152 320C1104 320 1056 320 1008 320C960 320 912 320 864 320C816 320 768 320 720 320C672 320 624 320 576 320C528 320 480 320 432 320C384 320 336 320 288 320C240 320 192 320 144 320C96 320 48 320 24 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+
+        .right-dark-strip-bg {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(225deg, rgba(255, 255, 255, 1) 80%, rgb(8 85 102) 80%, rgb(19 67 100) 100%);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2 {
+            color: rgba(0, 17, 105, 1);
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .modal-content {
+            background: linear-gradient(125deg, #ffc107 0%, #ffc107 30%, #FFFFFF calc(30% + 1px), #FFFFFF 60%, #FFFFFF calc(60% + 1px), #FFFFFF 72%, #FFFFFF calc(72% + 1px), #FFFFFF 100%);
+        }
+
+        a small,
+        a svg {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        a small {
+            font-size: .6rem;
+        }
+
+        a.nav-link {
+            transition: none;
+        }
+
+        .ico-container {
+            position: relative;
+        }
+
+        .card:hover div div img.img-fluid {
+            -webkit-animation: img-fluid 0.9s both;
+            animation: img-fluid 0.9s both;
+        }
+
+        @keyframes img-fluid {
+            0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+
+            30% {
+                -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+            }
+
+            40% {
+                -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+            }
+
+            50% {
+                -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+            }
+
+            65% {
+                -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+            }
+
+            75% {
+                -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+            }
+
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        .blink {
+            animation: blink-animation 1s steps(5, start) infinite;
+            -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        }
+
+        @keyframes blink-animation {
+            to {
+                /* visibility: hidden; */
+                background-color: #ffc107;
+            }
+        }
+
+        @-webkit-keyframes blink-animation {
+            to {
+                /* visibility: hidden; */
+                background-color: #ffc107;
+            }
+        }
+    </style>
+{% endraw %}

@@ -3,7 +3,9 @@
 // site serves today (see docs/url-map.txt) — /ppf-calculator.html etc., never
 // directory/index.html, so extensionless GitHub Pages URLs stay identical.
 module.exports = function (eleventyConfig) {
-  // Static passthroughs are added per-family as migration proceeds.
+  // Verification files must remain byte-exact — never templated.
+  eleventyConfig.addPassthroughCopy("google843786092a7f748f.html");
+  eleventyConfig.addPassthroughCopy("hdu16dvs7z7j2wf1um4dj8md16j4v0.html");
 
   return {
     dir: {

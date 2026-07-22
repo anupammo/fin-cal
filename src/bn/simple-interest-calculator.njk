@@ -1,0 +1,936 @@
+---json
+{
+  "title": "সরল সুদের ক্যালকুলেটর: আর্থিক স্বচ্ছতার জন্য",
+  "description": "আমাদের টাকার সরল সুদের ক্যালকুলেটরের সরলতা আবিষ্কার করুন। অনায়াসে ঋণ বা বিনিয়োগের সুদ গণনা করুন। এখনই আমাদের ব্যবহারকারী-বান্ধব টুল ব্যবহার করে দেখুন",
+  "translations": [
+    "en",
+    "bn",
+    "hi"
+  ],
+  "ogImage": "https://nivesguru.in/res/meta/simple-interest-calculator.png",
+  "pageStyle": "styles/bn-simple-interest-calculator.njk",
+  "pageSchema": "schema/bn-simple-interest-calculator.njk"
+}
+---
+{% raw %}
+    <header id="calculator">
+        <div class="wave1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="../favicon-32x32.png" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                            ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
+                                            </path>
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu" data-bs-popper="static">
+                                    <li><a class="dropdown-item" href="../simple-interest-calculator">English</a></li>
+                                    <li><a class="dropdown-item" href="../hi/simple-interest-calculator">हिंदी</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body">
+                                <div class="px-5 pt-5">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a title="Home" href="./">🏠 Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active"
+                                                aria-current="simple-interest-calculator">
+                                                Simple Interest ক্যালকুলেটর</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <h1 class="lead fs-3 my-4 px-5">সরল সুদের ক্যালকুলেটর: ভারতের আর্থিক স্বচ্ছতার জন্য</h1>
+                                <form class="px-5 lead fs-6">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Principal Amount </label>
+                                            </div>
+                                            <div class="col">
+                                                <label for="totinv" class="form-label float-end">₹
+                                                    <span class="fs-4" id="inv-disp">400000</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="1000000" step="50000"
+                                            value="400000" id="totinv" onchange="dispInv()">
+                                        <div class="row">
+                                            <span class="col">0</span>
+                                            <span class="text-end col">1000000</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    <span id="roi-disp" class="fs-4">9</span>
+                                                    <span>%</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="15" step=".1" value="9"
+                                            id="emi-roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">15</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Duration</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label float-end">
+                                                    <span class="fs-4" id="dur-disp">10</span>
+                                                    <span>Yr</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="1" max="25" step="1" value="10"
+                                            id="dage" onchange="dispTime()">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="col">1</span><span class="text-end col">25</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="my-4">
+                                        <button type="button" onclick="resultSimpleInterest();"
+                                            class="btn btn-primary rounded-pill shadow-none px-5">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body py-0">
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow border-0 my-3">
+                            <div class="card-body">
+                                <div class="px-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
+                                            <time pubdate="pubdate" datetime="2023-11-26">Updated on : Nov 26,
+                                                2023</time>
+                                        </li>
+                                        <li class="list-group-item lead fs-6 pt-0 px-0">
+                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                                rel="author">Anupam Mondal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <section class="g-adsense">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-in-article-adsense"> <ins class="adsbygoogle"
+                            style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+                            data-ad-client="ca-pub-1195438021979002" data-ad-slot="8059393466"></ins>
+                        <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section id="toc">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1></h1>Outline
+                    
+                    <h2 class="h4 my-5"></h2>I. Introduction
+                       - A brief explanation of what simple interest is
+                       - Importance of calculating simple interest accurately
+                    
+                    <h2 class="h4 my-5"></h2>II. Understanding Simple Interest
+                       - Definition and formula
+                       - Key components: principal, rate, and time
+                       - Real-world examples for clarity
+                    
+                    <h2 class="h4 my-5"></h2>III. Significance of Simple Interest ক্যালকুলেটর
+                       - Time-saving aspect
+                       - Accuracy in calculations
+                       - How it aids financial planning
+                    
+                    <h2 class="h4 my-5"></h2>IV. Features of a Good Simple Interest ক্যালকুলেটর
+                       - User-friendly interface
+                       - Inclusion of relevant options (monthly, quarterly, annually)
+                       - Accessibility on different devices
+                    
+                    <h2 class="h4 my-5"></h2>V. Step-by-Step Guide to Using a Simple Interest ক্যালকুলেটর
+                       - Entering principal, rate, and time
+                       - Selecting the time frequency
+                       - Obtaining accurate results
+                    
+                    <h2 class="h4 my-5"></h2>VI. Advantages of Using a Simple Interest ক্যালকুলেটর in Rupees
+                       - Currency-specific calculations
+                       - Comparison with other calculators
+                       - Implications for personal finance
+                    
+                    <h2 class="h4 my-5"></h2>VII. Common Mistakes to Avoid When Using Simple Interest ক্যালকুলেটর
+                       - Misinterpretation of time units
+                       - Incorrect input of interest rate
+                       - Importance of double-checking results
+                    
+                    <h2 class="h4 my-5"></h2>VIII. Tips for Effective Financial Planning Using Simple Interest ক্যালকুলেটর
+                       - Setting realistic financial goals
+                       - Understanding the impact of time on interest
+                       - Incorporating interest calculations into budgeting
+                    
+                    <h2 class="h4 my-5"></h2>IX. Real-life Applications of Simple Interest Calculations in Rupees
+                       - Loan planning
+                       - Investment decisions
+                       - Educational savings
+                    
+                    <h2 class="h4 my-5"></h2>X. How Online ক্যালকুলেটর Have Revolutionized Financial Planning
+                       - Accessibility and convenience
+                       - Integration with personal finance apps
+                       - Positive impact on financial literacy
+                    
+                    <h2 class="h4 my-5"></h2>XI. Addressing Perplexity in Simple Interest Calculations
+                       - Clarifying common misconceptions
+                       - Providing examples for better understanding
+                    
+                    <h2 class="h4 my-5"></h2>XII. Burstiness in Financial Scenarios
+                       - Handling sudden changes in interest rates
+                       - Adapting calculations for unexpected financial events
+                    
+                    <h2 class="h4 my-5"></h2>XIII. Crafting a Personalized Financial Strategy
+                       - Tailoring calculations to individual needs
+                       - Incorporating long-term financial goals
+                       - Balancing risk and reward
+                    
+                    <h2 class="h4 my-5"></h2>XIV. Conclusion
+                       - Summarizing the importance of simple interest calculations
+                       - Encouraging readers to utilize online calculators for financial planning
+                    
+                    <h2 class="h4 my-5"></h2>XV. Frequently Asked Questions (FAQs)
+                       1<p></p>Is a simple interest calculator suitable for complex financial scenarios?**
+                       2<p></p>Can I use a simple interest calculator for international currencies?**
+                       3<p></p>How frequently should I review my interest calculations for optimal financial planning?**
+                       4<p></p>Are there any online calculators specifically designed for educational savings?**
+                       5<p></p>What steps can I take if I encounter discrepancies in my simple interest calculations?**
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">ভূমিকা</h2>
+
+                    <p class="lead fs-6">বেসিক দিয়ে শুরু করা যাক। সরল সুদ হল অর্থের একটি মৌলিক ধারণা, যা সময়ের সাথে
+                        সাথে একটি মূল পরিমাণে অর্জিত বা প্রদত্ত সুদের প্রতিনিধিত্ব করে। এটি একটি সরল গণনা যা বিভিন্ন
+                        আর্থিক সিদ্ধান্তের ভিত্তি তৈরি করে।</p>
+
+                    <p class="lead fs-6">ব্যক্তিগত অর্থের গতিশীল ল্যান্ডস্কেপে, সরল আগ্রহ বোঝা এবং পরিচালনা করা
+                        সর্বোত্তম। আপনি বিনিয়োগের পরিকল্পনা করছেন, একটি ঋণ বিবেচনা করছেন বা শিক্ষার জন্য সঞ্চয় করছেন
+                        না কেন, সরল সুদের সঠিকভাবে গণনা করার ক্ষমতা একটি মূল্যবান দক্ষতা। এই প্রবন্ধে, আমরা সাধারণ
+                        আগ্রহের জগতে অনুসন্ধান করব, এর গণনার সূক্ষ্মতা এবং সাধারণ সুদের ক্যালকুলেটরদের দ্বারা আনা
+                        সুবিধাগুলি, বিশেষ করে ভারতীয় টাকার প্রসঙ্গে।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">সরল সুদ বোঝা</h2>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 mb-3">সংজ্ঞা এবং সূত্র</h3>
+                    <p class="lead fs-6">
+                        <br> সূত্র ব্যবহার করে সরল সুদ গণনা করা হয়:
+                        <br> A = P x (1 + r/n)^(n*t)
+                        <br> যেখানে:
+                        <br> A = পরিপক্কতার পরিমাণ
+                        <br> P = মূল পরিমাণ (বিনিয়োগের পরিমাণ)
+                        <br> r = সুদের হার (দশমিকে)
+                        <br> n = চক্রবৃদ্ধি ফ্রিকোয়েন্সি (বার্ষিক, অর্ধ-বার্ষিক, ত্রৈমাসিক, বা মাসিক)
+                        <br> t = বিনিয়োগের মেয়াদ (বছরে)
+                    </p>
+                    <h3 class="h5 mb-3">মূল উপাদান: প্রধান, হার, এবং সময়</h3>
+                    <p class="lead fs-6">সূত্রটি ভেঙ্গে, আমরা তিনটি অপরিহার্য উপাদান খুঁজে পাই: মূল পরিমাণ, সুদের হার,
+                        এবং সুদের গণনা করার সময়।
+
+                    </p>
+                    <h3 class="h5 mb-3">স্বচ্ছতার জন্য বাস্তব-বিশ্বের উদাহরণ</h3>
+                    <p class="lead fs-6">ধারণাটি আরও ভালভাবে উপলব্ধি করতে, আসুন একটি বাস্তব জীবনের উদাহরণ বিবেচনা করি।
+                        কল্পনা করুন আপনি বার্ষিক 5% সুদের হারে ₹1,000 বিনিয়োগ করেন। এক বছরের জন্য সরল সুদ হবে ₹50।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="mb-5 px-5">
+                        <img class="img-fluid" src="../simple-interest-calculator.svg"
+                            alt="Simple Interest ক্যালকুলেটর in Rupees" title="Simple Interest ক্যালকুলেটর in Rupees">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">সরল সুদের ক্যালকুলেটরের তাৎপর্য</h2>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">সময় বাঁচানোর দিক</h3>
+                    <p class="lead fs-6">ম্যানুয়ালি সাধারণ সুদ গণনা করা সময়সাপেক্ষ হতে পারে, বিশেষ করে একাধিক
+                        পরিস্থিতিতে। সরল ইন্টারেস্ট ক্যালকুলেটর লিখুন - প্রক্রিয়াটিকে স্ট্রিমলাইন করার জন্য ডিজাইন করা
+                        একটি টুল।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">গণনায় নির্ভুলতা</h3>
+                    <p class="lead fs-6">ক্যালকুলেটরগুলি প্রতিবার সুনির্দিষ্ট ফলাফল নিশ্চিত করে মানুষের ত্রুটির সম্ভাবনা
+                        দূর করে। আর্থিক সিদ্ধান্ত মোকাবেলা করার সময় এটি অত্যন্ত গুরুত্বপূর্ণ।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">এটি কীভাবে আর্থিক পরিকল্পনায় সহায়তা করে</h3>
+                    <p class="lead fs-6">ঋণ পরিশোধ থেকে বিনিয়োগ অনুমান পর্যন্ত, একটি সরল সুদের ক্যালকুলেটর আর্থিক
+                        পরিকল্পনার একটি অপরিহার্য সহযোগী।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">একটি ভাল সরল সুদের ক্যালকুলেটরের বৈশিষ্ট্য
+                    </h2>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">ব্যবহারকারী-বান্ধব ইন্টারফেস
+                    </h3>
+                    <p class="lead fs-6">একটি কার্যকর ক্যালকুলেটরের একটি স্বজ্ঞাত ইন্টারফেস থাকা উচিত, এটি বিভিন্ন
+                        স্তরের আর্থিক দক্ষতার ব্যক্তিদের কাছে অ্যাক্সেসযোগ্য করে তোলে।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">প্রাসঙ্গিক বিকল্প অন্তর্ভুক্তি</h3>
+                    <p class="lead fs-6">একটি বহুমুখী ক্যালকুলেটর ব্যবহারকারীদের বিভিন্ন যৌগিক ফ্রিকোয়েন্সি বেছে নিতে
+                        দেয় - মাসিক, ত্রৈমাসিক বা বার্ষিক।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">বিভিন্ন ডিভাইসে অ্যাক্সেসযোগ্যতা</h3>
+                    <p class="lead fs-6">প্রযুক্তির আধিপত্যের যুগে, একটি ভাল ক্যালকুলেটর বিভিন্ন ডিভাইসে অ্যাক্সেসযোগ্য
+                        হওয়া উচিত, যাতে ব্যবহারকারীরা যেতে যেতে গণনা করতে পারে।
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-5">একটি সরল সুদের ক্যালকুলেটর ব্যবহার করার জন্য ধাপে ধাপে নির্দেশিকা</h2>
+                    <h3 class="h5 mb-3">প্রিন্সিপাল, রেট এবং সময় প্রবেশ করানো হচ্ছে</h3>
+                    <p class="lead fs-6">মূল পরিমাণ, সুদের হার এবং যে সময় সুদের হিসাব করা হবে তা প্রবেশ করে শুরু করুন।
+                    </p>
+                    <h3 class="h5 mb-3">সময়ের ফ্রিকোয়েন্সি নির্বাচন করা হচ্ছে</h3>
+                    <p class="lead fs-6">বার্ষিক, অর্ধ-বার্ষিক, মাসিক বা দৈনিক হোক না কেন - যে ফ্রিকোয়েন্সিটির সাথে
+                        সুদের চক্রবৃদ্ধি হয় তা চয়ন করুন৷</p>
+                    <h3 class="h5 mb-3">সঠিক ফলাফল প্রাপ্তি</h3>
+                    <p class="lead fs-6">গণনার বোতাম টিপুন এবং ভয়েলা! ক্যালকুলেটর আপনাকে অর্জিত সঠিক সরল সুদ প্রদান
+                        করে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-5">টাকায় একটি সরল সুদের ক্যালকুলেটর ব্যবহার করার সুবিধা</h2>
+                    <h3 class="h5 mb-3">মুদ্রা-নির্দিষ্ট গণনা</h3>
+                    <p class="lead fs-6">ভারতের ব্যবহারকারীদের জন্য, রুপিতে সুদ গণনা করা তাদের আর্থিক পরিস্থিতির একটি
+                        পরিষ্কার চিত্র প্রদান করে।</p>
+                    <h3 class="h5 mb-3">অন্যান্য ক্যালকুলেটরের সাথে তুলনা</h3>
+                    <p class="lead fs-6">অন্যান্য মুদ্রার তুলনায় রুপি-নির্দিষ্ট গণনার সুবিধা বোঝা।
+                    </p>
+                    <h3 class="h5 mb-3">ব্যক্তিগত অর্থের জন্য প্রভাব</h3>
+                    <p class="lead fs-6">কিভাবে একটি রুপি-ভিত্তিক ক্যালকুলেটর ব্যবহার ব্যক্তিগত আর্থিক সিদ্ধান্তকে
+                        ইতিবাচকভাবে প্রভাবিত করতে পারে।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">সাধারণ সুদের ক্যালকুলেটর ব্যবহার করার সময় এড়ানোর জন্য সাধারণ ভুল</h2>
+                    <h3 class="h5 mb-3">সময়ের এককের ভুল ব্যাখ্যা</h3>
+                    <p class="lead fs-6">গণনায় বিভ্রান্তি এড়িয়ে, প্রবেশ করা সময়ের এককের মধ্যে ধারাবাহিকতা নিশ্চিত
+                        করুন।</p>
+                    <h3 class="h5 mb-3">সুদের হারের ভুল ইনপুট</h3>
+                    <p class="lead fs-6">আর্থিক পরিকল্পনাকে প্রভাবিত করতে পারে এমন ভুল গণনা রোধ করতে সুদের হারের ইনপুটটি
+                        দুবার চেক করুন।</p>
+                    <h3 class="h5 mb-3">ডবল-চেকিং ফলাফলের গুরুত্ব</h3>
+                    <p class="lead fs-6">এমনকি একটি ক্যালকুলেটর দিয়েও, আর্থিক সিদ্ধান্ত গ্রহণে সম্ভাব্য ত্রুটিগুলি
+                        এড়াতে ফলাফলগুলি যাচাই করা অত্যন্ত গুরুত্বপূর্ণ৷</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">সরল সুদের ক্যালকুলেটর ব্যবহার করে কার্যকর আর্থিক পরিকল্পনার জন্য টিপস
+                    </h2>
+                    <h3 class="h5 mb-3">বাস্তবসম্মত আর্থিক লক্ষ্য নির্ধারণ করা
+                    </h3>
+                    <p class="lead fs-6">বাস্তবতার সাথে আর্থিক লক্ষ্যগুলি সারিবদ্ধ করতে ক্যালকুলেটর ব্যবহার করুন,
+                        নিশ্চিত করুন যে সেগুলি অর্জনযোগ্য এবং বাস্তবসম্মত।</p>
+                    <h3 class="h5 mb-3">সুদের উপর সময়ের প্রভাব বোঝা</h3>
+                    <p class="lead fs-6">সময় কীভাবে সুদের সঞ্চয়কে প্রভাবিত করে তা অন্বেষণ করুন, আপনাকে বিনিয়োগ এবং
+                        সঞ্চয় সংক্রান্ত জ্ঞাত সিদ্ধান্ত নিতে সহায়তা করে।</p>
+                    <h3 class="h5 mb-3">বাজেটে সুদের হিসাব অন্তর্ভুক্ত করা</h3>
+                    <p class="lead fs-6">আর্থিক পরিকল্পনার জন্য একটি ব্যাপক পদ্ধতির জন্য আপনার বাজেট প্রক্রিয়ায় সুদের
+                        গণনাগুলিকে একীভূত করুন।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">টাকায় সরল সুদের গণনার বাস্তব-জীবনের আবেদন</h2>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">ঋণ পরিকল্পনা
+                    </h3>
+                    <p class="lead fs-6">কিভাবে টাকায় সরল সুদের হিসাব করা ঋণের পরিকল্পনা করতে সাহায্য করে,
+                        ব্যবস্থাপনাযোগ্য পরিশোধের সময়সূচী নিশ্চিত করে।
+                    </p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">বিনিয়োগ সিদ্ধান্ত</h3>
+                    <p class="lead fs-6">বিনিয়োগে রিটার্ন প্রজেক্ট করতে ক্যালকুলেটর ব্যবহার করা এবং সুদের গণনার উপর
+                        ভিত্তি করে জ্ঞাত সিদ্ধান্ত নেওয়া।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">শিক্ষাগত সঞ্চয়</h3>
+                    <p class="lead fs-6">শিক্ষার জন্য পরিকল্পনা করা রুপি-নির্দিষ্ট সুদের গণনার সাথে আরও সুনির্দিষ্ট হয়ে
+                        ওঠে, প্রয়োজনে তহবিল পাওয়া যায় তা নিশ্চিত করা।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h2 class="h4 my-5">অনলাইন ক্যালকুলেটররা কীভাবে আর্থিক পরিকল্পনায় বিপ্লব ঘটিয়েছে</h2>
+                    <h3 class="h5 mb-3">অ্যাক্সেসযোগ্যতা এবং সুবিধা</h3>
+                    <p class="lead fs-6">অনলাইন ক্যালকুলেটরে স্থানান্তর আর্থিক সাক্ষরতার প্রতিটি স্তরে ব্যক্তিদের জন্য
+                        আর্থিক পরিকল্পনাকে আরও সহজলভ্য এবং সুবিধাজনক করে তুলেছে।</p>
+                    <h3 class="h5 mb-3">ব্যক্তিগত ফাইন্যান্স অ্যাপের সাথে ইন্টিগ্রেশন</h3>
+                    <p class="lead fs-6">অনলাইন ক্যালকুলেটরগুলি ব্যক্তিগত ফাইন্যান্স অ্যাপের সাথে নির্বিঘ্নে একত্রিত
+                        হয়, ব্যবহারকারীদের আর্থিক ব্যবস্থাপনার জন্য একটি ব্যাপক টুলসেট প্রদান করে।
+                    </p>
+                    <h3 class="h5 mb-3">আর্থিক সাক্ষরতার উপর ইতিবাচক প্রভাব</h3>
+                    <p class="lead fs-6">অনলাইন ক্যালকুলেটরগুলির সহজলভ্যতা এবং সহজলভ্যতা আর্থিক সাক্ষরতার উন্নতিতে অবদান
+                        রাখে, ব্যক্তিদের সচেতন সিদ্ধান্ত নেওয়ার ক্ষমতা দেয়।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="px-5">
+                        <img class="img-fluid" src="../simple-interest-calculator-rupees.svg"
+                            alt="Simple Interest ক্যালকুলেটর in Rupees" title="Simple Interest ক্যালকুলেটর in Rupees">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">সরল সুদের গণনায় বিভ্রান্তির সমাধান করা</h2>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 mb-3">সাধারণ ভুল ধারণাগুলি স্পষ্ট করা</h3>
+                    <p class="lead fs-6">সরল সুদের গণনার আশেপাশে থাকা ভুল ধারনাগুলিকে মোকাবেলা করা এবং দূর করা, পাঠকদের
+                        একটি পরিষ্কার বোঝার বিষয়টি নিশ্চিত করা।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 mb-3">ভাল বোঝার জন্য উদাহরণ প্রদান</h3>
+                    <p class="lead fs-6">সরল সুদের গণনার জটিল দিকগুলি ব্যাখ্যা করার জন্য ব্যবহারিক উদাহরণ ব্যবহার করে,
+                        পাঠকদের মধ্যে একটি গভীর উপলব্ধি বৃদ্ধি করে৷</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">আর্থিক পরিস্থিতিতে burstiness</h2>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 mb-3">সুদের হারে আকস্মিক পরিবর্তন পরিচালনা করা</h3>
+                    <p class="lead fs-6">সুদের হারের আকস্মিক পরিবর্তনের সাথে গণনাকে খাপ খাইয়ে নেওয়ার নির্দেশিকা,
+                        পাঠকদের অপ্রত্যাশিত আর্থিক ওঠানামা নেভিগেট করতে সাহায্য করে।
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h5 mb-3">অপ্রত্যাশিত আর্থিক ইভেন্টের জন্য গণনা মানিয়ে নেওয়া</h3>
+                    <p class="lead fs-6">আর্থিক স্থিতিশীলতা বজায় রেখে অপ্রত্যাশিত আর্থিক ঘটনার প্রতিক্রিয়ায় তাদের
+                        গণনা সামঞ্জস্য করার জন্য পাঠকদের প্রস্তুত করা।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">একটি ব্যক্তিগতকৃত আর্থিক কৌশল তৈরি করা</h2>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">ব্যক্তিগত প্রয়োজন অনুযায়ী গণনা সেলাই করা</h3>
+                    <p class="lead fs-6">পাঠকদের তাদের অনন্য আর্থিক পরিস্থিতি এবং লক্ষ্যগুলির উপর ভিত্তি করে তাদের গণনা
+                        ব্যক্তিগতকৃত করতে উত্সাহিত করা।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">দীর্ঘমেয়াদী আর্থিক লক্ষ্যগুলি অন্তর্ভুক্ত করা</h3>
+                    <p class="lead fs-6">আর্থিক পরিকল্পনার জন্য সরল সুদের হিসাব ব্যবহার করার সময় দীর্ঘমেয়াদী লক্ষ্য
+                        বিবেচনা করার গুরুত্ব তুলে ধরা।</p>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3 class="h5 mb-3">ভারসাম্য ঝুঁকি এবং পুরস্কার</h3>
+                    <p class="lead fs-6">আর্থিক সিদ্ধান্তে ঝুঁকি এবং পুরষ্কারের মধ্যে ভারসাম্য বজায় রাখার নির্দেশিকা,
+                        সুদের গণনাগুলিকে অবহিত পছন্দগুলির জন্য একটি হাতিয়ার হিসাবে ব্যবহার করে৷</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">উপসংহার</h2>
+                    <p class="lead fs-6">উপসংহারে, সরল সুদের গণনার শিল্প আয়ত্ত করা, বিশেষ করে ভারতীয় টাকার
+                        প্রেক্ষাপটে, সুষ্ঠু আর্থিক পরিকল্পনার একটি মূল দিক। অনলাইন ক্যালকুলেটরগুলির আবির্ভাব ব্যক্তিদের
+                        তাদের অর্থের কাছে যাওয়ার উপায়ে বৈপ্লবিক পরিবর্তন এনেছে, অ্যাক্সেসযোগ্যতা, নির্ভুলতা এবং আর্থিক
+                        সাক্ষরতা বৃদ্ধি করে।
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h4 my-5">প্রায়শই জিজ্ঞাসিত প্রশ্ন (FAQs)</h2>
+
+                    <p>একটি সরল সুদের ক্যালকুলেটর কি জটিল আর্থিক পরিস্থিতির জন্য উপযুক্ত?</p>
+                    <p class="lead fs-6">হ্যাঁ, একটি ভাল ক্যালকুলেটর জটিল গণনার জন্য সঠিক ফলাফল প্রদান করে বিভিন্ন
+                        আর্থিক পরিস্থিতি পরিচালনা করতে পারে।</p>
+
+                    <p>আমি কি আন্তর্জাতিক মুদ্রার জন্য একটি সাধারণ সুদের ক্যালকুলেটর ব্যবহার করতে পারি?
+                    </p>
+                    <p class="lead fs-6">যদিও সাধারণ ক্যালকুলেটরগুলি যে কোনও মুদ্রার সাথে কাজ করে, একটি রুপি-নির্দিষ্ট
+                        ক্যালকুলেটর ব্যবহার করে ভারতে ব্যবহারকারীদের জন্য আরও প্রসঙ্গ সরবরাহ করে।</p>
+
+                    <p>সর্বোত্তম আর্থিক পরিকল্পনার জন্য কত ঘন ঘন আমার সুদের হিসাব পর্যালোচনা করা উচিত?</p>
+                    <p class="lead fs-6">নিয়মিতভাবে আপনার গণনা পর্যালোচনা করার পরামর্শ দেওয়া হয়, বিশেষ করে যখন আপনার
+                        আর্থিক অবস্থা বা অর্থনৈতিক অবস্থার পরিবর্তন হয়।</p>
+
+                    <p>শিক্ষাগত সঞ্চয়ের জন্য বিশেষভাবে ডিজাইন করা কোনো অনলাইন ক্যালকুলেটর আছে কি?</p>
+                    <p class="lead fs-6">হ্যাঁ, অনেক ক্যালকুলেটর আপনাকে শিক্ষাগত সঞ্চয় সম্পর্কিত বিশদ বিবরণ দিতে দেয়,
+                        যা আপনাকে আপনার সন্তানদের ভবিষ্যতের জন্য পরিকল্পনা করতে সহায়তা করে।</p>
+
+                    <p>আমি যদি আমার সরল সুদের গণনার মধ্যে অসঙ্গতির সম্মুখীন হই তাহলে আমি কি পদক্ষেপ নিতে পারি?
+                    </p>
+                    <p class="lead fs-6">আপনার ইনপুটগুলি দুবার পরীক্ষা করুন, সঠিক সময়ের ইউনিটগুলি ব্যবহার করা হয়েছে তা
+                        নিশ্চিত করুন এবং, যদি প্রয়োজন হয়, অসঙ্গতিগুলি সমাধান করতে আর্থিক বিশেষজ্ঞদের কাছ থেকে সহায়তা
+                        নিন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="g-adsense">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-multiplex-adsense"> <ins class="adsbygoogle" style="display:block"
+                            data-ad-format="autorelaxed" data-ad-client="ca-pub-1195438021979002"
+                            data-ad-slot="2998638475"></ins>
+                        <script>     (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="../maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="../sitemap">HTML Sitemap</a> | <a
+                            class="text-white" href="../sitemap.xml">XML Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
+                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function dispInv() {
+            let invdisp = document.getElementById("totinv").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
+        }
+
+        function dispROI() {
+            let aged = document.getElementById("emi-roi").value;
+            document.getElementById("roi-disp").innerHTML = aged;
+        }
+
+        function dispTime() {
+            let invdisp = document.getElementById("dage").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
+
+        function resultSimpleInterest() {
+            // Example usage:
+            const principalAmount = document.getElementById("totinv").value;
+            const interestRate = document.getElementById("emi-roi").value;
+            const timePeriod = document.getElementById("dage").value;
+
+            function calculateSimpleInterest(principal, rate, time) {
+                // Calculate simple interest
+                const interest = (principal * rate * time) / 100;
+
+                // Calculate total amount
+                // const totalAmount = principal + interest;
+
+                // Return the result
+                return {
+                    interest: interest
+                };
+            }
+
+            const result = calculateSimpleInterest(principalAmount, interestRate, timePeriod);
+
+            let maturityAmount = parseInt(principalAmount) + result.interest;
+
+            let tblVal = "<tbody><tr><td>Total Investment</td><td class='text-end'>₹ <span class='fs-5'>" + principalAmount + "</span></td></tr><tr><td>Total Interest</td><td class='text-end'>₹ <span class='fs-5'>" + result.interest + "</span></td</tr><tr><td>Matured Amount</td><td class='text-end'>₹ <span class='fs-5'>" + maturityAmount + "</span></td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [result.interest, principalAmount];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors, data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="../app.js"></script>
+{% endraw %}

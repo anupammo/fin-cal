@@ -1,0 +1,1026 @@
+---json
+{
+  "title": "এসআইপি ক্যালকুলেটর: সিস্টেম্যাটিক ইনভেস্টমেন্ট",
+  "description": "আমাদের এসআইপি রিটার্ন ক্যালকুলেটর দিয়ে এসআইপি বিনিয়োগের সুবিধাগুলি অন্বেষণ করুন। ভারতে কীভাবে পদ্ধতিগত বিনিয়োগ পরিকল্পনা ক্যালকুলেটর আপনাকে সাহায্য করতে পারে তা আবিষ্কার করুন",
+  "translations": [
+    "en",
+    "bn",
+    "hi"
+  ],
+  "ogImage": "https://nivesguru.in/res/meta/systematic-investment-plans-calculator.png",
+  "pageStyle": "styles/bn-systematic-investment-plan-sip-return-calculator.njk",
+  "pageSchema": "schema/bn-systematic-investment-plan-sip-return-calculator.njk"
+}
+---
+{% raw %}
+    <header id="calculator">
+        <div class="wave1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
+                        <img src="../favicon-32x32.png" width="32" height="32"
+                            class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
+                            title="Nivesguru Logo">
+                        <p class="d-inline-block h4">Nivesguru</p>
+                    </a>
+                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Investment ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item"
+                                            href="senior-citizens-savings-scheme-scss-calculator">SCSS ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="post-office-monthly-income-scheme-mis-calculator">MIS ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="mahila-samman-savings-certificate-mssc-calculator">MSSC
+                                            ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="post-office-time-deposit-td-calculator">TD
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sgb-calculator">SGB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="kvp-calculator">KVP
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="national-savings-certificate-nsc-calculator">NSC
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="apy-calculator">APY
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="national-pension-system-nps-calculator">NPS
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ppf-calculator">PPF
+                                            ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY
+                                            ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Finance ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="emi-calculator-online">EMI ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">SIP
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="swp-calculator-online">SWP ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="compound-interest-calculator">Compound Interest
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="simple-interest-calculator">Simple Interest
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="inflation-calculator-india">Inflation
+                                            ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="lumpsum-calculator-online">Lumpsum
+                                            ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Savings ক্যালকুলেটর
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="fixed-deposit-fd-calculator">FD ক্যালকুলেটর</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="bob-fd-calculator">BOB FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-fd-calculator">BOI FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-fd-calculator">PNB FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-fd-calculator">SBI FD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-fd-calculator">UBI FD ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="rd-calculator">RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="bob-rd-calculator">BOB RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-rd-calculator">BOI RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-rd-calculator">PNB RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-rd-calculator">SBI RD ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-rd-calculator">UBI RD ক্যালকুলেটর</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="sb-calculator">SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="bob-sb-calculator">BOB SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="boi-sb-calculator">BOI SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="pnb-sb-calculator">PNB SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="sbi-sb-calculator">SBI SB ক্যালকুলেটর</a></li>
+                                    <li><a class="dropdown-item" href="ubi-sb-calculator">UBI SB ক্যালকুলেটর</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about-us">About us</a></li>
+                                    <li><a class="dropdown-item" href="contact-us">Contact us</a></li>
+                                    <li><a class="dropdown-item" href="faq-page">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z">
+                                            </path>
+                                            <path
+                                                d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu" data-bs-popper="static">
+                                    <li><a class="dropdown-item"
+                                            href="../systematic-investment-plan-sip-return-calculator">English</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../hi/systematic-investment-plan-sip-return-calculator">हिंदी</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="systematic-investment-plan-sip-return-calculator">বাংলা</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body">
+                                <div class="px-5 pt-5">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a title="Home" href="./">🏠 Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="sip-calculator">SIP
+                                                ক্যালকুলেটর</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                                <h1 class="lead fw-bold fs-3 mb-5 px-5">SIP রিটার্ন ক্যালকুলেটর: সিস্টেমেটিক
+                                    ইনভেস্টমেন্ট প্ল্যানের শক্তি উন্মোচন</h1>
+                                <form class="px-5">
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Investment / Month</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="inv-disp">5000</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="1000" max="100000" step="1000"
+                                            value="5000" id="fd_toti" onchange="dispInv()">
+                                        <div class="row">
+                                            <span class="col">1000</span>
+                                            <span class="text-end col">100000</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="fd_toti" class="form-label">Interest Rate</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end"><strong
+                                                        id="age-disp">7.5%</strong></label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="5" max="12" step=".1" value="7.5"
+                                            id="fd_roi" onchange="dispROI()">
+                                        <div class="row">
+                                            <span class="col">5</span>
+                                            <span class="text-end col">12</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label">Duration (Year)</label>
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label fw-bold float-end" id="dur-disp">5</label>
+                                            </div>
+                                        </div>
+                                        <input type="range" class="form-range" min="0" max="20" step="1" value="5"
+                                            id="fd_idur" onchange="dispTime()">
+                                        <div class="row">
+                                            <span class="col">0</span>
+                                            <span class="text-end col">20</span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary rounded-pill shadow-none px-5" type="button"
+                                            onclick="fdCalc();">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="card shadow h-100 border-0 mb-3">
+                            <div class="card-body py-0">
+                                <div class="px-5">
+                                    <div class="card border-0">
+                                        <div class="card-body pb-0">
+                                            <table id="myTbl" class="lead table table-borderless fs-6 mt-5 mb-0">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow border-0 my-3">
+                            <div class="card-body">
+                                <div class="px-5">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item lead fs-6 py-1 px-0 border-0 lead fs-6">
+                                            <time pubdate="pubdate" datetime="2023-09-10">Updated on : Sep 10,
+                                                2023</time>
+                                        </li>
+                                        <li class="list-group-item lead fs-6 pt-0 px-0">
+                                            Author : <a href="https://anupammondal.in" title="Posts by Anupam Mondal"
+                                                rel="author">Anupam Mondal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="my-5" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item lead text-secondary py-1 px-0 border-0">
+                            <time pubdate="pubdate" datetime="2023-09-10">Published : Sep 10, 2023</time>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-3">ভূমিকা: এসআইপি ক্যালকুলেটর</h2>
+                    <p class="lead fs-6">ব্যক্তিগত অর্থায়নের ক্রমবর্ধমান ল্যান্ডস্কেপে, বিনিয়োগ কৌশলগুলি একটি নিরাপদ
+                        ভবিষ্যত গঠনে একটি মুখ্য ভূমিকা পালন করে। উপলব্ধ অগণিত বিকল্পগুলির মধ্যে, দীর্ঘমেয়াদী সম্পদ
+                        সৃষ্টির জন্য বিনিয়োগকারীদের জন্য পদ্ধতিগত বিনিয়োগ পরিকল্পনা (SIPs) একটি জনপ্রিয় পছন্দ হিসাবে
+                        আবির্ভূত হয়েছে। এই নিবন্ধটি এসআইপি বিনিয়োগের জগতের সন্ধান করে, এসআইপি ক্যালকুলেটরগুলির
+                        অন্তর্দৃষ্টি প্রদান করে, ভারতের আর্থিক বাজারে তাদের তাত্পর্য এবং কীভাবে তারা তথ্য বিনিয়োগের
+                        সিদ্ধান্ত নিতে সহায়তা করে।</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-3 col-md-4 col-12">
+                    <ul class="list-group list-group-flush lead fw-bold fs-6 my-3">
+                        <li class="list-group-item border-0">
+                            <a href="fixed-deposit-fd-calculator"><span class="fs-5">🪙</span> FD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sb-calculator"><span class="fs-5">🪙</span> SB
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="rd-calculator"><span class="fs-5">🪙</span> RD
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sukanya-samriddhi-yojana-ssy-calculator"><span class="fs-5">🪙</span> SSY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="ppf-calculator"><span class="fs-5">🪙</span> PPF
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="national-pension-system-nps-calculator"><span class="fs-5">🪙</span> NPS
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="apy-calculator"><span class="fs-5">🪙</span> APY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator"><span
+                                    class="fs-5">🪙</span> PMJJBY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator"><span class="fs-5">🪙</span>
+                                PMSBY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="kvp-calculator"><span class="fs-5">🪙</span> KVP
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="national-savings-certificate-nsc-calculator"><span class="fs-5">🪙</span> NSC
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="list-group-item border-0">
+                            <a href="sgb-calculator"><span class="fs-5">🪙</span> SGB
+                                ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-8 col-md-6 col-12">
+                    <h2 class="h3 my-3">কিভাবে একটি SIP ক্যালকুলেটর কাজ করে?</h2>
+                    <p class="lead fs-6">পোস্ট অফিস এসআইপি ক্যালকুলেটরটি ব্যবহারকারী-বান্ধব হওয়ার জন্য ডিজাইন করা
+                        হয়েছে, এমনকি যাদের আর্থিক গণনার অভিজ্ঞতা কম বা নেই তাদের জন্যও। আপনাকে সঠিক ফলাফল দেওয়ার জন্য
+                        এটির জন্য শুধুমাত্র কয়েকটি মৌলিক ইনপুট প্রয়োজন, যেমন আপনার বিনিয়োগের পরিমাণ, সুদের হার এবং
+                        বিনিয়োগের সময়কাল। পোস্ট অফিস এসআইপি ক্যালকুলেটর ব্যবহার করে, আপনি বিভিন্ন বিনিয়োগ বিকল্পের
+                        তুলনা করতে পারেন এবং সেরা রিটার্ন প্রদান করে এমন একটি বেছে নিতে পারেন। এটি আপনাকে অবহিত বিনিয়োগ
+                        সিদ্ধান্ত নিতে এবং আপনার সঞ্চয়কে সর্বাধিক করতে সহায়তা করতে পারে। অধিকন্তু, পোস্ট অফিস এমআইএস
+                        স্কিম অফার করে এমন ব্যবসা এবং আর্থিক প্রতিষ্ঠানগুলির জন্য ক্যালকুলেটর একটি মূল্যবান হাতিয়ার।
+                        আপনার ওয়েবসাইটে ক্যালকুলেটর এম্বেড করার মাধ্যমে, আপনি আপনার ক্লায়েন্টদের তাদের উপার্জন গণনা
+                        করার এবং নতুন ক্লায়েন্টদের আকর্ষণ করার জন্য একটি সুবিধাজনক উপায় প্রদান করতে পারেন। উপসংহারে,
+                        পোস্ট অফিস এসআইপি ক্যালকুলেটর যে কেউ তাদের বিনিয়োগ কার্যকরভাবে পরিচালনা করতে চায় তাদের জন্য
+                        একটি অপরিহার্য হাতিয়ার। এটি ব্যবহার করা সহজ, নির্ভুল এবং আপনাকে তথ্য বিনিয়োগের সিদ্ধান্ত নিতে
+                        সাহায্য করতে পারে। আজ এটি ব্যবহার করে দেখুন এবং নিজের জন্য সুবিধাগুলি অনুভব করুন!
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card border-0">
+                        <img src="../systematic-investment-plan-sip-return-calculator.svg"
+                            class="card-body img-fluid py-4" alt="Systematic Investment Plans - SIP Return ক্যালকুলেটর">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="h3 mb-3">বিনামূল্যে এসআইপি ক্যালকুলেটর উপসংহার:</h2>
+                    <p class="lead fs-6">আপনি কি আপনার পোস্ট অফিসের কর্মক্ষমতা অপ্টিমাইজ করতে খুঁজছেন? আমাদের এসআইপি
+                        ক্যালকুলেটর ছাড়া আর দেখুন না, এখন nivesguru.in-এ উপলব্ধ! এর উন্নত অ্যালগরিদম এবং
+                        ব্যবহারকারী-বান্ধব ইন্টারফেসের সাহায্যে, আমাদের ক্যালকুলেটর আপনাকে মূল কর্মক্ষমতা মেট্রিক্স যেমন
+                        মেল ভলিউম, ডেলিভারি সময় এবং গ্রাহক সন্তুষ্টির হিসাব করতে এবং ট্র্যাক করতে সাহায্য করতে পারে।
+                        nivesguru.in-এ, আমরা প্রতিযোগিতায় এগিয়ে থাকার গুরুত্ব বুঝতে পারি এবং আমাদের এসআইপি
+                        ক্যালকুলেটরটি SEO এর জন্য অপ্টিমাইজ করা হয়েছে যাতে আপনার পোস্ট অফিস সার্চ ইঞ্জিনের ফলাফলে
+                        দৃশ্যমান এবং প্রাসঙ্গিক থাকে। আমাদের টুল ব্যবহার করে, আপনি আরও গ্রাহকদের আকৃষ্ট করতে এবং আপনার
+                        পোস্ট অফিসের দৃশ্যমানতা বাড়াতে সক্ষম হবেন। আপনি একটি ছোট পোস্ট অফিস যা ক্রিয়াকলাপকে
+                        স্ট্রিমলাইন করতে চাইছেন বা কর্মক্ষমতা অপ্টিমাইজ করার জন্য একটি বড় অপারেশন চাইছেন না কেন, আমাদের
+                        এসআইপি ক্যালকুলেটর সাহায্য করতে পারে। nivesguru.in-এ আজই এটি ব্যবহার করে দেখুন এবং এটি আপনার
+                        পোস্ট অফিসের জন্য কী পার্থক্য করতে পারে তা দেখুন!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">এসআইপি বিনিয়োগের সারাংশ
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="essence">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h3 class="h4 my-4">এসআইপি বিনিয়োগ বোঝা</h3>
+                    <p class="lead fs-6"><strong>সিস্টেমেটিক ইনভেস্টমেন্ট প্ল্যান</strong>, সাধারণত SIP নামে পরিচিত,
+                        মিউচুয়াল ফান্ডে বিনিয়োগ করার জন্য একটি সুশৃঙ্খল পদ্ধতি। এটি বিনিয়োগকারীদের একটি নির্দিষ্ট
+                        মিউচুয়াল ফান্ড স্কিমে নিয়মিত বিরতিতে, সাধারণত মাসিক বা ত্রৈমাসিক অর্থ বরাদ্দ করার অনুমতি দেয়।
+                        এসআইপি-এর আকর্ষণ এর সরলতার মধ্যে রয়েছে, যা ব্যক্তিদের ন্যূনতম মূলধনের সাথে বিনিয়োগ শুরু করতে
+                        এবং রুপি-গড় গড় থেকে লাভবান হতে সক্ষম করে।</p>
+                    <h3 class="h4 my-4">SIP রিটার্ন ক্যালকুলেটর উন্মোচন করা হচ্ছে</h3>
+                    <p class="lead fs-6">একজন বিচক্ষণ বিনিয়োগকারীর অস্ত্রাগারের একটি গুরুত্বপূর্ণ হাতিয়ার হল এসআইপি
+                        রিটার্ন ক্যালকুলেটর। এই টুলটি এসআইপি বিনিয়োগে সম্ভাব্য রিটার্নের অনুমান করার জটিলতা দূর করে।
+                        বিনিয়োগের পরিমাণ, সময়কাল এবং প্রত্যাশিত রিটার্নের হারের মতো মূল ভেরিয়েবলগুলি ইনপুট করে,
+                        বিনিয়োগকারীরা সময়ের সাথে সাথে তাদের বিনিয়োগের বৃদ্ধিতে মূল্যবান অন্তর্দৃষ্টি অর্জন করতে পারে।
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/14907339/pexels-photo-14907339.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class="img-fluid rounded shadow my-5" alt="SIP Investment by Nivesguru">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">ভারতে এসআইপি ক্যালকুলেটর ব্যবহার করা</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="leveraging">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h4 class="h4 my-4">ভারতে এসআইপি ক্যালকুলেটর ব্যবহার করা</h4>
+                    <p class="lead fs-6">ভারতের গতিশীল আর্থিক ল্যান্ডস্কেপ এসআইপি বিনিয়োগে উত্থিত হয়েছে। ভারতীয়
+                        বাজারের জন্য তৈরি এসআইপি ক্যালকুলেটরগুলির উত্থানের সাথে এই বৃদ্ধি ঘটেছে৷ ভারতের একটি এসআইপি
+                        ক্যালকুলেটর মূল্যস্ফীতি, ট্যাক্সের প্রভাব এবং বাজারের অস্থিরতার মতো ভেরিয়েবলের কারণ করে, যা
+                        ভবিষ্যতের আয়ের আরও সঠিক প্রক্ষেপণ প্রদান করে। ফলস্বরূপ, বিনিয়োগকারীরা তাদের আর্থিক লক্ষ্যগুলির
+                        সাথে সামঞ্জস্যপূর্ণ সুপরিচিত সিদ্ধান্ত নিতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h4 class="h4 my-4">বিনিয়োগের পছন্দগুলি নেভিগেট করা: বিনিয়োগের জন্য সেরা এসআইপি৷</h4>
+                    <p class="lead fs-6">বিনিয়োগের জন্য সেরা SIP বেছে নেওয়া একটি গুরুত্বপূর্ণ সিদ্ধান্ত। এসআইপি
+                        ক্যালকুলেটরগুলি বিনিয়োগকারীদের বিভিন্ন মিউচুয়াল ফান্ড স্কিম তুলনা করার অনুমতি দিয়ে এই
+                        প্রক্রিয়ায় সহায়তা করে। বিভিন্ন পরিস্থিতিতে ইনপুট করে, ব্যক্তিরা তাদের ঝুঁকির ক্ষুধা, আর্থিক
+                        উদ্দেশ্য এবং বিনিয়োগের দিগন্তের সাথে সারিবদ্ধ স্কিমগুলি সনাক্ত করতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h4 class="h4 my-4">বিনিয়োগকারীদের ক্ষমতায়ন: মিউচুয়াল ফান্ড এসআইপি ক্যালকুলেটর</h4>
+                    <p class="lead fs-6">একটি মিউচুয়াল ফান্ড এসআইপি ক্যালকুলেটর হল একটি বহুমুখী টুল যা সকল স্তরের
+                        দক্ষতার বিনিয়োগকারীদের জন্য সরবরাহ করে। পাকা বিনিয়োগকারীরা বিভিন্ন বিনিয়োগের পরিমাণ এবং
+                        মেয়াদ নিয়ে পরীক্ষা করে তাদের পোর্টফোলিও ঠিক করতে পারেন। অন্যদিকে, নবজাতকরা, কীভাবে নিয়মিত
+                        অবদান সময়ের সাথে সাথে যথেষ্ট সম্পদ আহরণে অনুবাদ করতে পারে সে সম্পর্কে একটি স্পষ্ট ধারণা অর্জন
+                        করতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h4 class="h4 my-4">অনলাইন এসআইপি ক্যালকুলেটরের সুবিধা</h4>
+                    <p class="lead fs-6">ডিজিটাল যুগে, অ্যাক্সেসিবিলিটি গুরুত্বপূর্ণ। অনলাইন এসআইপি ক্যালকুলেটর আর্থিক
+                        পরিকল্পনার শক্তি বিনিয়োগকারীদের নখদর্পণে নিয়ে আসে। এই ব্যবহারকারী-বান্ধব সরঞ্জামগুলি
+                        বিনিয়োগকারীদের তাত্ক্ষণিক গণনা করতে, বিভিন্ন পরিস্থিতি বিশ্লেষণ করতে এবং চলতে চলতে তাদের
+                        বিনিয়োগ কৌশলগুলিকে পরিমার্জিত করতে সক্ষম করে৷</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">ডিমিস্টিফাইং সিস্টেমেটিক ইনভেস্টমেন্ট প্ল্যান (SIP)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="thoughts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center lead fs-6">সিস্টেমেটিক ইনভেস্টমেন্ট প্ল্যান, প্রায়ই SIP হিসাবে সংক্ষেপিত হয়,
+                        বিনিয়োগের জন্য একটি পদ্ধতিগত পদ্ধতি যা বাজারের অস্থিরতার প্রভাবকে কমিয়ে দেয়। এতে একটি
+                        মিউচুয়াল ফান্ডের ইউনিট কেনার জন্য নিয়মিত বিরতিতে একটি নির্দিষ্ট পরিমাণ অর্থ বরাদ্দ করা জড়িত।
+                        বাজারের উচ্চতা এবং নিম্নের মধ্যে বিনিয়োগ বিতরণ করে, SIP বিনিয়োগকারীদের রুপি-কস্ট গড় থেকে
+                        উপকৃত হতে সক্ষম করে।</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">কিভাবে SIP কাজ করে?</h3>
+                    <p class="lead fs-6">SIP ইনভেস্টমেন্টের জন্য নির্দিষ্ট ব্যবধানে আপনার অ্যাকাউন্ট থেকে একটি
+                        পূর্বনির্ধারিত পরিমাণ কেটে নেওয়ার জন্য আপনার ব্যাঙ্কের সাথে একটি স্থায়ী নির্দেশ সেট আপ করা
+                        অন্তর্ভুক্ত। এই পরিমাণটি তারপর নির্বাচিত মিউচুয়াল ফান্ড স্কিমে বিনিয়োগ করা হয়। ক্রয়কৃত
+                        ইউনিটগুলি তহবিলের বিদ্যমান নেট অ্যাসেট ভ্যালুর (এনএভি) উপর নির্ভর করে। বাজার মন্দার সময়, আরও
+                        ইউনিট অধিগ্রহণ করা হয় এবং উত্থানের সময়, কম ইউনিট কেনা হয়। এই কৌশল নিশ্চিত করে যে প্রতি ইউনিট
+                        গড় খরচ তুলনামূলকভাবে স্থির থাকে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="h4 my-4">এসআইপি-তে চক্রবৃদ্ধির ক্ষমতা</h3>
+                    <p class="lead fs-6">এসআইপি বিনিয়োগের অন্যতম ভিত্তি হল চক্রবৃদ্ধির শক্তি। যেহেতু মিউচুয়াল ফান্ড
+                        দ্বারা উত্পন্ন রিটার্নগুলি পুনঃবিনিয়োগ করা হয়, তারা পরবর্তী সময়ে অতিরিক্ত রিটার্ন তৈরি করে।
+                        সময়ের সাথে সাথে, এই চক্রবৃদ্ধি প্রভাব সম্পদের সূচকীয় বৃদ্ধির দিকে নিয়ে যায়।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">এসআইপি বিনিয়োগ কৌশল অন্বেষণ</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="strategies">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4">এসআইপি-তে বৈচিত্র্যের শিল্প</h3>
+                    <p class="lead fs-6">বৈচিত্র্যকরণ হল বিনিয়োগের একটি মৌলিক কৌশল, এবং SIPs এটি বাস্তবায়নের একটি
+                        সুবিধাজনক উপায় অফার করে। এসআইপি-এর মাধ্যমে একাধিক মিউচুয়াল ফান্ড স্কিমে বিনিয়োগ করে,
+                        বিনিয়োগকারীরা তাদের ঝুঁকি বিভিন্ন সম্পদ শ্রেণী, শিল্প এবং বাজার বিভাগে ছড়িয়ে দিতে পারে। এই
+                        পদ্ধতিটি একটি একক বিনিয়োগে দুর্বল কর্মক্ষমতার প্রভাবকে কমিয়ে দেয় এবং সামঞ্জস্যপূর্ণ আয়ের
+                        সম্ভাবনা বাড়ায়।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4">SIP এর সাথে লক্ষ্য-ভিত্তিক বিনিয়োগ</h3>
+                    <p class="lead fs-6">নির্দিষ্ট আর্থিক লক্ষ্য পূরণের জন্য এসআইপি তৈরি করা যেতে পারে। এটি একটি অবসর
+                        গ্রহণ করপাস তৈরি করা হোক না কেন, একটি শিশুর শিক্ষার জন্য অর্থায়ন করা হোক বা একটি বাড়ি কেনা,
+                        এসআইপিগুলি এই উদ্দেশ্যগুলি অর্জনের জন্য একটি সুশৃঙ্খল পদ্ধতির প্রস্তাব করে৷ লক্ষ্যমাত্রার সাথে
+                        বিনিয়োগের পরিমাণ এবং মেয়াদ সারিবদ্ধ করে, বিনিয়োগকারীরা তাদের অগ্রগতি ট্র্যাক করতে পারে এবং
+                        প্রয়োজন অনুসারে সমন্বয় করতে পারে।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4">ELSS SIP-এর মাধ্যমে কর সুবিধা</h3>
+                    <p class="lead fs-6">ইক্যুইটি লিঙ্কড সেভিংস স্কিম (ELSS) আয়কর আইনের ধারা 80C এর অধীনে কর সুবিধা
+                        প্রদান করে। ELSS SIP গুলি বিনিয়োগকারীদের সম্ভাব্য মূলধন বৃদ্ধি এবং কর সঞ্চয়ের দ্বৈত সুবিধা
+                        প্রদান করে। এসআইপি ক্যালকুলেটরগুলি বিনিয়োগকারীদের তাদের সামগ্রিক আয়ের উপর ট্যাক্স সুবিধার
+                        প্রভাব বুঝতে এবং ELSS-এ তহবিল বরাদ্দ করার বিষয়ে সচেতন সিদ্ধান্ত নিতে সাহায্য করতে পারে।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="concerns">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">বিনিয়োগকারীদের উদ্বেগ সম্বোধন</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h3 class="h4 mb-4">SIP-এর মাধ্যমে বাজারের অস্থিরতা মোকাবেলা করা</h3>
+                    <p class="lead fs-6">বাজারের অস্থিরতা প্রায়ই বিনিয়োগকারীদের মধ্যে অনিশ্চয়তা সৃষ্টি করে। যাইহোক,
+                        এসআইপি বাজারের চরম ওঠানামার বিরুদ্ধে একটি কুশন হিসেবে কাজ করে। ধারাবাহিকভাবে একটি নির্দিষ্ট
+                        পরিমাণ বিনিয়োগ করে, বিনিয়োগকারীরা দাম কম হলে বেশি ইউনিট এবং দাম বেশি হলে কম ইউনিট কেনেন। এই
+                        কৌশলটি কার্যকরভাবে ইউনিটের ব্যয় নির্ণয় করে, স্বল্পমেয়াদী বাজারের অশান্তির প্রভাব হ্রাস করে।
+                    </p>
+                    <h3 class="h4 mb-4">এসআইপি বনাম লম্প সাম: তুলনামূলক বিশ্লেষণ</h3>
+                    <p class="lead fs-6">বিনিয়োগকারীরা প্রায়ই চিন্তা করে যে SIP-এর মাধ্যমে বিনিয়োগ করবেন নাকি একমুঠো
+                        বিনিয়োগ বেছে নেবেন। SIP ক্যালকুলেটরগুলি সম্ভাব্য রিটার্নের পাশাপাশি তুলনা প্রদান করে এই
+                        সিদ্ধান্তকে সহজতর করতে পারে। যদিও একমুঠো বিনিয়োগ বাজারের নিম্নমুখীতাকে পুঁজি করতে পারে,
+                        এসআইপিগুলি রুপি-কস্ট গড়ের সুবিধা প্রদান করে এবং একটি অনুপযুক্ত সময়ে একটি বড় অঙ্কের বিনিয়োগের
+                        ঝুঁকি হ্রাস করে।</p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/68912/pexels-photo-68912.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-2" alt="Systematic Investment Plan ক্যালকুলেটর">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="step-by-step`">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">SIP ক্যালকুলেটর নেভিগেট করা: একটি ধাপে ধাপে গাইড</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4"><span class="h3">ধাপ 1: </span><br />একটি নির্ভরযোগ্য SIP ক্যালকুলেটর চয়ন করুন
+                    </h3>
+                    <p class="lead fs-6">একটি বিশ্বস্ত আর্থিক ওয়েবসাইট বা মিউচুয়াল ফান্ড প্ল্যাটফর্ম থেকে একটি SIP
+                        ক্যালকুলেটর নির্বাচন করুন। নিশ্চিত করুন যে ক্যালকুলেটরটি ইনপুট প্যারামিটারে নমনীয়তা, গ্রাফিকাল
+                        উপস্থাপনা এবং ভবিষ্যতের রেফারেন্সের জন্য পরিস্থিতি সংরক্ষণ করার ক্ষমতার মতো বৈশিষ্ট্যগুলি অফার
+                        করে।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4"><span class="h3">ধাপ 2: </span><br />ইনপুট বিনিয়োগ বিবরণ</h3>
+                    <p class="lead fs-6">বিনিয়োগের পরিমাণ, এসআইপি ফ্রিকোয়েন্সি (মাসিক/ত্রৈমাসিক), প্রত্যাশিত রিটার্নের
+                        হার এবং বিনিয়োগের মেয়াদ লিখুন। কিছু ক্যালকুলেটর বিনিয়োগকারীর বর্তমান বয়স এবং মুদ্রাস্ফীতির
+                        হারের মতো অতিরিক্ত তথ্যের জন্যও অনুরোধ করতে পারে।</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h3 class="h5 mb-4"><span class="h3">ধাপ 3: </span><br />ফলাফল বিশ্লেষণ</h3>
+                    <p class="lead fs-6">একবার আপনি বিস্তারিত লিখলে, SIP ক্যালকুলেটর আপনার বিনিয়োগের বৃদ্ধির অনুমান
+                        তৈরি করবে। এতে মোট বিনিয়োগের পরিমাণ, সম্ভাব্য আয় এবং পরিপক্কতার পরিমাণ অন্তর্ভুক্ত থাকতে পারে।
+                        গ্রাফ এবং চার্টগুলি সময়ের সাথে বিনিয়োগের কার্যকারিতাকে দৃশ্যমানভাবে উপস্থাপন করতে পারে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5" id="conclusion">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">উপসংহার</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <h3 class="mb-4">আপনার SIP যাত্রা এখানে শুরু হয়</h3>
+                    <p class="lead fs-6">আর্থিক ল্যান্ডস্কেপ অগ্রগতির সাথে সাথে, SIP এবং তাদের ক্যালকুলেটরগুলি
+                        বিনিয়োগকারীদের জন্য অপরিহার্য হাতিয়ার হয়ে চলেছে। জটিল গণনা সহজ করার এবং সম্ভাব্য রিটার্ন
+                        সম্পর্কে অন্তর্দৃষ্টি প্রদান করার ক্ষমতা সহ, এসআইপি ক্যালকুলেটর ব্যক্তিদেরকে সচেতন বিনিয়োগের
+                        সিদ্ধান্ত নেওয়ার ক্ষমতা দেয়। পদ্ধতিগত বিনিয়োগের নীতিগুলিকে আলিঙ্গন করে এবং রুপি-কস্ট
+                        এভারেজিংয়ের সুবিধাগুলি ব্যবহার করে, বিনিয়োগকারীরা আর্থিক সমৃদ্ধি এবং নিরাপত্তার দিকে যাত্রা
+                        শুরু করতে পারে। মনে রাখবেন, যখন SIP ক্যালকুলেটরগুলি মূল্যবান অন্তর্দৃষ্টি প্রদান করে, তখন একজন
+                        আর্থিক উপদেষ্টার সাথে পরামর্শ করা আপনার অনন্য আর্থিক লক্ষ্যগুলির জন্য উপযুক্ত ব্যক্তিগত
+                        নির্দেশনা প্রদান করতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h3 class="mb-4">আর্থিক ভবিষ্যৎ ক্ষমতায়ন</h3>
+                    <p class="lead fs-6">বিনিয়োগের ক্ষেত্রে, জ্ঞান প্রকৃতপক্ষে শক্তি। SIP ক্যালকুলেটর বিনিয়োগকারীদের
+                        তাদের বিনিয়োগের বৃদ্ধি কল্পনা করার ক্ষমতা দিয়ে, বিচক্ষণ সিদ্ধান্ত গ্রহণে সহায়তা করে। ভারতীয়
+                        আর্থিক বাজারের বিকাশ অব্যাহত থাকায়, এসআইপি বিনিয়োগ এবং ক্যালকুলেটরগুলি আর্থিক নিরাপত্তা এবং
+                        সমৃদ্ধির দিকে প্রয়াসী ব্যক্তিদের জন্য মূল্যবান হাতিয়ার হিসাবে রয়ে গেছে। আপনি একজন অভিজ্ঞ
+                        বিনিয়োগকারী বা একজন নবীন হোন না কেন, SIP-এর সম্ভাবনাকে কাজে লাগানো একটি উজ্জ্বল আর্থিক
+                        ভবিষ্যতের পথ প্রশস্ত করতে পারে।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4"><span class="d-block h1">FAQ's</span>এর
+                            এসআইপি বিনিয়োগ সম্পর্কে</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5" id="faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p>প্রশ্ন 1: SIP-এর জন্য ন্যূনতম বিনিয়োগের পরিমাণ কত?</p>
+                    <p class="lead fs-6">SIP-এর জন্য ন্যূনতম বিনিয়োগের পরিমাণ মিউচুয়াল ফান্ড স্কিম এবং ফান্ড হাউসের
+                        মধ্যে পরিবর্তিত হতে পারে। এটি ₹500 থেকে ₹1,000 পর্যন্ত হতে পারে। যাইহোক, আপনার আগ্রহের স্কিমের
+                        নির্দিষ্ট প্রয়োজনীয়তাগুলি পরীক্ষা করা অপরিহার্য।</p>
+                    <p>প্রশ্ন 2: আমি কি পরে এসআইপি বিনিয়োগের পরিমাণ পরিবর্তন করতে পারি?</p>
+                    <p class="lead fs-6">হ্যাঁ, অনেক SIP বিনিয়োগের পরিমাণ সামঞ্জস্য করার ক্ষেত্রে নমনীয়তা প্রদান করে।
+                        আপনি আপনার আর্থিক পরিস্থিতি এবং লক্ষ্যগুলির উপর ভিত্তি করে আপনার SIP অবদানগুলি বাড়াতে, হ্রাস
+                        করতে বা বিরতি দিতে পারেন।
+                    </p>
+                    <p>প্রশ্ন 3: SIP বিনিয়োগ কি ঝুঁকিমুক্ত?
+                    </p>
+                    <p class="lead fs-6">যদিও SIP গুলিকে সাধারণত রুপি-কস্ট এভারেজিংয়ের কারণে কম ঝুঁকিপূর্ণ বলে মনে করা
+                        হয়, তবুও তারা বাজারের অন্তর্নিহিত ঝুঁকি বহন করে। মিউচুয়াল ফান্ড ইউনিটের মূল্য বাজারের অবস্থার
+                        উপর ভিত্তি করে ওঠানামা করতে পারে, যা আপনার বিনিয়োগের সামগ্রিক আয়কে প্রভাবিত করে।</p>
+                    <p>প্রশ্ন 4: আমি কি একসাথে একাধিক SIP শুরু করতে পারি?</p>
+                    <p class="lead fs-6">একেবারে। প্রকৃতপক্ষে, বিভিন্ন মিউচুয়াল ফান্ড স্কিম জুড়ে একাধিক SIP শুরু করা
+                        বৈচিত্র্য এবং একটি সুসংহত বিনিয়োগ পোর্টফোলিওতে অবদান রাখতে পারে। এসআইপি ক্যালকুলেটর আপনাকে এই
+                        একাধিক বিনিয়োগ কার্যকরভাবে পরিচালনা ও নিরীক্ষণ করতে সাহায্য করতে পারে।</p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>প্রশ্ন 5. একটি SIP রিটার্ন ক্যালকুলেটর কি?</p>
+                    <p class="lead fs-6">একটি এসআইপি রিটার্ন ক্যালকুলেটর একটি টুল যা বিনিয়োগকারীদের তাদের এসআইপি
+                        বিনিয়োগের সম্ভাব্য রিটার্ন অনুমান করতে সাহায্য করে। বিনিয়োগের পরিমাণ, সময়কাল এবং প্রত্যাশিত
+                        রিটার্নের হারের মতো ভেরিয়েবল ইনপুট করার মাধ্যমে, বিনিয়োগকারীরা তাদের বিনিয়োগের বৃদ্ধির
+                        অন্তর্দৃষ্টি অর্জন করতে পারে।
+                    </p>
+                    <p>প্রশ্ন ৬. কেন SIP ভারতে একটি জনপ্রিয় বিনিয়োগ পছন্দ?</p>
+                    <p class="lead fs-6">SIP এর সরলতা, অ্যাক্সেসযোগ্যতা এবং বাজারের অস্থিরতার প্রভাব কমানোর ক্ষমতার
+                        কারণে ভারতে জনপ্রিয়। এটি ব্যক্তিদের নিয়মিতভাবে অল্প পরিমাণে বিনিয়োগ করতে দেয়, এটি বিভিন্ন
+                        আর্থিক লক্ষ্যের জন্য উপযুক্ত করে তোলে।</p>
+                    <p>প্রশ্ন ৭. SIP-এ রুপি-কস্ট এভারেজিং কীভাবে কাজ করে?</p>
+                    <p class="lead fs-6">রুপি-কস্ট এভারেজিংয়ে বাজারের অবস্থা নির্বিশেষে নিয়মিত বিরতিতে একটি নির্দিষ্ট
+                        পরিমাণ বিনিয়োগ করা জড়িত। এই কৌশলটি নিশ্চিত করে যে বিনিয়োগকারীরা যখন দাম কম থাকে তখন বেশি
+                        ইউনিট এবং দাম বেশি হলে কম ইউনিট ক্রয় করে, ফলে সময়ের সাথে সাথে প্রতি ইউনিটের গড় খরচ কম হয়।
+                    </p>
+                    <p>প্রশ্ন ৮. SIP ক্যালকুলেটর কি সঠিক আয়ের পূর্বাভাস দিতে পারে?</p>
+                    <p class="lead fs-6">SIP ক্যালকুলেটরগুলি প্রদত্ত ইনপুটগুলির উপর ভিত্তি করে আনুমানিক আয় প্রদান করে।
+                        বাজারের ওঠানামা এবং অপ্রত্যাশিত ঘটনার কারণে প্রকৃত আয় পরিবর্তিত হতে পারে। যাইহোক, এসআইপি
+                        ক্যালকুলেটরগুলি প্রত্যাশা নির্ধারণ এবং বিনিয়োগের সিদ্ধান্ত নেওয়ার জন্য একটি দরকারী টুল অফার
+                        করে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <h2 class="text-center my-4">সমাপ্তি চিন্তা</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5" id="concluding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-12">
+                    <h3 class="h4 mb-4">আপনার SIP জার্নি উন্মোচিত হয়</h3>
+                    <p class="lead fs-6">বিনিয়োগের জগতে, এসআইপিগুলি আর্থিক বিচক্ষণতা এবং দূরদর্শিতার আলোকবর্তিকা হিসাবে
+                        দাঁড়িয়ে আছে। পদ্ধতিগত বিনিয়োগ এবং এসআইপি ক্যালকুলেটরদের প্রজ্ঞার মাধ্যমে, আপনার কাছে একটি
+                        দৃঢ় আর্থিক ভিত্তি তৈরি করার সুযোগ রয়েছে। আপনি SIP বিনিয়োগের জটিলতাগুলি নেভিগেট করার সময়, মনে
+                        রাখবেন যে প্রতিটি অবদান, যতই ছোট হোক না কেন, আপনাকে আপনার আর্থিক আকাঙ্খার কাছাকাছি নিয়ে আসে।
+                        সুতরাং, আত্মবিশ্বাসের সাথে, জ্ঞানে সজ্জিত এবং আপনার আর্থিক ভবিষ্যত হাতের নাগালে রয়েছে এই
+                        প্রত্যয় নিয়ে এই যাত্রা শুরু করুন।</p>
+                    <h3 class="h4 mb-4">দাবিত্যাগ</h3>
+                    <p class="lead fs-6">এই নিবন্ধে দেওয়া তথ্য শুধুমাত্র শিক্ষাগত উদ্দেশ্যে এবং আর্থিক পরামর্শ বিবেচনা
+                        করা উচিত নয়। ব্যক্তিগত আর্থিক পরিস্থিতির সতর্কতা অবলম্বন এবং একজন যোগ্য আর্থিক উপদেষ্টার সাথে
+                        পরামর্শের ভিত্তিতে বিনিয়োগের সিদ্ধান্ত নেওয়া উচিত। বিষয়বস্তুর যথার্থতা এবং প্রযোজ্যতা সময়ের
+                        সাথে সাথে এবং বিভিন্ন অঞ্চলের মধ্যে পরিবর্তিত হতে পারে। সর্বদা সবচেয়ে আপ-টু-ডেট তথ্যের জন্য
+                        সর্বশেষ অফিসিয়াল উত্স এবং নির্দেশিকা পড়ুন।
+                    </p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12">
+                    <img src="https://images.pexels.com/photos/14907454/pexels-photo-14907454.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        class="img-fluid rounded my-5" alt="SIP Return ক্যালকুলেটর by Nivesguru">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item lead fs-6 border-0 py-1 px-0">
+                            <time pubdate="pubdate" datetime="2023-10-04">সংশোধিত: অক্টোবর 04, 2023</time>
+                        </li>
+                        <li class="list-group-item lead pt-0 px-0">
+                            লেখকঃ <a href="https://anupammondal.in" title="Posts by Anupam Mondal" rel="author"> অনুপম
+                                মন্ডল</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark">
+        <div class="container-fluid bg-duo">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav justify-content-center my-3">
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 p-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.facebook.com/Nivesguru-118950734466440/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                                <small class="mt-1">Facebook</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://instagram.com/niveshguru_official?igshid=ZDdkNTZiNTM=" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                                <small class="mt-1">Instagram</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.youtube.com/@nivesguru-india" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                                <small class="mt-1">YouTube</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://twitter.com/Nivesguru" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                                <small class="mt-1">Twitter</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-3 px-2 text-white bg-dark rounded border mx-1"
+                                href="https://www.linkedin.com/company/nivesguru/" target="_blank">
+                                <svg xmlns="https://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="mt-1">Linkedin</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about-us">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact-us">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="faq-page">FAQ page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../privacy-policy">Privacy policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="../terms-and-conditions">Terms & condition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="fixed-deposit-fd-calculator">FD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sb-calculator">SB ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="rd-calculator">RD ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sukanya-samriddhi-yojana-ssy-calculator">SSY
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="ppf-calculator">PPF
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-pension-system-nps-calculator">NPS
+                                ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <ul class="nav flex-column text-center mt-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="apy-calculator">APY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator">PMJJBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="pradhan-mantri-suraksha-bima-yojana-pmsby-calculator">PMSBY ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="kvp-calculator">KVP ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="national-savings-certificate-nsc-calculator">NSC
+                                ক্যালকুলেটর</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sgb-calculator">SGB ক্যালকুলেটর</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mt-3">
+                    <img src="../maskable_icon_x192.png" width="130" height="130"
+                        class="rounded-circle mx-auto mt-3 d-block" loading="lazy"
+                        alt="Investment make easy with Nivesguru" title="Investment make easy with Nivesguru">
+                    <p class="h5 text-white text-center mt-3">Investment make<br>easy with Nivesguru</p>
+                    <p class="text-center text-white"><a class="text-white" href="../sitemap">HTML Sitemap</a> | <a
+                            class="text-white" href="../sitemap.xml">XML Sitemap</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-light text-center">
+                    <p>🇮🇳 Nivesguru &copy 2024 | Co-Sponserd -
+                        <a class="text-warning" href="https://wheelguru.in" target="_blank">Wheelguru</a>
+                        <br>
+                        Designed & Developed by : Team
+                        <a class="text-warning" href="https://anupammondal.in" target="_blank">Anupam Mondal</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function dispInv() {
+            let invdisp = document.getElementById("fd_toti").value;
+            document.getElementById("inv-disp").innerHTML = invdisp;
+        }
+
+        function dispROI() {
+            let aged = document.getElementById("fd_roi").value;
+            document.getElementById("age-disp").innerHTML = aged;
+        }
+
+        function dispTime() {
+            let invdisp = document.getElementById("fd_idur").value;
+            document.getElementById("dur-disp").innerHTML = invdisp;
+        }
+
+        function fdCalc() {
+            let invst = parseInt(document.getElementById("fd_toti").value);
+            let roi = parseInt(document.getElementById("fd_roi").value);
+            let invdur = parseInt(document.getElementById("fd_idur").value) * 12;
+            let mamnt = 0;
+
+            function calculateSIP(initialInvestment, investmentPM, iRate, durationPerMonth) {
+                const iRateMonthly = (iRate / 12) / 100;
+
+                let fval = 0;
+                for (let i = 1; i <= durationPerMonth; i++) {
+                    fval += investmentPM;
+                    fval += fval * iRateMonthly;
+                }
+
+                fval += initialInvestment;
+                return fval.toFixed(0);
+            }
+
+            const totalCorpus = calculateSIP(mamnt, invst, roi, invdur);
+
+            let totalInvestment = parseInt(invst * invdur);
+            let totalInterest = parseInt(totalCorpus - totalInvestment);
+
+            // Table of Investments 
+            let tblVal = "<tbody><tr><td>Total Investment</td><th class='text-end' id='total-investment'></td></tr><tr><td>Total Interest</td><th class='text-end' id='interest-earned'></td</tr><tr><td>Maturity Value</td><th class='text-end' id='maturity-value'></td></tr></tbody>";
+            document.getElementById("myTbl").innerHTML = tblVal;
+
+            document.getElementById("total-investment").innerHTML = totalInvestment;
+            document.getElementById("interest-earned").innerHTML = totalInterest;
+            document.getElementById("maturity-value").innerHTML = totalCorpus;
+            // Table of Investments 
+
+            // Pie Chart 
+            var xValues = ["Total Investment", "Total Interest"];
+            var yValues = [totalInvestment, totalInterest];
+            var barColors = ["#03a9f4", "#f50057"];
+
+            // Pie Chart 
+            new Chart("myChart", {
+                type: "pie",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: true
+                    },
+                    title: {
+                        display: true
+                    }
+                }
+            });
+            // Pie Chart 
+        }
+    </script>
+    <script src="../app.js"></script>
+{% endraw %}
