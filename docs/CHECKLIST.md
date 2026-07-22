@@ -67,8 +67,8 @@
 - [ ] Lab check on 10 heaviest pages: LCP < 2.0s, INP < 200ms, CLS < 0.1 (throttled Moto-G class)
 
 ### Automation
-- [ ] Build-time `sitemap.xml` (lastmod from git/content dates) + `llms.txt`
-- [ ] GitHub Actions: PR build check + deploy to Pages on merge to `main`
+- [x] Build-time `sitemap.xml` — generated from collections at every build (142 entries; honest git lastmods via `gitLastMod` filter; auto-excludes 404/offline/cross-canonicalized pages; all 3 language homes present, 0 dupes). `llms.txt` generated from `rates.json` — rates in it auto-update (2026-07-20)
+- [x] GitHub Actions (`.github/workflows/deploy.yml`): build → URL-freeze `--complete` gate → JSON-LD scan → deploy to Pages (deploy only on `main`; needs Settings→Pages→Source="GitHub Actions" at cutover). Full asset passthrough added — `_site/` is a complete deployable site (234 assets copied incl. CNAME/robots/SW/res/svg) (2026-07-20)
 - [ ] Deploy in batches (EN → HI → BN); watch GSC indexing after each batch for 1 week
 
 **Phase 1 exit gate:** ☐ one-commit rate change propagates site-wide · ☐ CWV lab targets met · ☐ zero URL regressions

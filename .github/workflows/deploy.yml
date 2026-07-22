@@ -1,0 +1,59 @@
+# Build, verify, and deploy the Eleventy site to GitHub Pages.
+#
+# CUTOVER NOTE: deployment activates when (a) this lands on `main` and
+# (b) repo Settings → Pages → Source is switched to "GitHub Actions".
+# Until then, pushes to other branches still run the build + URL-contract check.
+name: build-deploy
+
+on:
+  push:
+    branches: [main, v2026]
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history — sitemap lastmods come from git
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: URL-freeze contract (all 148 URLs, no extras)
+        run: node scripts/assert-urls.mjs --complete
+
+      - name: JSON-LD validity scan (source pages)
+        run: node scripts/scan-jsonld.mjs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

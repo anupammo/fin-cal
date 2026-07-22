@@ -1,0 +1,22 @@
+---json
+{
+  "permalink": "/sitemap.xml",
+  "eleventyExcludeFromCollections": true,
+  "layout": null
+}
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all %}
+{%- set slug = p.url | replace(".html", "") %}
+{%- set display = "/" if slug == "/index" else (slug | replace("/index", "/")) %}
+{#- exclude 404/offline and pages canonicalized to a DIFFERENT url #}
+{%- if p.fileSlug == "404" or p.fileSlug == "offline" or (p.data.canonical and p.data.canonical != display) %}
+{%- else %}
+<url>
+  <loc>https://nivesguru.in{{ display }}</loc>
+  <lastmod>{{ p.inputPath | gitLastMod }}</lastmod>
+</url>
+{%- endif %}
+{%- endfor %}
+</urlset>
