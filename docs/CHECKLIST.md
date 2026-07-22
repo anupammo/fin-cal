@@ -60,9 +60,9 @@
 - [ ] Calculator JS refactored to shared modules (no per-page copy-paste logic)
 
 ### Performance
-- [ ] Purge Bootstrap to used selectors (or replace with ~15 KB custom CSS); inline critical CSS
+- [x] Purge Bootstrap: **216→91 KiB (58%)**, self-hosted at `/css/bootstrap-purged.min.css` (kills the render-blocking jsdelivr round-trip); regenerated every build via `scripts/purge-css.mjs` with runtime-class safelist; class-coverage verified (2026-07-20). Critical-CSS inlining deferred — measure first after cutover
 - [ ] Convert remaining PNG/JPEG to webp/avif with `srcset`; explicit width/height everywhere (CLS)
-- [ ] Lazy-load AdSense units below the fold; reserve ad-slot dimensions
+- [x] Lazy-load AdSense: script now loads on first interaction or 4s idle (layout-level; targets TBT 610ms / 14 long tasks). ⚠️ **Revenue-affecting change — monitor AdSense impressions for ~1 week after cutover; rollback = restore the plain async tag in `base.njk`.** Ad-slot dimension reservation (CLS) = body-level work, Phase 2 (2026-07-20)
 - [ ] `font-display: swap` / system font stack; preconnect only what's used
 - [ ] Lab check on 10 heaviest pages: LCP < 2.0s, INP < 200ms, CLS < 0.1 (throttled Moto-G class)
 

@@ -6,9 +6,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && node scripts/purge-css.mjs",
     "dev": "eleventy --serve",
-    "check": "eleventy && node scripts/assert-urls.mjs"
+    "check": "npm run build && node scripts/assert-urls.mjs --complete && node scripts/scan-jsonld.mjs"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/anupammo/fin-cal#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "purgecss": "^8.0.0"
   },
   "private": true
 }

@@ -3,13 +3,14 @@
 // cache-first for versioned static assets, offline.html fallback.
 // Bump CACHE_VERSION on any deploy that changes cached static assets.
 
-const CACHE_VERSION = "nivesguru-v2026-07";
+const CACHE_VERSION = "nivesguru-v2026-07b";
 const OFFLINE_URL = "/offline.html";
 
 // Stable static assets safe to cache-first. HTML pages are intentionally
 // NOT precached — they are always fetched network-first so rates stay fresh.
 const STATIC_ASSETS = [
     OFFLINE_URL,
+    "/css/bootstrap-purged.min.css",
     "/bootstrap.min.css",
     "/fincal.css",
     "/app.js",

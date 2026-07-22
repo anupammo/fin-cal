@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("app.js");
   eleventyConfig.addPassthroughCopy("serviceWorker.js");
   eleventyConfig.addPassthroughCopy("bootstrap.min.css");
+  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("bootstrap.min.css.map");
   eleventyConfig.addPassthroughCopy("fincal.css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
