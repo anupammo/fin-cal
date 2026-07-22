@@ -49,10 +49,10 @@
 
 ### Decisions
 - [x] Write SSG decision doc — **Eleventy chosen**, Astro runner-up, `nextjs-fincal` retired with evidence (only ~5% migrated, no static-export config, React runtime conflicts with CWV goals). See [SSG-DECISION.md](./SSG-DECISION.md) (2026-07-20)
-- [ ] Freeze the URL map: export all 148 live URLs to `docs/url-map.txt` as the migration contract
+- [x] Freeze the URL map: all 148 live URLs exported to `docs/url-map.txt`; enforced by `scripts/assert-urls.mjs` (`npm run check`, `--complete` at cutover) (2026-07-20)
 
 ### Build system
-- [ ] Scaffold SSG; base layout (head, meta, GA4, AdSense, favicon set, nav, footer)
+- [x] Scaffold SSG: Eleventy 3.1.6 installed; `eleventy.config.js` (flat `.html` output = URL contract); `src/_layouts/base.njk` (one head: GA4, AdSense, clean schema, meta/og/twitter, favicons, canonical, generated hreflang); `_data/site.json` + `_data/rates.json`; en/hi/bn dir data with permalink rules. **Pilot: ppf-calculator migrated — body byte-identical to live page, all head probes pass, JSON-LD valid, 0.2s build** (2026-07-20)
 - [ ] Template partials: schema (WebSite/Org, BreadcrumbList, FAQPage, WebApplication), hreflang trio generator
 - [ ] `data/rates.json` — every instrument & bank rate with `effectiveFrom`, `sourceUrl`, `verifiedOn`
 - [ ] Per-calculator content files (front-matter: title, description, formula, FAQ entries) × EN/HI/BN

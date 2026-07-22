@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gaId }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.gaId }}');
+    </script>
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsenseClient }}"
+        crossorigin="anonymous"></script>
+    <!-- JSON-LD markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "{{ site.name }}",
+            "alternateName": ["NivesGuru", "Nives Guru", "NivesGuru Calculator", "Investment Calculator", "Financial Calculator", "nivesguru.in"],
+            "url": "{{ site.url }}/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "{{ site.url }}/#organization",
+            "name": "{{ site.name }}",
+            "description": "{{ site.description }}",
+            "url": "{{ site.url }}",
+            "logo": "{{ site.logo }}",
+            "email": "{{ site.email }}",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "{{ site.telephone }}",
+              "email": "{{ site.email }}",
+              "contactType": "customer support",
+              "areaServed": "IN"
+            },
+            "sameAs": {{ site.sameAs | dump | safe }}
+        }
+    </script>
+    {%- if schema %}
+    <script type="application/ld+json">
+        {{ schema | dump | safe }}
+    </script>
+    {%- endif %}
+    <!-- Primary Meta Tags -->
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ pageUrl }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ ogImage or (site.url + '/nivesguru.png') }}">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ site.twitterHandle }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ pageUrl }}">
+    <meta property="twitter:title" content="{{ title }}">
+    <meta property="twitter:description" content="{{ description }}">
+    <meta property="twitter:image" content="{{ ogImage or (site.url + '/nivesguru.png') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="canonical" href="{{ site.url }}{{ canonical or pageUrl }}">
+    {%- if translations %}
+    <!-- Multilingual & hreflang -->
+    {%- set slug = page.fileSlug %}
+    {%- for t in translations %}
+    {%- if t == "en" %}
+    <link rel="alternate" href="{{ site.url }}/{{ slug }}" hreflang="en" />
+    {%- else %}
+    <link rel="alternate" href="{{ site.url }}/{{ t }}/{{ slug }}" hreflang="{{ t }}" />
+    {%- endif %}
+    {%- endfor %}
+    <link rel="alternate" href="{{ site.url }}/{{ slug }}" hreflang="x-default" />
+    {%- endif %}
+    <link href="{{ site.bootstrapCss.href }}" rel="stylesheet"
+        integrity="{{ site.bootstrapCss.integrity }}" crossorigin="anonymous">
+    {%- if pageStyle %}
+    {% include pageStyle %}
+    {%- endif %}
+</head>
+
+<body>
+{{ content | safe }}
+</body>
+
+</html>

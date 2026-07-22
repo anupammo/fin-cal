@@ -1,0 +1,30 @@
+{
+  "verifiedOn": "2026-07-20",
+  "quarter": "Jul–Sep 2026 (Q2 FY 2026-27)",
+  "quarterNote": "Small-savings rates unchanged for 9 straight quarters (MoF notification 30 Jun 2026).",
+  "smallSavings": {
+    "ppf":   { "rate": 7.1, "source": "Ministry of Finance / India Post" },
+    "ssy":   { "rate": 8.2, "source": "Ministry of Finance / India Post" },
+    "nsc":   { "rate": 7.7, "source": "Ministry of Finance / India Post" },
+    "scss":  { "rate": 8.2, "source": "Ministry of Finance / India Post" },
+    "kvp":   { "rate": 7.5, "maturityMonths": 115, "source": "Ministry of Finance / India Post" },
+    "pomis": { "rate": 7.4, "source": "Ministry of Finance / India Post" },
+    "potd":  { "1y": 6.9, "2y": 7.0, "3y": 7.1, "5y": 7.5, "source": "Ministry of Finance / India Post" },
+    "pord":  { "rate": 6.7, "source": "Ministry of Finance / India Post" }
+  },
+  "insurance": {
+    "pmjjby": { "premiumPerYear": 436, "cover": 200000, "ageRange": "18-50" },
+    "pmsby":  { "premiumPerYear": 20,  "cover": 200000, "ageRange": "18-70" }
+  },
+  "tax": {
+    "fy": "2026-27",
+    "ay": "2027-28",
+    "newRegime": {
+      "slabs": [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [null, 0.30]],
+      "rebate87A": 60000,
+      "rebateLimit": 1200000,
+      "standardDeduction": 75000
+    },
+    "cess": 0.04
+  }
+}

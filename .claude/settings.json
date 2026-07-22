@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(git fetch *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "Bash(npm --version)",
+      "Bash(node -e ' *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"console.log\\('eleventy version:', require\\('@11ty/eleventy/package.json'\\).version\\)\")",
+      "Bash(npx @11ty/eleventy --version)",
+      "Bash(mkdir -p src/_includes/styles)",
+      "Bash(sed -n '149,220p' ppf-calculator.html)",
+      "Bash(npx @11ty/eleventy)",
+      "Bash(npm run *)"
     ]
   }
 }
