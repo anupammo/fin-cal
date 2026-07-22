@@ -48,7 +48,7 @@
 ## Phase 1 — Technical Rebuild (3 Aug – 13 Sep 2026)
 
 ### Decisions
-- [ ] Write SSG decision doc: Eleventy vs Astro vs salvaging `nextjs-fincal` branch (criteria: static output, build speed, i18n support, contributor familiarity)
+- [x] Write SSG decision doc — **Eleventy chosen**, Astro runner-up, `nextjs-fincal` retired with evidence (only ~5% migrated, no static-export config, React runtime conflicts with CWV goals). See [SSG-DECISION.md](./SSG-DECISION.md) (2026-07-20)
 - [ ] Freeze the URL map: export all 148 live URLs to `docs/url-map.txt` as the migration contract
 
 ### Build system
