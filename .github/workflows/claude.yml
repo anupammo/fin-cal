@@ -1,0 +1,57 @@
+# Interactive Claude — responds to `@claude` on issues, PRs, and review comments.
+# Mention @claude in an issue/PR comment (or open/assign an issue containing it)
+# and Claude will pick up the thread, work in the repo, and reply / open a PR.
+#
+# Requires repo secret ANTHROPIC_API_KEY (Settings → Secrets and variables → Actions).
+name: claude
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  claude:
+    # Only run when someone actually mentions @claude — avoids burning API budget
+    # on every comment.
+    if: |
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Attribute any commit/push to the site owner, not github-actions[bot].
+    env:
+      GIT_AUTHOR_NAME: Anupam Mondal
+      GIT_AUTHOR_EMAIL: a09051985@gmail.com
+      GIT_COMMITTER_NAME: Anupam Mondal
+      GIT_COMMITTER_EMAIL: a09051985@gmail.com
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read # lets Claude read CI results on the PR
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Pin git identity to the site owner
+        run: |
+          git config user.name  "Anupam Mondal"
+          git config user.email "a09051985@gmail.com"
+
+      - name: Run Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # NivesGuru is a YMYL finance site — never let Claude invent numbers.
+          claude_args: |
+            --append-system-prompt "This is NivesGuru, a public financial-calculator site for India (YMYL). NEVER invent, guess, or change interest rates, tax slabs, premiums, or any financial figure — those must be verified by a human against official sources (RBI / India Post / incometax.gov.in). Never break the URL contract in docs/url-map.txt. Before proposing code changes, run 'npm ci && npm run check' and make sure it passes."

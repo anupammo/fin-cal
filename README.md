@@ -96,6 +96,7 @@ HTML5 · CSS3 / Bootstrap 5 · Vanilla JavaScript · PWA (service worker + manif
 | [REVAMP-PLAN-2026.md](./docs/REVAMP-PLAN-2026.md) | Full audit, 5-pillar strategy (E-E-A-T, freshness, rebuild, content, distribution), KPIs, risks |
 | [ROADMAP.md](./docs/ROADMAP.md) | 6 phases, Jul 2026 → Mar 2027, with exit criteria and a Gantt view |
 | [CHECKLIST.md](./docs/CHECKLIST.md) | Task-level checkboxes per phase — the working tracker |
+| [AUTOMATION.md](./docs/AUTOMATION.md) | CI/CD + the scheduled Claude roadmap agent — what runs, guardrails, setup |
 
 ## 🤝 Contributing
 
