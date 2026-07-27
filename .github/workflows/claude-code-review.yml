@@ -1,0 +1,48 @@
+# Automated Claude code review on every pull request.
+# Posts review comments focused on the things that matter for this repo:
+# URL-contract safety, JSON-LD validity, Core Web Vitals, and (critically for a
+# YMYL site) any hardcoded financial figure that isn't sourced from rates.json.
+#
+# Requires repo secret ANTHROPIC_API_KEY.
+name: claude-code-review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Claude review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review the pull request diff for this repo (NivesGuru — a static financial-calculator
+            site for India, built with Eleventy). Leave a concise review as PR comments.
+
+            Focus, in priority order:
+            1. YMYL correctness — flag ANY hardcoded interest rate, tax slab, premium, or
+               financial figure that is not sourced from src/_data/rates.json, and flag any
+               changed number that lacks a cited official source. Do not approve invented numbers.
+            2. URL contract — any change that could add/remove/rename an emitted URL vs
+               docs/url-map.txt (assert-urls.mjs enforces this; call out risk early).
+            3. JSON-LD validity and duplicate/self-serving schema (aggregateRating/review).
+            4. Core Web Vitals regressions (render-blocking assets, unsized images → CLS,
+               eager AdSense, large JS).
+            5. Normal correctness/quality issues in changed JS/templates.
+
+            Be specific and cite file:line. If the diff is clean, say so briefly. Do not nitpick
+            unchanged code.
+          claude_args: |
+            --model claude-sonnet-5

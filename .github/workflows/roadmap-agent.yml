@@ -1,0 +1,79 @@
+# Scheduled autonomous roadmap agent.
+#
+# Runs 4x/day at 5-hour intervals. Each run spends up to ~20 minutes making ONE
+# small, verified, safe piece of progress on docs/CHECKLIST.md (or an open issue)
+# and opens a PULL REQUEST against v2026 — it never pushes to main/v2026 directly.
+#
+# Mandate & guardrails: .github/roadmap-agent.md
+# Requires repo secret ANTHROPIC_API_KEY.
+#
+# Schedule (cron is UTC): 01:00, 06:00, 11:00, 16:00 UTC
+#   = 06:30, 11:30, 16:30, 21:30 IST — four runs, 5 hours apart.
+name: roadmap-agent
+
+on:
+  schedule:
+    - cron: "0 1,6,11,16 * * *"
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+
+# Never let two agent runs overlap.
+concurrency:
+  group: roadmap-agent
+  cancel-in-progress: false
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    # ~20 min of agent work + a few min for setup/build/verify.
+    timeout-minutes: 25
+    # Attribute every commit/push to the site owner, not github-actions[bot].
+    env:
+      GIT_AUTHOR_NAME: Anupam Mondal
+      GIT_AUTHOR_EMAIL: a09051985@gmail.com
+      GIT_COMMITTER_NAME: Anupam Mondal
+      GIT_COMMITTER_EMAIL: a09051985@gmail.com
+    permissions:
+      contents: write # create the agent branch
+      pull-requests: write # open the PR
+      issues: write # read/triage + open follow-up issues
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history — sitemap lastmods come from git
+
+      - name: Pin git identity to the site owner
+        run: |
+          git config user.name  "Anupam Mondal"
+          git config user.email "a09051985@gmail.com"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Load agent mandate
+        run: |
+          {
+            echo 'AGENT_PROMPT<<AGENT_EOF'
+            cat .github/roadmap-agent.md
+            echo ''
+            echo 'This run started at: '"$(date -u +'%Y-%m-%d %H:%M UTC')"
+            echo 'AGENT_EOF'
+          } >> "$GITHUB_ENV"
+
+      - name: Run roadmap agent
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # for gh issue/pr commands
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: ${{ env.AGENT_PROMPT }}
+          # ~20 min budget: cap turns so a run can't sprawl. Sonnet for cost;
+          # allow the tools the mandate needs (git branch, gh PR, npm verify).
+          claude_args: |
+            --model claude-sonnet-5
+            --max-turns 60
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep"
