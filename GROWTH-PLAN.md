@@ -82,11 +82,18 @@ Publish **2 new calculators per week** using the same template as the new pages 
 - **Backlinks**: list the site on free-tools directories, college finance clubs, and pitch guest posts to personal-finance blogs.
 - **Hindi + Bengali versions** of the 6 new calculators (the hi/bn pages already have hreflang wiring — copy the pattern).
 
-### Phase 4 — Technical, weeks 2–6
-- Convert big PNGs to WebP (`nivesguru.png`, `nivesguru-1.png`, `SEO analytics team-*.png`) and add `width`/`height` to images to stop layout shift.
-- Load Chart.js with `defer`; long term replace with lightweight CSS bars (as done on the new pages).
-- Remove unused files from the repo root (`*.zip`, duplicate SVG/PNG variants) so the site stays lean.
-- Run PageSpeed Insights on the top 10 pages after each change; aim for green Core Web Vitals on mobile.
+### Phase 4 — Technical
+**Done (design system v2, see `DESIGN-SYSTEM.md`):**
+- [x] One theme on all 152 pages: sticky navbar, calculator search (`/` or Ctrl+K), dark mode, language switch, new homepage hero.
+- [x] Bootstrap 5.3.3 + Inter font self-hosted (no render-blocking third-party CSS); Bootstrap JS deferred; Wikimedia background image removed.
+- [x] Images below the fold lazy-loaded; large SVG illustrations optimised (−16%); sharper navbar logo.
+- [x] New service worker: always-fresh pages, cached static files, offline page; old stale caches cleared. Manifest no longer blocks the install prompt.
+- [x] Lighthouse (local): SEO 100, accessibility 98–100, CLS 0. Fixed broken image/icon paths on Hindi/Bengali pages and a script error on the bank balance pages.
+
+**Still to do:**
+- Load Chart.js with `defer` (needs each legacy page's inline script moved into a `DOMContentLoaded` handler) or replace it with the CSS bars used on the new pages.
+- Remove unused files from the repo root (`*.zip`, duplicate SVG/PNG variants).
+- After merging, run PageSpeed Insights on the top 10 pages (third-party ad scripts could not be measured from the sandbox).
 
 ## 4. KPIs to watch weekly (Search Console + GA4 + AdSense)
 | Metric | Now | Month 2 | Month 4 | July 2027 |

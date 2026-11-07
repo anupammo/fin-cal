@@ -1,0 +1,559 @@
+/*!
+ * Nivesguru Design System v2 (2027)
+ * One stylesheet for every page. Loaded after Bootstrap 5.3 and after each page's own <style>,
+ * so it can override legacy rules. Tokens live on :root; dark mode via [data-bs-theme="dark"].
+ */
+
+/* ---------- 1. Font ---------- */
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/inter-var.woff2") format("woff2");
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------- 2. Tokens ---------- */
+:root,
+[data-bs-theme="light"] {
+    --ng-bg: #f5f7fb;
+    --ng-surface: #ffffff;
+    --ng-surface-2: #f0f3f9;
+    --ng-surface-3: #e8edf6;
+    --ng-border: #e2e7f0;
+    --ng-border-strong: #cfd7e6;
+    --ng-text: #172033;
+    --ng-muted: #5a6478;
+    --ng-heading: #0b1b4a;
+    --ng-primary: #2848d6;
+    --ng-primary-rgb: 40, 72, 214;
+    --ng-primary-hover: #1e39b5;
+    --ng-primary-soft: #e9eeff;
+    --ng-on-primary: #ffffff;
+    --ng-saffron: #ff8c1a;
+    --ng-green: #138a3e;
+    --ng-green-soft: #e6f6ec;
+    --ng-danger: #d92d5c;
+    --ng-glow-1: rgba(40, 72, 214, .10);
+    --ng-glow-2: rgba(255, 140, 26, .10);
+    --ng-glow-3: rgba(19, 138, 62, .08);
+    --ng-nav-bg: rgba(255, 255, 255, .82);
+    --ng-shadow-sm: 0 1px 2px rgba(16, 24, 40, .05);
+    --ng-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 6px 20px rgba(16, 24, 40, .06);
+    --ng-shadow-lg: 0 2px 6px rgba(16, 24, 40, .06), 0 18px 40px rgba(16, 24, 40, .10);
+    --ng-radius-sm: 10px;
+    --ng-radius: 14px;
+    --ng-radius-lg: 20px;
+    --ng-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari",
+        "Noto Sans Bengali", "Helvetica Neue", Arial, sans-serif;
+    --ng-ease: cubic-bezier(.2, .8, .2, 1);
+
+    /* Bootstrap mapping */
+    --bs-font-sans-serif: var(--ng-font);
+    --bs-body-font-family: var(--ng-font);
+    --bs-body-bg: var(--ng-bg);
+    --bs-body-bg-rgb: 245, 247, 251;
+    --bs-body-color: var(--ng-text);
+    --bs-emphasis-color: var(--ng-heading);
+    --bs-secondary-color: var(--ng-muted);
+    --bs-tertiary-bg: var(--ng-surface-2);
+    --bs-secondary-bg: var(--ng-surface-3);
+    --bs-border-color: var(--ng-border);
+    --bs-primary: var(--ng-primary);
+    --bs-primary-rgb: var(--ng-primary-rgb);
+    --bs-link-color: var(--ng-primary);
+    --bs-link-color-rgb: var(--ng-primary-rgb);
+    --bs-link-hover-color: var(--ng-primary-hover);
+    --bs-link-hover-color-rgb: 30, 57, 181;
+    --bs-heading-color: var(--ng-heading);
+    --bs-border-radius: var(--ng-radius-sm);
+    --bs-border-radius-lg: var(--ng-radius);
+    --bs-border-radius-xl: var(--ng-radius-lg);
+    --bs-focus-ring-color: rgba(var(--ng-primary-rgb), .28);
+    color-scheme: light;
+}
+
+[data-bs-theme="dark"] {
+    --ng-bg: #0a0f1e;
+    --ng-surface: #111830;
+    --ng-surface-2: #172040;
+    --ng-surface-3: #1e2850;
+    --ng-border: #253055;
+    --ng-border-strong: #33406b;
+    --ng-text: #dfe4f0;
+    --ng-muted: #9aa4bd;
+    --ng-heading: #f2f5ff;
+    --ng-primary: #7d97ff;
+    --ng-primary-rgb: 125, 151, 255;
+    --ng-primary-hover: #a3b5ff;
+    --ng-primary-soft: rgba(125, 151, 255, .14);
+    --ng-on-primary: #0a0f1e;
+    --ng-green: #4cc47a;
+    --ng-green-soft: rgba(76, 196, 122, .14);
+    --ng-danger: #ff6b8f;
+    --ng-glow-1: rgba(125, 151, 255, .14);
+    --ng-glow-2: rgba(255, 140, 26, .08);
+    --ng-glow-3: rgba(76, 196, 122, .06);
+    --ng-nav-bg: rgba(10, 15, 30, .78);
+    --ng-shadow-sm: 0 1px 2px rgba(0, 0, 0, .3);
+    --ng-shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    --ng-shadow-lg: 0 2px 6px rgba(0, 0, 0, .35), 0 20px 44px rgba(0, 0, 0, .35);
+
+    --bs-body-bg: var(--ng-bg);
+    --bs-body-bg-rgb: 10, 15, 30;
+    --bs-body-color: var(--ng-text);
+    --bs-emphasis-color: var(--ng-heading);
+    --bs-secondary-color: var(--ng-muted);
+    --bs-tertiary-bg: var(--ng-surface-2);
+    --bs-secondary-bg: var(--ng-surface-3);
+    --bs-border-color: var(--ng-border);
+    --bs-primary: var(--ng-primary);
+    --bs-primary-rgb: var(--ng-primary-rgb);
+    --bs-link-color: var(--ng-primary);
+    --bs-link-color-rgb: var(--ng-primary-rgb);
+    --bs-link-hover-color: var(--ng-primary-hover);
+    --bs-link-hover-color-rgb: 163, 181, 255;
+    --bs-heading-color: var(--ng-heading);
+    color-scheme: dark;
+}
+
+/* ---------- 3. Base ---------- */
+html { scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body {
+    font-family: var(--ng-font);
+    background: var(--ng-bg);
+    color: var(--ng-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv11", "ss01";
+}
+::selection { background: rgba(var(--ng-primary-rgb), .22); }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--ng-heading);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+h1, h1.lead { font-weight: 750; letter-spacing: -0.025em; line-height: 1.15; }
+h2, ul li a { color: var(--ng-heading); }          /* overrides legacy navy rule */
+ul li a { color: var(--ng-primary); }
+a { color: var(--ng-primary); text-decoration: none; text-underline-offset: 3px; }
+a:hover { color: var(--ng-primary-hover); }
+p a, li > a:not(.nav-link):not(.dropdown-item):not(.btn), td a, .small a:not(.btn), a[rel="author"] { text-decoration: underline; text-decoration-color: rgba(var(--ng-primary-rgb), .35); }
+p a:hover, td a:hover { text-decoration-color: currentColor; }
+.lead { font-weight: 400; }
+p.lead, .lead.fs-6 { color: var(--ng-text); line-height: 1.75; }
+.text-muted, .text-body-secondary { color: var(--ng-muted) !important; }
+hr { border-color: var(--ng-border); opacity: 1; }
+strong, b { font-weight: 650; }
+table, .table, .ng-num, [id*="result"], [id*="Disp"], [id*="disp"] { font-variant-numeric: tabular-nums; }
+img { max-width: 100%; height: auto; }
+svg { max-width: 100%; }
+
+:focus-visible {
+    outline: 3px solid rgba(var(--ng-primary-rgb), .45);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.ng-skip {
+    position: absolute; left: 12px; top: 8px; z-index: 2000;
+    background: var(--ng-primary); color: var(--ng-on-primary) !important;
+    padding: .5rem 1rem; border-radius: var(--ng-radius-sm); font-weight: 600;
+}
+
+/* ---------- 4. Navbar ---------- */
+.ng-nav {
+    position: sticky; top: 0; z-index: 1030;
+    background: var(--ng-nav-bg) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--ng-border);
+    padding-top: .55rem; padding-bottom: .55rem;
+}
+.ng-nav::before {               /* thin tricolour line: a quiet nod to the brand */
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+    background: linear-gradient(90deg, #ff9933 0 33.3%, #ffffff 33.3% 66.6%, #138808 66.6% 100%);
+}
+[data-bs-theme="dark"] .ng-nav::before {
+    background: linear-gradient(90deg, #ff9933 0 33.3%, #e8e8e8 33.3% 66.6%, #138808 66.6% 100%);
+}
+.ng-nav .navbar-brand {
+    display: inline-flex; align-items: center; gap: .55rem;
+    color: var(--ng-heading) !important; font-weight: 800; letter-spacing: -.02em;
+}
+.ng-nav .navbar-brand img { margin: 0 !important; border-radius: 9px !important; }
+.ng-nav .navbar-brand p, .ng-nav .navbar-brand .h4 { margin: 0; font-size: 1.25rem; font-weight: 800; color: inherit; }
+.ng-nav .nav-link {
+    color: var(--ng-text) !important; font-weight: 600; font-size: .95rem;
+    padding: .5rem .8rem !important; border-radius: var(--ng-radius-sm);
+}
+.ng-nav .nav-link:hover, .ng-nav .nav-link:focus-visible, .ng-nav .nav-link.show {
+    color: var(--ng-primary) !important; background: var(--ng-primary-soft);
+}
+.ng-nav .navbar-toggler { color: var(--ng-heading); padding: .4rem .5rem; border-radius: var(--ng-radius-sm); }
+.ng-nav .navbar-toggler span { color: inherit !important; }
+.ng-nav .dropdown-menu {
+    --bs-dropdown-bg: var(--ng-surface);
+    --bs-dropdown-border-color: var(--ng-border);
+    --bs-dropdown-link-color: var(--ng-text);
+    --bs-dropdown-link-hover-bg: var(--ng-primary-soft);
+    --bs-dropdown-link-hover-color: var(--ng-primary);
+    --bs-dropdown-link-active-bg: var(--ng-primary);
+    --bs-dropdown-divider-bg: var(--ng-border);
+    border-radius: var(--ng-radius); box-shadow: var(--ng-shadow-lg); padding: .5rem;
+    max-height: calc(100vh - 90px); overflow-y: auto;
+}
+.ng-nav .dropdown-item { border-radius: 8px; font-size: .92rem; padding: .45rem .75rem; font-weight: 500; }
+.ng-nav .dropdown-item[aria-current="page"] { color: var(--ng-primary); background: var(--ng-primary-soft); font-weight: 650; }
+@media (min-width: 992px) {
+    .ng-nav .dropdown-menu { columns: 2; column-gap: .25rem; min-width: 30rem; }
+    .ng-nav .nav-item:last-child .dropdown-menu, .ng-nav .dropdown-menu:not(:has(> li:nth-child(8))) { columns: 1; min-width: 14rem; }
+    .ng-nav .dropdown-menu > li { break-inside: avoid; }
+    .ng-nav .dropdown-menu .dropdown-divider { display: none; }
+    .ng-nav .navbar-nav .dropdown-menu { right: 0; left: auto; }
+}
+@media (max-width: 991.98px) {
+    .ng-nav .navbar-collapse {
+        margin-top: .5rem; padding: .5rem; border-radius: var(--ng-radius);
+        background: var(--ng-surface); border: 1px solid var(--ng-border); box-shadow: var(--ng-shadow);
+        max-height: calc(100vh - 80px); overflow-y: auto;
+    }
+    .ng-nav .dropdown-menu { box-shadow: none; border: 0; background: var(--ng-surface-2); max-height: none; }
+}
+.ng-actions { gap: .3rem; flex: none; }
+@media (min-width: 576px) { .ng-nav .nav-item:has(.bi-translate) { display: none; } }  /* replaced by #ngLang */
+.ng-icon-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .4rem;
+    height: 40px; min-width: 40px; padding: 0 .6rem;
+    border: 1px solid var(--ng-border); border-radius: 999px;
+    background: var(--ng-surface); color: var(--ng-text); font-size: .9rem; font-weight: 500;
+    transition: border-color .15s, background .15s, color .15s;
+}
+.ng-icon-btn:hover { border-color: var(--ng-border-strong); color: var(--ng-primary); }
+.ng-icon-btn svg { display: block; width: 18px; height: 18px; margin: 0; flex: none; max-width: none; }
+.ng-search-btn { padding: 0 .8rem 0 .7rem; color: var(--ng-muted); }
+.ng-search-btn kbd {
+    font: 600 .7rem/1 var(--ng-font); color: var(--ng-muted); background: var(--ng-surface-2);
+    border: 1px solid var(--ng-border); border-radius: 6px; padding: .2rem .35rem; box-shadow: none;
+}
+.ng-nav .ng-lang {
+    height: 40px; border-radius: 999px; border: 1px solid var(--ng-border); background-color: var(--ng-surface);
+    color: var(--ng-text); font-size: .85rem; font-weight: 600; width: auto; min-height: 40px;
+    padding: 0 2rem 0 .85rem; background-position: right .7rem center; background-size: 12px 10px;
+}
+[data-bs-theme="dark"] .ng-theme-btn .i-sun, [data-bs-theme="light"] .ng-theme-btn .i-moon { display: none; }
+
+/* ---------- 5. Header / hero area (calculator pages) ---------- */
+header, header.calculator, header.bg-1, header.sky {
+    background:
+        radial-gradient(900px 420px at 8% -10%, var(--ng-glow-1), transparent 60%),
+        radial-gradient(700px 380px at 95% 0%, var(--ng-glow-2), transparent 60%),
+        radial-gradient(600px 300px at 60% 110%, var(--ng-glow-3), transparent 60%),
+        var(--ng-bg) !important;
+    background-attachment: scroll !important;
+    position: relative;
+}
+header::before, header::after { content: none !important; display: none !important; }
+header .wave1, .wave1 { background: none !important; }
+header > .wave1 > .container.py-5, header > .container.py-5 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
+/* ---------- 6. Cards ---------- */
+.card {
+    --bs-card-bg: var(--ng-surface);
+    --bs-card-border-color: var(--ng-border);
+    --bs-card-border-radius: var(--ng-radius-lg);
+    --bs-card-inner-border-radius: calc(var(--ng-radius-lg) - 1px);
+    --bs-card-color: var(--ng-text);
+    border: 1px solid var(--ng-border) !important;
+}
+.card.border-0 { border-color: var(--ng-border) !important; }
+.card .card .card, .card .card.border-0 { border: 0 !important; box-shadow: none !important; }
+.shadow { box-shadow: var(--ng-shadow) !important; }
+.shadow-sm { box-shadow: var(--ng-shadow-sm) !important; }
+.shadow-lg { box-shadow: var(--ng-shadow-lg) !important; }
+.card:has(.stretched-link) { transition: transform .2s var(--ng-ease), box-shadow .2s var(--ng-ease), border-color .2s; }
+.card:has(.stretched-link):hover { transform: translateY(-2px); box-shadow: var(--ng-shadow-lg) !important; border-color: rgba(var(--ng-primary-rgb), .35) !important; }
+.card-title { color: var(--ng-heading); }
+.card .stretched-link { color: var(--ng-heading); }
+.card .stretched-link:hover { color: var(--ng-primary); }
+.card-320 { max-width: 320px; }
+
+/* Legacy calculator cards used px-5 / p-5 everywhere: too tight on phones */
+@media (max-width: 575.98px) {
+    .px-5 { padding-left: .5rem !important; padding-right: .5rem !important; }
+    .p-5 { padding: 1rem !important; }
+    .pt-5 { padding-top: 1rem !important; }
+    header .card-body { padding: 1rem; }
+}
+
+/* ---------- 7. Breadcrumb ---------- */
+.breadcrumb { --bs-breadcrumb-divider-color: var(--ng-muted); --bs-breadcrumb-item-active-color: var(--ng-muted); font-size: .85rem; margin-bottom: .75rem; }
+.breadcrumb a { color: var(--ng-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--ng-primary); }
+
+/* ---------- 8. Forms ---------- */
+.form-label { font-weight: 550; color: var(--ng-text); }
+.form-control, .form-select {
+    background-color: var(--ng-surface); color: var(--ng-text);
+    border: 1px solid var(--ng-border-strong); border-radius: var(--ng-radius-sm);
+    padding: .6rem .85rem; font-size: 1rem; min-height: 44px;
+    transition: border-color .15s, box-shadow .15s;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--ng-primary); background-color: var(--ng-surface); color: var(--ng-text);
+    box-shadow: 0 0 0 4px rgba(var(--ng-primary-rgb), .15);
+}
+.input-group-text { background: var(--ng-surface-2); border-color: var(--ng-border-strong); color: var(--ng-muted); font-weight: 600; border-radius: var(--ng-radius-sm); }
+.form-check-input { border-color: var(--ng-border-strong); background-color: var(--ng-surface); }
+.form-check-input:checked { background-color: var(--ng-primary); border-color: var(--ng-primary); }
+.form-check-input:focus { box-shadow: 0 0 0 4px rgba(var(--ng-primary-rgb), .15); border-color: var(--ng-primary); }
+.form-text { color: var(--ng-muted); }
+
+/* Range sliders: filled track (theme.js keeps --ng-fill in sync) */
+.form-range { --ng-fill: 50%; height: 1.75rem; }
+.form-range::-webkit-slider-runnable-track {
+    height: 6px; border-radius: 999px; border: 0;
+    background: linear-gradient(90deg, var(--ng-primary) 0 var(--ng-fill), var(--ng-surface-3) var(--ng-fill) 100%);
+}
+.form-range::-moz-range-track { height: 6px; border-radius: 999px; background: var(--ng-surface-3); border: 0; }
+.form-range::-moz-range-progress { height: 6px; border-radius: 999px; background: var(--ng-primary); }
+.form-range::-webkit-slider-thumb {
+    width: 22px; height: 22px; margin-top: -8px; border-radius: 50%;
+    background: var(--ng-surface); border: 3px solid var(--ng-primary); box-shadow: 0 2px 6px rgba(16, 24, 40, .2);
+    transition: transform .15s;
+}
+.form-range::-moz-range-thumb {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--ng-surface); border: 3px solid var(--ng-primary); box-shadow: 0 2px 6px rgba(16, 24, 40, .2);
+}
+.form-range:active::-webkit-slider-thumb { transform: scale(1.12); background: var(--ng-surface); }
+.form-range:focus::-webkit-slider-thumb { box-shadow: 0 0 0 5px rgba(var(--ng-primary-rgb), .2); }
+
+/* ---------- 9. Buttons ---------- */
+.btn { font-weight: 600; border-radius: var(--ng-radius-sm); padding: .6rem 1.1rem; }
+.btn.rounded-pill { border-radius: 999px; }
+.btn-primary {
+    --bs-btn-bg: var(--ng-primary); --bs-btn-border-color: var(--ng-primary); --bs-btn-color: var(--ng-on-primary);
+    --bs-btn-hover-bg: var(--ng-primary-hover); --bs-btn-hover-border-color: var(--ng-primary-hover); --bs-btn-hover-color: var(--ng-on-primary);
+    --bs-btn-active-bg: var(--ng-primary-hover); --bs-btn-active-border-color: var(--ng-primary-hover); --bs-btn-active-color: var(--ng-on-primary);
+    --bs-btn-focus-shadow-rgb: var(--ng-primary-rgb);
+    box-shadow: 0 6px 16px rgba(var(--ng-primary-rgb), .25);
+}
+.btn-outline-primary { --bs-btn-color: var(--ng-primary); --bs-btn-border-color: var(--ng-primary); --bs-btn-hover-bg: var(--ng-primary); --bs-btn-hover-border-color: var(--ng-primary); --bs-btn-hover-color: var(--ng-on-primary); }
+.btn-success { --bs-btn-bg: #11793a; --bs-btn-border-color: #11793a; --bs-btn-hover-bg: #0d632f; --bs-btn-hover-border-color: #0d632f; --bs-btn-active-bg: #0d632f; }
+.btn-outline-secondary { --bs-btn-color: var(--ng-text); --bs-btn-border-color: var(--ng-border-strong); --bs-btn-hover-bg: var(--ng-surface-2); --bs-btn-hover-color: var(--ng-heading); --bs-btn-hover-border-color: var(--ng-border-strong); }
+.btn-light { --bs-btn-bg: var(--ng-surface-2); --bs-btn-border-color: var(--ng-border); --bs-btn-color: var(--ng-text); --bs-btn-hover-bg: var(--ng-surface-3); --bs-btn-hover-border-color: var(--ng-border-strong); --bs-btn-hover-color: var(--ng-heading); }
+
+/* ---------- 10. Tables & lists ---------- */
+.table {
+    --bs-table-bg: transparent; --bs-table-color: var(--ng-text);
+    --bs-table-border-color: var(--ng-border); --bs-table-striped-bg: var(--ng-surface-2);
+    --bs-table-hover-bg: var(--ng-surface-2);
+    --bs-table-striped-color: var(--ng-text); --bs-table-hover-color: var(--ng-text);
+}
+.table > thead th, .table > thead td { color: var(--ng-muted); font-weight: 600; font-size: .85em; text-transform: none; background: var(--ng-surface-2); }
+.table-bordered { border-radius: var(--ng-radius-sm); overflow: hidden; }
+.table-success { --bs-table-bg: var(--ng-green-soft); --bs-table-color: var(--ng-text); }
+.table-light, .table-dark { --bs-table-bg: var(--ng-surface-2); --bs-table-color: var(--ng-text); --bs-table-border-color: var(--ng-border); }
+.list-group { --bs-list-group-bg: transparent; --bs-list-group-color: var(--ng-text); --bs-list-group-border-color: var(--ng-border); }
+.nav-pills { --bs-nav-pills-link-active-bg: var(--ng-primary); --bs-nav-pills-link-active-color: var(--ng-on-primary); --bs-nav-pills-border-radius: 999px; }
+.nav-pills .nav-link { color: var(--ng-text); font-weight: 600; }
+.accordion { --bs-accordion-bg: var(--ng-surface); --bs-accordion-border-color: var(--ng-border); --bs-accordion-btn-color: var(--ng-heading); --bs-accordion-active-bg: var(--ng-primary-soft); --bs-accordion-active-color: var(--ng-primary); --bs-accordion-border-radius: var(--ng-radius); }
+details > summary { cursor: pointer; color: var(--ng-heading); }
+details > summary::marker { color: var(--ng-primary); }
+
+/* ---------- 11. Article / content sections ---------- */
+/* Legacy pages keep their own grid widths so sections stay aligned; new pages use .ng-content. */
+header ~ section h2.my-5, header ~ section .h4.my-5 { margin-top: 2.5rem !important; margin-bottom: 1rem !important; }
+header ~ section h2, .ng-content h2 { font-size: clamp(1.25rem, 1.05rem + .7vw, 1.6rem); }
+header ~ section h3 { font-size: clamp(1.05rem, 1rem + .3vw, 1.25rem); }
+header ~ section ul:not(.nav):not(.list-group):not(.dropdown-menu) li, .ng-content ul li { list-style: disc; }
+header ~ section ul:not(.nav):not(.list-group):not(.dropdown-menu), .ng-content ul { padding-left: 1.25rem; }
+header ~ section li::marker, .ng-content li::marker { color: var(--ng-primary); }
+section img[src$=".svg"], section img[src$=".png"], section img[src$=".jpg"] { border-radius: var(--ng-radius); }
+[data-bs-theme="dark"] section img[src$=".svg"]:not([width="105"]),
+[data-bs-theme="dark"] header img[src$=".svg"],
+[data-bs-theme="dark"] section img[src$=".png"]:not([width]) { background: #eef2fa; padding: .5rem; }
+
+/* Legacy decorative backgrounds → neutral surfaces */
+.bg-duo { background: transparent !important; }
+.right-dark-strip-bg { background: linear-gradient(135deg, var(--ng-surface) 0%, var(--ng-surface-2) 100%) !important; border-block: 1px solid var(--ng-border); }
+.modal-content { background: var(--ng-surface) !important; border-radius: var(--ng-radius-lg); border: 1px solid var(--ng-border); }
+.bg-light { background-color: var(--ng-surface-2) !important; }
+.bg-white { background-color: var(--ng-surface) !important; }
+.bg-body-tertiary { background-color: var(--ng-surface-2) !important; }
+.text-dark, .text-black { color: var(--ng-heading) !important; }
+.text-primary { color: var(--ng-primary) !important; }
+.text-success { color: var(--ng-green) !important; }
+.bg-primary { background-color: var(--ng-primary) !important; }
+.badge.bg-primary { color: var(--ng-on-primary); }
+
+/* Legacy colour rules from per-page <style> blocks and inline styles */
+strong, b { color: inherit; }
+.ng-title-blue { color: var(--ng-heading) !important; }
+.ng-card-white, .glass-card { background: var(--ng-surface) !important; }
+.mix-bg, .bg-2, .bg-3, .bg-pattern { background: var(--ng-surface-2) !important; }
+[data-bs-theme="dark"] [style*="color: rgb(0, 0, 0)"],
+[data-bs-theme="dark"] [style*="color: rgb(89, 89, 89)"],
+[data-bs-theme="dark"] [style*="color: rgb(127, 127, 127)"],
+[data-bs-theme="dark"] [style*="color: #595959"],
+[data-bs-theme="dark"] [style*="color: rgb(48, 48, 241)"] { color: var(--ng-text) !important; }
+.text-secondary { color: var(--ng-muted) !important; }
+.text-warning { color: #b7791f !important; }
+[data-bs-theme="dark"] .text-warning { color: #f6c453 !important; }
+.text-danger { color: var(--ng-danger) !important; }
+
+/* Legal pages generated by a policy tool (data-custom-class styles) */
+[data-custom-class], [data-custom-class] * { font-family: var(--ng-font) !important; }
+[data-bs-theme="dark"] body [data-custom-class], [data-bs-theme="dark"] body [data-custom-class] * { color: var(--ng-text) !important; }
+[data-bs-theme="dark"] body [data-custom-class^="heading"], [data-bs-theme="dark"] body [data-custom-class^="heading"] *,
+[data-bs-theme="dark"] body [data-custom-class="title"], [data-bs-theme="dark"] body [data-custom-class="title"] * { color: var(--ng-heading) !important; }
+body [data-custom-class="link"], body [data-custom-class="link"] * { color: var(--ng-primary) !important; }
+
+/* Yellow highlight rows/badges keep dark text in both themes */
+.bg-warning, .bg-warning * { color: #1a1300 !important; }
+
+/* HTML sitemap page (its own generated layout) */
+body:has(#cont) #top { background: transparent; padding-bottom: 2rem; }
+body:has(#cont) #top nav { background: var(--ng-surface); color: var(--ng-heading); box-shadow: var(--ng-shadow); border: 1px solid var(--ng-border); border-top: 0; margin: 0 auto; max-width: 1100px; font-weight: 700; }
+body:has(#cont) #top h3, body:has(#cont) #top h3 a { color: var(--ng-muted); }
+body:has(#cont) #cont { background: var(--ng-surface); color: var(--ng-text); box-shadow: var(--ng-shadow); border: 1px solid var(--ng-border); max-width: 1100px; margin: -1rem auto 0; border-radius: var(--ng-radius-lg); }
+body:has(#cont) .lhead { background: var(--ng-surface-2); color: var(--ng-heading); border-radius: var(--ng-radius-sm); font-weight: 650; }
+body:has(#cont) .lpage { border-bottom-color: var(--ng-border); }
+body:has(#cont) a:link, body:has(#cont) a:visited { color: var(--ng-primary); text-decoration: none; }
+body:has(#cont) #footer, body:has(#cont) #footer a { color: var(--ng-muted); }
+
+/* ---------- 12. Related links ---------- */
+.internal-links .card { box-shadow: none !important; background: var(--ng-surface); }
+.internal-links .card.bg-light { background: var(--ng-surface) !important; }
+.internal-links h3, .internal-links h4 { font-size: .8rem !important; text-transform: uppercase; letter-spacing: .06em; color: var(--ng-muted); font-weight: 700; }
+.internal-links hr { display: none; }
+.internal-links .nav-link { color: var(--ng-text); padding: .3rem 1rem; font-weight: 500; }
+.internal-links .nav-link:hover { color: var(--ng-primary); }
+.internal-links .nav:not(.flex-column) .nav-link {
+    border: 1px solid var(--ng-border); border-radius: 999px; margin: .25rem; padding: .35rem .9rem; font-size: .9rem; background: var(--ng-surface);
+}
+.internal-links .nav:not(.flex-column) .nav-link:hover { border-color: var(--ng-primary); background: var(--ng-primary-soft); }
+
+/* ---------- 13. Footer ---------- */
+footer, footer.bg-dark, footer.mountain {
+    --ng-f-text: #b8c0d6; --ng-f-head: #ffffff;
+    background: #070b18 !important; color: var(--ng-f-text);
+    border-top: 1px solid rgba(255, 255, 255, .06);
+    margin-top: 3rem; padding-bottom: 1.5rem;
+}
+footer .container-fluid.bg-duo { padding-top: 1.5rem; }
+footer ul.nav.justify-content-center .nav-link {
+    width: 44px; height: 44px; padding: 0 !important; display: inline-flex !important; align-items: center; justify-content: center;
+    font-size: 0 !important; border-radius: 50% !important; border: 1px solid rgba(255, 255, 255, .14) !important;
+    background: rgba(255, 255, 255, .04) !important; margin: 0 .25rem; transition: background .15s, border-color .15s;
+}
+footer ul.nav.justify-content-center .nav-link svg { width: 18px; height: 18px; }
+footer ul.nav.justify-content-center .nav-link small { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }  /* visually hidden, still read by screen readers */
+footer ul.nav.justify-content-center .nav-link:hover { background: rgba(255, 255, 255, .12) !important; border-color: rgba(255, 255, 255, .3) !important; }
+footer a, footer .nav-link, footer .text-white, footer ul li a { color: var(--ng-f-text) !important; }
+footer a:hover, footer .nav-link:hover { color: #ffffff !important; }
+footer .nav-link { font-size: .92rem; padding: .3rem .5rem; }
+footer h2, footer h3, footer h4, footer h5, footer h6, footer .h5, footer .h6 { color: var(--ng-f-head) !important; }
+footer hr { border-color: rgba(255, 255, 255, .1); }
+footer p, footer small, footer span { color: var(--ng-f-text); }
+
+/* ---------- 14. Calculator components (new pages) ---------- */
+.ng-calc .form-label { margin-bottom: .3rem; }
+.ng-calc .input-group-text { min-width: 2.75rem; justify-content: center; }
+.ng-calc .form-range { margin-top: .25rem; }
+.ng-big { font-size: clamp(1.7rem, 1.4rem + 1.2vw, 2.3rem); font-weight: 800; color: var(--ng-heading); line-height: 1.15; letter-spacing: -.02em; font-variant-numeric: tabular-nums; display: block; }
+.ng-kpi { background: var(--ng-surface-2); border: 1px solid var(--ng-border); border-radius: var(--ng-radius); padding: .9rem 1rem; height: 100%; }
+.ng-kpi small { display: block; color: var(--ng-muted); font-size: .8rem; font-weight: 500; text-align: left; margin: 0 0 .15rem; }
+.ng-kpi b { font-size: 1.2rem; color: var(--ng-heading); font-weight: 750; font-variant-numeric: tabular-nums; }
+.ng-best { border-color: var(--ng-green) !important; background: var(--ng-green-soft) !important; position: relative; }
+.ng-best::after { content: "Lower tax"; position: absolute; top: .55rem; right: .7rem; font-size: .68rem; font-weight: 700; color: var(--ng-green); text-transform: uppercase; letter-spacing: .05em; }
+.ng-bar { display: flex; height: 12px; border-radius: 999px; overflow: hidden; background: var(--ng-surface-3); }
+.ng-bar span { display: block; height: 100%; transition: width .35s var(--ng-ease); }
+.ng-legend { color: var(--ng-muted); }
+.ng-legend span { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+.ng-table td, .ng-table th { font-size: .9rem; padding: .5rem .55rem; }
+.ng-content { padding-top: 1rem; }
+.ng-content > .container > .row > [class*="col-"] { max-width: 860px; margin-inline: auto; }
+.ng-content h2 { margin: 2.5rem 0 1rem; }
+.ng-content h3 { color: var(--ng-heading); font-size: 1.1rem; margin: 1.5rem 0 .6rem; }
+.ng-content p, .ng-content li { font-size: 1.02rem; line-height: 1.75; }
+.ng-content ol li { list-style: decimal; }
+.ng-formula {
+    background: var(--ng-surface-2); border: 1px solid var(--ng-border); border-left: 4px solid var(--ng-saffron);
+    border-radius: var(--ng-radius-sm); padding: .8rem 1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .92rem; overflow-x: auto; color: var(--ng-heading);
+}
+.ng-share { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ng-share a svg, .ng-share a small { display: inline; margin: 0; }
+
+/* ---------- 15. Homepage ---------- */
+.ng-hero { padding-block: clamp(2.5rem, 2rem + 4vw, 5.5rem) clamp(2rem, 1.5rem + 3vw, 4rem); text-align: center; }
+.ng-eyebrow {
+    display: inline-flex; align-items: center; gap: .5rem; padding: .35rem .85rem; border-radius: 999px;
+    background: var(--ng-surface); border: 1px solid var(--ng-border); color: var(--ng-muted);
+    font-size: .82rem; font-weight: 600; box-shadow: var(--ng-shadow-sm);
+}
+.ng-eyebrow i { width: 8px; height: 8px; border-radius: 50%; background: var(--ng-green); box-shadow: 0 0 0 4px var(--ng-green-soft); }
+.ng-hero h1 { font-size: clamp(2rem, 1.3rem + 3.2vw, 3.6rem); margin: 1.1rem auto .9rem; max-width: 16ch; }
+.ng-hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--ng-primary), #6f5bff 55%, var(--ng-saffron)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ng-hero .ng-sub { font-size: clamp(1rem, .95rem + .3vw, 1.2rem); color: var(--ng-muted); max-width: 46rem; margin: 0 auto 1.75rem; line-height: 1.65; }
+.ng-hero-search {
+    display: flex; align-items: center; gap: .6rem; max-width: 40rem; margin: 0 auto;
+    background: var(--ng-surface); border: 1px solid var(--ng-border-strong); border-radius: 999px;
+    padding: .4rem .45rem .4rem 1.2rem; box-shadow: var(--ng-shadow-lg); cursor: text;
+}
+.ng-hero-search svg { width: 20px; height: 20px; color: var(--ng-muted); flex: none; margin: 0; }
+.ng-hero-search input { border: 0; outline: 0; background: transparent; flex: 1; min-width: 0; font-size: 1.05rem; color: var(--ng-text); padding: .55rem 0; }
+.ng-hero-search .btn { flex: none; }
+.ng-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: 1.25rem; }
+.ng-chip {
+    display: inline-flex; align-items: center; padding: .4rem .9rem; border-radius: 999px; font-size: .9rem; font-weight: 550;
+    background: var(--ng-surface); border: 1px solid var(--ng-border); color: var(--ng-text) !important; text-decoration: none !important;
+    transition: border-color .15s, color .15s, background .15s;
+}
+.ng-chip:hover { border-color: var(--ng-primary); color: var(--ng-primary) !important; background: var(--ng-primary-soft); }
+.ng-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem 2rem; margin-top: 2.25rem; color: var(--ng-muted); font-size: .92rem; }
+.ng-stats b { color: var(--ng-heading); font-weight: 750; }
+.ng-home section > .container > h2, .ng-home section h2.my-4 {
+    font-size: clamp(1.35rem, 1.1rem + .9vw, 1.85rem); text-align: left !important; margin: 2.5rem 0 1.25rem !important; padding: 0 !important;
+}
+.ng-home section .card.p-3 { padding: 1rem !important; }
+.ng-home section .card img { border-radius: 12px; }
+.ng-network .card { box-shadow: none !important; }
+.ng-network img { border-radius: 12px; }
+
+/* ---------- 16. Search palette ---------- */
+.ng-cmdk { position: fixed; inset: 0; z-index: 2000; display: none; align-items: flex-start; justify-content: center; padding: 10vh 1rem 1rem; background: rgba(7, 11, 24, .55); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.ng-cmdk.open { display: flex; }
+.ng-cmdk-box { width: 100%; max-width: 620px; background: var(--ng-surface); border: 1px solid var(--ng-border); border-radius: var(--ng-radius-lg); box-shadow: var(--ng-shadow-lg); overflow: hidden; }
+.ng-cmdk-head { display: flex; align-items: center; gap: .6rem; padding: .85rem 1rem; border-bottom: 1px solid var(--ng-border); }
+.ng-cmdk-head svg { width: 20px; height: 20px; color: var(--ng-muted); flex: none; margin: 0; }
+.ng-cmdk-head input::-webkit-search-cancel-button, .ng-hero-search input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+.ng-cmdk-head input { flex: 1; border: 0; outline: 0; background: transparent; font-size: 1.05rem; color: var(--ng-text); min-width: 0; }
+.ng-cmdk-list { list-style: none; margin: 0; padding: .4rem; max-height: min(60vh, 460px); overflow-y: auto; }
+.ng-cmdk-list li { list-style: none; }
+.ng-cmdk-list a { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem .8rem; border-radius: 10px; color: var(--ng-text) !important; text-decoration: none !important; }
+.ng-cmdk-list a small { color: var(--ng-muted); font-size: .8rem; white-space: nowrap; display: inline; margin: 0; text-align: right; }
+.ng-cmdk-list a[aria-selected="true"], .ng-cmdk-list a:hover { background: var(--ng-primary-soft); color: var(--ng-primary) !important; }
+.ng-cmdk-empty { padding: 1.25rem 1rem; color: var(--ng-muted); }
+.ng-cmdk-foot { display: flex; gap: 1rem; padding: .55rem 1rem; border-top: 1px solid var(--ng-border); color: var(--ng-muted); font-size: .78rem; }
+
+/* ---------- 17. Ads: reserve space, keep them from crowding content ---------- */
+ins.adsbygoogle { margin: 1.5rem auto; }
+
+/* ---------- 18. Motion & print ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+    .ng-nav, footer, .internal-links, .ng-share, ins.adsbygoogle, .ng-cmdk, .ng-skip, iframe { display: none !important; }
+    body, header { background: #fff !important; color: #000 !important; }
+    .card { box-shadow: none !important; border: 1px solid #ccc !important; break-inside: avoid; }
+    a { color: #000 !important; text-decoration: none !important; }
+}

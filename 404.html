@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ng-theme:head -->
+    <meta name="color-scheme" content="light dark">
+    <script>(function(){var t;try{t=localStorage.getItem("ng-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-bs-theme",t)})();</script>
+    <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="theme-color" content="#3f51b5">
     <link rel="manifest" href="/manifest.json">
     <style>
@@ -49,8 +53,11 @@
             filter: drop-shadow(2px 4px 6px black);
         }
     </style>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/theme.css?v=2">
 </head>
 <body>
+    <a class="visually-hidden-focusable ng-skip" href="#main">Skip to content</a>
     <header class="sky">
         <h1>404 Page Not Found</h1>
         <p>
@@ -64,6 +71,16 @@
                 <a href="contact-us">Contact</a>
             </span>
         </p>
+        <p class="mt-2 mb-3" style="color:var(--ng-muted)">This page moved or no longer exists. Find the calculator you need:</p>
+        <p><button type="button" class="btn btn-primary rounded-pill px-4" data-ng-search>Search calculators</button></p>
+        <div class="ng-chips mb-4">
+            <a class="ng-chip" href="/income-tax-calculator">Income tax</a>
+            <a class="ng-chip" href="/salary-calculator">In-hand salary</a>
+            <a class="ng-chip" href="/systematic-investment-plan-sip-return-calculator">SIP</a>
+            <a class="ng-chip" href="/ppf-calculator">PPF</a>
+            <a class="ng-chip" href="/fixed-deposit-fd-calculator">FD</a>
+            <a class="ng-chip" href="/emi-calculator-online">EMI</a>
+        </div>
     </header>
     <div id="body-img">
         <svg class="animated" id="freepik_stories-going-offline" xmlns="http://www.w3.org/2000/svg"
@@ -577,5 +594,6 @@
         </svg>
     </div>
     <footer class="mountain"></footer>
+    <script src="/assets/js/theme.js?v=2" defer></script>
 </body>
 </html>
