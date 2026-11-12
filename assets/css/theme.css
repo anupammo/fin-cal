@@ -557,3 +557,11 @@ ins.adsbygoogle { margin: 1.5rem auto; }
     .card { box-shadow: none !important; border: 1px solid #ccc !important; break-inside: avoid; }
     a { color: #000 !important; text-decoration: none !important; }
 }
+
+/* XIRR cash-flow table: fit date + amount on small screens */
+#flows { table-layout: fixed; width: 100%; }
+#flows th:first-child { width: 52%; }
+#flows th:last-child { width: 2.75rem; }
+#flows input { min-width: 0; width: 100%; padding-left: .5rem; padding-right: .5rem; }
+#flows td { padding-left: .2rem; padding-right: .2rem; }
+#flows .btn { padding: .35rem .55rem; }

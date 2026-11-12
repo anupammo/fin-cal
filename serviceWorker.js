@@ -4,7 +4,7 @@
  * - Third-party requests (ads, analytics) are never touched.
  * Bump VERSION whenever cached assets change in a way that must reach users at once.
  */
-const VERSION = 'ng-v2-2026-11-07';
+const VERSION = 'ng-v2-2026-11-12';
 const STATIC = VERSION + '-static';
 const PAGES = VERSION + '-pages';
 const CORE = [

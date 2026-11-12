@@ -41,10 +41,16 @@ _Audit date: 6 Nov 2026 · Site: https://nivesguru.in (GitHub Pages, `main` bran
 - [x] Proper 1200×630 share images for the 8 rebuilt/new pages (the old income tax and GST og:images pointed to files that did not exist).
 - [x] RSS feed and `urllist.txt` updated with the new pages.
 
-### Still to fix (found during the audit, not changed yet)
-- **SGB pages** (`sgb-calculator`, `sovereign-gold-bond-calculator`) still promise "next issue dates" for 2023-24. New SGB issues have stopped — rewrite them around **SGB redemption value / premature redemption** (still searched by existing holders).
-- **MSSC page**: Mahila Samman Savings Certificate was announced for deposits only up to 31 March 2025. Confirm it was not extended, then add a "closed to new deposits" note and point readers to alternatives (RD, TD, NSC).
-- Hindi/Bengali versions of the 6 new calculators and the rebuilt income tax/GST pages.
+### Batch 2 — done 12 Nov 2026
+- [x] **SGB pages** (English, Hindi, Bengali): removed the stale "next issue 2023-24" claims; now explain that no new tranche has been issued since Feb 2024 and how premature redemption works (e.g. ₹14,167/gram on 2 Nov 2026).
+- [x] **MSSC pages**: clear "closed to new deposits since 31 March 2025" notice in all three languages, with links to alternatives.
+- [x] **Removed self-written star ratings** from structured data on 8 pages (fake "80 reviews" on the homepage/bank page, product ratings on SGB). Google treats these as spam and can penalise the whole site.
+- [x] **4 more calculators**: Home loan EMI with prepayment, Retirement (corpus + step-up SIP), XIRR (with SIP auto-fill), Post Office RD (6.7%).
+- [x] Fixed a bug where year-by-year tables on Step-up SIP and CAGR stayed empty.
+- [x] Page generator saved in `tools/page-generator/` so new calculators can be built the same way.
+
+### Still to fix
+- Hindi/Bengali versions of the 10 new calculators and the rebuilt income tax/GST pages.
 
 ### Phase 1 — Owner actions, this week (needs your Google logins)
 1. **Merge this branch into `main`** so GitHub Pages publishes it. Then open https://nivesguru.in/income-tax-calculator and check it loads.
@@ -64,7 +70,7 @@ _Audit date: 6 Nov 2026 · Site: https://nivesguru.in (GitHub Pages, `main` bran
 ### Phase 2 — Content engine, weeks 2–8
 Publish **2 new calculators per week** using the same template as the new pages (calculator + 1,000-word guide + FAQ schema). Priority order by Indian search demand:
 
-1. Home loan EMI with prepayment · 2. Retirement / FIRE · 3. Mutual fund returns (lumpsum + SIP + XIRR) · 4. Post Office RD · 5. NPS vs PPF vs EPF comparison · 6. Car loan & personal loan EMI · 7. Age calculator / DA calculator (8th Pay Commission demand) · 8. Leave encashment · 9. Old vs new regime break-even · 10. Advance tax · 11. Rent receipt generator · 12. SGB redemption value (existing holders still search this).
+~~1. Home loan EMI with prepayment · 2. Retirement · 3. XIRR · 4. Post Office RD~~ (done) · 5. NPS vs PPF vs EPF comparison · 6. Car loan & personal loan EMI · 7. Age calculator / DA calculator (8th Pay Commission demand) · 8. Leave encashment · 9. Old vs new regime break-even · 10. Advance tax · 11. Rent receipt generator · 12. SGB redemption value calculator (existing holders still search this; SGB pages already explain it).
 
 **Refresh calendar (freshness = rankings):**
 | When | What to update |
