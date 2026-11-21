@@ -26,6 +26,8 @@ function extract(srcPath) {
 
   const head = html.slice(0, html.search(/<body[\s>]/i));
   const bodyStart = html.indexOf(">", html.search(/<body[\s>]/i)) + 1;
+  // Keep <body> attributes (class, onload handlers that start calculators) — base.njk re-emits them.
+  const bodyAttrs = html.slice(html.search(/<body[\s>]/i) + 5, bodyStart - 1).trim();
   const body = html.slice(bodyStart, html.lastIndexOf("</body>")).replace(/^\r?\n/, "").replace(/\s+$/, "");
 
   const attr = (re) => (head.match(re) || [])[1];
@@ -56,6 +58,7 @@ function extract(srcPath) {
   const pageUrl = (lang === "en" ? "/" : `/${lang}/`) + slug;
   const fm = { title, description, translations };
   if (ogImage) fm.ogImage = ogImage;
+  if (bodyAttrs) fm.bodyAttrs = bodyAttrs;
   if (canonicalHref && canonicalHref !== SITE + pageUrl) fm.canonical = canonicalHref.replace(SITE, "");
   if (!translations.length) delete fm.translations;
 

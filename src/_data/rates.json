@@ -1,7 +1,7 @@
 {
-  "verifiedOn": "2026-07-20",
-  "quarter": "Jul–Sep 2026 (Q2 FY 2026-27)",
-  "quarterNote": "Small-savings rates unchanged for 9 straight quarters (MoF notification 30 Jun 2026).",
+  "verifiedOn": "2026-11-12",
+  "quarter": "Oct–Dec 2026 (Q3 FY 2026-27)",
+  "quarterNote": "Small-savings rates unchanged again (MoF notification 30 Sep 2026).",
   "smallSavings": {
     "ppf":   { "rate": 7.1, "source": "Ministry of Finance / India Post" },
     "ssy":   { "rate": 8.2, "source": "Ministry of Finance / India Post" },

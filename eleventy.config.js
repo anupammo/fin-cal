@@ -32,10 +32,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("app.js");
   eleventyConfig.addPassthroughCopy("serviceWorker.js");
-  eleventyConfig.addPassthroughCopy("bootstrap.min.css");
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("bootstrap.min.css.map");
-  eleventyConfig.addPassthroughCopy("fincal.css");
+  // Design system v2 (DESIGN-SYSTEM.md): self-hosted Bootstrap 5.3.3, Inter font, theme.css/js
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("calc-core.js");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("res");
   eleventyConfig.addPassthroughCopy("svg");

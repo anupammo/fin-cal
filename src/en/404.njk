@@ -5,6 +5,7 @@
 }
 ---
 {% raw %}
+    <a class="visually-hidden-focusable ng-skip" href="#main">Skip to content</a>
     <header class="sky">
         <h1>404 Page Not Found</h1>
         <p>
@@ -18,6 +19,16 @@
                 <a href="contact-us">Contact</a>
             </span>
         </p>
+        <p class="mt-2 mb-3" style="color:var(--ng-muted)">This page moved or no longer exists. Find the calculator you need:</p>
+        <p><button type="button" class="btn btn-primary rounded-pill px-4" data-ng-search>Search calculators</button></p>
+        <div class="ng-chips mb-4">
+            <a class="ng-chip" href="/income-tax-calculator">Income tax</a>
+            <a class="ng-chip" href="/salary-calculator">In-hand salary</a>
+            <a class="ng-chip" href="/systematic-investment-plan-sip-return-calculator">SIP</a>
+            <a class="ng-chip" href="/ppf-calculator">PPF</a>
+            <a class="ng-chip" href="/fixed-deposit-fd-calculator">FD</a>
+            <a class="ng-chip" href="/emi-calculator-online">EMI</a>
+        </div>
     </header>
     <div id="body-img">
         <svg class="animated" id="freepik_stories-going-offline" xmlns="http://www.w3.org/2000/svg"
@@ -531,4 +542,5 @@
         </svg>
     </div>
     <footer class="mountain"></footer>
+    <script src="/assets/js/theme.js?v=2" defer></script>
 {% endraw %}

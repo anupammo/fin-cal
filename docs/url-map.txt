@@ -53,13 +53,16 @@
 /boi-fd-calculator
 /boi-rd-calculator
 /boi-sb-calculator
+/cagr-calculator
 /capital-gain-tax-calculator
 /compound-interest-calculator
 /contact-us
 /emi-calculator-online
+/epf-calculator
 /faq-page
 /fixed-deposit-fd-calculator
 /google843786092a7f748f
+/gratuity-calculator
 /gst-calculator
 /hdu16dvs7z7j2wf1um4dj8md16j4v0
 /hi/
@@ -106,6 +109,8 @@
 /hi/ubi-fd-calculator
 /hi/ubi-rd-calculator
 /hi/ubi-sb-calculator
+/home-loan-emi-calculator
+/hra-calculator
 /income-tax-calculator
 /inflation-calculator-india
 /kvp-calculator
@@ -119,12 +124,15 @@
 /pnb-sb-calculator
 /post-office-monthly-income-scheme-calculator
 /post-office-monthly-income-scheme-mis-calculator
+/post-office-rd-calculator
 /post-office-time-deposit-td-calculator
 /ppf-calculator
 /pradhan-mantri-jeevan-jyoti-bima-yojana-pmjjby-calculator
 /pradhan-mantri-suraksha-bima-yojana-pmsby-calculator
 /privacy-policy
 /rd-calculator
+/retirement-calculator
+/salary-calculator
 /sb-calculator
 /sbi-fd-calculator
 /sbi-rd-calculator
@@ -137,6 +145,7 @@
 /simple-interest-calculator
 /sitemap
 /sovereign-gold-bond-calculator
+/step-up-sip-calculator
 /sukanya-samriddhi-yojana-ssy-calculator
 /swp-calculator-online
 /systematic-investment-plan-sip-return-calculator
@@ -146,3 +155,4 @@
 /ubi-rd-calculator
 /ubi-sb-calculator
 /vat-calculator
+/xirr-calculator

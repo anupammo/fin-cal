@@ -1,82 +1,76 @@
-// NivesGuru service worker — single source of truth.
-// Strategy: network-first for HTML/navigations (pages never go stale),
-// cache-first for versioned static assets, offline.html fallback.
-// Bump CACHE_VERSION on any deploy that changes cached static assets.
-
-const CACHE_VERSION = "nivesguru-v2026-07b";
-const OFFLINE_URL = "/offline.html";
-
-// Stable static assets safe to cache-first. HTML pages are intentionally
-// NOT precached — they are always fetched network-first so rates stay fresh.
-const STATIC_ASSETS = [
-    OFFLINE_URL,
-    "/css/bootstrap-purged.min.css",
-    "/bootstrap.min.css",
-    "/fincal.css",
-    "/app.js",
-    "/manifest.json",
-    "/android-icon-192x192.png",
-    "/res/icon/bank-deposit.webp",
-    "/res/icon/deposits.webp",
-    "/res/icon/ssy.webp",
-    "/res/icon/pension-plan.webp",
-    "/res/icon/bima-yojana.webp",
-    "/res/icon/govt-bonds.webp",
-    "/res/icon/gold-bonds.webp"
+/* Nivesguru service worker v2
+ * - Pages: network first (always fresh), cached copy when offline, offline.html as last resort.
+ * - Static files (CSS, JS, fonts, images): served from cache, refreshed in the background.
+ * - Third-party requests (ads, analytics) are never touched.
+ * Bump VERSION whenever cached assets change in a way that must reach users at once.
+ */
+const VERSION = 'ng-v2-2026-11-12';
+const STATIC = VERSION + '-static';
+const PAGES = VERSION + '-pages';
+const CORE = [
+    '/',
+    '/offline.html',
+    '/assets/css/theme.css?v=2',
+    '/assets/js/theme.js?v=2',
+    '/assets/vendor/bootstrap.min.css',
+    '/assets/vendor/bootstrap.bundle.min.js',
+    '/assets/fonts/inter-var.woff2',
+    '/calc-core.js',
+    '/app.js',
+    '/favicon-32x32.png'
 ];
 
-self.addEventListener("install", event => {
+self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE_VERSION)
-            .then(cache => cache.addAll(STATIC_ASSETS))
-            .then(() => self.skipWaiting())
-            .catch(() => self.skipWaiting())
+        caches.open(STATIC).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting())
     );
 });
 
-// Remove every cache that isn't the current version.
-self.addEventListener("activate", event => {
+self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys()
-            .then(keys => Promise.all(
-                keys.filter(k => k !== CACHE_VERSION).map(k => caches.delete(k))
-            ))
+            .then((keys) => Promise.all(keys.filter((k) => !k.startsWith(VERSION)).map((k) => caches.delete(k))))
             .then(() => self.clients.claim())
     );
 });
 
-self.addEventListener("fetch", event => {
-    const request = event.request;
-    if (request.method !== "GET") return;
+function isStatic(url) {
+    return url.pathname.startsWith('/assets/') ||
+        /\.(?:css|js|woff2|png|jpe?g|webp|gif|svg|ico)$/i.test(url.pathname);
+}
 
-    const isHTML = request.mode === "navigate" ||
-        (request.headers.get("accept") || "").includes("text/html");
+self.addEventListener('fetch', (event) => {
+    const req = event.request;
+    if (req.method !== 'GET') return;
+    const url = new URL(req.url);
+    if (url.origin !== self.location.origin) return;
 
-    if (isHTML) {
-        // Network-first: always try the live page, fall back to cache, then offline.
+    if (req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html')) {
         event.respondWith(
-            fetch(request)
-                .then(response => {
-                    const copy = response.clone();
-                    caches.open(CACHE_VERSION).then(c => c.put(request, copy));
-                    return response;
+            fetch(req)
+                .then((res) => {
+                    if (res.ok) {
+                        const copy = res.clone();
+                        caches.open(PAGES).then((c) => c.put(req, copy));
+                    }
+                    return res;
                 })
-                .catch(() => caches.match(request).then(r => r || caches.match(OFFLINE_URL)))
+                .catch(() => caches.match(req).then((hit) => hit || caches.match('/offline.html')))
         );
         return;
     }
 
-    // Static assets: cache-first, revalidate in background.
-    event.respondWith(
-        caches.match(request).then(cached => {
-            const network = fetch(request).then(response => {
-                if (response && response.status === 200 && response.type === "basic") {
-                    const copy = response.clone();
-                    caches.open(CACHE_VERSION).then(c => c.put(request, copy));
-                }
-                return response;
-            }).catch(() => cached);
-            return cached || network;
-        })
-    );
+    if (isStatic(url)) {
+        event.respondWith(
+            caches.open(STATIC).then((cache) =>
+                cache.match(req).then((hit) => {
+                    const network = fetch(req).then((res) => {
+                        if (res.ok) cache.put(req, res.clone());
+                        return res;
+                    }).catch(() => hit);
+                    return hit || network;
+                })
+            )
+        );
+    }
 });

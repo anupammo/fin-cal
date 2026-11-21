@@ -7,8 +7,58 @@
 
 <url>
   <loc>https://nivesguru.in/</loc>
-  <lastmod>2026-07-19T22:40:25+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/salary-calculator</loc>
+  <lastmod>2026-11-06T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/epf-calculator</loc>
+  <lastmod>2026-11-06T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/hra-calculator</loc>
+  <lastmod>2026-11-06T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/gratuity-calculator</loc>
+  <lastmod>2026-11-06T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/step-up-sip-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/cagr-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/home-loan-emi-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/retirement-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/xirr-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://nivesguru.in/post-office-rd-calculator</loc>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://nivesguru.in/capital-gain-tax-calculator</loc>
@@ -17,12 +67,12 @@
 </url>
 <url>
   <loc>https://nivesguru.in/gst-calculator</loc>
-  <lastmod>2025-08-11T18:38:32+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nivesguru.in/income-tax-calculator</loc>
-  <lastmod>2025-08-11T18:38:32+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -57,7 +107,7 @@
 </url>
 <url>
   <loc>https://nivesguru.in/mahila-samman-savings-certificate-mssc-calculator</loc>
-  <lastmod>2025-08-11T18:38:32+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -67,7 +117,7 @@
 </url>
 <url>
   <loc>https://nivesguru.in/sgb-calculator</loc>
-  <lastmod>2026-07-19T22:40:25+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -82,7 +132,7 @@
 </url>
 <url>
   <loc>https://nivesguru.in/sukanya-samriddhi-yojana-ssy-calculator</loc>
-  <lastmod>2025-08-11T18:38:32+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -97,7 +147,7 @@
 </url>
 <url>
   <loc>https://nivesguru.in/ppf-calculator</loc>
-  <lastmod>2025-08-11T18:38:32+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -292,12 +342,12 @@
 </url>
 <url>
   <loc>https://nivesguru.in/hi/mahila-samman-savings-certificate-mssc-calculator</loc>
-  <lastmod>2024-06-05T12:53:06+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nivesguru.in/bn/mahila-samman-savings-certificate-mssc-calculator</loc>
-  <lastmod>2024-06-04T15:55:12+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
@@ -312,12 +362,12 @@
 </url>
 <url>
   <loc>https://nivesguru.in/hi/sgb-calculator</loc>
-  <lastmod>2026-07-19T22:40:25+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://nivesguru.in/bn/sgb-calculator</loc>
-  <lastmod>2026-07-19T22:40:25+00:00</lastmod>
+  <lastmod>2026-11-12T10:00:00+05:30</lastmod>
   <priority>0.64</priority>
 </url>
 <url>

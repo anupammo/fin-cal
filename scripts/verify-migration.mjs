@@ -36,7 +36,13 @@ for (const built of walk("_site")) {
   const problems = [];
 
   if (!existsSync(rel)) problems.push("no original file to compare");
-  else if (bodyOf(out) !== bodyOf(readFileSync(rel, "utf8"))) problems.push("BODY DIFFERS from original");
+  else {
+    const orig = readFileSync(rel, "utf8");
+    if (bodyOf(out) !== bodyOf(orig)) problems.push("BODY DIFFERS from original");
+    // The <body> tag carries onload handlers and classes, so it must match too.
+    const bodyTag = s => (s.match(/<body[^>]*>/i) || [""])[0].replace(/\s+/g, " ");
+    if (bodyTag(out) !== bodyTag(orig)) problems.push(`BODY TAG DIFFERS: ${bodyTag(out)} vs ${bodyTag(orig)}`);
+  }
 
   let n = 0;
   for (const m of out.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {

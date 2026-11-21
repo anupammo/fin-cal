@@ -8,25 +8,30 @@
     "bn"
   ],
   "ogImage": "https://nivesguru.in/nivesguru.png",
+  "bodyAttrs": "onload=\"sgbCalc()\"",
   "pageStyle": "styles/hi-sgb-calculator.njk",
   "pageSchema": "schema/hi-sgb-calculator.njk"
 }
 ---
 {% raw %}
-    <header id="calculator">
-        <div class="wave1">
-            <nav class="navbar navbar-expand-lg">
+    <a class="visually-hidden-focusable ng-skip" href="#main">Skip to content</a>
+    <nav class="navbar ng-nav navbar-expand-lg" aria-label="Main">
                 <div class="container">
-                    <a class="navbar-brand text-white fw-bold" href="./" title="Nivesguru">
-                        <img src="../favicon-32x32.png" width="32" height="32"
+                    <a class="navbar-brand fw-bold" href="./" title="Nivesguru">
+                        <img src="../maskable_icon_x96.png" width="32" height="32"
                             class="d-inline-block align-text-top rounded-circle" alt="Nivesguru Logo"
                             title="Nivesguru Logo">
                         <p class="d-inline-block h4">Nivesguru</p>
                     </a>
+                    <div class="ng-actions d-flex align-items-center order-lg-last ms-auto ms-lg-2">
+                        <span id="ngLang" class="d-none d-sm-inline-flex"></span>
+                        <button type="button" class="ng-icon-btn ng-search-btn" data-ng-search aria-label="Search calculators"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="d-none d-xl-inline">Search</span><kbd class="d-none d-xl-inline">/</kbd></button>
+                        <button type="button" class="ng-icon-btn ng-theme-btn" id="ngTheme" aria-label="Toggle dark theme"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+                    </div>
                     <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="text-white">
+                        <span class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-grid-fill" viewBox="0 0 16 16">
                                 <path
@@ -37,7 +42,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Investment कैलकुलेटर
                                 </a>
@@ -85,7 +90,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Finance कैलकुलेटर
                                 </a>
@@ -106,7 +111,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Savings कैलकुलेटर
                                 </a>
@@ -139,7 +144,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     About
                                 </a>
@@ -150,7 +155,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" href="#" role="button"
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="d-inline-block">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -172,6 +177,10 @@
                     </div>
                 </div>
             </nav>
+    <span id="main"></span>
+    <header id="calculator">
+        <div class="wave1">
+            
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6 col-12">
@@ -315,29 +324,12 @@
                             class="fw-bold" rel="nofollow" target="_blank">सॉवरेन गोल्ड बॉन्ड (एसजीबी)</a> एक सरकार समर्थित योजना है जो निवेशकों को भौतिक सोने से जुड़े भंडारण और सुरक्षा मुद्दों के बारे में चिंता किए बिना सोने में निवेश करने का अवसर प्रदान करती है। एसजीबी के लिए एक निवेश कैलकुलेटर निवेशकों को उनके निवेश पर रिटर्न का अनुमान लगाने और उसके अनुसार अपने वित्त की योजना बनाने में मदद कर सकता है।</p>
                 </div>
                 <div class="col-lg-7 col-md-6 col-12">
-                    <!-- <a title="सॉवरेन गोल्ड बॉन्ड / एसजीबी कैलकुलेटर: निवेश और रिटर्न"
-                        href="https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=56906" rel="nofollow"
+                    <!-- <a title="RBI: Sovereign Gold Bond scheme"
+                        href="https://rbi.org.in/scripts/bs_swarnabharat.aspx" rel="nofollow"
                         target="_blank"> -->
                         <div class="blink rounded text-dark p-3">
-                            <h2 class="h5">एसजीबी सीरीज III सदस्यता: 18 - 22 दिसंबर, 2023</h2>
-                            <!-- <h2 class="h5">SGB Series II Subscription : 11th - 15th September, 2023</h2> -->
-                            <p class="lead fs-6 mb-0">
-                                <strong>एसजीबी (सॉवरेन गोल्ड बॉन्ड)</strong>2023-24 योजना 
-                                <strong>सीरीज IV सदस्यता</strong>
-                                <!-- <strong>Series III subscription</strong> -->
-                                <!-- <strong>Series II subscription</strong> -->
-                                <!-- will start from <strong>18th - 22nd December, 2023</strong>. -->
-                                <strong>12-16 फरवरी, 2024</strong>से शुरू होगा।
-                                <!-- <strong>11th - 15th September, 2023</strong>. -->
-                                <!-- Date of Issuance - 12th September, 2023. Invest in Digital Gold and -->
-                                <!-- Date of Issuance - 28th December, 2023. Invest in Digital Gold and -->
-                                जारी करने की तारीख - 21 फरवरी, 2024. डिजिटल गोल्ड में निवेश करें।
-                                <!-- <strong> ₹5926 per gram</strong>.  -->
-                                <!-- <strong> ₹6199 per gram</strong>. Get discount <strong> of ₹50 per gram (₹6149) -->
-                                    प्रति ग्राम पर ₹50 का डिस्काउंट<strong>मिलेगा
-                                    </strong>अगर आप इसे ऑनलाइन या डिजिटल मोड से खरीदते हैं। ब्याज 2.5% होगा और
-                                    अर्ध-वार्षिक आधार पर भुगतान किया जाता है। SGB निवेश लॉन्ग टर्म कैपिटल गेन (LTCG) के अंतर्गत आता है
-                            </p>
+                            <h2 class="h5">2026 में सॉवरेन गोल्ड बॉन्ड: कोई नया इश्यू नहीं, केवल रिडेम्प्शन</h2>
+                            <p class="lead fs-6 mb-0">आख़िरी <strong>एसजीबी</strong> किश्त <strong>2023-24 सीरीज IV</strong> (फ़रवरी 2024) थी; उसके बाद कोई नई किश्त घोषित नहीं हुई है। एसजीबी धारक <strong>5 साल बाद ब्याज की तारीख़ों पर समय से पहले रिडीम</strong> कर सकते हैं (RBI मूल्य: पिछले तीन कारोबारी दिनों का IBJA औसत — जैसे 2 नवंबर 2026 को 2021-22 सीरीज VII के लिए <strong>₹14,167 प्रति ग्राम</strong>), 8 साल तक रख सकते हैं, या NSE/BSE पर बेच सकते हैं। ब्याज 2.5% सालाना, हर छह महीने।</p>
                         </div>
                     <!-- </a> -->
                 </div>
@@ -610,7 +602,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12">
-                    <img src="../nivesguru-investment-calculator-sgb.svg" width="300" height="300"
+                    <img loading="lazy" decoding="async" src="../nivesguru-investment-calculator-sgb.svg" width="300" height="300"
                         alt="nivesguru investment कैलकुलेटर sgb">
                 </div>
             </div>
@@ -921,9 +913,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script src="/assets/vendor/bootstrap.bundle.min.js" defer></script>
     </head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
@@ -1026,4 +1016,5 @@
         })(document, window);
         /* ]]> */
     </script>
+    <script src="/assets/js/theme.js?v=2" defer></script>
 {% endraw %}
