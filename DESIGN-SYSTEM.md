@@ -13,13 +13,14 @@ One look and feel for every page (English, हिंदी, বাংলা), bu
 | `calc-core.js` | Shared calculator maths and helpers (tax engine, ₹ formatting, input binding) |
 | `serviceWorker.js` | Offline support: pages network-first, static files cached |
 | `tools/apply-theme.py` | Adds the design system to any page that does not have it yet. Safe to re-run |
+| `tools/pwa-head.py` | Adds iOS/Android web-app tags, the manifest and touch-icon links, and service-worker registration to any page missing them. Safe to re-run |
 
 ## Adding a new page
 
 1. Copy an existing calculator page such as `salary-calculator.html` (it already has the full structure).
 2. Change the title, meta tags, canonical, JSON-LD, form, result and article content.
 3. Add it to `sitemap.xml`, the menu (`Finance Calculators` dropdown) and the search list in `assets/js/theme.js` (`CALCS`).
-4. If you started from an old page, run `python3 tools/apply-theme.py` — it adds the theme files, sticky navbar, search, dark mode, skip link and lazy images.
+4. If you started from an old page, run `python3 tools/apply-theme.py` and `python3 tools/pwa-head.py` — it adds the theme files, sticky navbar, search, dark mode, skip link and lazy images.
 5. When you change `theme.css` or `theme.js` in a way returning visitors must get at once, bump `?v=2` in `tools/apply-theme.py`, re-run it on all pages, and bump `VERSION` in `serviceWorker.js`.
 
 ## Tokens (CSS custom properties on `:root`)

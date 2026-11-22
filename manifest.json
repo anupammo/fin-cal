@@ -1,115 +1,174 @@
 {
-  "name": "Investment Calculator - Plan Financial Future | NivesGuru",
+  "name": "NivesGuru – Financial Calculators for India",
   "short_name": "NivesGuru",
   "start_url": "/",
   "id": "/",
   "dir": "ltr",
-  "lang": "en",
+  "lang": "en-IN",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#f5f7fb",
-  "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "categories": [
     "finance",
-    "education",
-    "news",
     "utilities",
-    "productivity"
+    "productivity",
+    "education"
   ],
   "icons": [
     {
-      "src": "./icons-vector.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512"
-    },
-    {
-      "src": "./android-icon-36x36.png",
-      "sizes": "36x36",
-      "type": "image/png",
-      "density": "0.75"
-    },
-    {
-      "src": "./android-icon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "density": "1.0"
-    },
-    {
-      "src": "./android-icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "density": "1.5"
-    },
-    {
-      "src": "./android-icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "./android-icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "density": "3.0"
-    },
-    {
-      "src": "./maskable_icon_x192.png",
-      "type": "image/png",
+      "src": "/android-icon-192x192.png",
       "sizes": "192x192",
-      "purpose": "maskable"
-    },
-    {
-      "src": "./maskable_icon_x96.png",
       "type": "image/png",
-      "sizes": "96x96",
       "purpose": "any"
     },
     {
-      "src": "./maskable_icon_x512.png",
+      "src": "/maskable_icon_x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any"
+    },
+    {
+      "src": "/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons-vector.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
     {
-      "name": "Investment Calculator - Plan Financial Future | NivesGuru",
-      "short_name": "NivesGuru",
-      "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
-      "url": "/",
+      "name": "Income Tax Calculator",
+      "short_name": "Income tax",
+      "description": "FY 2026-27, new vs old regime",
+      "url": "/income-tax-calculator?source=pwa-shortcut",
       "icons": [
         {
-          "src": "./maskable_icon_x192.png",
-          "sizes": "192x192"
+          "src": "/maskable_icon_x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
         }
       ]
     },
     {
-      "name": "Investment Calculator - Plan Financial Future | NivesGuru",
-      "short_name": "NivesGuru",
-      "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
-      "url": "/",
+      "name": "SIP Calculator",
+      "short_name": "SIP",
+      "description": "Mutual fund SIP returns",
+      "url": "/systematic-investment-plan-sip-return-calculator?source=pwa-shortcut",
       "icons": [
         {
-          "src": "./maskable_icon_x96.png",
-          "sizes": "96x96"
+          "src": "/maskable_icon_x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "EMI Calculator",
+      "short_name": "EMI",
+      "description": "Home and personal loan EMI",
+      "url": "/home-loan-emi-calculator?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/maskable_icon_x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "PPF Calculator",
+      "short_name": "PPF",
+      "description": "Public Provident Fund at 7.1%",
+      "url": "/ppf-calculator?source=pwa-shortcut",
+      "icons": [
+        {
+          "src": "/maskable_icon_x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
         }
       ]
     }
   ],
-  "description": "NivesGuru, free tools / calculators for Indian investors. Plan your financial future for SB, FD, RD, KVP, NPS, PPF, NPS, APY, PMJJBY, PMSBY, SSY etc",
+  "description": "Free income tax, salary, SIP, PPF, FD, EMI, EPF and post office calculators for India. Works offline, in English, हिंदी and বাংলা.",
   "screenshots": [
     {
-      "src": "./screenshot1.png",
-      "type": "image/png",
-      "sizes": "540x720",
-      "form_factor": "narrow"
+      "src": "/res/screenshots/phone-home.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Search 50+ free calculators"
     },
     {
-      "src": "./screenshot2.jpg",
-      "type": "image/jpg",
-      "sizes": "720x540",
-      "form_factor": "wide"
+      "src": "/res/screenshots/phone-income-tax.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Income tax: new vs old regime"
+    },
+    {
+      "src": "/res/screenshots/phone-salary-dark.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "In-hand salary, in dark mode"
+    },
+    {
+      "src": "/res/screenshots/desktop-home.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Nivesguru on desktop"
+    },
+    {
+      "src": "/res/screenshots/desktop-income-tax.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Income tax calculator on desktop"
     }
-  ]
+  ],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
 }

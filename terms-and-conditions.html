@@ -7,6 +7,12 @@
     <meta name="color-scheme" content="light dark">
     <script>(function(){var t;try{t=localStorage.getItem("ng-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-bs-theme",t)})();</script>
     <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- ng-pwa -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="NivesGuru">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="application-name" content="NivesGuru">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHX88MXWW4"></script>
     <script>
@@ -706,5 +712,6 @@
     </footer>
     <script src="/assets/vendor/bootstrap.bundle.min.js" defer></script>
     <script src="/assets/js/theme.js?v=2" defer></script>
+    <script src="/app.js" defer></script>
 </body>
 </html>
